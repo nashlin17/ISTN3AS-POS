@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginScreen));
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxPassword_Login = new System.Windows.Forms.TextBox();
+            this.tbxUsername_Login = new System.Windows.Forms.TextBox();
             this.btnExit2Home = new System.Windows.Forms.Button();
             this.btnStaffSign = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,30 +42,24 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.tbxUsername = new System.Windows.Forms.TextBox();
-            this.group6DataSet = new ISTN3AS.group6DataSet();
+            this.getLoginDS = new ISTN3AS.group6DataSet();
             this.getLoginDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getLoginDetailsTableAdapter = new ISTN3AS.group6DataSetTableAdapters.GetLoginDetailsTableAdapter();
             this.tableAdapterManager = new ISTN3AS.group6DataSetTableAdapters.TableAdapterManager();
-            this.getLoginDetailsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getLoginDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getLoginDetailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getLoginDetailsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLogin
             // 
             this.pnlLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLogin.Controls.Add(this.maskedTextBox2);
-            this.pnlLogin.Controls.Add(this.textBox1);
+            this.pnlLogin.Controls.Add(this.tbxPassword_Login);
+            this.pnlLogin.Controls.Add(this.tbxUsername_Login);
             this.pnlLogin.Controls.Add(this.btnExit2Home);
             this.pnlLogin.Controls.Add(this.btnStaffSign);
             this.pnlLogin.Controls.Add(this.label5);
@@ -75,26 +69,26 @@
             this.pnlLogin.Controls.Add(this.pictureBox3);
             this.pnlLogin.Controls.Add(this.pictureBox2);
             this.pnlLogin.Controls.Add(this.pictureBox1);
-            this.pnlLogin.Location = new System.Drawing.Point(182, 123);
+            this.pnlLogin.Location = new System.Drawing.Point(176, 124);
             this.pnlLogin.Margin = new System.Windows.Forms.Padding(2);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(263, 353);
             this.pnlLogin.TabIndex = 0;
             // 
-            // maskedTextBox2
+            // tbxPassword_Login
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(69, 206);
-            this.maskedTextBox2.Mask = "********************************";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(149, 20);
-            this.maskedTextBox2.TabIndex = 15;
+            this.tbxPassword_Login.Location = new System.Drawing.Point(69, 205);
+            this.tbxPassword_Login.Name = "tbxPassword_Login";
+            this.tbxPassword_Login.Size = new System.Drawing.Size(149, 20);
+            this.tbxPassword_Login.TabIndex = 14;
+            this.tbxPassword_Login.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // tbxUsername_Login
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 13;
+            this.tbxUsername_Login.Location = new System.Drawing.Point(69, 156);
+            this.tbxUsername_Login.Name = "tbxUsername_Login";
+            this.tbxUsername_Login.Size = new System.Drawing.Size(149, 20);
+            this.tbxUsername_Login.TabIndex = 13;
             // 
             // btnExit2Home
             // 
@@ -203,45 +197,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // maskedTextBox1
+            // getLoginDS
             // 
-            this.maskedTextBox1.BackColor = System.Drawing.Color.White;
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.maskedTextBox1.Location = new System.Drawing.Point(228, 56);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PasswordChar = '*';
-            this.maskedTextBox1.Size = new System.Drawing.Size(127, 22);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.Text = "Password";
-            // 
-            // tbxUsername
-            // 
-            this.tbxUsername.BackColor = System.Drawing.Color.White;
-            this.tbxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxUsername.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxUsername.ForeColor = System.Drawing.Color.Black;
-            this.tbxUsername.Location = new System.Drawing.Point(57, 202);
-            this.tbxUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.tbxUsername.Multiline = true;
-            this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Size = new System.Drawing.Size(134, 23);
-            this.tbxUsername.TabIndex = 1;
-            this.tbxUsername.TabStop = false;
-            this.tbxUsername.Text = "Username";
-            // 
-            // group6DataSet
-            // 
-            this.group6DataSet.DataSetName = "group6DataSet";
-            this.group6DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.getLoginDS.DataSetName = "getLoginDS";
+            this.getLoginDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // getLoginDetailsBindingSource
             // 
             this.getLoginDetailsBindingSource.DataMember = "GetLoginDetails";
-            this.getLoginDetailsBindingSource.DataSource = this.group6DataSet;
+            this.getLoginDetailsBindingSource.DataSource = this.getLoginDS;
             // 
             // getLoginDetailsTableAdapter
             // 
@@ -264,42 +228,14 @@
             this.tableAdapterManager.SupplierTblTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ISTN3AS.group6DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // getLoginDetailsDataGridView
-            // 
-            this.getLoginDetailsDataGridView.AutoGenerateColumns = false;
-            this.getLoginDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.getLoginDetailsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.getLoginDetailsDataGridView.DataSource = this.getLoginDetailsBindingSource;
-            this.getLoginDetailsDataGridView.Location = new System.Drawing.Point(91, 512);
-            this.getLoginDetailsDataGridView.Name = "getLoginDetailsDataGridView";
-            this.getLoginDetailsDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.getLoginDetailsDataGridView.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ISTN3AS.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(562, 752);
-            this.Controls.Add(this.getLoginDetailsDataGridView);
+            this.ClientSize = new System.Drawing.Size(550, 571);
             this.Controls.Add(this.pnlLogin);
-            this.Controls.Add(this.tbxUsername);
-            this.Controls.Add(this.maskedTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginScreen";
@@ -311,11 +247,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getLoginDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getLoginDetailsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getLoginDetailsDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -323,9 +257,7 @@
 
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox tbxUsername;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
@@ -333,14 +265,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStaffSign;
         private System.Windows.Forms.Button btnExit2Home;
-        private group6DataSet group6DataSet;
+        private group6DataSet getLoginDS;
         private System.Windows.Forms.BindingSource getLoginDetailsBindingSource;
         private group6DataSetTableAdapters.GetLoginDetailsTableAdapter getLoginDetailsTableAdapter;
         private group6DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView getLoginDetailsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxUsername_Login;
+        private System.Windows.Forms.TextBox tbxPassword_Login;
     }
 }
