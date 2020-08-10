@@ -2432,7 +2432,6 @@
             // 
             // pnlCompany
             // 
-            this.pnlCompany.AutoSize = true;
             this.pnlCompany.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlCompany.BackgroundImage = global::ISTN3AS.Properties.Resources.Frost;
             this.pnlCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -2944,9 +2943,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1543, 771);
+            this.ClientSize = new System.Drawing.Size(1412, 771);
             this.Controls.Add(this.tabcontrol1);
             this.Controls.Add(this.pnlCompany);
             this.Controls.Add(this.pnlOptions);
@@ -3021,7 +3019,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
