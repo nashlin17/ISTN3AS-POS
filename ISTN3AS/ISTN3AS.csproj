@@ -53,6 +53,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="group6DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>group6DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +104,17 @@
     <EmbeddedResource Include="salesControl.resx">
       <DependentUpon>salesControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="group6DataSet.xsc">
+      <DependentUpon>group6DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="group6DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>group6DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="group6DataSet.xss">
+      <DependentUpon>group6DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
