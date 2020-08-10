@@ -27,6 +27,14 @@ namespace ISTN3AS
 
         private void btnStaffSign_Click(object sender, EventArgs e)
         {
+            try
+            {
+               // this.getLoginDetailsTableAdapter.CheckLoginDetails(this.group6DataSet.GetLoginDetails, usernameToolStripTextBox.Text, passwordToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
             salesControl sc = new salesControl();
             this.Hide();
             sc.ShowDialog();
