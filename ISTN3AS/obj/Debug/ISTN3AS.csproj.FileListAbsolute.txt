@@ -38,3 +38,16 @@ C:\Users\Ashli\Desktop\ISTN Project\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.pdb
 C:\Users\Ashli\Desktop\ISTN Project\ISTN3AS-POS\ISTN3AS\bin\Debug\ISTN3AS.exe.config
 C:\Users\Ashli\Desktop\ISTN Project\ISTN3AS-POS\ISTN3AS\bin\Debug\ISTN3AS.exe
 C:\Users\Ashli\Desktop\ISTN Project\ISTN3AS-POS\ISTN3AS\bin\Debug\ISTN3AS.pdb
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\bin\Debug\ISTN3AS.exe.config
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\bin\Debug\ISTN3AS.exe
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\bin\Debug\ISTN3AS.pdb
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.csprojAssemblyReference.cache
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.mainMenu.resources
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.LoginScreen.resources
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.payment.resources
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.Properties.Resources.resources
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.sales.resources
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.salesControl.resources
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.csproj.GenerateResource.cache
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.exe
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.pdb
