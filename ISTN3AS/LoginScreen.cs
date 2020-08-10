@@ -29,16 +29,24 @@ namespace ISTN3AS
         {
             try
             {
-               // this.getLoginDetailsTableAdapter.CheckLoginDetails(this.group6DataSet.GetLoginDetails, usernameToolStripTextBox.Text, passwordToolStripTextBox.Text);
+               this.getLoginDetailsTableAdapter.CheckLoginDetails(this.getLoginDS.GetLoginDetails, tbxUsername_Login.Text, tbxPassword_Login.Text);
+                if(getLoginDS.GetLoginDetails.Rows[0][0].ToString().ToUpper() == tbxUsername_Login.Text.ToUpper() && getLoginDS.GetLoginDetails.Rows[0][1].ToString() == tbxPassword_Login.Text)
+                {
+                    salesControl sc = new salesControl();
+                    this.Hide();
+                    sc.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Password");
+                }
             }
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show("Invalid Login Details");
             }
-            salesControl sc = new salesControl();
-            this.Hide();
-            sc.ShowDialog();
-            this.Close();
+            
         }
     }
 }
