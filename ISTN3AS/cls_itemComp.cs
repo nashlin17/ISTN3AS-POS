@@ -48,36 +48,33 @@ namespace ISTN3AS
 
         public void Purchase(salesControl formInstance)
         {
-            formInstance.btnAccessPurchase.Enabled=true;
-            formInstance.btnCapPurchase.Enabled = true;
-            formInstance.btnGymPurchase.Enabled = true;
+            
+           
+     
             formInstance.btnMenuPurchase.Enabled = true;
             formInstance.btnShoePurchase.Enabled = true;
-            formInstance.btnTshirtPurchase.Enabled = true;
+           
 
-            formInstance.btnAccessOrder.Enabled = false;
-            formInstance.btnCapOrder.Enabled = false;
-            formInstance.btnGymOrder.Enabled = false;
+    
             formInstance.btnMenuOrder.Enabled = false;
             formInstance.btnShoeOrder.Enabled = false;
-            formInstance.btnTshirtOrder.Enabled = false;
+       
         }
 
         public void Order(salesControl formInstance)
         {
-            formInstance.btnAccessPurchase.Enabled = false;
-            formInstance.btnCapPurchase.Enabled = false;
-            formInstance.btnGymPurchase.Enabled = false;
+           
+     
             formInstance.btnMenuPurchase.Enabled = false;
             formInstance.btnShoePurchase.Enabled = false;
-            formInstance.btnTshirtPurchase.Enabled = false;
+          
 
-            formInstance.btnAccessOrder.Enabled = true;
-            formInstance.btnCapOrder.Enabled = true;
-            formInstance.btnGymOrder.Enabled = true;
+     
+   
+          
             formInstance.btnMenuOrder.Enabled = true;
             formInstance.btnShoeOrder.Enabled = true;
-            formInstance.btnTshirtOrder.Enabled = true;
+            
         }
 
 

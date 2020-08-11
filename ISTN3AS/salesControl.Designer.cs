@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.memberAcc = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -89,9 +90,7 @@
             this.label79 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.comboBox18 = new System.Windows.Forms.ComboBox();
-            this.btnGymOrder = new System.Windows.Forms.Button();
             this.label74 = new System.Windows.Forms.Label();
-            this.btnGymPurchase = new System.Windows.Forms.Button();
             this.comboBox20 = new System.Windows.Forms.ComboBox();
             this.label77 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
@@ -100,9 +99,7 @@
             this.label76 = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.btnAccessOrder = new System.Windows.Forms.Button();
             this.label72 = new System.Windows.Forms.Label();
-            this.btnAccessPurchase = new System.Windows.Forms.Button();
             this.comboBox17 = new System.Windows.Forms.ComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
@@ -110,10 +107,8 @@
             this.cat3 = new System.Windows.Forms.TabPage();
             this.label68 = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.btnCapOrder = new System.Windows.Forms.Button();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.btnCapPurchase = new System.Windows.Forms.Button();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.label69 = new System.Windows.Forms.Label();
             this.comboBox15 = new System.Windows.Forms.ComboBox();
@@ -124,26 +119,24 @@
             this.label67 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.btnShoeOrder = new System.Windows.Forms.Button();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.label60 = new System.Windows.Forms.Label();
-            this.btnShoePurchase = new System.Windows.Forms.Button();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.label62 = new System.Windows.Forms.Label();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.btnShoeOrder = new System.Windows.Forms.Button();
+            this.btnShoePurchase = new System.Windows.Forms.Button();
             this.cat1 = new System.Windows.Forms.TabPage();
             this.label66 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.btnTshirtOrder = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnTshirtPurchase = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -203,6 +196,7 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richItemsPurchased = new System.Windows.Forms.RichTextBox();
             this.pnlCompany = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -230,15 +224,31 @@
             this.btnCat5 = new System.Windows.Forms.Button();
             this.btnCat4 = new System.Windows.Forms.Button();
             this.btnCat3 = new System.Windows.Forms.Button();
-            this.btnCat1 = new System.Windows.Forms.Button();
             this.btnCat2 = new System.Windows.Forms.Button();
+            this.btnCat1 = new System.Windows.Forms.Button();
             this.gbItemsScroll = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.grpBoxDBgrid = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.prodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellingPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reorderStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.group6DataSet = new ISTN3AS.group6DataSet();
+            this.productTblTableAdapter = new ISTN3AS.group6DataSetTableAdapters.ProductTblTableAdapter();
             this.memberAcc.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -293,6 +303,10 @@
             this.panel1.SuspendLayout();
             this.gbItemsScroll.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.grpBoxDBgrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // memberAcc
@@ -304,7 +318,7 @@
             this.memberAcc.Location = new System.Drawing.Point(4, 25);
             this.memberAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.memberAcc.Name = "memberAcc";
-            this.memberAcc.Size = new System.Drawing.Size(1080, 609);
+            this.memberAcc.Size = new System.Drawing.Size(1044, 611);
             this.memberAcc.TabIndex = 6;
             this.memberAcc.Text = "memberAcc";
             // 
@@ -694,7 +708,7 @@
             this.purchase.Location = new System.Drawing.Point(4, 25);
             this.purchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.purchase.Name = "purchase";
-            this.purchase.Size = new System.Drawing.Size(1080, 609);
+            this.purchase.Size = new System.Drawing.Size(391, 611);
             this.purchase.TabIndex = 5;
             this.purchase.Text = "purchase";
             // 
@@ -1000,7 +1014,7 @@
             this.cat5.Location = new System.Drawing.Point(4, 25);
             this.cat5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat5.Name = "cat5";
-            this.cat5.Size = new System.Drawing.Size(1080, 609);
+            this.cat5.Size = new System.Drawing.Size(391, 707);
             this.cat5.TabIndex = 4;
             this.cat5.Text = "cat5";
             // 
@@ -1008,7 +1022,7 @@
             // 
             this.label79.BackColor = System.Drawing.Color.White;
             this.label79.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(88, 14);
+            this.label79.Location = new System.Drawing.Point(35, 21);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(344, 44);
             this.label79.TabIndex = 23;
@@ -1018,18 +1032,16 @@
             // groupBox17
             // 
             this.groupBox17.Controls.Add(this.comboBox18);
-            this.groupBox17.Controls.Add(this.btnGymOrder);
             this.groupBox17.Controls.Add(this.label74);
-            this.groupBox17.Controls.Add(this.btnGymPurchase);
             this.groupBox17.Controls.Add(this.comboBox20);
             this.groupBox17.Controls.Add(this.label77);
             this.groupBox17.Controls.Add(this.label78);
             this.groupBox17.Controls.Add(this.comboBox21);
-            this.groupBox17.Location = new System.Drawing.Point(21, 80);
+            this.groupBox17.Location = new System.Drawing.Point(6, 60);
             this.groupBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox17.Size = new System.Drawing.Size(435, 513);
+            this.groupBox17.Size = new System.Drawing.Size(389, 640);
             this.groupBox17.TabIndex = 4;
             this.groupBox17.TabStop = false;
             // 
@@ -1045,29 +1057,9 @@
             this.comboBox18.Location = new System.Drawing.Point(203, 33);
             this.comboBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(207, 32);
+            this.comboBox18.Size = new System.Drawing.Size(170, 32);
             this.comboBox18.Sorted = true;
             this.comboBox18.TabIndex = 13;
-            // 
-            // btnGymOrder
-            // 
-            this.btnGymOrder.BackColor = System.Drawing.SystemColors.Window;
-            this.btnGymOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGymOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGymOrder.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnGymOrder.FlatAppearance.BorderSize = 2;
-            this.btnGymOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGymOrder.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGymOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnGymOrder.Image = global::ISTN3AS.Properties.Resources.order;
-            this.btnGymOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGymOrder.Location = new System.Drawing.Point(73, 402);
-            this.btnGymOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGymOrder.Name = "btnGymOrder";
-            this.btnGymOrder.Size = new System.Drawing.Size(300, 78);
-            this.btnGymOrder.TabIndex = 12;
-            this.btnGymOrder.Text = "Add To Order";
-            this.btnGymOrder.UseVisualStyleBackColor = false;
             // 
             // label74
             // 
@@ -1077,26 +1069,6 @@
             this.label74.Size = new System.Drawing.Size(175, 23);
             this.label74.TabIndex = 7;
             this.label74.Text = "Chooose Type : ";
-            // 
-            // btnGymPurchase
-            // 
-            this.btnGymPurchase.BackColor = System.Drawing.SystemColors.Window;
-            this.btnGymPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGymPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGymPurchase.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnGymPurchase.FlatAppearance.BorderSize = 2;
-            this.btnGymPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGymPurchase.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGymPurchase.ForeColor = System.Drawing.Color.Black;
-            this.btnGymPurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
-            this.btnGymPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGymPurchase.Location = new System.Drawing.Point(73, 319);
-            this.btnGymPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGymPurchase.Name = "btnGymPurchase";
-            this.btnGymPurchase.Size = new System.Drawing.Size(300, 78);
-            this.btnGymPurchase.TabIndex = 6;
-            this.btnGymPurchase.Text = "Add To Cart";
-            this.btnGymPurchase.UseVisualStyleBackColor = false;
             // 
             // comboBox20
             // 
@@ -1110,7 +1082,7 @@
             this.comboBox20.Location = new System.Drawing.Point(203, 151);
             this.comboBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(207, 32);
+            this.comboBox20.Size = new System.Drawing.Size(170, 32);
             this.comboBox20.Sorted = true;
             this.comboBox20.TabIndex = 5;
             // 
@@ -1144,7 +1116,7 @@
             this.comboBox21.Location = new System.Drawing.Point(203, 89);
             this.comboBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(207, 32);
+            this.comboBox21.Size = new System.Drawing.Size(170, 32);
             this.comboBox21.Sorted = true;
             this.comboBox21.TabIndex = 0;
             // 
@@ -1156,7 +1128,7 @@
             this.cat4.Location = new System.Drawing.Point(4, 25);
             this.cat4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat4.Name = "cat4";
-            this.cat4.Size = new System.Drawing.Size(1080, 609);
+            this.cat4.Size = new System.Drawing.Size(391, 707);
             this.cat4.TabIndex = 3;
             this.cat4.Text = "cat4";
             // 
@@ -1164,7 +1136,7 @@
             // 
             this.label76.BackColor = System.Drawing.Color.White;
             this.label76.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(88, 14);
+            this.label76.Location = new System.Drawing.Point(40, 21);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(344, 44);
             this.label76.TabIndex = 22;
@@ -1174,18 +1146,16 @@
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.comboBox13);
-            this.groupBox16.Controls.Add(this.btnAccessOrder);
             this.groupBox16.Controls.Add(this.label72);
-            this.groupBox16.Controls.Add(this.btnAccessPurchase);
             this.groupBox16.Controls.Add(this.comboBox17);
             this.groupBox16.Controls.Add(this.label73);
             this.groupBox16.Controls.Add(this.label75);
             this.groupBox16.Controls.Add(this.comboBox19);
-            this.groupBox16.Location = new System.Drawing.Point(21, 80);
+            this.groupBox16.Location = new System.Drawing.Point(6, 60);
             this.groupBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox16.Size = new System.Drawing.Size(420, 513);
+            this.groupBox16.Size = new System.Drawing.Size(385, 645);
             this.groupBox16.TabIndex = 3;
             this.groupBox16.TabStop = false;
             // 
@@ -1198,32 +1168,12 @@
             "Everton",
             "Liverpool",
             "Manchester United"});
-            this.comboBox13.Location = new System.Drawing.Point(203, 33);
+            this.comboBox13.Location = new System.Drawing.Point(178, 33);
             this.comboBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(207, 32);
+            this.comboBox13.Size = new System.Drawing.Size(179, 32);
             this.comboBox13.Sorted = true;
             this.comboBox13.TabIndex = 13;
-            // 
-            // btnAccessOrder
-            // 
-            this.btnAccessOrder.BackColor = System.Drawing.SystemColors.Window;
-            this.btnAccessOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAccessOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccessOrder.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAccessOrder.FlatAppearance.BorderSize = 2;
-            this.btnAccessOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccessOrder.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccessOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnAccessOrder.Image = global::ISTN3AS.Properties.Resources.order;
-            this.btnAccessOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccessOrder.Location = new System.Drawing.Point(73, 402);
-            this.btnAccessOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccessOrder.Name = "btnAccessOrder";
-            this.btnAccessOrder.Size = new System.Drawing.Size(300, 78);
-            this.btnAccessOrder.TabIndex = 12;
-            this.btnAccessOrder.Text = "Add To Order";
-            this.btnAccessOrder.UseVisualStyleBackColor = false;
             // 
             // label72
             // 
@@ -1234,26 +1184,6 @@
             this.label72.TabIndex = 7;
             this.label72.Text = "Chooose Type : ";
             // 
-            // btnAccessPurchase
-            // 
-            this.btnAccessPurchase.BackColor = System.Drawing.SystemColors.Window;
-            this.btnAccessPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAccessPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccessPurchase.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAccessPurchase.FlatAppearance.BorderSize = 2;
-            this.btnAccessPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccessPurchase.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccessPurchase.ForeColor = System.Drawing.Color.Black;
-            this.btnAccessPurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
-            this.btnAccessPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccessPurchase.Location = new System.Drawing.Point(73, 319);
-            this.btnAccessPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccessPurchase.Name = "btnAccessPurchase";
-            this.btnAccessPurchase.Size = new System.Drawing.Size(300, 78);
-            this.btnAccessPurchase.TabIndex = 6;
-            this.btnAccessPurchase.Text = "Add To Cart";
-            this.btnAccessPurchase.UseVisualStyleBackColor = false;
-            // 
             // comboBox17
             // 
             this.comboBox17.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1263,10 +1193,10 @@
             "Green",
             "Red",
             "Yellow"});
-            this.comboBox17.Location = new System.Drawing.Point(203, 151);
+            this.comboBox17.Location = new System.Drawing.Point(178, 145);
             this.comboBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(207, 32);
+            this.comboBox17.Size = new System.Drawing.Size(179, 32);
             this.comboBox17.Sorted = true;
             this.comboBox17.TabIndex = 5;
             // 
@@ -1284,7 +1214,7 @@
             this.label75.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.Location = new System.Drawing.Point(21, 94);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(175, 23);
+            this.label75.Size = new System.Drawing.Size(151, 23);
             this.label75.TabIndex = 1;
             this.label75.Text = "Choose Brand : ";
             // 
@@ -1297,10 +1227,10 @@
             "Everton",
             "Liverpool",
             "Manchester United"});
-            this.comboBox19.Location = new System.Drawing.Point(203, 89);
+            this.comboBox19.Location = new System.Drawing.Point(178, 91);
             this.comboBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(207, 32);
+            this.comboBox19.Size = new System.Drawing.Size(179, 32);
             this.comboBox19.Sorted = true;
             this.comboBox19.TabIndex = 0;
             // 
@@ -1312,7 +1242,7 @@
             this.cat3.Location = new System.Drawing.Point(4, 25);
             this.cat3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat3.Name = "cat3";
-            this.cat3.Size = new System.Drawing.Size(1080, 609);
+            this.cat3.Size = new System.Drawing.Size(391, 707);
             this.cat3.TabIndex = 2;
             this.cat3.Text = "cat3";
             // 
@@ -1320,7 +1250,7 @@
             // 
             this.label68.BackColor = System.Drawing.Color.White;
             this.label68.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(88, 14);
+            this.label68.Location = new System.Drawing.Point(32, 18);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(344, 44);
             this.label68.TabIndex = 19;
@@ -1329,43 +1259,21 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.btnCapOrder);
             this.groupBox15.Controls.Add(this.radioButton7);
             this.groupBox15.Controls.Add(this.radioButton8);
-            this.groupBox15.Controls.Add(this.btnCapPurchase);
             this.groupBox15.Controls.Add(this.comboBox14);
             this.groupBox15.Controls.Add(this.label69);
             this.groupBox15.Controls.Add(this.comboBox15);
             this.groupBox15.Controls.Add(this.label70);
             this.groupBox15.Controls.Add(this.label71);
             this.groupBox15.Controls.Add(this.comboBox16);
-            this.groupBox15.Location = new System.Drawing.Point(21, 80);
+            this.groupBox15.Location = new System.Drawing.Point(6, 60);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox15.Size = new System.Drawing.Size(440, 513);
+            this.groupBox15.Size = new System.Drawing.Size(389, 640);
             this.groupBox15.TabIndex = 3;
             this.groupBox15.TabStop = false;
-            // 
-            // btnCapOrder
-            // 
-            this.btnCapOrder.BackColor = System.Drawing.SystemColors.Window;
-            this.btnCapOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCapOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCapOrder.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCapOrder.FlatAppearance.BorderSize = 2;
-            this.btnCapOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapOrder.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnCapOrder.Image = global::ISTN3AS.Properties.Resources.order;
-            this.btnCapOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapOrder.Location = new System.Drawing.Point(73, 402);
-            this.btnCapOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCapOrder.Name = "btnCapOrder";
-            this.btnCapOrder.Size = new System.Drawing.Size(300, 78);
-            this.btnCapOrder.TabIndex = 12;
-            this.btnCapOrder.Text = "Add To Order";
-            this.btnCapOrder.UseVisualStyleBackColor = false;
             // 
             // radioButton7
             // 
@@ -1391,26 +1299,6 @@
             this.radioButton8.Text = "   Male";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
-            // btnCapPurchase
-            // 
-            this.btnCapPurchase.BackColor = System.Drawing.SystemColors.Window;
-            this.btnCapPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCapPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCapPurchase.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCapPurchase.FlatAppearance.BorderSize = 2;
-            this.btnCapPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapPurchase.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapPurchase.ForeColor = System.Drawing.Color.Black;
-            this.btnCapPurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
-            this.btnCapPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapPurchase.Location = new System.Drawing.Point(73, 319);
-            this.btnCapPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCapPurchase.Name = "btnCapPurchase";
-            this.btnCapPurchase.Size = new System.Drawing.Size(300, 78);
-            this.btnCapPurchase.TabIndex = 6;
-            this.btnCapPurchase.Text = "Add To Cart";
-            this.btnCapPurchase.UseVisualStyleBackColor = false;
-            // 
             // comboBox14
             // 
             this.comboBox14.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1420,10 +1308,10 @@
             "Green",
             "Red",
             "Yellow"});
-            this.comboBox14.Location = new System.Drawing.Point(203, 144);
+            this.comboBox14.Location = new System.Drawing.Point(172, 143);
             this.comboBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(207, 32);
+            this.comboBox14.Size = new System.Drawing.Size(198, 32);
             this.comboBox14.Sorted = true;
             this.comboBox14.TabIndex = 5;
             // 
@@ -1432,7 +1320,7 @@
             this.label69.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.Location = new System.Drawing.Point(21, 146);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(175, 23);
+            this.label69.Size = new System.Drawing.Size(159, 23);
             this.label69.TabIndex = 4;
             this.label69.Text = "Choose Colour : ";
             // 
@@ -1446,10 +1334,10 @@
             "S",
             "XL",
             "Xs"});
-            this.comboBox15.Location = new System.Drawing.Point(203, 89);
+            this.comboBox15.Location = new System.Drawing.Point(172, 89);
             this.comboBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(207, 32);
+            this.comboBox15.Size = new System.Drawing.Size(198, 32);
             this.comboBox15.Sorted = true;
             this.comboBox15.TabIndex = 3;
             // 
@@ -1458,7 +1346,7 @@
             this.label70.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(21, 92);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(175, 23);
+            this.label70.Size = new System.Drawing.Size(145, 23);
             this.label70.TabIndex = 2;
             this.label70.Text = "Choose Size : ";
             // 
@@ -1467,7 +1355,7 @@
             this.label71.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.Location = new System.Drawing.Point(21, 36);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(175, 23);
+            this.label71.Size = new System.Drawing.Size(145, 23);
             this.label71.TabIndex = 1;
             this.label71.Text = "Choose Brand : ";
             // 
@@ -1480,10 +1368,10 @@
             "Everton",
             "Liverpool",
             "Manchester United"});
-            this.comboBox16.Location = new System.Drawing.Point(203, 33);
+            this.comboBox16.Location = new System.Drawing.Point(172, 33);
             this.comboBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(207, 32);
+            this.comboBox16.Size = new System.Drawing.Size(198, 32);
             this.comboBox16.Sorted = true;
             this.comboBox16.TabIndex = 0;
             // 
@@ -1496,7 +1384,7 @@
             this.cat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat2.Name = "cat2";
             this.cat2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cat2.Size = new System.Drawing.Size(1080, 609);
+            this.cat2.Size = new System.Drawing.Size(391, 707);
             this.cat2.TabIndex = 1;
             this.cat2.Text = "cat2";
             // 
@@ -1504,7 +1392,7 @@
             // 
             this.label67.BackColor = System.Drawing.Color.White;
             this.label67.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(88, 14);
+            this.label67.Location = new System.Drawing.Point(34, 18);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(344, 44);
             this.label67.TabIndex = 18;
@@ -1514,22 +1402,20 @@
             // groupBox14
             // 
             this.groupBox14.Controls.Add(this.comboBox9);
-            this.groupBox14.Controls.Add(this.btnShoeOrder);
             this.groupBox14.Controls.Add(this.radioButton5);
             this.groupBox14.Controls.Add(this.radioButton6);
             this.groupBox14.Controls.Add(this.label60);
-            this.groupBox14.Controls.Add(this.btnShoePurchase);
             this.groupBox14.Controls.Add(this.comboBox10);
             this.groupBox14.Controls.Add(this.label62);
             this.groupBox14.Controls.Add(this.comboBox11);
             this.groupBox14.Controls.Add(this.label64);
             this.groupBox14.Controls.Add(this.label65);
             this.groupBox14.Controls.Add(this.comboBox12);
-            this.groupBox14.Location = new System.Drawing.Point(21, 80);
+            this.groupBox14.Location = new System.Drawing.Point(6, 60);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox14.Size = new System.Drawing.Size(440, 513);
+            this.groupBox14.Size = new System.Drawing.Size(399, 640);
             this.groupBox14.TabIndex = 2;
             this.groupBox14.TabStop = false;
             // 
@@ -1545,34 +1431,14 @@
             this.comboBox9.Location = new System.Drawing.Point(203, 33);
             this.comboBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(207, 32);
+            this.comboBox9.Size = new System.Drawing.Size(179, 32);
             this.comboBox9.Sorted = true;
             this.comboBox9.TabIndex = 13;
-            // 
-            // btnShoeOrder
-            // 
-            this.btnShoeOrder.BackColor = System.Drawing.SystemColors.Window;
-            this.btnShoeOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShoeOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShoeOrder.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnShoeOrder.FlatAppearance.BorderSize = 2;
-            this.btnShoeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShoeOrder.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShoeOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnShoeOrder.Image = global::ISTN3AS.Properties.Resources.order;
-            this.btnShoeOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShoeOrder.Location = new System.Drawing.Point(73, 402);
-            this.btnShoeOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnShoeOrder.Name = "btnShoeOrder";
-            this.btnShoeOrder.Size = new System.Drawing.Size(300, 78);
-            this.btnShoeOrder.TabIndex = 12;
-            this.btnShoeOrder.Text = "Add To Order";
-            this.btnShoeOrder.UseVisualStyleBackColor = false;
             // 
             // radioButton5
             // 
             this.radioButton5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(219, 258);
+            this.radioButton5.Location = new System.Drawing.Point(181, 301);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(136, 28);
@@ -1584,7 +1450,7 @@
             // radioButton6
             // 
             this.radioButton6.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(25, 258);
+            this.radioButton6.Location = new System.Drawing.Point(25, 301);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(136, 28);
@@ -1598,29 +1464,9 @@
             this.label60.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.Location = new System.Drawing.Point(21, 36);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(175, 23);
+            this.label60.Size = new System.Drawing.Size(159, 23);
             this.label60.TabIndex = 7;
             this.label60.Text = "Chooose Type : ";
-            // 
-            // btnShoePurchase
-            // 
-            this.btnShoePurchase.BackColor = System.Drawing.SystemColors.Window;
-            this.btnShoePurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShoePurchase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShoePurchase.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnShoePurchase.FlatAppearance.BorderSize = 2;
-            this.btnShoePurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShoePurchase.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShoePurchase.ForeColor = System.Drawing.Color.Black;
-            this.btnShoePurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
-            this.btnShoePurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShoePurchase.Location = new System.Drawing.Point(73, 319);
-            this.btnShoePurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnShoePurchase.Name = "btnShoePurchase";
-            this.btnShoePurchase.Size = new System.Drawing.Size(300, 78);
-            this.btnShoePurchase.TabIndex = 6;
-            this.btnShoePurchase.Text = "Add To Cart";
-            this.btnShoePurchase.UseVisualStyleBackColor = false;
             // 
             // comboBox10
             // 
@@ -1631,17 +1477,17 @@
             "Green",
             "Red",
             "Yellow"});
-            this.comboBox10.Location = new System.Drawing.Point(203, 202);
+            this.comboBox10.Location = new System.Drawing.Point(203, 231);
             this.comboBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(207, 32);
+            this.comboBox10.Size = new System.Drawing.Size(179, 32);
             this.comboBox10.Sorted = true;
             this.comboBox10.TabIndex = 5;
             // 
             // label62
             // 
             this.label62.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(21, 206);
+            this.label62.Location = new System.Drawing.Point(21, 240);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(175, 23);
             this.label62.TabIndex = 4;
@@ -1657,17 +1503,17 @@
             "S",
             "XL",
             "Xs"});
-            this.comboBox11.Location = new System.Drawing.Point(203, 149);
+            this.comboBox11.Location = new System.Drawing.Point(203, 167);
             this.comboBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(207, 32);
+            this.comboBox11.Size = new System.Drawing.Size(179, 32);
             this.comboBox11.Sorted = true;
             this.comboBox11.TabIndex = 3;
             // 
             // label64
             // 
             this.label64.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(21, 153);
+            this.label64.Location = new System.Drawing.Point(21, 167);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(175, 23);
             this.label64.TabIndex = 2;
@@ -1676,7 +1522,7 @@
             // label65
             // 
             this.label65.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(21, 94);
+            this.label65.Location = new System.Drawing.Point(21, 102);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(175, 23);
             this.label65.TabIndex = 1;
@@ -1691,12 +1537,54 @@
             "Everton",
             "Liverpool",
             "Manchester United"});
-            this.comboBox12.Location = new System.Drawing.Point(203, 89);
+            this.comboBox12.Location = new System.Drawing.Point(203, 99);
             this.comboBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(207, 32);
+            this.comboBox12.Size = new System.Drawing.Size(179, 32);
             this.comboBox12.Sorted = true;
             this.comboBox12.TabIndex = 0;
+            // 
+            // btnShoeOrder
+            // 
+            this.btnShoeOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnShoeOrder.BackColor = System.Drawing.SystemColors.Window;
+            this.btnShoeOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShoeOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShoeOrder.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnShoeOrder.FlatAppearance.BorderSize = 2;
+            this.btnShoeOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShoeOrder.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShoeOrder.ForeColor = System.Drawing.Color.Black;
+            this.btnShoeOrder.Image = global::ISTN3AS.Properties.Resources.order;
+            this.btnShoeOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShoeOrder.Location = new System.Drawing.Point(0, 623);
+            this.btnShoeOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShoeOrder.Name = "btnShoeOrder";
+            this.btnShoeOrder.Size = new System.Drawing.Size(248, 71);
+            this.btnShoeOrder.TabIndex = 12;
+            this.btnShoeOrder.Text = "Add To Order";
+            this.btnShoeOrder.UseVisualStyleBackColor = false;
+            // 
+            // btnShoePurchase
+            // 
+            this.btnShoePurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShoePurchase.BackColor = System.Drawing.SystemColors.Window;
+            this.btnShoePurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShoePurchase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShoePurchase.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnShoePurchase.FlatAppearance.BorderSize = 2;
+            this.btnShoePurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShoePurchase.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShoePurchase.ForeColor = System.Drawing.Color.Black;
+            this.btnShoePurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
+            this.btnShoePurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShoePurchase.Location = new System.Drawing.Point(280, 625);
+            this.btnShoePurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShoePurchase.Name = "btnShoePurchase";
+            this.btnShoePurchase.Size = new System.Drawing.Size(256, 66);
+            this.btnShoePurchase.TabIndex = 6;
+            this.btnShoePurchase.Text = "Add To Cart";
+            this.btnShoePurchase.UseVisualStyleBackColor = false;
             // 
             // cat1
             // 
@@ -1707,7 +1595,7 @@
             this.cat1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat1.Name = "cat1";
             this.cat1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cat1.Size = new System.Drawing.Size(1080, 609);
+            this.cat1.Size = new System.Drawing.Size(391, 707);
             this.cat1.TabIndex = 0;
             this.cat1.Text = "cat1";
             // 
@@ -1715,7 +1603,7 @@
             // 
             this.label66.BackColor = System.Drawing.Color.White;
             this.label66.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(88, 14);
+            this.label66.Location = new System.Drawing.Point(25, 14);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(341, 38);
             this.label66.TabIndex = 17;
@@ -1725,22 +1613,20 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.comboBox8);
-            this.groupBox1.Controls.Add(this.btnTshirtOrder);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnTshirtPurchase);
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(21, 80);
+            this.groupBox1.Location = new System.Drawing.Point(6, 60);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(440, 500);
+            this.groupBox1.Size = new System.Drawing.Size(385, 640);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -1756,29 +1642,9 @@
             this.comboBox8.Location = new System.Drawing.Point(203, 33);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(207, 32);
+            this.comboBox8.Size = new System.Drawing.Size(170, 32);
             this.comboBox8.Sorted = true;
             this.comboBox8.TabIndex = 13;
-            // 
-            // btnTshirtOrder
-            // 
-            this.btnTshirtOrder.BackColor = System.Drawing.SystemColors.Window;
-            this.btnTshirtOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTshirtOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTshirtOrder.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnTshirtOrder.FlatAppearance.BorderSize = 2;
-            this.btnTshirtOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTshirtOrder.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTshirtOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnTshirtOrder.Image = global::ISTN3AS.Properties.Resources.order;
-            this.btnTshirtOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTshirtOrder.Location = new System.Drawing.Point(73, 402);
-            this.btnTshirtOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTshirtOrder.Name = "btnTshirtOrder";
-            this.btnTshirtOrder.Size = new System.Drawing.Size(300, 78);
-            this.btnTshirtOrder.TabIndex = 12;
-            this.btnTshirtOrder.Text = "Add To Order";
-            this.btnTshirtOrder.UseVisualStyleBackColor = false;
             // 
             // radioButton2
             // 
@@ -1813,26 +1679,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Chooose Type : ";
             // 
-            // btnTshirtPurchase
-            // 
-            this.btnTshirtPurchase.BackColor = System.Drawing.SystemColors.Window;
-            this.btnTshirtPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTshirtPurchase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTshirtPurchase.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnTshirtPurchase.FlatAppearance.BorderSize = 2;
-            this.btnTshirtPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTshirtPurchase.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTshirtPurchase.ForeColor = System.Drawing.Color.Black;
-            this.btnTshirtPurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
-            this.btnTshirtPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTshirtPurchase.Location = new System.Drawing.Point(73, 319);
-            this.btnTshirtPurchase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTshirtPurchase.Name = "btnTshirtPurchase";
-            this.btnTshirtPurchase.Size = new System.Drawing.Size(300, 78);
-            this.btnTshirtPurchase.TabIndex = 6;
-            this.btnTshirtPurchase.Text = "Add To Cart";
-            this.btnTshirtPurchase.UseVisualStyleBackColor = false;
-            // 
             // comboBox3
             // 
             this.comboBox3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1845,7 +1691,7 @@
             this.comboBox3.Location = new System.Drawing.Point(203, 202);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(207, 32);
+            this.comboBox3.Size = new System.Drawing.Size(170, 32);
             this.comboBox3.Sorted = true;
             this.comboBox3.TabIndex = 5;
             // 
@@ -1871,7 +1717,7 @@
             this.comboBox2.Location = new System.Drawing.Point(203, 149);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(207, 32);
+            this.comboBox2.Size = new System.Drawing.Size(170, 32);
             this.comboBox2.Sorted = true;
             this.comboBox2.TabIndex = 3;
             // 
@@ -1905,7 +1751,7 @@
             this.comboBox1.Location = new System.Drawing.Point(203, 89);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 32);
+            this.comboBox1.Size = new System.Drawing.Size(170, 32);
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 0;
             // 
@@ -1921,11 +1767,12 @@
             this.tabcontrol1.Controls.Add(this.orders);
             this.tabcontrol1.Controls.Add(this.returnItem);
             this.tabcontrol1.Controls.Add(this.cat1);
+            this.tabcontrol1.Controls.Add(this.tabPage1);
             this.tabcontrol1.Location = new System.Drawing.Point(324, 133);
             this.tabcontrol1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1088, 638);
+            this.tabcontrol1.Size = new System.Drawing.Size(399, 736);
             this.tabcontrol1.TabIndex = 5;
             // 
             // accCreate
@@ -1937,7 +1784,7 @@
             this.accCreate.Location = new System.Drawing.Point(4, 25);
             this.accCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accCreate.Name = "accCreate";
-            this.accCreate.Size = new System.Drawing.Size(1080, 609);
+            this.accCreate.Size = new System.Drawing.Size(399, 705);
             this.accCreate.TabIndex = 7;
             this.accCreate.Text = "AccCreate";
             // 
@@ -2162,7 +2009,7 @@
             this.orders.Location = new System.Drawing.Point(4, 25);
             this.orders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orders.Name = "orders";
-            this.orders.Size = new System.Drawing.Size(1080, 609);
+            this.orders.Size = new System.Drawing.Size(399, 705);
             this.orders.TabIndex = 8;
             this.orders.Text = "orders";
             // 
@@ -2286,7 +2133,7 @@
             this.returnItem.Location = new System.Drawing.Point(4, 25);
             this.returnItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.returnItem.Name = "returnItem";
-            this.returnItem.Size = new System.Drawing.Size(1080, 609);
+            this.returnItem.Size = new System.Drawing.Size(399, 705);
             this.returnItem.TabIndex = 9;
             this.returnItem.Text = "return";
             // 
@@ -2549,18 +2396,29 @@
             this.label41.Size = new System.Drawing.Size(0, 24);
             this.label41.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(399, 705);
+            this.tabPage1.TabIndex = 10;
+            this.tabPage1.Text = "tabPage1";
+            // 
             // richItemsPurchased
             // 
             this.richItemsPurchased.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.richItemsPurchased.Location = new System.Drawing.Point(5, 71);
+            this.richItemsPurchased.Location = new System.Drawing.Point(6, 72);
             this.richItemsPurchased.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richItemsPurchased.Name = "richItemsPurchased";
-            this.richItemsPurchased.Size = new System.Drawing.Size(532, 448);
+            this.richItemsPurchased.Size = new System.Drawing.Size(412, 461);
             this.richItemsPurchased.TabIndex = 19;
             this.richItemsPurchased.Text = "Item Type                         Item Name                          Item Cost";
             // 
             // pnlCompany
             // 
+            this.pnlCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCompany.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlCompany.BackgroundImage = global::ISTN3AS.Properties.Resources.Frost;
             this.pnlCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -2571,16 +2429,17 @@
             this.pnlCompany.Location = new System.Drawing.Point(324, -2);
             this.pnlCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(1087, 100);
+            this.pnlCompany.Size = new System.Drawing.Size(1375, 100);
             this.pnlCompany.TabIndex = 3;
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackgroundImage = global::ISTN3AS.Properties.Resources.Frost;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Castellar", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(936, 26);
+            this.button1.Location = new System.Drawing.Point(1195, 27);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(59, 47);
@@ -2590,11 +2449,12 @@
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.BackgroundImage = global::ISTN3AS.Properties.Resources.Frost;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Font = new System.Drawing.Font("Castellar", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Snow;
-            this.btnExit.Location = new System.Drawing.Point(1000, 26);
+            this.btnExit.Location = new System.Drawing.Point(1260, 27);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(59, 47);
@@ -2605,10 +2465,11 @@
             // 
             // lblCompany
             // 
+            this.lblCompany.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCompany.Font = new System.Drawing.Font("Castellar", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompany.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCompany.Image = global::ISTN3AS.Properties.Resources.Frost;
-            this.lblCompany.Location = new System.Drawing.Point(280, 2);
+            this.lblCompany.Location = new System.Drawing.Point(420, 2);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(525, 95);
             this.lblCompany.TabIndex = 0;
@@ -2641,7 +2502,7 @@
             this.pnlOptions.Location = new System.Drawing.Point(0, 0);
             this.pnlOptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(325, 949);
+            this.pnlOptions.Size = new System.Drawing.Size(325, 869);
             this.pnlOptions.TabIndex = 0;
             // 
             // lblUsrname
@@ -2723,6 +2584,7 @@
             this.pictureBox10.Size = new System.Drawing.Size(47, 42);
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // btnReturns
             // 
@@ -2893,18 +2755,21 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::ISTN3AS.Properties.Resources.Frost;
             this.panel1.Controls.Add(this.btnCat5);
             this.panel1.Controls.Add(this.btnCat4);
             this.panel1.Controls.Add(this.btnCat3);
-            this.panel1.Controls.Add(this.btnCat1);
             this.panel1.Controls.Add(this.btnCat2);
+            this.panel1.Controls.Add(this.btnCat1);
             this.panel1.Location = new System.Drawing.Point(324, 100);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 69);
+            this.panel1.Size = new System.Drawing.Size(1481, 69);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnCat5
             // 
@@ -2917,7 +2782,7 @@
             this.btnCat5.ForeColor = System.Drawing.Color.White;
             this.btnCat5.Image = global::ISTN3AS.Properties.Resources.dumbell;
             this.btnCat5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCat5.Location = new System.Drawing.Point(904, 15);
+            this.btnCat5.Location = new System.Drawing.Point(1196, 15);
             this.btnCat5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCat5.Name = "btnCat5";
             this.btnCat5.Size = new System.Drawing.Size(155, 46);
@@ -2938,7 +2803,7 @@
             this.btnCat4.ForeColor = System.Drawing.Color.White;
             this.btnCat4.Image = global::ISTN3AS.Properties.Resources.sports_and_competition;
             this.btnCat4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCat4.Location = new System.Drawing.Point(685, 15);
+            this.btnCat4.Location = new System.Drawing.Point(916, 15);
             this.btnCat4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCat4.Name = "btnCat4";
             this.btnCat4.Size = new System.Drawing.Size(155, 46);
@@ -2959,7 +2824,7 @@
             this.btnCat3.ForeColor = System.Drawing.Color.White;
             this.btnCat3.Image = global::ISTN3AS.Properties.Resources.cap;
             this.btnCat3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCat3.Location = new System.Drawing.Point(467, 15);
+            this.btnCat3.Location = new System.Drawing.Point(619, 15);
             this.btnCat3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCat3.Name = "btnCat3";
             this.btnCat3.Size = new System.Drawing.Size(155, 46);
@@ -2967,6 +2832,26 @@
             this.btnCat3.Text = "Caps";
             this.btnCat3.UseVisualStyleBackColor = false;
             this.btnCat3.Click += new System.EventHandler(this.btnCat3_Click);
+            // 
+            // btnCat2
+            // 
+            this.btnCat2.BackColor = System.Drawing.SystemColors.Window;
+            this.btnCat2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCat2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(59)))), ((int)(((byte)(149)))));
+            this.btnCat2.FlatAppearance.BorderSize = 2;
+            this.btnCat2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCat2.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCat2.ForeColor = System.Drawing.Color.White;
+            this.btnCat2.Image = global::ISTN3AS.Properties.Resources.sneaker;
+            this.btnCat2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCat2.Location = new System.Drawing.Point(332, 15);
+            this.btnCat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCat2.Name = "btnCat2";
+            this.btnCat2.Size = new System.Drawing.Size(155, 46);
+            this.btnCat2.TabIndex = 1;
+            this.btnCat2.Text = "Shoes";
+            this.btnCat2.UseVisualStyleBackColor = false;
+            this.btnCat2.Click += new System.EventHandler(this.btnCat2_Click);
             // 
             // btnCat1
             // 
@@ -2989,56 +2874,21 @@
             this.btnCat1.UseVisualStyleBackColor = false;
             this.btnCat1.Click += new System.EventHandler(this.btnCat1_Click);
             // 
-            // btnCat2
-            // 
-            this.btnCat2.BackColor = System.Drawing.SystemColors.Window;
-            this.btnCat2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCat2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(59)))), ((int)(((byte)(149)))));
-            this.btnCat2.FlatAppearance.BorderSize = 2;
-            this.btnCat2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCat2.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCat2.ForeColor = System.Drawing.Color.White;
-            this.btnCat2.Image = global::ISTN3AS.Properties.Resources.sneaker;
-            this.btnCat2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCat2.Location = new System.Drawing.Point(252, 15);
-            this.btnCat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCat2.Name = "btnCat2";
-            this.btnCat2.Size = new System.Drawing.Size(155, 46);
-            this.btnCat2.TabIndex = 1;
-            this.btnCat2.Text = "Shoes";
-            this.btnCat2.UseVisualStyleBackColor = false;
-            this.btnCat2.Click += new System.EventHandler(this.btnCat2_Click);
-            // 
             // gbItemsScroll
             // 
-            this.gbItemsScroll.Controls.Add(this.button5);
+            this.gbItemsScroll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbItemsScroll.Controls.Add(this.button2);
-            this.gbItemsScroll.Controls.Add(this.panel3);
+            this.gbItemsScroll.Controls.Add(this.button5);
             this.gbItemsScroll.Controls.Add(this.richItemsPurchased);
-            this.gbItemsScroll.Location = new System.Drawing.Point(855, 175);
+            this.gbItemsScroll.Controls.Add(this.panel3);
+            this.gbItemsScroll.Location = new System.Drawing.Point(1275, 168);
             this.gbItemsScroll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbItemsScroll.Name = "gbItemsScroll";
             this.gbItemsScroll.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbItemsScroll.Size = new System.Drawing.Size(545, 583);
+            this.gbItemsScroll.Size = new System.Drawing.Size(424, 699);
             this.gbItemsScroll.TabIndex = 20;
             this.gbItemsScroll.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.button5.Image = global::ISTN3AS.Properties.Resources.process;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(315, 526);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(213, 50);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Process";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -3049,13 +2899,30 @@
             this.button2.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button2.Image = global::ISTN3AS.Properties.Resources.quit;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(24, 526);
+            this.button2.Location = new System.Drawing.Point(6, 640);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(213, 50);
+            this.button2.Size = new System.Drawing.Size(192, 50);
             this.button2.TabIndex = 21;
             this.button2.Text = "Delete Item";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.button5.Image = global::ISTN3AS.Properties.Resources.process;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(218, 640);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(200, 50);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "Process";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel3
             // 
@@ -3063,10 +2930,10 @@
             this.panel3.Controls.Add(this.btnSearch2);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(5, 21);
+            this.panel3.Location = new System.Drawing.Point(8, 8);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(442, 39);
+            this.panel3.Size = new System.Drawing.Size(410, 40);
             this.panel3.TabIndex = 20;
             // 
             // btnSearch2
@@ -3076,7 +2943,7 @@
             this.btnSearch2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch2.Location = new System.Drawing.Point(387, 2);
+            this.btnSearch2.Location = new System.Drawing.Point(356, 2);
             this.btnSearch2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch2.Name = "btnSearch2";
             this.btnSearch2.Size = new System.Drawing.Size(44, 31);
@@ -3086,7 +2953,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 5);
+            this.label5.Location = new System.Drawing.Point(3, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 32);
             this.label5.TabIndex = 8;
@@ -3098,25 +2965,168 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 31);
+            this.textBox2.Size = new System.Drawing.Size(215, 31);
             this.textBox2.TabIndex = 11;
+            // 
+            // grpBoxDBgrid
+            // 
+            this.grpBoxDBgrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.grpBoxDBgrid.Controls.Add(this.dataGridView1);
+            this.grpBoxDBgrid.Controls.Add(this.btnShoeOrder);
+            this.grpBoxDBgrid.Controls.Add(this.btnShoePurchase);
+            this.grpBoxDBgrid.Location = new System.Drawing.Point(733, 168);
+            this.grpBoxDBgrid.Name = "grpBoxDBgrid";
+            this.grpBoxDBgrid.Size = new System.Drawing.Size(548, 699);
+            this.grpBoxDBgrid.TabIndex = 22;
+            this.grpBoxDBgrid.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.prodIDDataGridViewTextBoxColumn,
+            this.prodNameDataGridViewTextBoxColumn,
+            this.costPriceDataGridViewTextBoxColumn,
+            this.prodQuantityDataGridViewTextBoxColumn,
+            this.discountDataGridViewTextBoxColumn,
+            this.sellingPriceDataGridViewTextBoxColumn,
+            this.reorderStatusDataGridViewTextBoxColumn,
+            this.brandIDDataGridViewTextBoxColumn,
+            this.sizeDataGridViewTextBoxColumn,
+            this.colourDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.productTblBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 64);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(536, 461);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // prodIDDataGridViewTextBoxColumn
+            // 
+            this.prodIDDataGridViewTextBoxColumn.DataPropertyName = "ProdID";
+            this.prodIDDataGridViewTextBoxColumn.HeaderText = "ProdID";
+            this.prodIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prodIDDataGridViewTextBoxColumn.Name = "prodIDDataGridViewTextBoxColumn";
+            this.prodIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prodIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prodNameDataGridViewTextBoxColumn
+            // 
+            this.prodNameDataGridViewTextBoxColumn.DataPropertyName = "ProdName";
+            this.prodNameDataGridViewTextBoxColumn.HeaderText = "ProdName";
+            this.prodNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prodNameDataGridViewTextBoxColumn.Name = "prodNameDataGridViewTextBoxColumn";
+            this.prodNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // costPriceDataGridViewTextBoxColumn
+            // 
+            this.costPriceDataGridViewTextBoxColumn.DataPropertyName = "CostPrice";
+            this.costPriceDataGridViewTextBoxColumn.HeaderText = "CostPrice";
+            this.costPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.costPriceDataGridViewTextBoxColumn.Name = "costPriceDataGridViewTextBoxColumn";
+            this.costPriceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prodQuantityDataGridViewTextBoxColumn
+            // 
+            this.prodQuantityDataGridViewTextBoxColumn.DataPropertyName = "ProdQuantity";
+            this.prodQuantityDataGridViewTextBoxColumn.HeaderText = "ProdQuantity";
+            this.prodQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prodQuantityDataGridViewTextBoxColumn.Name = "prodQuantityDataGridViewTextBoxColumn";
+            this.prodQuantityDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // discountDataGridViewTextBoxColumn
+            // 
+            this.discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
+            this.discountDataGridViewTextBoxColumn.HeaderText = "Discount";
+            this.discountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
+            this.discountDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sellingPriceDataGridViewTextBoxColumn
+            // 
+            this.sellingPriceDataGridViewTextBoxColumn.DataPropertyName = "SellingPrice";
+            this.sellingPriceDataGridViewTextBoxColumn.HeaderText = "SellingPrice";
+            this.sellingPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sellingPriceDataGridViewTextBoxColumn.Name = "sellingPriceDataGridViewTextBoxColumn";
+            this.sellingPriceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // reorderStatusDataGridViewTextBoxColumn
+            // 
+            this.reorderStatusDataGridViewTextBoxColumn.DataPropertyName = "ReorderStatus";
+            this.reorderStatusDataGridViewTextBoxColumn.HeaderText = "ReorderStatus";
+            this.reorderStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.reorderStatusDataGridViewTextBoxColumn.Name = "reorderStatusDataGridViewTextBoxColumn";
+            this.reorderStatusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // brandIDDataGridViewTextBoxColumn
+            // 
+            this.brandIDDataGridViewTextBoxColumn.DataPropertyName = "BrandID";
+            this.brandIDDataGridViewTextBoxColumn.HeaderText = "BrandID";
+            this.brandIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.brandIDDataGridViewTextBoxColumn.Name = "brandIDDataGridViewTextBoxColumn";
+            this.brandIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sizeDataGridViewTextBoxColumn
+            // 
+            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
+            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
+            this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
+            this.sizeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // colourDataGridViewTextBoxColumn
+            // 
+            this.colourDataGridViewTextBoxColumn.DataPropertyName = "Colour";
+            this.colourDataGridViewTextBoxColumn.HeaderText = "Colour";
+            this.colourDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.colourDataGridViewTextBoxColumn.Name = "colourDataGridViewTextBoxColumn";
+            this.colourDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // productTblBindingSource
+            // 
+            this.productTblBindingSource.DataMember = "ProductTbl";
+            this.productTblBindingSource.DataSource = this.group6DataSet;
+            // 
+            // group6DataSet
+            // 
+            this.group6DataSet.DataSetName = "group6DataSet";
+            this.group6DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productTblTableAdapter
+            // 
+            this.productTblTableAdapter.ClearBeforeFill = true;
             // 
             // salesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1409, 949);
-            this.Controls.Add(this.tabcontrol1);
+            this.ClientSize = new System.Drawing.Size(1700, 869);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlCompany);
             this.Controls.Add(this.pnlOptions);
+            this.Controls.Add(this.tabcontrol1);
+            this.Controls.Add(this.grpBoxDBgrid);
             this.Controls.Add(this.gbItemsScroll);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "salesControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "salesControl";
+            this.Load += new System.EventHandler(this.salesControl_Load);
             this.memberAcc.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
@@ -3181,6 +3191,10 @@
             this.gbItemsScroll.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.grpBoxDBgrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3206,7 +3220,6 @@
         public System.Windows.Forms.Button btnCat5;
         public System.Windows.Forms.Button btnCat4;
         private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.Button btnTshirtPurchase;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -3258,7 +3271,6 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
-        public System.Windows.Forms.Button btnTshirtOrder;
         public System.Windows.Forms.Button btnReturns;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -3324,10 +3336,8 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.GroupBox groupBox15;
-        public System.Windows.Forms.Button btnCapOrder;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
-        public System.Windows.Forms.Button btnCapPurchase;
         private System.Windows.Forms.ComboBox comboBox14;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.ComboBox comboBox15;
@@ -3337,9 +3347,7 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.ComboBox comboBox13;
-        public System.Windows.Forms.Button btnAccessOrder;
         private System.Windows.Forms.Label label72;
-        public System.Windows.Forms.Button btnAccessPurchase;
         private System.Windows.Forms.ComboBox comboBox17;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label75;
@@ -3347,9 +3355,7 @@
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.ComboBox comboBox18;
-        public System.Windows.Forms.Button btnGymOrder;
         private System.Windows.Forms.Label label74;
-        public System.Windows.Forms.Button btnGymPurchase;
         private System.Windows.Forms.ComboBox comboBox20;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label78;
@@ -3397,5 +3403,22 @@
         public System.Windows.Forms.TabPage orders;
         public System.Windows.Forms.TabPage returnItem;
         public System.Windows.Forms.GroupBox gbItemsScroll;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox grpBoxDBgrid;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private group6DataSet group6DataSet;
+        private System.Windows.Forms.BindingSource productTblBindingSource;
+        private group6DataSetTableAdapters.ProductTblTableAdapter productTblTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodQuantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellingPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reorderStatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colourDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
     }
 }

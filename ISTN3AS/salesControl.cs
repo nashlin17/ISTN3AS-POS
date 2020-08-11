@@ -17,11 +17,11 @@ namespace ISTN3AS
         public salesControl()
         {
             InitializeComponent();
+        
             sc.Intialise(this);
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = purchase;
-            tabcontrol1.Width = 1088;
-            tabcontrol1.Height = 638;
+            tabcontrol1.Size = new Size(1382, 734);
             btnItems.Enabled = false;
 
 
@@ -36,35 +36,30 @@ namespace ISTN3AS
         {
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat1;
-            gbItemsScroll.BringToFront();
-       
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
+            tabcontrol1.Size = new Size(399, 640);
+
+
+
+
         }
 
         private void btnCashOut_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = purchase;
-            gbItemsScroll.SendToBack();
-            tabcontrol1.Width = 1088;
-            tabcontrol1.Height = 638;
+            
+          
         }
 
         private void btnCat1_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat1;
-            gbItemsScroll.BringToFront();
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
         }
 
         private void btnCat2_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat2;
-            gbItemsScroll.BringToFront();
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
+           
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -86,27 +81,23 @@ namespace ISTN3AS
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = memberAcc;
-            gbItemsScroll.SendToBack();
-            tabcontrol1.Width = 1088;
-            tabcontrol1.Height = 638;
+         
         }
 
         private void btnAdd2_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = orders;
-            gbItemsScroll.SendToBack();
-            tabcontrol1.Width = 1088;
-            tabcontrol1.Height = 638;
+            tabcontrol1.Size = new Size(1382, 734);
+
         }
 
         private void btnReturns_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = returnItem;
-            gbItemsScroll.SendToBack();
-            tabcontrol1.Width = 1088;
-            tabcontrol1.Height = 638;
+            tabcontrol1.Size = new Size(1382, 734);
+
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -118,9 +109,7 @@ namespace ISTN3AS
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = accCreate;
-            gbItemsScroll.SendToBack();
-            tabcontrol1.Width = 1088;
-            tabcontrol1.Height = 638;
+            tabcontrol1.Size = new Size(1382, 734);
           
         }
 
@@ -132,25 +121,19 @@ namespace ISTN3AS
         private void btnCat3_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat3;
-            gbItemsScroll.BringToFront();
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
+          
         }
 
         private void btnCat4_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat4;
-            gbItemsScroll.BringToFront();
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
+       
         }
 
         private void btnCat5_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat5;
-            gbItemsScroll.BringToFront();
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -239,8 +222,7 @@ namespace ISTN3AS
             sc.Purchase(this);
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat1;
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
+            tabcontrol1.Size = new Size(399, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
         }
@@ -250,10 +232,26 @@ namespace ISTN3AS
             sc.Order(this);
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat1;
-            tabcontrol1.Width = 535;
-            tabcontrol1.Height = 638;
+            tabcontrol1.Size = new Size(399, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
+        }
+
+        private void salesControl_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'group6DataSet.ProductTbl' table. You can move, or remove it, as needed.
+            this.productTblTableAdapter.Fill(this.group6DataSet.ProductTbl);
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

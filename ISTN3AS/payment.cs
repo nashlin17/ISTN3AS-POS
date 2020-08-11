@@ -52,8 +52,8 @@ namespace ISTN3AS
             sc.btnMenuPurchase.Enabled = true;
             sc.tabcontrol1.SelectedIndex=4 ;
             sc.gbItemsScroll.SendToBack();
-            sc.tabcontrol1.Width = 1088;
-            sc.tabcontrol1.Height = 638;
+            sc.tabcontrol1.Width = 1382;
+            sc.tabcontrol1.Height = 734;
             this.Close();
         }
 
