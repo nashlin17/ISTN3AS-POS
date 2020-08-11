@@ -36,7 +36,7 @@ namespace ISTN3AS
         {
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat1;
-            tabcontrol1.Size = new Size(399, 640);
+            tabcontrol1.Size = new Size(307, 640);
 
 
 
@@ -222,7 +222,7 @@ namespace ISTN3AS
             sc.Purchase(this);
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat1;
-            tabcontrol1.Size = new Size(399, 640);
+            tabcontrol1.Size = new Size(307, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
         }
@@ -232,7 +232,7 @@ namespace ISTN3AS
             sc.Order(this);
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat1;
-            tabcontrol1.Size = new Size(399, 640);
+            tabcontrol1.Size = new Size(307, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
         }
@@ -250,6 +250,16 @@ namespace ISTN3AS
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cat2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
