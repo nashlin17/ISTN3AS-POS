@@ -1452,7 +1452,6 @@
             this.cat2.Size = new System.Drawing.Size(273, 572);
             this.cat2.TabIndex = 1;
             this.cat2.Text = "cat2";
-            this.cat2.Click += new System.EventHandler(this.cat2_Click);
             // 
             // groupBox14
             // 

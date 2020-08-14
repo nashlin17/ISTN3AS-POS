@@ -16,6 +16,7 @@ namespace ISTN3AS
     {
         cls_itemComp sc = new cls_itemComp();
         private bool filterOn = false;
+        String FilterParameters = "";
         public salesControl()
         {
             InitializeComponent();
@@ -48,20 +49,20 @@ namespace ISTN3AS
         private void btnCashOut_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
-            tabcontrol1.SelectedTab = purchase;
+            //tabcontrol1.SelectedTab = purchase;
 
 
         }
 
         private void btnCat1_Click(object sender, EventArgs e)
         {
-            tabcontrol1.SelectedTab = cat1;
+            //tabcontrol1.SelectedTab = cat1;
             categorySelceted("T-Shirt");
         }
 
         private void btnCat2_Click(object sender, EventArgs e)
         {
-            tabcontrol1.SelectedTab = cat2;
+            //tabcontrol1.SelectedTab = cat2;
             categorySelceted("Shoe");
 
         }
@@ -109,20 +110,20 @@ namespace ISTN3AS
 
         private void btnCat3_Click(object sender, EventArgs e)
         {
-            tabcontrol1.SelectedTab = cat3;
+            //tabcontrol1.SelectedTab = cat3;
             categorySelceted("Cap");
 
         }
 
         private void btnCat4_Click(object sender, EventArgs e)
         {
-            tabcontrol1.SelectedTab = cat4;
+            //tabcontrol1.SelectedTab = cat4;
             categorySelceted("Accessories");
         }
 
         private void btnCat5_Click(object sender, EventArgs e)
         {
-            tabcontrol1.SelectedTab = cat5;
+            //tabcontrol1.SelectedTab = cat5;
             categorySelceted("Equipment");
 
         }
@@ -205,7 +206,8 @@ namespace ISTN3AS
         {
             sc.Purchase(this);
             sc.Showbuttons(this);
-            tabcontrol1.SelectedTab = cat1;
+            tabcontrol1.SelectedTab = cat4;
+            this.categoryFIlterTA.AllProducts(this.productDS.CategoryFIlter);
             tabcontrol1.Size = new Size(307, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
@@ -240,10 +242,6 @@ namespace ISTN3AS
 
         }
 
-        private void cat2_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void button20_Click(object sender, EventArgs e)
@@ -268,6 +266,8 @@ namespace ISTN3AS
             try
             {
                 this.categoryFIlterTA.FilterCategory(this.productDS.CategoryFIlter, category);
+                cbxDefaultIndex();
+                //FilterParameters = "";
                 this.colourTblTableAdapter1.populateColour(this.productFilterDS.ColourTbl, category);
                 this.brandTblTableAdapter1.populateBrand(this.productFilterDS.BrandTbl, category);
                 this.sizeTblTableAdapter1.populateSize(this.productFilterDS.SizeTbl, category);
@@ -276,16 +276,8 @@ namespace ISTN3AS
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-            cbxDefaultIndex();
-            
-
-
+            cbxDefaultIndex();  
             filterOn = true;
-
-           // populateCBXBrand(category);
-            //populateCBXColour(category);
-            //popluateCBXSize(category);
-
         }
 
         private void cbxDefaultIndex()
@@ -293,20 +285,8 @@ namespace ISTN3AS
             cbxColour_Accessories.SelectedIndex = -1;
             cbxBrand_Accessories.SelectedIndex = -1;
             cbxSize_Accessories.SelectedIndex = -1;
-
-            
-
-            cbxColour_Caps.SelectedIndex = -1;
-            cbxBrand_Caps.SelectedIndex = -1;
-            cbxSize_Caps.SelectedIndex = -1;
-
-            cbxBrand_Shoes.SelectedIndex = -1;
-            cbxColour_Shoes.SelectedIndex = -1;
-            cbxSize_Shoes.SelectedIndex = -1;
-
-            cbxBrand_TShirts.SelectedIndex = -1;
-            cbxColour_TShirts.SelectedIndex = -1;
-            cbxSize_TShirts.SelectedIndex = -1;
+            categoryFIlterBS.RemoveFilter();
+            //FilterParameters = "";
         }
 
         private void cbxSize_Accessories_SelectedIndexChanged(object sender, EventArgs e)
@@ -322,9 +302,8 @@ namespace ISTN3AS
         {
             if (filterOn)
             {
-                FilterAccessories();
+               FilterAccessories();
             }
-            //
         }
 
         private void cbxColour_Accessories_SelectedIndexChanged(object sender, EventArgs e)
@@ -337,7 +316,7 @@ namespace ISTN3AS
 
         private void FilterAccessories()
         {
-            String FilterParameters = "";
+            FilterParameters = "";
             if (cbxColour_Accessories.SelectedIndex != -1)
             {
                 if (FilterParameters.Length == 0)
@@ -348,7 +327,6 @@ namespace ISTN3AS
                 {
                     FilterParameters += "AND Colour = '" + cbxColour_Accessories.Text + "'";
                 }
-                MessageBox.Show(FilterParameters);
             }
             if (cbxBrand_Accessories.SelectedIndex != -1)
             {
@@ -360,7 +338,6 @@ namespace ISTN3AS
                 {
                     FilterParameters += "AND BrandName = '" + cbxBrand_Accessories.Text + "'";
                 }
-                MessageBox.Show(FilterParameters);
             }
             if (cbxSize_Accessories.SelectedIndex != -1)
             {
@@ -373,10 +350,12 @@ namespace ISTN3AS
                 {
                     FilterParameters += " AND Size = '" + cbxSize_Accessories.Text + "'";
                 }
-                MessageBox.Show(FilterParameters);
             }
-
-            //categoryFIlterBS.Filter = FilterParameters;
+            if (filterOn)
+            {
+                categoryFIlterBS.Filter = FilterParameters;
+            }
+               
         }
 
     }

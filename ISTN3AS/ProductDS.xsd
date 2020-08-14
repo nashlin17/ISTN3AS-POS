@@ -32,7 +32,20 @@ WHERE        (ProductTbl.Category LIKE @cat)</CommandText>
               <Mapping SourceColumn="Colour" DataSetColumn="Colour" />
               <Mapping SourceColumn="Size" DataSetColumn="Size" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DBConnection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="AllProducts" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="AllProducts" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AllProducts">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProductTbl.ProdName, ColourTbl.Colour, SizeTbl.Size, BrandTbl.BrandName, ProductTbl.SellingPrice
+FROM            BrandTbl INNER JOIN
+                         ProductTbl ON BrandTbl.BrandID = ProductTbl.BrandID INNER JOIN
+                         ColourTbl ON ProductTbl.ColourID = ColourTbl.ColourID INNER JOIN
+                         SizeTbl ON ProductTbl.SizeID = SizeTbl.SizeID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
