@@ -44,7 +44,7 @@ namespace ISTN3AS
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("Invalid Login Details");
+                MessageBox.Show(ex.Message);
             }
             
         }

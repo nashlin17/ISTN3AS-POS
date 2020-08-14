@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +15,11 @@ namespace ISTN3AS
     public partial class salesControl : Form
     {
         cls_itemComp sc = new cls_itemComp();
-      
+        private bool filterOn = false;
         public salesControl()
         {
             InitializeComponent();
-        
+
             sc.Intialise(this);
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = purchase;
@@ -47,23 +49,20 @@ namespace ISTN3AS
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = purchase;
-            
-          
+
+
         }
 
         private void btnCat1_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat1;
+            categorySelceted("T-Shirt");
         }
 
         private void btnCat2_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat2;
-           
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
+            categorySelceted("Shoe");
 
         }
 
@@ -72,16 +71,11 @@ namespace ISTN3AS
             this.Close();
         }
 
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCustAcc_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = memberAcc;
-         
+
         }
 
         private void btnAdd2_Click(object sender, EventArgs e)
@@ -100,17 +94,12 @@ namespace ISTN3AS
 
         }
 
-        private void button16_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = accCreate;
             tabcontrol1.Size = new Size(1382, 734);
-          
+
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,19 +110,21 @@ namespace ISTN3AS
         private void btnCat3_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat3;
-          
+            categorySelceted("Cap");
+
         }
 
         private void btnCat4_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat4;
-       
+            categorySelceted("Accessories");
         }
 
         private void btnCat5_Click(object sender, EventArgs e)
         {
             tabcontrol1.SelectedTab = cat5;
-           
+            categorySelceted("Equipment");
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -142,13 +133,6 @@ namespace ISTN3AS
             payment.ShowDialog();
 
         }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
 
         private void rgbOrdMem_Click(object sender, EventArgs e)
         {
@@ -169,7 +153,7 @@ namespace ISTN3AS
 
         private void rgbStCust_CheckedChanged(object sender, EventArgs e)
         {
-            if (rgbStCust.Checked==true)
+            if (rgbStCust.Checked == true)
             {
                 lblStMem.Enabled = false;
                 tbxStMem.Enabled = false;
@@ -239,8 +223,10 @@ namespace ISTN3AS
 
         private void salesControl_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'group6DataSet.ColourTbl' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'group6DataSet.ProductTbl' table. You can move, or remove it, as needed.
-            this.productTblTableAdapter.Fill(this.group6DataSet.ProductTbl);
+            //this.productTblTableAdapter.Fill(this.group6DataSet.ProductTbl);
+
 
         }
 
@@ -259,9 +245,139 @@ namespace ISTN3AS
 
         }
 
-        private void comboBox13_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void button20_Click(object sender, EventArgs e)
         {
+            tbxAddress_AccCreation.Clear();
+            tbxCell_AccCreation.Clear();
+            tbxCustAccPass.Clear();
+            tbxEmail_AccCreation.Clear();
+            tbxName_AccCreation.Clear();
+            tbxSurname_AccCreation.Clear();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            insert1.InsertMember(tbxName_AccCreation.Text, tbxSurname_AccCreation.Text, tbxCell_AccCreation.Text, tbxAddress_AccCreation.Text, tbxEmail_AccCreation.Text);
+        }
+
+
+        private void categorySelceted(string category)
+        {
+            filterOn = false;
+            try
+            {
+                this.categoryFIlterTA.FilterCategory(this.productDS.CategoryFIlter, category);
+                this.colourTblTableAdapter1.populateColour(this.productFilterDS.ColourTbl, category);
+                this.brandTblTableAdapter1.populateBrand(this.productFilterDS.BrandTbl, category);
+                this.sizeTblTableAdapter1.populateSize(this.productFilterDS.SizeTbl, category);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            cbxDefaultIndex();
+            
+
+
+            filterOn = true;
+
+           // populateCBXBrand(category);
+            //populateCBXColour(category);
+            //popluateCBXSize(category);
 
         }
+
+        private void cbxDefaultIndex()
+        {
+            cbxColour_Accessories.SelectedIndex = -1;
+            cbxBrand_Accessories.SelectedIndex = -1;
+            cbxSize_Accessories.SelectedIndex = -1;
+
+            
+
+            cbxColour_Caps.SelectedIndex = -1;
+            cbxBrand_Caps.SelectedIndex = -1;
+            cbxSize_Caps.SelectedIndex = -1;
+
+            cbxBrand_Shoes.SelectedIndex = -1;
+            cbxColour_Shoes.SelectedIndex = -1;
+            cbxSize_Shoes.SelectedIndex = -1;
+
+            cbxBrand_TShirts.SelectedIndex = -1;
+            cbxColour_TShirts.SelectedIndex = -1;
+            cbxSize_TShirts.SelectedIndex = -1;
+        }
+
+        private void cbxSize_Accessories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (filterOn)
+            {
+                FilterAccessories();
+            }
+            
+        }
+
+        private void cbxBrand_Accessories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (filterOn)
+            {
+                FilterAccessories();
+            }
+            //
+        }
+
+        private void cbxColour_Accessories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (filterOn)
+            {
+                FilterAccessories();
+            }
+        }
+
+        private void FilterAccessories()
+        {
+            String FilterParameters = "";
+            if (cbxColour_Accessories.SelectedIndex != -1)
+            {
+                if (FilterParameters.Length == 0)
+                {
+                    FilterParameters += "Colour = '" + cbxColour_Accessories.Text + "'";
+                }
+                else
+                {
+                    FilterParameters += "AND Colour = '" + cbxColour_Accessories.Text + "'";
+                }
+                MessageBox.Show(FilterParameters);
+            }
+            if (cbxBrand_Accessories.SelectedIndex != -1)
+            {
+                if (FilterParameters.Length == 0)
+                {
+                    FilterParameters += "BrandName = '" + cbxBrand_Accessories.Text + "'";
+                }
+                else
+                {
+                    FilterParameters += "AND BrandName = '" + cbxBrand_Accessories.Text + "'";
+                }
+                MessageBox.Show(FilterParameters);
+            }
+            if (cbxSize_Accessories.SelectedIndex != -1)
+            {
+                if (FilterParameters.Length == 0)
+                {
+                    
+                    FilterParameters += "Size = '" + cbxSize_Accessories.Text + "'";
+                }
+                else
+                {
+                    FilterParameters += " AND Size = '" + cbxSize_Accessories.Text + "'";
+                }
+                MessageBox.Show(FilterParameters);
+            }
+
+            //categoryFIlterBS.Filter = FilterParameters;
+        }
+
     }
 }

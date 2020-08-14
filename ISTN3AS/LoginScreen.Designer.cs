@@ -215,18 +215,6 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BrandTblTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.MemberTblTableAdapter = null;
-            this.tableAdapterManager.OrderLineTblTableAdapter = null;
-            this.tableAdapterManager.OrderTblTableAdapter = null;
-            this.tableAdapterManager.ProductTblTableAdapter = null;
-            this.tableAdapterManager.ReturnProductTblTableAdapter = null;
-            this.tableAdapterManager.ReturnTblTableAdapter = null;
-            this.tableAdapterManager.StaffTblTableAdapter = null;
-            this.tableAdapterManager.SupplierOrderTblTableAdapter = null;
-            this.tableAdapterManager.SupplierProductLineTableAdapter = null;
-            this.tableAdapterManager.SupplierTblTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ISTN3AS.group6DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // LoginScreen

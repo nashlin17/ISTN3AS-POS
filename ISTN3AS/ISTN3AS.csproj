@@ -53,6 +53,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="group6DataSet.cs">
+      <DependentUpon>group6DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="group6DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,6 +72,16 @@
     </Compile>
     <Compile Include="payment.Designer.cs">
       <DependentUpon>payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductFilterDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductFilterDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +127,28 @@
     </None>
     <None Include="group6DataSet.xss">
       <DependentUpon>group6DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductDS.xsc">
+      <DependentUpon>ProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProductDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductDS.xss">
+      <DependentUpon>ProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProductFilterDS.xsc">
+      <DependentUpon>ProductFilterDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProductFilterDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductFilterDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductFilterDS.xss">
+      <DependentUpon>ProductFilterDS.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

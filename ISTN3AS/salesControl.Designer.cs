@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label colourLabel;
+            System.Windows.Forms.Label brandNameLabel;
+            System.Windows.Forms.Label sizeLabel;
             this.memberAcc = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -89,60 +92,62 @@
             this.cat5 = new System.Windows.Forms.TabPage();
             this.label79 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
-            this.label74 = new System.Windows.Forms.Label();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
+            this.brandNameComboBox = new System.Windows.Forms.ComboBox();
+            this.brandTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productFilterDS = new ISTN3AS.ProductFilterDS();
+            this.colourComboBox = new System.Windows.Forms.ComboBox();
+            this.colourTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sizeComboBox = new System.Windows.Forms.ComboBox();
+            this.sizeTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.productDS = new ISTN3AS.ProductDS();
             this.cat4 = new System.Windows.Forms.TabPage();
             this.label76 = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.cbxSize_Accessories = new System.Windows.Forms.ComboBox();
+            this.cbxColour_Accessories = new System.Windows.Forms.ComboBox();
+            this.cbxBrand_Accessories = new System.Windows.Forms.ComboBox();
             this.label72 = new System.Windows.Forms.Label();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
-            this.comboBox19 = new System.Windows.Forms.ComboBox();
+            this.group6DataSet = new ISTN3AS.group6DataSet();
             this.cat3 = new System.Windows.Forms.TabPage();
             this.label68 = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.cbxSize_Caps = new System.Windows.Forms.ComboBox();
+            this.cbxColour_Caps = new System.Windows.Forms.ComboBox();
+            this.cbxBrand_Caps = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.cat2 = new System.Windows.Forms.TabPage();
-            this.label67 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.cbxSize_Shoes = new System.Windows.Forms.ComboBox();
+            this.cbxColour_Shoes = new System.Windows.Forms.ComboBox();
+            this.cbxBrand_Shoes = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.label60 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.label67 = new System.Windows.Forms.Label();
             this.btnShoeOrder = new System.Windows.Forms.Button();
             this.btnShoePurchase = new System.Windows.Forms.Button();
             this.cat1 = new System.Windows.Forms.TabPage();
             this.label66 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cbxSize_TShirts = new System.Windows.Forms.ComboBox();
+            this.cbxColour_TShirts = new System.Windows.Forms.ComboBox();
+            this.cbxBrand_TShirts = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabcontrol1 = new System.Windows.Forms.TabControl();
             this.accCreate = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -155,13 +160,13 @@
             this.label56 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.tbxCell_AccCreation = new System.Windows.Forms.TextBox();
+            this.tbxAddress_AccCreation = new System.Windows.Forms.TextBox();
+            this.tbxEmail_AccCreation = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.tbxSurname_AccCreation = new System.Windows.Forms.TextBox();
+            this.tbxName_AccCreation = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
@@ -234,21 +239,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.grpBoxDBgrid = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.prodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sellingPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reorderStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.brandIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.group6DataSet = new ISTN3AS.group6DataSet();
-            this.productTblTableAdapter = new ISTN3AS.group6DataSetTableAdapters.ProductTblTableAdapter();
+            this.categoryFIlterDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryFIlterBS = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.insert1 = new ISTN3AS.group6DataSetTableAdapters.Insert();
+            this.categoryFIlterTA = new ISTN3AS.ProductDSTableAdapters.CategoryFIlterTableAdapter();
+            this.tableAdapterManager2 = new ISTN3AS.ProductDSTableAdapters.TableAdapterManager();
+            this.brandTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.BrandTblTableAdapter();
+            this.colourTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.ColourTblTableAdapter();
+            this.sizeTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.SizeTblTableAdapter();
+            colourLabel = new System.Windows.Forms.Label();
+            brandNameLabel = new System.Windows.Forms.Label();
+            sizeLabel = new System.Windows.Forms.Label();
             this.memberAcc.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -269,8 +276,14 @@
             this.groupBox4.SuspendLayout();
             this.cat5.SuspendLayout();
             this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brandTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productFilterDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colourTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
             this.cat4.SuspendLayout();
             this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).BeginInit();
             this.cat3.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.cat2.SuspendLayout();
@@ -304,10 +317,37 @@
             this.gbItemsScroll.SuspendLayout();
             this.panel3.SuspendLayout();
             this.grpBoxDBgrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productTblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // colourLabel
+            // 
+            colourLabel.AutoSize = true;
+            colourLabel.Location = new System.Drawing.Point(52, 164);
+            colourLabel.Name = "colourLabel";
+            colourLabel.Size = new System.Drawing.Size(40, 13);
+            colourLabel.TabIndex = 14;
+            colourLabel.Text = "Colour:";
+            // 
+            // brandNameLabel
+            // 
+            brandNameLabel.AutoSize = true;
+            brandNameLabel.Location = new System.Drawing.Point(23, 110);
+            brandNameLabel.Name = "brandNameLabel";
+            brandNameLabel.Size = new System.Drawing.Size(69, 13);
+            brandNameLabel.TabIndex = 15;
+            brandNameLabel.Text = "Brand Name:";
+            // 
+            // sizeLabel
+            // 
+            sizeLabel.AutoSize = true;
+            sizeLabel.Location = new System.Drawing.Point(32, 50);
+            sizeLabel.Name = "sizeLabel";
+            sizeLabel.Size = new System.Drawing.Size(30, 13);
+            sizeLabel.TabIndex = 13;
+            sizeLabel.Text = "Size:";
             // 
             // memberAcc
             // 
@@ -316,9 +356,9 @@
             this.memberAcc.Controls.Add(this.groupBox2);
             this.memberAcc.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memberAcc.Location = new System.Drawing.Point(4, 22);
-            this.memberAcc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.memberAcc.Margin = new System.Windows.Forms.Padding(2);
             this.memberAcc.Name = "memberAcc";
-            this.memberAcc.Size = new System.Drawing.Size(299, 572);
+            this.memberAcc.Size = new System.Drawing.Size(273, 572);
             this.memberAcc.TabIndex = 6;
             this.memberAcc.Text = "memberAcc";
             // 
@@ -329,9 +369,9 @@
             this.groupBox5.Controls.Add(this.panel14);
             this.groupBox5.Controls.Add(this.panel18);
             this.groupBox5.Location = new System.Drawing.Point(495, 14);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(303, 474);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
@@ -344,7 +384,7 @@
             this.button6.Image = global::ISTN3AS.Properties.Resources.process;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(161, 410);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(141, 46);
             this.button6.TabIndex = 8;
@@ -359,7 +399,7 @@
             this.button7.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(0, 410);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(141, 46);
             this.button7.TabIndex = 7;
@@ -373,7 +413,7 @@
             this.panel14.Controls.Add(this.label20);
             this.panel14.Controls.Add(this.label23);
             this.panel14.Location = new System.Drawing.Point(4, 68);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(299, 69);
             this.panel14.TabIndex = 5;
@@ -397,7 +437,6 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Monthly Limit";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // panel18
             // 
@@ -406,7 +445,7 @@
             this.panel18.Controls.Add(this.label29);
             this.panel18.Controls.Add(this.label30);
             this.panel18.Location = new System.Drawing.Point(4, 15);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(299, 49);
             this.panel18.TabIndex = 0;
@@ -437,9 +476,9 @@
             this.groupBox2.Controls.Add(this.panel10);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox2.Location = new System.Drawing.Point(13, 14);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(478, 474);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
@@ -453,7 +492,7 @@
             this.panel19.Controls.Add(this.tbxCustAccPass);
             this.panel19.Controls.Add(this.label31);
             this.panel19.Location = new System.Drawing.Point(10, 110);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(460, 111);
             this.panel19.TabIndex = 11;
@@ -463,7 +502,7 @@
             this.button10.BackColor = System.Drawing.Color.White;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Location = new System.Drawing.Point(324, 51);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(102, 37);
             this.button10.TabIndex = 13;
@@ -475,7 +514,7 @@
             this.button9.BackColor = System.Drawing.Color.White;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Location = new System.Drawing.Point(204, 51);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(102, 37);
             this.button9.TabIndex = 12;
@@ -489,7 +528,7 @@
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox11.Location = new System.Drawing.Point(10, 6);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(30, 28);
             this.pictureBox11.TabIndex = 5;
@@ -498,7 +537,7 @@
             // tbxCustAccPass
             // 
             this.tbxCustAccPass.Location = new System.Drawing.Point(163, 6);
-            this.tbxCustAccPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxCustAccPass.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCustAccPass.Name = "tbxCustAccPass";
             this.tbxCustAccPass.Size = new System.Drawing.Size(286, 29);
             this.tbxCustAccPass.TabIndex = 11;
@@ -524,7 +563,7 @@
             this.panel12.Controls.Add(this.lblCustAccSurNm);
             this.panel12.Controls.Add(this.lblCustAccNo);
             this.panel12.Location = new System.Drawing.Point(168, 244);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(302, 207);
             this.panel12.TabIndex = 2;
@@ -603,7 +642,7 @@
             this.panel11.Controls.Add(this.label18);
             this.panel11.Controls.Add(this.label17);
             this.panel11.Location = new System.Drawing.Point(10, 244);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(162, 207);
             this.panel11.TabIndex = 1;
@@ -649,7 +688,6 @@
             this.label21.TabIndex = 7;
             this.label21.Text = "Surname :";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label18
             // 
@@ -685,7 +723,7 @@
             this.panel10.Controls.Add(this.label13);
             this.panel10.Controls.Add(this.pictureBox9);
             this.panel10.Location = new System.Drawing.Point(10, 18);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(460, 66);
             this.panel10.TabIndex = 0;
@@ -710,7 +748,7 @@
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Location = new System.Drawing.Point(10, 7);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(50, 52);
             this.pictureBox9.TabIndex = 2;
@@ -722,9 +760,9 @@
             this.purchase.Controls.Add(this.panel2);
             this.purchase.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.purchase.Location = new System.Drawing.Point(4, 22);
-            this.purchase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.purchase.Margin = new System.Windows.Forms.Padding(2);
             this.purchase.Name = "purchase";
-            this.purchase.Size = new System.Drawing.Size(299, 572);
+            this.purchase.Size = new System.Drawing.Size(273, 572);
             this.purchase.TabIndex = 5;
             this.purchase.Text = "purchase";
             // 
@@ -735,7 +773,7 @@
             this.panel2.Controls.Add(this.groupBox7);
             this.panel2.Controls.Add(this.groupBox4);
             this.panel2.Location = new System.Drawing.Point(34, 14);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(745, 460);
             this.panel2.TabIndex = 0;
@@ -748,7 +786,7 @@
             this.panel5.Controls.Add(this.lblStMem);
             this.panel5.Controls.Add(this.rgbStCust);
             this.panel5.Location = new System.Drawing.Point(10, 79);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(355, 169);
             this.panel5.TabIndex = 7;
@@ -756,7 +794,7 @@
             // tbxStMem
             // 
             this.tbxStMem.Location = new System.Drawing.Point(97, 121);
-            this.tbxStMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxStMem.Margin = new System.Windows.Forms.Padding(2);
             this.tbxStMem.Name = "tbxStMem";
             this.tbxStMem.Size = new System.Drawing.Size(250, 29);
             this.tbxStMem.TabIndex = 1;
@@ -765,7 +803,7 @@
             // 
             this.rgbStMem.BackColor = System.Drawing.Color.White;
             this.rgbStMem.Location = new System.Drawing.Point(2, 58);
-            this.rgbStMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rgbStMem.Margin = new System.Windows.Forms.Padding(2);
             this.rgbStMem.Name = "rgbStMem";
             this.rgbStMem.Size = new System.Drawing.Size(352, 50);
             this.rgbStMem.TabIndex = 8;
@@ -788,7 +826,7 @@
             // 
             this.rgbStCust.BackColor = System.Drawing.Color.White;
             this.rgbStCust.Location = new System.Drawing.Point(4, 2);
-            this.rgbStCust.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rgbStCust.Margin = new System.Windows.Forms.Padding(2);
             this.rgbStCust.Name = "rgbStCust";
             this.rgbStCust.Size = new System.Drawing.Size(346, 50);
             this.rgbStCust.TabIndex = 7;
@@ -803,9 +841,9 @@
             this.groupBox7.Controls.Add(this.panel4);
             this.groupBox7.Controls.Add(this.label10);
             this.groupBox7.Location = new System.Drawing.Point(380, 2);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(355, 447);
             this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
@@ -823,7 +861,7 @@
             this.btnMenuOrder.Image = global::ISTN3AS.Properties.Resources.order;
             this.btnMenuOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuOrder.Location = new System.Drawing.Point(76, 379);
-            this.btnMenuOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenuOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenuOrder.Name = "btnMenuOrder";
             this.btnMenuOrder.Size = new System.Drawing.Size(225, 63);
             this.btnMenuOrder.TabIndex = 13;
@@ -844,7 +882,7 @@
             this.panel4.Controls.Add(this.lblOrdCell);
             this.panel4.Controls.Add(this.lblOrdName);
             this.panel4.Location = new System.Drawing.Point(0, 76);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(354, 273);
             this.panel4.TabIndex = 10;
@@ -856,7 +894,7 @@
             this.panel6.Controls.Add(this.rgbOrdMem);
             this.panel6.Controls.Add(this.lblOrdMem);
             this.panel6.Location = new System.Drawing.Point(-2, 164);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(356, 108);
             this.panel6.TabIndex = 9;
@@ -864,7 +902,7 @@
             // tbxOrdMem
             // 
             this.tbxOrdMem.Location = new System.Drawing.Point(99, 65);
-            this.tbxOrdMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxOrdMem.Margin = new System.Windows.Forms.Padding(2);
             this.tbxOrdMem.Name = "tbxOrdMem";
             this.tbxOrdMem.Size = new System.Drawing.Size(250, 29);
             this.tbxOrdMem.TabIndex = 1;
@@ -873,7 +911,7 @@
             // 
             this.rgbOrdMem.BackColor = System.Drawing.Color.White;
             this.rgbOrdMem.Location = new System.Drawing.Point(3, 6);
-            this.rgbOrdMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rgbOrdMem.Margin = new System.Windows.Forms.Padding(2);
             this.rgbOrdMem.Name = "rgbOrdMem";
             this.rgbOrdMem.Size = new System.Drawing.Size(352, 50);
             this.rgbOrdMem.TabIndex = 8;
@@ -897,7 +935,7 @@
             // 
             this.rgbOrdCust.BackColor = System.Drawing.Color.White;
             this.rgbOrdCust.Location = new System.Drawing.Point(2, 2);
-            this.rgbOrdCust.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rgbOrdCust.Margin = new System.Windows.Forms.Padding(2);
             this.rgbOrdCust.Name = "rgbOrdCust";
             this.rgbOrdCust.Size = new System.Drawing.Size(350, 50);
             this.rgbOrdCust.TabIndex = 9;
@@ -911,7 +949,7 @@
             // 
             this.tbxOrdNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbxOrdNo.Location = new System.Drawing.Point(76, 129);
-            this.tbxOrdNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxOrdNo.Margin = new System.Windows.Forms.Padding(2);
             this.tbxOrdNo.Name = "tbxOrdNo";
             this.tbxOrdNo.Size = new System.Drawing.Size(275, 29);
             this.tbxOrdNo.TabIndex = 6;
@@ -932,7 +970,7 @@
             // 
             this.tbxOrdCell.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbxOrdCell.Location = new System.Drawing.Point(76, 97);
-            this.tbxOrdCell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxOrdCell.Margin = new System.Windows.Forms.Padding(2);
             this.tbxOrdCell.Name = "tbxOrdCell";
             this.tbxOrdCell.Size = new System.Drawing.Size(275, 29);
             this.tbxOrdCell.TabIndex = 5;
@@ -941,7 +979,7 @@
             // 
             this.tbxOrdName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbxOrdName.Location = new System.Drawing.Point(76, 64);
-            this.tbxOrdName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxOrdName.Margin = new System.Windows.Forms.Padding(2);
             this.tbxOrdName.Name = "tbxOrdName";
             this.tbxOrdName.Size = new System.Drawing.Size(275, 29);
             this.tbxOrdName.TabIndex = 4;
@@ -988,9 +1026,9 @@
             this.groupBox4.Controls.Add(this.btnMenuPurchase);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Location = new System.Drawing.Point(10, 2);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(355, 447);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
@@ -1008,7 +1046,7 @@
             this.btnMenuPurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
             this.btnMenuPurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuPurchase.Location = new System.Drawing.Point(63, 379);
-            this.btnMenuPurchase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenuPurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenuPurchase.Name = "btnMenuPurchase";
             this.btnMenuPurchase.Size = new System.Drawing.Size(225, 63);
             this.btnMenuPurchase.TabIndex = 7;
@@ -1031,13 +1069,14 @@
             // 
             // cat5
             // 
+            this.cat5.AutoScroll = true;
             this.cat5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cat5.Controls.Add(this.label79);
             this.cat5.Controls.Add(this.groupBox17);
             this.cat5.Location = new System.Drawing.Point(4, 22);
-            this.cat5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cat5.Margin = new System.Windows.Forms.Padding(2);
             this.cat5.Name = "cat5";
-            this.cat5.Size = new System.Drawing.Size(299, 572);
+            this.cat5.Size = new System.Drawing.Size(273, 572);
             this.cat5.TabIndex = 4;
             this.cat5.Text = "cat5";
             // 
@@ -1055,107 +1094,121 @@
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.comboBox18);
-            this.groupBox17.Controls.Add(this.label74);
-            this.groupBox17.Controls.Add(this.comboBox20);
-            this.groupBox17.Controls.Add(this.label77);
-            this.groupBox17.Controls.Add(this.label78);
-            this.groupBox17.Controls.Add(this.comboBox21);
+            this.groupBox17.Controls.Add(brandNameLabel);
+            this.groupBox17.Controls.Add(this.brandNameComboBox);
+            this.groupBox17.Controls.Add(colourLabel);
+            this.groupBox17.Controls.Add(this.colourComboBox);
+            this.groupBox17.Controls.Add(sizeLabel);
+            this.groupBox17.Controls.Add(this.sizeComboBox);
+            this.groupBox17.Controls.Add(this.label11);
+            this.groupBox17.Controls.Add(this.label12);
+            this.groupBox17.Controls.Add(this.label14);
             this.groupBox17.Location = new System.Drawing.Point(4, 49);
-            this.groupBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox17.Size = new System.Drawing.Size(292, 520);
             this.groupBox17.TabIndex = 4;
             this.groupBox17.TabStop = false;
             // 
-            // comboBox18
+            // brandNameComboBox
             // 
-            this.comboBox18.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox18.Location = new System.Drawing.Point(152, 27);
-            this.comboBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(128, 27);
-            this.comboBox18.Sorted = true;
-            this.comboBox18.TabIndex = 13;
+            this.brandNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.brandTblBindingSource, "BrandName", true));
+            this.brandNameComboBox.DataSource = this.brandTblBindingSource;
+            this.brandNameComboBox.DisplayMember = "BrandName";
+            this.brandNameComboBox.FormattingEnabled = true;
+            this.brandNameComboBox.Location = new System.Drawing.Point(98, 107);
+            this.brandNameComboBox.Name = "brandNameComboBox";
+            this.brandNameComboBox.Size = new System.Drawing.Size(121, 21);
+            this.brandNameComboBox.TabIndex = 16;
             // 
-            // label74
+            // brandTblBindingSource
             // 
-            this.label74.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(16, 29);
-            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(131, 19);
-            this.label74.TabIndex = 7;
-            this.label74.Text = "Chooose Type : ";
+            this.brandTblBindingSource.DataMember = "BrandTbl";
+            this.brandTblBindingSource.DataSource = this.productFilterDS;
             // 
-            // comboBox20
+            // productFilterDS
             // 
-            this.comboBox20.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Items.AddRange(new object[] {
-            "Blue",
-            "Green",
-            "Red",
-            "Yellow"});
-            this.comboBox20.Location = new System.Drawing.Point(152, 123);
-            this.comboBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(128, 27);
-            this.comboBox20.Sorted = true;
-            this.comboBox20.TabIndex = 5;
+            this.productFilterDS.DataSetName = "ProductFilterDS";
+            this.productFilterDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label77
+            // colourComboBox
             // 
-            this.label77.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(16, 125);
-            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(131, 19);
-            this.label77.TabIndex = 4;
-            this.label77.Text = "Choose Colour : ";
+            this.colourComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.colourTblBindingSource, "Colour", true));
+            this.colourComboBox.DataSource = this.colourTblBindingSource;
+            this.colourComboBox.DisplayMember = "Colour";
+            this.colourComboBox.FormattingEnabled = true;
+            this.colourComboBox.Location = new System.Drawing.Point(98, 161);
+            this.colourComboBox.Name = "colourComboBox";
+            this.colourComboBox.Size = new System.Drawing.Size(121, 21);
+            this.colourComboBox.TabIndex = 15;
             // 
-            // label78
+            // colourTblBindingSource
             // 
-            this.label78.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.Location = new System.Drawing.Point(16, 76);
-            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(131, 19);
-            this.label78.TabIndex = 1;
-            this.label78.Text = "Choose Brand : ";
+            this.colourTblBindingSource.DataMember = "ColourTbl";
+            this.colourTblBindingSource.DataSource = this.productFilterDS;
             // 
-            // comboBox21
+            // sizeComboBox
             // 
-            this.comboBox21.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox21.Location = new System.Drawing.Point(152, 72);
-            this.comboBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(128, 27);
-            this.comboBox21.Sorted = true;
-            this.comboBox21.TabIndex = 0;
+            this.sizeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sizeTblBindingSource, "Size", true));
+            this.sizeComboBox.DataSource = this.sizeTblBindingSource;
+            this.sizeComboBox.DisplayMember = "Size";
+            this.sizeComboBox.FormattingEnabled = true;
+            this.sizeComboBox.Location = new System.Drawing.Point(98, 47);
+            this.sizeComboBox.Name = "sizeComboBox";
+            this.sizeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.sizeComboBox.TabIndex = 14;
+            // 
+            // sizeTblBindingSource
+            // 
+            this.sizeTblBindingSource.DataMember = "SizeTbl";
+            this.sizeTblBindingSource.DataSource = this.productFilterDS;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(14, 15);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 19);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Chooose Size: ";
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(14, 131);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 19);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Choose Colour : ";
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(14, 74);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 19);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Choose Brand : ";
+            // 
+            // productDS
+            // 
+            this.productDS.DataSetName = "ProductDS";
+            this.productDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cat4
             // 
+            this.cat4.AutoScroll = true;
             this.cat4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cat4.Controls.Add(this.label76);
             this.cat4.Controls.Add(this.groupBox16);
             this.cat4.Location = new System.Drawing.Point(4, 22);
-            this.cat4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cat4.Margin = new System.Windows.Forms.Padding(2);
             this.cat4.Name = "cat4";
-            this.cat4.Size = new System.Drawing.Size(299, 572);
+            this.cat4.Size = new System.Drawing.Size(273, 572);
             this.cat4.TabIndex = 3;
             this.cat4.Text = "cat4";
             // 
@@ -1163,7 +1216,7 @@
             // 
             this.label76.BackColor = System.Drawing.Color.White;
             this.label76.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(30, 17);
+            this.label76.Location = new System.Drawing.Point(8, 15);
             this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(258, 36);
@@ -1173,67 +1226,70 @@
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.comboBox13);
+            this.groupBox16.Controls.Add(this.cbxSize_Accessories);
+            this.groupBox16.Controls.Add(this.cbxColour_Accessories);
+            this.groupBox16.Controls.Add(this.cbxBrand_Accessories);
             this.groupBox16.Controls.Add(this.label72);
-            this.groupBox16.Controls.Add(this.comboBox17);
             this.groupBox16.Controls.Add(this.label73);
             this.groupBox16.Controls.Add(this.label75);
-            this.groupBox16.Controls.Add(this.comboBox19);
-            this.groupBox16.Location = new System.Drawing.Point(4, 49);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox16.Location = new System.Drawing.Point(13, 49);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox16.Size = new System.Drawing.Size(289, 524);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox16.Size = new System.Drawing.Size(253, 518);
             this.groupBox16.TabIndex = 3;
             this.groupBox16.TabStop = false;
             // 
-            // comboBox13
+            // cbxSize_Accessories
             // 
-            this.comboBox13.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox13.Location = new System.Drawing.Point(134, 27);
-            this.comboBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(135, 27);
-            this.comboBox13.Sorted = true;
-            this.comboBox13.TabIndex = 13;
-            this.comboBox13.SelectedIndexChanged += new System.EventHandler(this.comboBox13_SelectedIndexChanged);
+            this.cbxSize_Accessories.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sizeTblBindingSource, "Size", true));
+            this.cbxSize_Accessories.DataSource = this.sizeTblBindingSource;
+            this.cbxSize_Accessories.DisplayMember = "Size";
+            this.cbxSize_Accessories.FormattingEnabled = true;
+            this.cbxSize_Accessories.Location = new System.Drawing.Point(18, 37);
+            this.cbxSize_Accessories.Name = "cbxSize_Accessories";
+            this.cbxSize_Accessories.Size = new System.Drawing.Size(184, 21);
+            this.cbxSize_Accessories.TabIndex = 10;
+            this.cbxSize_Accessories.SelectedIndexChanged += new System.EventHandler(this.cbxSize_Accessories_SelectedIndexChanged);
+            // 
+            // cbxColour_Accessories
+            // 
+            this.cbxColour_Accessories.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.colourTblBindingSource, "Colour", true));
+            this.cbxColour_Accessories.DataSource = this.colourTblBindingSource;
+            this.cbxColour_Accessories.DisplayMember = "Colour";
+            this.cbxColour_Accessories.FormattingEnabled = true;
+            this.cbxColour_Accessories.Location = new System.Drawing.Point(18, 153);
+            this.cbxColour_Accessories.Name = "cbxColour_Accessories";
+            this.cbxColour_Accessories.Size = new System.Drawing.Size(184, 21);
+            this.cbxColour_Accessories.TabIndex = 9;
+            this.cbxColour_Accessories.SelectedIndexChanged += new System.EventHandler(this.cbxColour_Accessories_SelectedIndexChanged);
+            // 
+            // cbxBrand_Accessories
+            // 
+            this.cbxBrand_Accessories.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.brandTblBindingSource, "BrandName", true));
+            this.cbxBrand_Accessories.DataSource = this.brandTblBindingSource;
+            this.cbxBrand_Accessories.DisplayMember = "BrandName";
+            this.cbxBrand_Accessories.FormattingEnabled = true;
+            this.cbxBrand_Accessories.Location = new System.Drawing.Point(18, 98);
+            this.cbxBrand_Accessories.Name = "cbxBrand_Accessories";
+            this.cbxBrand_Accessories.Size = new System.Drawing.Size(184, 21);
+            this.cbxBrand_Accessories.TabIndex = 8;
+            this.cbxBrand_Accessories.SelectedIndexChanged += new System.EventHandler(this.cbxBrand_Accessories_SelectedIndexChanged);
             // 
             // label72
             // 
             this.label72.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(16, 29);
+            this.label72.Location = new System.Drawing.Point(14, 15);
             this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(131, 19);
             this.label72.TabIndex = 7;
-            this.label72.Text = "Chooose Type : ";
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Items.AddRange(new object[] {
-            "Blue",
-            "Green",
-            "Red",
-            "Yellow"});
-            this.comboBox17.Location = new System.Drawing.Point(134, 118);
-            this.comboBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(135, 27);
-            this.comboBox17.Sorted = true;
-            this.comboBox17.TabIndex = 5;
+            this.label72.Text = "Chooose Size: ";
             // 
             // label73
             // 
             this.label73.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(16, 125);
+            this.label73.Location = new System.Drawing.Point(14, 131);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(131, 19);
@@ -1243,28 +1299,17 @@
             // label75
             // 
             this.label75.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(16, 76);
+            this.label75.Location = new System.Drawing.Point(14, 74);
             this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(113, 19);
             this.label75.TabIndex = 1;
             this.label75.Text = "Choose Brand : ";
             // 
-            // comboBox19
+            // group6DataSet
             // 
-            this.comboBox19.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox19.Location = new System.Drawing.Point(134, 74);
-            this.comboBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(135, 27);
-            this.comboBox19.Sorted = true;
-            this.comboBox19.TabIndex = 0;
+            this.group6DataSet.DataSetName = "group6DataSet";
+            this.group6DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cat3
             // 
@@ -1272,9 +1317,9 @@
             this.cat3.Controls.Add(this.label68);
             this.cat3.Controls.Add(this.groupBox15);
             this.cat3.Location = new System.Drawing.Point(4, 22);
-            this.cat3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cat3.Margin = new System.Windows.Forms.Padding(2);
             this.cat3.Name = "cat3";
-            this.cat3.Size = new System.Drawing.Size(299, 572);
+            this.cat3.Size = new System.Drawing.Size(273, 572);
             this.cat3.TabIndex = 2;
             this.cat3.Text = "cat3";
             // 
@@ -1292,27 +1337,90 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.cbxSize_Caps);
+            this.groupBox15.Controls.Add(this.cbxColour_Caps);
+            this.groupBox15.Controls.Add(this.cbxBrand_Caps);
+            this.groupBox15.Controls.Add(this.label15);
+            this.groupBox15.Controls.Add(this.label16);
+            this.groupBox15.Controls.Add(this.label24);
             this.groupBox15.Controls.Add(this.radioButton7);
             this.groupBox15.Controls.Add(this.radioButton8);
-            this.groupBox15.Controls.Add(this.comboBox14);
-            this.groupBox15.Controls.Add(this.label69);
-            this.groupBox15.Controls.Add(this.comboBox15);
-            this.groupBox15.Controls.Add(this.label70);
-            this.groupBox15.Controls.Add(this.label71);
-            this.groupBox15.Controls.Add(this.comboBox16);
-            this.groupBox15.Location = new System.Drawing.Point(4, 49);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox15.Location = new System.Drawing.Point(4, 54);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox15.Size = new System.Drawing.Size(292, 520);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Size = new System.Drawing.Size(257, 515);
             this.groupBox15.TabIndex = 3;
             this.groupBox15.TabStop = false;
+            // 
+            // cbxSize_Caps
+            // 
+            this.cbxSize_Caps.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sizeTblBindingSource, "Size", true));
+            this.cbxSize_Caps.DataSource = this.sizeTblBindingSource;
+            this.cbxSize_Caps.DisplayMember = "Size";
+            this.cbxSize_Caps.FormattingEnabled = true;
+            this.cbxSize_Caps.Location = new System.Drawing.Point(18, 37);
+            this.cbxSize_Caps.Name = "cbxSize_Caps";
+            this.cbxSize_Caps.Size = new System.Drawing.Size(184, 21);
+            this.cbxSize_Caps.TabIndex = 17;
+            // 
+            // cbxColour_Caps
+            // 
+            this.cbxColour_Caps.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.colourTblBindingSource, "Colour", true));
+            this.cbxColour_Caps.DataSource = this.colourTblBindingSource;
+            this.cbxColour_Caps.DisplayMember = "Colour";
+            this.cbxColour_Caps.FormattingEnabled = true;
+            this.cbxColour_Caps.Location = new System.Drawing.Point(18, 153);
+            this.cbxColour_Caps.Name = "cbxColour_Caps";
+            this.cbxColour_Caps.Size = new System.Drawing.Size(184, 21);
+            this.cbxColour_Caps.TabIndex = 16;
+            // 
+            // cbxBrand_Caps
+            // 
+            this.cbxBrand_Caps.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.brandTblBindingSource, "BrandName", true));
+            this.cbxBrand_Caps.DataSource = this.brandTblBindingSource;
+            this.cbxBrand_Caps.DisplayMember = "BrandName";
+            this.cbxBrand_Caps.FormattingEnabled = true;
+            this.cbxBrand_Caps.Location = new System.Drawing.Point(18, 98);
+            this.cbxBrand_Caps.Name = "cbxBrand_Caps";
+            this.cbxBrand_Caps.Size = new System.Drawing.Size(184, 21);
+            this.cbxBrand_Caps.TabIndex = 15;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(14, 15);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(131, 19);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Chooose Size: ";
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(14, 131);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(131, 19);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Choose Colour : ";
+            // 
+            // label24
+            // 
+            this.label24.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(14, 74);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(113, 19);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "Choose Brand : ";
             // 
             // radioButton7
             // 
             this.radioButton7.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(164, 181);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton7.Location = new System.Drawing.Point(100, 179);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(102, 23);
             this.radioButton7.TabIndex = 11;
@@ -1323,8 +1431,8 @@
             // radioButton8
             // 
             this.radioButton8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(19, 181);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton8.Location = new System.Drawing.Point(18, 179);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(102, 23);
             this.radioButton8.TabIndex = 10;
@@ -1332,98 +1440,124 @@
             this.radioButton8.Text = "   Male";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
-            // comboBox14
-            // 
-            this.comboBox14.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Items.AddRange(new object[] {
-            "Blue",
-            "Green",
-            "Red",
-            "Yellow"});
-            this.comboBox14.Location = new System.Drawing.Point(129, 116);
-            this.comboBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(150, 27);
-            this.comboBox14.Sorted = true;
-            this.comboBox14.TabIndex = 5;
-            // 
-            // label69
-            // 
-            this.label69.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(16, 119);
-            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(119, 19);
-            this.label69.TabIndex = 4;
-            this.label69.Text = "Choose Colour : ";
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Items.AddRange(new object[] {
-            "L",
-            "M",
-            "S",
-            "XL",
-            "Xs"});
-            this.comboBox15.Location = new System.Drawing.Point(129, 72);
-            this.comboBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(150, 27);
-            this.comboBox15.Sorted = true;
-            this.comboBox15.TabIndex = 3;
-            // 
-            // label70
-            // 
-            this.label70.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(16, 75);
-            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(109, 19);
-            this.label70.TabIndex = 2;
-            this.label70.Text = "Choose Size : ";
-            // 
-            // label71
-            // 
-            this.label71.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(16, 29);
-            this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(109, 19);
-            this.label71.TabIndex = 1;
-            this.label71.Text = "Choose Brand : ";
-            // 
-            // comboBox16
-            // 
-            this.comboBox16.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox16.Location = new System.Drawing.Point(129, 27);
-            this.comboBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(150, 27);
-            this.comboBox16.Sorted = true;
-            this.comboBox16.TabIndex = 0;
-            // 
             // cat2
             // 
             this.cat2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cat2.Controls.Add(this.groupBox14);
             this.cat2.Controls.Add(this.label67);
             this.cat2.Location = new System.Drawing.Point(4, 22);
-            this.cat2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cat2.Margin = new System.Windows.Forms.Padding(2);
             this.cat2.Name = "cat2";
-            this.cat2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cat2.Size = new System.Drawing.Size(237, 572);
+            this.cat2.Padding = new System.Windows.Forms.Padding(2);
+            this.cat2.Size = new System.Drawing.Size(273, 572);
             this.cat2.TabIndex = 1;
             this.cat2.Text = "cat2";
             this.cat2.Click += new System.EventHandler(this.cat2_Click);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.cbxSize_Shoes);
+            this.groupBox14.Controls.Add(this.cbxColour_Shoes);
+            this.groupBox14.Controls.Add(this.cbxBrand_Shoes);
+            this.groupBox14.Controls.Add(this.label25);
+            this.groupBox14.Controls.Add(this.label26);
+            this.groupBox14.Controls.Add(this.label28);
+            this.groupBox14.Controls.Add(this.radioButton5);
+            this.groupBox14.Controls.Add(this.radioButton6);
+            this.groupBox14.Location = new System.Drawing.Point(4, 49);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox14.Size = new System.Drawing.Size(265, 520);
+            this.groupBox14.TabIndex = 2;
+            this.groupBox14.TabStop = false;
+            // 
+            // cbxSize_Shoes
+            // 
+            this.cbxSize_Shoes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sizeTblBindingSource, "Size", true));
+            this.cbxSize_Shoes.DataSource = this.sizeTblBindingSource;
+            this.cbxSize_Shoes.DisplayMember = "Size";
+            this.cbxSize_Shoes.FormattingEnabled = true;
+            this.cbxSize_Shoes.Location = new System.Drawing.Point(27, 42);
+            this.cbxSize_Shoes.Name = "cbxSize_Shoes";
+            this.cbxSize_Shoes.Size = new System.Drawing.Size(184, 21);
+            this.cbxSize_Shoes.TabIndex = 17;
+            // 
+            // cbxColour_Shoes
+            // 
+            this.cbxColour_Shoes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.colourTblBindingSource, "Colour", true));
+            this.cbxColour_Shoes.DataSource = this.colourTblBindingSource;
+            this.cbxColour_Shoes.DisplayMember = "Colour";
+            this.cbxColour_Shoes.FormattingEnabled = true;
+            this.cbxColour_Shoes.Location = new System.Drawing.Point(27, 158);
+            this.cbxColour_Shoes.Name = "cbxColour_Shoes";
+            this.cbxColour_Shoes.Size = new System.Drawing.Size(184, 21);
+            this.cbxColour_Shoes.TabIndex = 16;
+            // 
+            // cbxBrand_Shoes
+            // 
+            this.cbxBrand_Shoes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.brandTblBindingSource, "BrandName", true));
+            this.cbxBrand_Shoes.DataSource = this.brandTblBindingSource;
+            this.cbxBrand_Shoes.DisplayMember = "BrandName";
+            this.cbxBrand_Shoes.FormattingEnabled = true;
+            this.cbxBrand_Shoes.Location = new System.Drawing.Point(27, 103);
+            this.cbxBrand_Shoes.Name = "cbxBrand_Shoes";
+            this.cbxBrand_Shoes.Size = new System.Drawing.Size(184, 21);
+            this.cbxBrand_Shoes.TabIndex = 15;
+            // 
+            // label25
+            // 
+            this.label25.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(23, 20);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(131, 19);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "Chooose Size: ";
+            // 
+            // label26
+            // 
+            this.label26.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(23, 136);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(131, 19);
+            this.label26.TabIndex = 13;
+            this.label26.Text = "Choose Colour : ";
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(23, 79);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(113, 19);
+            this.label28.TabIndex = 12;
+            this.label28.Text = "Choose Brand : ";
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.Location = new System.Drawing.Point(109, 199);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(102, 23);
+            this.radioButton5.TabIndex = 11;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "   Female";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.Location = new System.Drawing.Point(27, 199);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(102, 23);
+            this.radioButton6.TabIndex = 10;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "   Male";
+            this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // label67
             // 
@@ -1436,155 +1570,6 @@
             this.label67.TabIndex = 18;
             this.label67.Text = "Shoes";
             this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.comboBox9);
-            this.groupBox14.Controls.Add(this.radioButton5);
-            this.groupBox14.Controls.Add(this.radioButton6);
-            this.groupBox14.Controls.Add(this.label60);
-            this.groupBox14.Controls.Add(this.comboBox10);
-            this.groupBox14.Controls.Add(this.label62);
-            this.groupBox14.Controls.Add(this.comboBox11);
-            this.groupBox14.Controls.Add(this.label64);
-            this.groupBox14.Controls.Add(this.label65);
-            this.groupBox14.Controls.Add(this.comboBox12);
-            this.groupBox14.Location = new System.Drawing.Point(4, 49);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox14.Size = new System.Drawing.Size(201, 520);
-            this.groupBox14.TabIndex = 2;
-            this.groupBox14.TabStop = false;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox9.Location = new System.Drawing.Point(152, 27);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(135, 27);
-            this.comboBox9.Sorted = true;
-            this.comboBox9.TabIndex = 13;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(136, 245);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(102, 23);
-            this.radioButton5.TabIndex = 11;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "   Female";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(19, 245);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(102, 23);
-            this.radioButton6.TabIndex = 10;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "   Male";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // label60
-            // 
-            this.label60.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(16, 29);
-            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(119, 19);
-            this.label60.TabIndex = 7;
-            this.label60.Text = "Chooose Type : ";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "Blue",
-            "Green",
-            "Red",
-            "Yellow"});
-            this.comboBox10.Location = new System.Drawing.Point(152, 188);
-            this.comboBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(135, 27);
-            this.comboBox10.Sorted = true;
-            this.comboBox10.TabIndex = 5;
-            // 
-            // label62
-            // 
-            this.label62.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(16, 195);
-            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(131, 19);
-            this.label62.TabIndex = 4;
-            this.label62.Text = "Choose Colour : ";
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "L",
-            "M",
-            "S",
-            "XL",
-            "Xs"});
-            this.comboBox11.Location = new System.Drawing.Point(152, 136);
-            this.comboBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(135, 27);
-            this.comboBox11.Sorted = true;
-            this.comboBox11.TabIndex = 3;
-            // 
-            // label64
-            // 
-            this.label64.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(16, 136);
-            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(131, 19);
-            this.label64.TabIndex = 2;
-            this.label64.Text = "Choose Size : ";
-            // 
-            // label65
-            // 
-            this.label65.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(16, 83);
-            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(131, 19);
-            this.label65.TabIndex = 1;
-            this.label65.Text = "Choose Brand : ";
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox12.Location = new System.Drawing.Point(152, 80);
-            this.comboBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(135, 27);
-            this.comboBox12.Sorted = true;
-            this.comboBox12.TabIndex = 0;
             // 
             // btnShoeOrder
             // 
@@ -1599,8 +1584,8 @@
             this.btnShoeOrder.ForeColor = System.Drawing.Color.Black;
             this.btnShoeOrder.Image = global::ISTN3AS.Properties.Resources.order;
             this.btnShoeOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShoeOrder.Location = new System.Drawing.Point(0, 506);
-            this.btnShoeOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShoeOrder.Location = new System.Drawing.Point(0, 554);
+            this.btnShoeOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnShoeOrder.Name = "btnShoeOrder";
             this.btnShoeOrder.Size = new System.Drawing.Size(186, 58);
             this.btnShoeOrder.TabIndex = 12;
@@ -1620,8 +1605,8 @@
             this.btnShoePurchase.ForeColor = System.Drawing.Color.Black;
             this.btnShoePurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
             this.btnShoePurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShoePurchase.Location = new System.Drawing.Point(210, 508);
-            this.btnShoePurchase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShoePurchase.Location = new System.Drawing.Point(366, 556);
+            this.btnShoePurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btnShoePurchase.Name = "btnShoePurchase";
             this.btnShoePurchase.Size = new System.Drawing.Size(192, 54);
             this.btnShoePurchase.TabIndex = 6;
@@ -1634,10 +1619,10 @@
             this.cat1.Controls.Add(this.label66);
             this.cat1.Controls.Add(this.groupBox1);
             this.cat1.Location = new System.Drawing.Point(4, 22);
-            this.cat1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cat1.Margin = new System.Windows.Forms.Padding(2);
             this.cat1.Name = "cat1";
-            this.cat1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cat1.Size = new System.Drawing.Size(291, 572);
+            this.cat1.Padding = new System.Windows.Forms.Padding(2);
+            this.cat1.Size = new System.Drawing.Size(273, 572);
             this.cat1.TabIndex = 0;
             this.cat1.Text = "cat1";
             // 
@@ -1655,45 +1640,90 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox8);
+            this.groupBox1.Controls.Add(this.cbxSize_TShirts);
+            this.groupBox1.Controls.Add(this.cbxColour_TShirts);
+            this.groupBox1.Controls.Add(this.cbxBrand_TShirts);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(4, 49);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(289, 520);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox8
+            // cbxSize_TShirts
             // 
-            this.comboBox8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox8.Location = new System.Drawing.Point(152, 27);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(128, 27);
-            this.comboBox8.Sorted = true;
-            this.comboBox8.TabIndex = 13;
+            this.cbxSize_TShirts.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sizeTblBindingSource, "Size", true));
+            this.cbxSize_TShirts.DataSource = this.sizeTblBindingSource;
+            this.cbxSize_TShirts.DisplayMember = "Size";
+            this.cbxSize_TShirts.FormattingEnabled = true;
+            this.cbxSize_TShirts.Location = new System.Drawing.Point(18, 37);
+            this.cbxSize_TShirts.Name = "cbxSize_TShirts";
+            this.cbxSize_TShirts.Size = new System.Drawing.Size(184, 21);
+            this.cbxSize_TShirts.TabIndex = 23;
+            // 
+            // cbxColour_TShirts
+            // 
+            this.cbxColour_TShirts.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.colourTblBindingSource, "Colour", true));
+            this.cbxColour_TShirts.DataSource = this.colourTblBindingSource;
+            this.cbxColour_TShirts.DisplayMember = "Colour";
+            this.cbxColour_TShirts.FormattingEnabled = true;
+            this.cbxColour_TShirts.Location = new System.Drawing.Point(18, 153);
+            this.cbxColour_TShirts.Name = "cbxColour_TShirts";
+            this.cbxColour_TShirts.Size = new System.Drawing.Size(184, 21);
+            this.cbxColour_TShirts.TabIndex = 22;
+            // 
+            // cbxBrand_TShirts
+            // 
+            this.cbxBrand_TShirts.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.brandTblBindingSource, "BrandName", true));
+            this.cbxBrand_TShirts.DataSource = this.brandTblBindingSource;
+            this.cbxBrand_TShirts.DisplayMember = "BrandName";
+            this.cbxBrand_TShirts.FormattingEnabled = true;
+            this.cbxBrand_TShirts.Location = new System.Drawing.Point(18, 98);
+            this.cbxBrand_TShirts.Name = "cbxBrand_TShirts";
+            this.cbxBrand_TShirts.Size = new System.Drawing.Size(184, 21);
+            this.cbxBrand_TShirts.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 19);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Chooose Size: ";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 131);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 19);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Choose Colour : ";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 74);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 19);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Choose Brand : ";
             // 
             // radioButton2
             // 
             this.radioButton2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(164, 210);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Location = new System.Drawing.Point(100, 179);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(102, 23);
             this.radioButton2.TabIndex = 11;
@@ -1704,103 +1734,14 @@
             // radioButton1
             // 
             this.radioButton1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(19, 210);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Location = new System.Drawing.Point(18, 179);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(102, 23);
             this.radioButton1.TabIndex = 10;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "   Male";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 29);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 19);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Chooose Type : ";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Blue",
-            "Green",
-            "Red",
-            "Yellow"});
-            this.comboBox3.Location = new System.Drawing.Point(152, 164);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 27);
-            this.comboBox3.Sorted = true;
-            this.comboBox3.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 167);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 19);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Choose Colour : ";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "L",
-            "M",
-            "S",
-            "XL",
-            "Xs"});
-            this.comboBox2.Location = new System.Drawing.Point(152, 121);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 27);
-            this.comboBox2.Sorted = true;
-            this.comboBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 124);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Choose Size : ";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Choose Brand : ";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Crystal palace",
-            "Everton",
-            "Liverpool",
-            "Manchester United"});
-            this.comboBox1.Location = new System.Drawing.Point(152, 72);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 27);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 0;
             // 
             // tabcontrol1
             // 
@@ -1816,10 +1757,10 @@
             this.tabcontrol1.Controls.Add(this.cat2);
             this.tabcontrol1.Controls.Add(this.cat3);
             this.tabcontrol1.Location = new System.Drawing.Point(243, 108);
-            this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(307, 598);
+            this.tabcontrol1.Size = new System.Drawing.Size(281, 598);
             this.tabcontrol1.TabIndex = 5;
             // 
             // accCreate
@@ -1829,9 +1770,9 @@
             this.accCreate.Controls.Add(this.groupBox12);
             this.accCreate.Font = new System.Drawing.Font("Gadugi", 12F);
             this.accCreate.Location = new System.Drawing.Point(4, 22);
-            this.accCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.accCreate.Margin = new System.Windows.Forms.Padding(2);
             this.accCreate.Name = "accCreate";
-            this.accCreate.Size = new System.Drawing.Size(291, 572);
+            this.accCreate.Size = new System.Drawing.Size(273, 572);
             this.accCreate.TabIndex = 7;
             this.accCreate.Text = "AccCreate";
             // 
@@ -1840,9 +1781,9 @@
             this.groupBox13.Controls.Add(this.groupBox3);
             this.groupBox13.Controls.Add(this.label7);
             this.groupBox13.Location = new System.Drawing.Point(476, 6);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox13.Size = new System.Drawing.Size(334, 476);
             this.groupBox13.TabIndex = 1;
             this.groupBox13.TabStop = false;
@@ -1853,9 +1794,9 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox3.Location = new System.Drawing.Point(4, 67);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(323, 193);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
@@ -1863,7 +1804,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(100, 20);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 29);
             this.textBox1.TabIndex = 1;
@@ -1897,9 +1838,9 @@
             this.groupBox12.Controls.Add(this.button21);
             this.groupBox12.Controls.Add(this.panel25);
             this.groupBox12.Location = new System.Drawing.Point(2, 6);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox12.Size = new System.Drawing.Size(470, 476);
             this.groupBox12.TabIndex = 0;
             this.groupBox12.TabStop = false;
@@ -1912,12 +1853,13 @@
             this.button20.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
             this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button20.Location = new System.Drawing.Point(4, 418);
-            this.button20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(141, 46);
             this.button20.TabIndex = 17;
             this.button20.Text = "Clear";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label56
             // 
@@ -1939,56 +1881,57 @@
             this.button21.Image = global::ISTN3AS.Properties.Resources.process;
             this.button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button21.Location = new System.Drawing.Point(320, 418);
-            this.button21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(141, 46);
             this.button21.TabIndex = 18;
             this.button21.Text = "Process";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel25.Controls.Add(this.textBox12);
-            this.panel25.Controls.Add(this.textBox15);
-            this.panel25.Controls.Add(this.textBox16);
+            this.panel25.Controls.Add(this.tbxCell_AccCreation);
+            this.panel25.Controls.Add(this.tbxAddress_AccCreation);
+            this.panel25.Controls.Add(this.tbxEmail_AccCreation);
             this.panel25.Controls.Add(this.label58);
             this.panel25.Controls.Add(this.label57);
-            this.panel25.Controls.Add(this.textBox13);
-            this.panel25.Controls.Add(this.textBox14);
+            this.panel25.Controls.Add(this.tbxSurname_AccCreation);
+            this.panel25.Controls.Add(this.tbxName_AccCreation);
             this.panel25.Controls.Add(this.label53);
             this.panel25.Controls.Add(this.label54);
             this.panel25.Controls.Add(this.label55);
             this.panel25.Location = new System.Drawing.Point(4, 75);
-            this.panel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel25.Margin = new System.Windows.Forms.Padding(2);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(457, 262);
             this.panel25.TabIndex = 15;
             // 
-            // textBox12
+            // tbxCell_AccCreation
             // 
-            this.textBox12.Location = new System.Drawing.Point(86, 106);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(345, 29);
-            this.textBox12.TabIndex = 16;
+            this.tbxCell_AccCreation.Location = new System.Drawing.Point(86, 106);
+            this.tbxCell_AccCreation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxCell_AccCreation.Name = "tbxCell_AccCreation";
+            this.tbxCell_AccCreation.Size = new System.Drawing.Size(345, 29);
+            this.tbxCell_AccCreation.TabIndex = 16;
             // 
-            // textBox15
+            // tbxAddress_AccCreation
             // 
-            this.textBox15.Location = new System.Drawing.Point(86, 153);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(345, 29);
-            this.textBox15.TabIndex = 18;
+            this.tbxAddress_AccCreation.Location = new System.Drawing.Point(86, 153);
+            this.tbxAddress_AccCreation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxAddress_AccCreation.Name = "tbxAddress_AccCreation";
+            this.tbxAddress_AccCreation.Size = new System.Drawing.Size(345, 29);
+            this.tbxAddress_AccCreation.TabIndex = 18;
             // 
-            // textBox16
+            // tbxEmail_AccCreation
             // 
-            this.textBox16.Location = new System.Drawing.Point(86, 202);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(345, 29);
-            this.textBox16.TabIndex = 19;
+            this.tbxEmail_AccCreation.Location = new System.Drawing.Point(86, 202);
+            this.tbxEmail_AccCreation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEmail_AccCreation.Name = "tbxEmail_AccCreation";
+            this.tbxEmail_AccCreation.Size = new System.Drawing.Size(345, 29);
+            this.tbxEmail_AccCreation.TabIndex = 19;
             // 
             // label58
             // 
@@ -2010,21 +1953,21 @@
             this.label57.TabIndex = 17;
             this.label57.Text = "Address : ";
             // 
-            // textBox13
+            // tbxSurname_AccCreation
             // 
-            this.textBox13.Location = new System.Drawing.Point(86, 58);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(345, 29);
-            this.textBox13.TabIndex = 15;
+            this.tbxSurname_AccCreation.Location = new System.Drawing.Point(86, 58);
+            this.tbxSurname_AccCreation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxSurname_AccCreation.Name = "tbxSurname_AccCreation";
+            this.tbxSurname_AccCreation.Size = new System.Drawing.Size(345, 29);
+            this.tbxSurname_AccCreation.TabIndex = 15;
             // 
-            // textBox14
+            // tbxName_AccCreation
             // 
-            this.textBox14.Location = new System.Drawing.Point(86, 10);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(346, 29);
-            this.textBox14.TabIndex = 14;
+            this.tbxName_AccCreation.Location = new System.Drawing.Point(86, 10);
+            this.tbxName_AccCreation.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxName_AccCreation.Name = "tbxName_AccCreation";
+            this.tbxName_AccCreation.Size = new System.Drawing.Size(346, 29);
+            this.tbxName_AccCreation.TabIndex = 14;
             // 
             // label53
             // 
@@ -2062,9 +2005,9 @@
             this.orders.Controls.Add(this.groupBox6);
             this.orders.Font = new System.Drawing.Font("Gadugi", 12F);
             this.orders.Location = new System.Drawing.Point(4, 22);
-            this.orders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.orders.Margin = new System.Windows.Forms.Padding(2);
             this.orders.Name = "orders";
-            this.orders.Size = new System.Drawing.Size(291, 572);
+            this.orders.Size = new System.Drawing.Size(273, 572);
             this.orders.TabIndex = 8;
             this.orders.Text = "orders";
             // 
@@ -2076,9 +2019,9 @@
             this.groupBox6.Controls.Add(this.button13);
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Location = new System.Drawing.Point(2, 2);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(505, 486);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
@@ -2086,7 +2029,7 @@
             // richTextBox2
             // 
             this.richTextBox2.Location = new System.Drawing.Point(5, 96);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(470, 266);
             this.richTextBox2.TabIndex = 2;
@@ -2099,7 +2042,7 @@
             this.panel16.Controls.Add(this.label27);
             this.panel16.Controls.Add(this.textBox7);
             this.panel16.Location = new System.Drawing.Point(5, 53);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(362, 32);
             this.panel16.TabIndex = 13;
@@ -2112,7 +2055,7 @@
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Location = new System.Drawing.Point(316, 2);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(33, 25);
             this.button12.TabIndex = 10;
@@ -2131,7 +2074,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(128, 3);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(185, 26);
@@ -2146,7 +2089,7 @@
             this.button14.Image = global::ISTN3AS.Properties.Resources.supermarket;
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button14.Location = new System.Drawing.Point(5, 436);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(166, 32);
             this.button14.TabIndex = 10;
@@ -2162,7 +2105,7 @@
             this.button13.Image = global::ISTN3AS.Properties.Resources.quit;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(5, 390);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(166, 32);
             this.button13.TabIndex = 10;
@@ -2188,9 +2131,9 @@
             this.returnItem.Controls.Add(this.groupBox9);
             this.returnItem.Font = new System.Drawing.Font("Gadugi", 12F);
             this.returnItem.Location = new System.Drawing.Point(4, 22);
-            this.returnItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.returnItem.Margin = new System.Windows.Forms.Padding(2);
             this.returnItem.Name = "returnItem";
-            this.returnItem.Size = new System.Drawing.Size(291, 572);
+            this.returnItem.Size = new System.Drawing.Size(273, 572);
             this.returnItem.TabIndex = 9;
             this.returnItem.Text = "return";
             // 
@@ -2201,9 +2144,9 @@
             this.groupBox11.Controls.Add(this.label51);
             this.groupBox11.Controls.Add(this.label52);
             this.groupBox11.Location = new System.Drawing.Point(414, 9);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox11.Size = new System.Drawing.Size(390, 479);
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
@@ -2220,7 +2163,7 @@
             this.button19.Image = global::ISTN3AS.Properties.Resources.process;
             this.button19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button19.Location = new System.Drawing.Point(122, 393);
-            this.button19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(174, 60);
             this.button19.TabIndex = 12;
@@ -2230,7 +2173,7 @@
             // richTextBox3
             // 
             this.richTextBox3.Location = new System.Drawing.Point(4, 67);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(382, 303);
             this.richTextBox3.TabIndex = 6;
@@ -2263,9 +2206,9 @@
             this.groupBox9.Controls.Add(this.label42);
             this.groupBox9.Controls.Add(this.label41);
             this.groupBox9.Location = new System.Drawing.Point(2, 9);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox9.Size = new System.Drawing.Size(407, 479);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
@@ -2284,9 +2227,9 @@
             this.grpboxReturn.Controls.Add(this.label46);
             this.grpboxReturn.Controls.Add(this.comboBox6);
             this.grpboxReturn.Location = new System.Drawing.Point(16, 63);
-            this.grpboxReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpboxReturn.Margin = new System.Windows.Forms.Padding(2);
             this.grpboxReturn.Name = "grpboxReturn";
-            this.grpboxReturn.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpboxReturn.Padding = new System.Windows.Forms.Padding(2);
             this.grpboxReturn.Size = new System.Drawing.Size(332, 410);
             this.grpboxReturn.TabIndex = 5;
             this.grpboxReturn.TabStop = false;
@@ -2301,7 +2244,7 @@
             "Liverpool",
             "Manchester United"});
             this.comboBox7.Location = new System.Drawing.Point(152, 30);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(156, 27);
             this.comboBox7.Sorted = true;
@@ -2329,7 +2272,7 @@
             this.button18.Image = global::ISTN3AS.Properties.Resources.order__2_;
             this.button18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button18.Location = new System.Drawing.Point(55, 330);
-            this.button18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(214, 63);
             this.button18.TabIndex = 12;
@@ -2340,7 +2283,7 @@
             // 
             this.radioButton3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(164, 199);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(102, 23);
             this.radioButton3.TabIndex = 11;
@@ -2352,7 +2295,7 @@
             // 
             this.radioButton4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.Location = new System.Drawing.Point(37, 199);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(102, 23);
             this.radioButton4.TabIndex = 10;
@@ -2370,7 +2313,7 @@
             "Red",
             "Yellow"});
             this.comboBox4.Location = new System.Drawing.Point(152, 145);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(156, 27);
             this.comboBox4.Sorted = true;
@@ -2397,7 +2340,7 @@
             "XL",
             "Xs"});
             this.comboBox5.Location = new System.Drawing.Point(152, 106);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(156, 27);
             this.comboBox5.Sorted = true;
@@ -2434,7 +2377,7 @@
             "Liverpool",
             "Manchester United"});
             this.comboBox6.Location = new System.Drawing.Point(152, 66);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(156, 27);
             this.comboBox6.Sorted = true;
@@ -2465,9 +2408,9 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(291, 572);
+            this.tabPage1.Size = new System.Drawing.Size(273, 572);
             this.tabPage1.TabIndex = 10;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -2475,7 +2418,7 @@
             // 
             this.richItemsPurchased.Font = new System.Drawing.Font("Gadugi", 12F);
             this.richItemsPurchased.Location = new System.Drawing.Point(4, 58);
-            this.richItemsPurchased.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richItemsPurchased.Margin = new System.Windows.Forms.Padding(2);
             this.richItemsPurchased.Name = "richItemsPurchased";
             this.richItemsPurchased.Size = new System.Drawing.Size(310, 375);
             this.richItemsPurchased.TabIndex = 19;
@@ -2493,9 +2436,9 @@
             this.pnlCompany.Controls.Add(this.btnExit);
             this.pnlCompany.Controls.Add(this.lblCompany);
             this.pnlCompany.Location = new System.Drawing.Point(243, -2);
-            this.pnlCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlCompany.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(1032, 82);
+            this.pnlCompany.Size = new System.Drawing.Size(1290, 82);
             this.pnlCompany.TabIndex = 3;
             // 
             // button1
@@ -2505,8 +2448,8 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Castellar", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(896, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(985, 22);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(44, 38);
             this.button1.TabIndex = 2;
@@ -2520,8 +2463,8 @@
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Font = new System.Drawing.Font("Castellar", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Snow;
-            this.btnExit.Location = new System.Drawing.Point(945, 22);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Location = new System.Drawing.Point(1034, 22);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 38);
             this.btnExit.TabIndex = 1;
@@ -2535,7 +2478,7 @@
             this.lblCompany.Font = new System.Drawing.Font("Castellar", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompany.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCompany.Image = global::ISTN3AS.Properties.Resources.Frost;
-            this.lblCompany.Location = new System.Drawing.Point(315, 2);
+            this.lblCompany.Location = new System.Drawing.Point(404, 2);
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(394, 77);
@@ -2567,9 +2510,9 @@
             this.pnlOptions.Controls.Add(this.btnCashOut);
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOptions.Location = new System.Drawing.Point(0, 0);
-            this.pnlOptions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlOptions.Margin = new System.Windows.Forms.Padding(2);
             this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(244, 706);
+            this.pnlOptions.Size = new System.Drawing.Size(244, 757);
             this.pnlOptions.TabIndex = 0;
             // 
             // lblUsrname
@@ -2591,7 +2534,7 @@
             this.pbxusr.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxusr.Image = global::ISTN3AS.Properties.Resources.user__1_;
             this.pbxusr.Location = new System.Drawing.Point(22, 10);
-            this.pbxusr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbxusr.Margin = new System.Windows.Forms.Padding(2);
             this.pbxusr.Name = "pbxusr";
             this.pbxusr.Size = new System.Drawing.Size(50, 52);
             this.pbxusr.TabIndex = 1;
@@ -2603,7 +2546,7 @@
             this.pictureBox1.BackgroundImage = global::ISTN3AS.Properties.Resources.webshop;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(22, 184);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 34);
             this.pictureBox1.TabIndex = 0;
@@ -2619,7 +2562,7 @@
             this.btnItems.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnItems.ForeColor = System.Drawing.Color.Snow;
             this.btnItems.Location = new System.Drawing.Point(0, 167);
-            this.btnItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnItems.Margin = new System.Windows.Forms.Padding(2);
             this.btnItems.Name = "btnItems";
             this.btnItems.Size = new System.Drawing.Size(244, 58);
             this.btnItems.TabIndex = 1;
@@ -2635,7 +2578,7 @@
             this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button30.Image = global::ISTN3AS.Properties.Resources.Frost;
             this.button30.Location = new System.Drawing.Point(2, 0);
-            this.button30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button30.Margin = new System.Windows.Forms.Padding(2);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(241, 81);
             this.button30.TabIndex = 14;
@@ -2647,7 +2590,7 @@
             this.pictureBox10.BackgroundImage = global::ISTN3AS.Properties.Resources.bag;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(22, 472);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(35, 34);
             this.pictureBox10.TabIndex = 13;
@@ -2664,7 +2607,7 @@
             this.btnReturns.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturns.ForeColor = System.Drawing.Color.Snow;
             this.btnReturns.Location = new System.Drawing.Point(0, 460);
-            this.btnReturns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturns.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturns.Name = "btnReturns";
             this.btnReturns.Size = new System.Drawing.Size(244, 58);
             this.btnReturns.TabIndex = 12;
@@ -2678,7 +2621,7 @@
             this.pictureBox8.BackgroundImage = global::ISTN3AS.Properties.Resources.frmexit;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Location = new System.Drawing.Point(22, 558);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 34);
             this.pictureBox8.TabIndex = 11;
@@ -2694,7 +2637,7 @@
             this.btnLogOut.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Snow;
             this.btnLogOut.Location = new System.Drawing.Point(-2, 552);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(244, 58);
             this.btnLogOut.TabIndex = 10;
@@ -2707,7 +2650,7 @@
             this.pictureBox7.BackgroundImage = global::ISTN3AS.Properties.Resources.cash_on_delivery;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(22, 323);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 34);
             this.pictureBox7.TabIndex = 9;
@@ -2719,7 +2662,7 @@
             this.pictureBox6.BackgroundImage = global::ISTN3AS.Properties.Resources.user__5_;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(22, 253);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(35, 34);
             this.pictureBox6.TabIndex = 8;
@@ -2731,7 +2674,7 @@
             this.pictureBox3.BackgroundImage = global::ISTN3AS.Properties.Resources.account__1_;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(22, 399);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 34);
             this.pictureBox3.TabIndex = 7;
@@ -2747,7 +2690,7 @@
             this.btnCustAcc.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustAcc.ForeColor = System.Drawing.Color.Snow;
             this.btnCustAcc.Location = new System.Drawing.Point(0, 387);
-            this.btnCustAcc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCustAcc.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustAcc.Name = "btnCustAcc";
             this.btnCustAcc.Size = new System.Drawing.Size(244, 58);
             this.btnCustAcc.TabIndex = 6;
@@ -2765,7 +2708,7 @@
             this.btnAdd2.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd2.ForeColor = System.Drawing.Color.Snow;
             this.btnAdd2.Location = new System.Drawing.Point(0, 313);
-            this.btnAdd2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd2.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(244, 58);
             this.btnAdd2.TabIndex = 5;
@@ -2783,7 +2726,7 @@
             this.btnAddUser.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.Color.Snow;
             this.btnAddUser.Location = new System.Drawing.Point(0, 240);
-            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(244, 58);
             this.btnAddUser.TabIndex = 4;
@@ -2797,7 +2740,7 @@
             this.pictureBox2.BackgroundImage = global::ISTN3AS.Properties.Resources.sales__1_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(22, 108);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 34);
             this.pictureBox2.TabIndex = 3;
@@ -2813,7 +2756,7 @@
             this.btnCashOut.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashOut.ForeColor = System.Drawing.Color.Snow;
             this.btnCashOut.Location = new System.Drawing.Point(0, 95);
-            this.btnCashOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCashOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnCashOut.Name = "btnCashOut";
             this.btnCashOut.Size = new System.Drawing.Size(244, 58);
             this.btnCashOut.TabIndex = 2;
@@ -2833,9 +2776,9 @@
             this.panel1.Controls.Add(this.btnCat2);
             this.panel1.Controls.Add(this.btnCat1);
             this.panel1.Location = new System.Drawing.Point(243, 81);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1111, 56);
+            this.panel1.Size = new System.Drawing.Size(1369, 56);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -2851,7 +2794,7 @@
             this.btnCat5.Image = global::ISTN3AS.Properties.Resources.dumbell;
             this.btnCat5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCat5.Location = new System.Drawing.Point(897, 12);
-            this.btnCat5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCat5.Margin = new System.Windows.Forms.Padding(2);
             this.btnCat5.Name = "btnCat5";
             this.btnCat5.Size = new System.Drawing.Size(116, 37);
             this.btnCat5.TabIndex = 4;
@@ -2872,7 +2815,7 @@
             this.btnCat4.Image = global::ISTN3AS.Properties.Resources.sports_and_competition;
             this.btnCat4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCat4.Location = new System.Drawing.Point(687, 12);
-            this.btnCat4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCat4.Margin = new System.Windows.Forms.Padding(2);
             this.btnCat4.Name = "btnCat4";
             this.btnCat4.Size = new System.Drawing.Size(116, 37);
             this.btnCat4.TabIndex = 3;
@@ -2893,7 +2836,7 @@
             this.btnCat3.Image = global::ISTN3AS.Properties.Resources.cap;
             this.btnCat3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCat3.Location = new System.Drawing.Point(464, 12);
-            this.btnCat3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCat3.Margin = new System.Windows.Forms.Padding(2);
             this.btnCat3.Name = "btnCat3";
             this.btnCat3.Size = new System.Drawing.Size(116, 37);
             this.btnCat3.TabIndex = 2;
@@ -2913,7 +2856,7 @@
             this.btnCat2.Image = global::ISTN3AS.Properties.Resources.sneaker;
             this.btnCat2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCat2.Location = new System.Drawing.Point(249, 12);
-            this.btnCat2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCat2.Margin = new System.Windows.Forms.Padding(2);
             this.btnCat2.Name = "btnCat2";
             this.btnCat2.Size = new System.Drawing.Size(116, 37);
             this.btnCat2.TabIndex = 1;
@@ -2934,7 +2877,7 @@
             this.btnCat1.Image = global::ISTN3AS.Properties.Resources.polo_shirt__2_;
             this.btnCat1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCat1.Location = new System.Drawing.Point(26, 12);
-            this.btnCat1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCat1.Margin = new System.Windows.Forms.Padding(2);
             this.btnCat1.Name = "btnCat1";
             this.btnCat1.Size = new System.Drawing.Size(116, 37);
             this.btnCat1.TabIndex = 0;
@@ -2950,11 +2893,11 @@
             this.gbItemsScroll.Controls.Add(this.button5);
             this.gbItemsScroll.Controls.Add(this.richItemsPurchased);
             this.gbItemsScroll.Controls.Add(this.panel3);
-            this.gbItemsScroll.Location = new System.Drawing.Point(956, 136);
-            this.gbItemsScroll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbItemsScroll.Location = new System.Drawing.Point(1088, 141);
+            this.gbItemsScroll.Margin = new System.Windows.Forms.Padding(2);
             this.gbItemsScroll.Name = "gbItemsScroll";
-            this.gbItemsScroll.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbItemsScroll.Size = new System.Drawing.Size(318, 568);
+            this.gbItemsScroll.Padding = new System.Windows.Forms.Padding(2);
+            this.gbItemsScroll.Size = new System.Drawing.Size(318, 616);
             this.gbItemsScroll.TabIndex = 20;
             this.gbItemsScroll.TabStop = false;
             // 
@@ -2968,7 +2911,7 @@
             this.button2.Image = global::ISTN3AS.Properties.Resources.quit;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(4, 520);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 41);
             this.button2.TabIndex = 21;
@@ -2984,7 +2927,7 @@
             this.button5.Image = global::ISTN3AS.Properties.Resources.process;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(164, 520);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 41);
             this.button5.TabIndex = 22;
@@ -2999,7 +2942,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Location = new System.Drawing.Point(6, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 33);
             this.panel3.TabIndex = 20;
@@ -3012,7 +2955,7 @@
             this.btnSearch2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch2.Location = new System.Drawing.Point(267, 2);
-            this.btnSearch2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch2.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch2.Name = "btnSearch2";
             this.btnSearch2.Size = new System.Drawing.Size(33, 25);
             this.btnSearch2.TabIndex = 10;
@@ -3031,7 +2974,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(101, 2);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(162, 26);
@@ -3040,153 +2983,97 @@
             // grpBoxDBgrid
             // 
             this.grpBoxDBgrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.grpBoxDBgrid.Controls.Add(this.dataGridView1);
+            this.grpBoxDBgrid.Controls.Add(this.categoryFIlterDataGridView);
             this.grpBoxDBgrid.Controls.Add(this.btnShoeOrder);
             this.grpBoxDBgrid.Controls.Add(this.btnShoePurchase);
-            this.grpBoxDBgrid.Location = new System.Drawing.Point(550, 136);
-            this.grpBoxDBgrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpBoxDBgrid.Location = new System.Drawing.Point(489, 141);
+            this.grpBoxDBgrid.Margin = new System.Windows.Forms.Padding(2);
             this.grpBoxDBgrid.Name = "grpBoxDBgrid";
-            this.grpBoxDBgrid.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpBoxDBgrid.Size = new System.Drawing.Size(411, 568);
+            this.grpBoxDBgrid.Padding = new System.Windows.Forms.Padding(2);
+            this.grpBoxDBgrid.Size = new System.Drawing.Size(567, 616);
             this.grpBoxDBgrid.TabIndex = 22;
             this.grpBoxDBgrid.TabStop = false;
             // 
-            // dataGridView1
+            // categoryFIlterDataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.prodIDDataGridViewTextBoxColumn,
-            this.prodNameDataGridViewTextBoxColumn,
-            this.costPriceDataGridViewTextBoxColumn,
-            this.prodQuantityDataGridViewTextBoxColumn,
-            this.discountDataGridViewTextBoxColumn,
-            this.sellingPriceDataGridViewTextBoxColumn,
-            this.reorderStatusDataGridViewTextBoxColumn,
-            this.brandIDDataGridViewTextBoxColumn,
-            this.sizeDataGridViewTextBoxColumn,
-            this.colourDataGridViewTextBoxColumn,
-            this.categoryDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.productTblBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 52);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(402, 375);
-            this.dataGridView1.TabIndex = 0;
+            this.categoryFIlterDataGridView.AutoGenerateColumns = false;
+            this.categoryFIlterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.categoryFIlterDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.categoryFIlterDataGridView.DataSource = this.categoryFIlterBS;
+            this.categoryFIlterDataGridView.Location = new System.Drawing.Point(40, 11);
+            this.categoryFIlterDataGridView.Name = "categoryFIlterDataGridView";
+            this.categoryFIlterDataGridView.Size = new System.Drawing.Size(518, 442);
+            this.categoryFIlterDataGridView.TabIndex = 12;
             // 
-            // prodIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.prodIDDataGridViewTextBoxColumn.DataPropertyName = "ProdID";
-            this.prodIDDataGridViewTextBoxColumn.HeaderText = "ProdID";
-            this.prodIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prodIDDataGridViewTextBoxColumn.Name = "prodIDDataGridViewTextBoxColumn";
-            this.prodIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prodIDDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProdName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ProdName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // prodNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.prodNameDataGridViewTextBoxColumn.DataPropertyName = "ProdName";
-            this.prodNameDataGridViewTextBoxColumn.HeaderText = "ProdName";
-            this.prodNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prodNameDataGridViewTextBoxColumn.Name = "prodNameDataGridViewTextBoxColumn";
-            this.prodNameDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "SellingPrice";
+            this.dataGridViewTextBoxColumn2.HeaderText = "SellingPrice";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // costPriceDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.costPriceDataGridViewTextBoxColumn.DataPropertyName = "CostPrice";
-            this.costPriceDataGridViewTextBoxColumn.HeaderText = "CostPrice";
-            this.costPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.costPriceDataGridViewTextBoxColumn.Name = "costPriceDataGridViewTextBoxColumn";
-            this.costPriceDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "BrandName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "BrandName";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // prodQuantityDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.prodQuantityDataGridViewTextBoxColumn.DataPropertyName = "ProdQuantity";
-            this.prodQuantityDataGridViewTextBoxColumn.HeaderText = "ProdQuantity";
-            this.prodQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prodQuantityDataGridViewTextBoxColumn.Name = "prodQuantityDataGridViewTextBoxColumn";
-            this.prodQuantityDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Colour";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Colour";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // discountDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn8
             // 
-            this.discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
-            this.discountDataGridViewTextBoxColumn.HeaderText = "Discount";
-            this.discountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
-            this.discountDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Size";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Size";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // sellingPriceDataGridViewTextBoxColumn
+            // categoryFIlterBS
             // 
-            this.sellingPriceDataGridViewTextBoxColumn.DataPropertyName = "SellingPrice";
-            this.sellingPriceDataGridViewTextBoxColumn.HeaderText = "SellingPrice";
-            this.sellingPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sellingPriceDataGridViewTextBoxColumn.Name = "sellingPriceDataGridViewTextBoxColumn";
-            this.sellingPriceDataGridViewTextBoxColumn.Width = 125;
+            this.categoryFIlterBS.DataMember = "CategoryFIlter";
+            this.categoryFIlterBS.DataSource = this.productDS;
+            this.categoryFIlterBS.Filter = "";
             // 
-            // reorderStatusDataGridViewTextBoxColumn
+            // categoryFIlterTA
             // 
-            this.reorderStatusDataGridViewTextBoxColumn.DataPropertyName = "ReorderStatus";
-            this.reorderStatusDataGridViewTextBoxColumn.HeaderText = "ReorderStatus";
-            this.reorderStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.reorderStatusDataGridViewTextBoxColumn.Name = "reorderStatusDataGridViewTextBoxColumn";
-            this.reorderStatusDataGridViewTextBoxColumn.Width = 125;
+            this.categoryFIlterTA.ClearBeforeFill = true;
             // 
-            // brandIDDataGridViewTextBoxColumn
+            // tableAdapterManager2
             // 
-            this.brandIDDataGridViewTextBoxColumn.DataPropertyName = "BrandID";
-            this.brandIDDataGridViewTextBoxColumn.HeaderText = "BrandID";
-            this.brandIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.brandIDDataGridViewTextBoxColumn.Name = "brandIDDataGridViewTextBoxColumn";
-            this.brandIDDataGridViewTextBoxColumn.Width = 125;
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.Connection = null;
+            this.tableAdapterManager2.UpdateOrder = ISTN3AS.ProductDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // sizeDataGridViewTextBoxColumn
+            // brandTblTableAdapter1
             // 
-            this.sizeDataGridViewTextBoxColumn.DataPropertyName = "Size";
-            this.sizeDataGridViewTextBoxColumn.HeaderText = "Size";
-            this.sizeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sizeDataGridViewTextBoxColumn.Name = "sizeDataGridViewTextBoxColumn";
-            this.sizeDataGridViewTextBoxColumn.Width = 125;
+            this.brandTblTableAdapter1.ClearBeforeFill = true;
             // 
-            // colourDataGridViewTextBoxColumn
+            // colourTblTableAdapter1
             // 
-            this.colourDataGridViewTextBoxColumn.DataPropertyName = "Colour";
-            this.colourDataGridViewTextBoxColumn.HeaderText = "Colour";
-            this.colourDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.colourDataGridViewTextBoxColumn.Name = "colourDataGridViewTextBoxColumn";
-            this.colourDataGridViewTextBoxColumn.Width = 125;
+            this.colourTblTableAdapter1.ClearBeforeFill = true;
             // 
-            // categoryDataGridViewTextBoxColumn
+            // sizeTblTableAdapter1
             // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productTblBindingSource
-            // 
-            this.productTblBindingSource.DataMember = "ProductTbl";
-            this.productTblBindingSource.DataSource = this.group6DataSet;
-            // 
-            // group6DataSet
-            // 
-            this.group6DataSet.DataSetName = "group6DataSet";
-            this.group6DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productTblTableAdapter
-            // 
-            this.productTblTableAdapter.ClearBeforeFill = true;
+            this.sizeTblTableAdapter1.ClearBeforeFill = true;
             // 
             // salesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1275, 706);
+            this.ClientSize = new System.Drawing.Size(1612, 757);
             this.Controls.Add(this.pnlCompany);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.tabcontrol1);
@@ -3194,7 +3081,7 @@
             this.Controls.Add(this.grpBoxDBgrid);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "salesControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "salesControl";
@@ -3223,8 +3110,15 @@
             this.groupBox4.ResumeLayout(false);
             this.cat5.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brandTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productFilterDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.colourTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
             this.cat4.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).EndInit();
             this.cat3.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.cat2.ResumeLayout(false);
@@ -3264,9 +3158,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.grpBoxDBgrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productTblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3292,13 +3186,6 @@
         public System.Windows.Forms.Button btnCat5;
         public System.Windows.Forms.Button btnCat4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         public System.Windows.Forms.Label lblCompany;
@@ -3377,32 +3264,23 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox tbxCell_AccCreation;
+        private System.Windows.Forms.TextBox tbxAddress_AccCreation;
+        private System.Windows.Forms.TextBox tbxEmail_AccCreation;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox tbxSurname_AccCreation;
+        private System.Windows.Forms.TextBox tbxName_AccCreation;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.ComboBox comboBox9;
         public System.Windows.Forms.Button btnShoeOrder;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label label60;
         public System.Windows.Forms.Button btnShoePurchase;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button20;
@@ -3410,28 +3288,12 @@
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.ComboBox comboBox15;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.ComboBox comboBox16;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.ComboBox comboBox13;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.ComboBox comboBox17;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.ComboBox comboBox19;
         private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.ComboBox comboBox18;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.ComboBox comboBox20;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.ComboBox comboBox21;
         private System.Windows.Forms.Button button30;
         private System.Windows.Forms.RichTextBox richItemsPurchased;
         private System.Windows.Forms.Panel panel3;
@@ -3477,20 +3339,69 @@
         public System.Windows.Forms.GroupBox gbItemsScroll;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox grpBoxDBgrid;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private group6DataSet group6DataSet;
-        private System.Windows.Forms.BindingSource productTblBindingSource;
         private group6DataSetTableAdapters.ProductTblTableAdapter productTblTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodQuantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sellingPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reorderStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brandIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colourDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private group6DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costPriceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodQuantityDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellingPriceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reorderStatusDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sizeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colourDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private group6DataSetTableAdapters.Insert insert1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private ProductDS productDS;
+        private System.Windows.Forms.BindingSource categoryFIlterBS;
+        private ProductDSTableAdapters.CategoryFIlterTableAdapter categoryFIlterTA;
+        private ProductDSTableAdapters.TableAdapterManager tableAdapterManager2;
+        private System.Windows.Forms.DataGridView categoryFIlterDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.BindingSource brandTblBindingSource;
+        private System.Windows.Forms.ComboBox cbxBrand_Accessories;
+        private System.Windows.Forms.BindingSource colourTblBindingSource;
+        private System.Windows.Forms.ComboBox cbxColour_Accessories;
+        private System.Windows.Forms.BindingSource sizeTblBindingSource;
+        private System.Windows.Forms.ComboBox cbxSize_Accessories;
+        private System.Windows.Forms.ComboBox cbxSize_Caps;
+        private System.Windows.Forms.ComboBox cbxColour_Caps;
+        private System.Windows.Forms.ComboBox cbxBrand_Caps;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox cbxSize_Shoes;
+        private System.Windows.Forms.ComboBox cbxColour_Shoes;
+        private System.Windows.Forms.ComboBox cbxBrand_Shoes;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox cbxSize_TShirts;
+        private System.Windows.Forms.ComboBox cbxColour_TShirts;
+        private System.Windows.Forms.ComboBox cbxBrand_TShirts;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox brandNameComboBox;
+        private ProductFilterDS productFilterDS;
+        private System.Windows.Forms.ComboBox colourComboBox;
+        private System.Windows.Forms.ComboBox sizeComboBox;
+        private ProductFilterDSTableAdapters.BrandTblTableAdapter brandTblTableAdapter1;
+        private ProductFilterDSTableAdapters.ColourTblTableAdapter colourTblTableAdapter1;
+        private ProductFilterDSTableAdapters.SizeTblTableAdapter sizeTblTableAdapter1;
     }
 }
