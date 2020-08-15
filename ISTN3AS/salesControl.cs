@@ -16,6 +16,7 @@ namespace ISTN3AS
     {
         cls_itemComp sc = new cls_itemComp();
         private bool filterOn = false;
+        private bool filterCategory = false;
         String FilterParameters = "";
         public salesControl()
         {
@@ -58,12 +59,14 @@ namespace ISTN3AS
         {
             //tabcontrol1.SelectedTab = cat1;
             categorySelceted("T-Shirt");
+            lblCategory.Text = "T-Shirts";
         }
 
         private void btnCat2_Click(object sender, EventArgs e)
         {
             //tabcontrol1.SelectedTab = cat2;
             categorySelceted("Shoe");
+            lblCategory.Text = "Shoe";
 
         }
 
@@ -112,6 +115,7 @@ namespace ISTN3AS
         {
             //tabcontrol1.SelectedTab = cat3;
             categorySelceted("Cap");
+            lblCategory.Text = "Caps";
 
         }
 
@@ -119,12 +123,14 @@ namespace ISTN3AS
         {
             //tabcontrol1.SelectedTab = cat4;
             categorySelceted("Accessories");
+            lblCategory.Text = "Accessories";
         }
 
         private void btnCat5_Click(object sender, EventArgs e)
         {
             //tabcontrol1.SelectedTab = cat5;
             categorySelceted("Equipment");
+            lblCategory.Text = "Equipment";
 
         }
 
@@ -204,6 +210,7 @@ namespace ISTN3AS
 
         private void btnMenuPurchase_Click(object sender, EventArgs e)
         {
+            
             sc.Purchase(this);
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat4;
@@ -211,6 +218,18 @@ namespace ISTN3AS
             tabcontrol1.Size = new Size(307, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
+
+
+            cbxCategory_Purchase.SelectedIndex = -1;
+
+            filterCategory = true;
+
+        }
+
+        private Boolean InitPurchase()
+        {
+            
+            return true;
         }
 
         private void btnMenuOrder_Click(object sender, EventArgs e)
@@ -225,6 +244,8 @@ namespace ISTN3AS
 
         private void salesControl_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'productFilterDS.CategoryTbl' table. You can move, or remove it, as needed.
+            this.categoryTblTableAdapter.populateCategory(this.productFilterDS.CategoryTbl);
             // TODO: This line of code loads data into the 'group6DataSet.ColourTbl' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'group6DataSet.ProductTbl' table. You can move, or remove it, as needed.
             //this.productTblTableAdapter.Fill(this.group6DataSet.ProductTbl);
@@ -293,7 +314,7 @@ namespace ISTN3AS
         {
             if (filterOn)
             {
-                FilterAccessories();
+                FilterProducts();
             }
             
         }
@@ -302,7 +323,7 @@ namespace ISTN3AS
         {
             if (filterOn)
             {
-               FilterAccessories();
+               FilterProducts();
             }
         }
 
@@ -310,11 +331,12 @@ namespace ISTN3AS
         {
             if (filterOn)
             {
-                FilterAccessories();
+                FilterProducts();
             }
+            
         }
 
-        private void FilterAccessories()
+        private void FilterProducts()
         {
             FilterParameters = "";
             if (cbxColour_Accessories.SelectedIndex != -1)
@@ -358,5 +380,15 @@ namespace ISTN3AS
                
         }
 
+        private void cbxCategory_Purchase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (filterCategory)
+            {
+                categorySelceted(cbxCategory_Purchase.Text);
+                lblCategory.Text = cbxCategory_Purchase.Text;
+            }
+            
+
+        }
     }
 }

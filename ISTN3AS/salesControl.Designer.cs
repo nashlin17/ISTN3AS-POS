@@ -104,8 +104,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.productDS = new ISTN3AS.ProductDS();
             this.cat4 = new System.Windows.Forms.TabPage();
-            this.label76 = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxCategory_Purchase = new System.Windows.Forms.ComboBox();
+            this.categoryTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxSize_Accessories = new System.Windows.Forms.ComboBox();
             this.cbxColour_Accessories = new System.Windows.Forms.ComboBox();
             this.cbxBrand_Accessories = new System.Windows.Forms.ComboBox();
@@ -253,6 +256,8 @@
             this.brandTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.BrandTblTableAdapter();
             this.colourTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.ColourTblTableAdapter();
             this.sizeTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.SizeTblTableAdapter();
+            this.categoryTblTableAdapter = new ISTN3AS.ProductFilterDSTableAdapters.CategoryTblTableAdapter();
+            this.tableAdapterManager1 = new ISTN3AS.ProductFilterDSTableAdapters.TableAdapterManager();
             colourLabel = new System.Windows.Forms.Label();
             brandNameLabel = new System.Windows.Forms.Label();
             sizeLabel = new System.Windows.Forms.Label();
@@ -283,6 +288,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
             this.cat4.SuspendLayout();
             this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).BeginInit();
             this.cat3.SuspendLayout();
             this.groupBox15.SuspendLayout();
@@ -1203,7 +1209,7 @@
             // 
             this.cat4.AutoScroll = true;
             this.cat4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cat4.Controls.Add(this.label76);
+            this.cat4.Controls.Add(this.lblCategory);
             this.cat4.Controls.Add(this.groupBox16);
             this.cat4.Location = new System.Drawing.Point(4, 22);
             this.cat4.Margin = new System.Windows.Forms.Padding(2);
@@ -1212,20 +1218,22 @@
             this.cat4.TabIndex = 3;
             this.cat4.Text = "cat4";
             // 
-            // label76
+            // lblCategory
             // 
-            this.label76.BackColor = System.Drawing.Color.White;
-            this.label76.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(8, 15);
-            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(258, 36);
-            this.label76.TabIndex = 22;
-            this.label76.Text = "Accessories";
-            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCategory.BackColor = System.Drawing.Color.White;
+            this.lblCategory.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Location = new System.Drawing.Point(8, 15);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(258, 36);
+            this.lblCategory.TabIndex = 22;
+            this.lblCategory.Text = "Accessories";
+            this.lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.label4);
+            this.groupBox16.Controls.Add(this.cbxCategory_Purchase);
             this.groupBox16.Controls.Add(this.cbxSize_Accessories);
             this.groupBox16.Controls.Add(this.cbxColour_Accessories);
             this.groupBox16.Controls.Add(this.cbxBrand_Accessories);
@@ -1236,9 +1244,36 @@
             this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox16.Size = new System.Drawing.Size(253, 518);
+            this.groupBox16.Size = new System.Drawing.Size(253, 431);
             this.groupBox16.TabIndex = 3;
             this.groupBox16.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 373);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 19);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Choose Product Type : ";
+            // 
+            // cbxCategory_Purchase
+            // 
+            this.cbxCategory_Purchase.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoryTblBindingSource, "Category", true));
+            this.cbxCategory_Purchase.DataSource = this.categoryTblBindingSource;
+            this.cbxCategory_Purchase.DisplayMember = "Category";
+            this.cbxCategory_Purchase.FormattingEnabled = true;
+            this.cbxCategory_Purchase.Location = new System.Drawing.Point(18, 395);
+            this.cbxCategory_Purchase.Name = "cbxCategory_Purchase";
+            this.cbxCategory_Purchase.Size = new System.Drawing.Size(184, 21);
+            this.cbxCategory_Purchase.TabIndex = 11;
+            this.cbxCategory_Purchase.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_Purchase_SelectedIndexChanged);
+            // 
+            // categoryTblBindingSource
+            // 
+            this.categoryTblBindingSource.DataMember = "CategoryTbl";
+            this.categoryTblBindingSource.DataSource = this.productFilterDS;
             // 
             // cbxSize_Accessories
             // 
@@ -3067,6 +3102,16 @@
             // 
             this.sizeTblTableAdapter1.ClearBeforeFill = true;
             // 
+            // categoryTblTableAdapter
+            // 
+            this.categoryTblTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.UpdateOrder = ISTN3AS.ProductFilterDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // salesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3117,6 +3162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
             this.cat4.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.categoryTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).EndInit();
             this.cat3.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
@@ -3287,7 +3333,7 @@
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Label label73;
@@ -3402,5 +3448,10 @@
         private ProductFilterDSTableAdapters.BrandTblTableAdapter brandTblTableAdapter1;
         private ProductFilterDSTableAdapters.ColourTblTableAdapter colourTblTableAdapter1;
         private ProductFilterDSTableAdapters.SizeTblTableAdapter sizeTblTableAdapter1;
+        private System.Windows.Forms.BindingSource categoryTblBindingSource;
+        private ProductFilterDSTableAdapters.CategoryTblTableAdapter categoryTblTableAdapter;
+        private ProductFilterDSTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbxCategory_Purchase;
     }
 }
