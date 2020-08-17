@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +20,7 @@ namespace ISTN3AS
         private bool filterOn = false;
         private bool filterCategory = false;
         String FilterParameters = "";
+
         public salesControl()
         {
             InitializeComponent();
@@ -31,20 +34,11 @@ namespace ISTN3AS
 
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnItems_Click(object sender, EventArgs e)
         {
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat1;
             tabcontrol1.Size = new Size(307, 640);
-
-
-
-
         }
 
         private void btnCashOut_Click(object sender, EventArgs e)
@@ -103,11 +97,6 @@ namespace ISTN3AS
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = accCreate;
             tabcontrol1.Size = new Size(1382, 734);
-
-        }
-
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -215,7 +204,7 @@ namespace ISTN3AS
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat4;
             this.categoryFIlterTA.AllProducts(this.productDS.CategoryFIlter);
-            tabcontrol1.Size = new Size(307, 640);
+            tabcontrol1.Size = new Size(242, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
 
@@ -224,12 +213,6 @@ namespace ISTN3AS
 
             filterCategory = true;
 
-        }
-
-        private Boolean InitPurchase()
-        {
-            
-            return true;
         }
 
         private void btnMenuOrder_Click(object sender, EventArgs e)
@@ -246,24 +229,23 @@ namespace ISTN3AS
         {
             // TODO: This line of code loads data into the 'productFilterDS.CategoryTbl' table. You can move, or remove it, as needed.
             this.categoryTblTableAdapter.populateCategory(this.productFilterDS.CategoryTbl);
+            this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
             // TODO: This line of code loads data into the 'group6DataSet.ColourTbl' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'group6DataSet.ProductTbl' table. You can move, or remove it, as needed.
             //this.productTblTableAdapter.Fill(this.group6DataSet.ProductTbl);
+            Quantity_Control.Value = 1;
+            lblTotal.Text = "Total : ";
 
 
+            lsvProductCart_Control.View = View.Details;
+
+            lsvProductCart_Control.Columns.Add("Player Name");
+            lsvProductCart_Control.Columns[0].Width = 203;
+            lsvProductCart_Control.Columns.Add("Qty");
+            lsvProductCart_Control.Columns[1].TextAlign = HorizontalAlignment.Center;
+            lsvProductCart_Control.Columns.Add("Total");
+            lsvProductCart_Control.Columns[2].TextAlign = HorizontalAlignment.Center;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         private void button20_Click(object sender, EventArgs e)
         {
@@ -277,7 +259,15 @@ namespace ISTN3AS
 
         private void button21_Click(object sender, EventArgs e)
         {
-            insert1.InsertMember(tbxName_AccCreation.Text, tbxSurname_AccCreation.Text, tbxCell_AccCreation.Text, tbxAddress_AccCreation.Text, tbxEmail_AccCreation.Text);
+            if (tbxCell_AccCreation.TextLength == 10 & (tbxEmail_AccCreation.Text.Contains("@")))
+            {
+                
+                staffTblTableAdapter.Insert(tbxName_AccCreation.Text, tbxSurname_AccCreation.Text, tbxCell_AccCreation.Text, tbxAddress_AccCreation.Text, tbxEmail_AccCreation.Text);
+                this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
+                MessageBox.Show("Account Created");
+            }
+            else { MessageBox.Show("Please Re-Enter PhoneNumber or Email"); }
+            
         }
 
 
@@ -389,6 +379,24 @@ namespace ISTN3AS
             }
             
 
+        }
+
+        double cartTotal = 0;
+        private void btnShoePurchase_Click(object sender, EventArgs e)
+        {
+            lsvProductCart_Control.Items.Add(new ListViewItem(new[] { categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString(), Quantity_Control.Value.ToString(), (Quantity_Control.Value * Decimal.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString())).ToString() }));
+            cartTotal += Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString());
+            lblTotal.Text = "Total : " + cartTotal.ToString(); ;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem eachItem in lsvProductCart_Control.SelectedItems)
+            {
+                cartTotal -= Double.Parse(lsvProductCart_Control.SelectedItems[0].SubItems[2].Text);
+                lblTotal.Text = "Total : " + cartTotal.ToString();
+                lsvProductCart_Control.Items.Remove(eachItem);
+            }
         }
     }
 }

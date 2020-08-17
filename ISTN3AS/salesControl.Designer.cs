@@ -106,6 +106,7 @@
             this.cat4 = new System.Windows.Forms.TabPage();
             this.lblCategory = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.Quantity_Control = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxCategory_Purchase = new System.Windows.Forms.ComboBox();
             this.categoryTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -159,9 +160,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.button20 = new System.Windows.Forms.Button();
             this.label56 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
             this.panel25 = new System.Windows.Forms.Panel();
             this.tbxCell_AccCreation = new System.Windows.Forms.TextBox();
             this.tbxAddress_AccCreation = new System.Windows.Forms.TextBox();
@@ -205,7 +204,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.richItemsPurchased = new System.Windows.Forms.RichTextBox();
             this.pnlCompany = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -235,6 +233,8 @@
             this.btnCat2 = new System.Windows.Forms.Button();
             this.btnCat1 = new System.Windows.Forms.Button();
             this.gbItemsScroll = new System.Windows.Forms.GroupBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lsvProductCart_Control = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -258,6 +258,18 @@
             this.sizeTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.SizeTblTableAdapter();
             this.categoryTblTableAdapter = new ISTN3AS.ProductFilterDSTableAdapters.CategoryTblTableAdapter();
             this.tableAdapterManager1 = new ISTN3AS.ProductFilterDSTableAdapters.TableAdapterManager();
+            this.staffTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager3 = new ISTN3AS.group6DataSetTableAdapters.TableAdapterManager();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.staffTblTableAdapter = new ISTN3AS.group6DataSetTableAdapters.StaffTblTableAdapter();
+            this.staffTblDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             colourLabel = new System.Windows.Forms.Label();
             brandNameLabel = new System.Windows.Forms.Label();
             sizeLabel = new System.Windows.Forms.Label();
@@ -288,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
             this.cat4.SuspendLayout();
             this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Quantity_Control)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).BeginInit();
             this.cat3.SuspendLayout();
@@ -326,6 +339,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffTblDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // colourLabel
@@ -364,7 +379,7 @@
             this.memberAcc.Location = new System.Drawing.Point(4, 22);
             this.memberAcc.Margin = new System.Windows.Forms.Padding(2);
             this.memberAcc.Name = "memberAcc";
-            this.memberAcc.Size = new System.Drawing.Size(273, 572);
+            this.memberAcc.Size = new System.Drawing.Size(855, 540);
             this.memberAcc.TabIndex = 6;
             this.memberAcc.Text = "memberAcc";
             // 
@@ -768,7 +783,7 @@
             this.purchase.Location = new System.Drawing.Point(4, 22);
             this.purchase.Margin = new System.Windows.Forms.Padding(2);
             this.purchase.Name = "purchase";
-            this.purchase.Size = new System.Drawing.Size(273, 572);
+            this.purchase.Size = new System.Drawing.Size(855, 540);
             this.purchase.TabIndex = 5;
             this.purchase.Text = "purchase";
             // 
@@ -1082,7 +1097,7 @@
             this.cat5.Location = new System.Drawing.Point(4, 22);
             this.cat5.Margin = new System.Windows.Forms.Padding(2);
             this.cat5.Name = "cat5";
-            this.cat5.Size = new System.Drawing.Size(273, 572);
+            this.cat5.Size = new System.Drawing.Size(855, 540);
             this.cat5.TabIndex = 4;
             this.cat5.Text = "cat5";
             // 
@@ -1214,7 +1229,7 @@
             this.cat4.Location = new System.Drawing.Point(4, 22);
             this.cat4.Margin = new System.Windows.Forms.Padding(2);
             this.cat4.Name = "cat4";
-            this.cat4.Size = new System.Drawing.Size(273, 572);
+            this.cat4.Size = new System.Drawing.Size(855, 540);
             this.cat4.TabIndex = 3;
             this.cat4.Text = "cat4";
             // 
@@ -1225,13 +1240,14 @@
             this.lblCategory.Location = new System.Drawing.Point(8, 15);
             this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(258, 36);
+            this.lblCategory.Size = new System.Drawing.Size(209, 36);
             this.lblCategory.TabIndex = 22;
             this.lblCategory.Text = "Accessories";
             this.lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.Quantity_Control);
             this.groupBox16.Controls.Add(this.label4);
             this.groupBox16.Controls.Add(this.cbxCategory_Purchase);
             this.groupBox16.Controls.Add(this.cbxSize_Accessories);
@@ -1240,18 +1256,25 @@
             this.groupBox16.Controls.Add(this.label72);
             this.groupBox16.Controls.Add(this.label73);
             this.groupBox16.Controls.Add(this.label75);
-            this.groupBox16.Location = new System.Drawing.Point(13, 49);
+            this.groupBox16.Location = new System.Drawing.Point(7, 53);
             this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox16.Size = new System.Drawing.Size(253, 431);
+            this.groupBox16.Size = new System.Drawing.Size(210, 482);
             this.groupBox16.TabIndex = 3;
             this.groupBox16.TabStop = false;
+            // 
+            // Quantity_Control
+            // 
+            this.Quantity_Control.Location = new System.Drawing.Point(82, 208);
+            this.Quantity_Control.Name = "Quantity_Control";
+            this.Quantity_Control.Size = new System.Drawing.Size(120, 20);
+            this.Quantity_Control.TabIndex = 13;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 373);
+            this.label4.Location = new System.Drawing.Point(11, 423);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 19);
@@ -1264,7 +1287,7 @@
             this.cbxCategory_Purchase.DataSource = this.categoryTblBindingSource;
             this.cbxCategory_Purchase.DisplayMember = "Category";
             this.cbxCategory_Purchase.FormattingEnabled = true;
-            this.cbxCategory_Purchase.Location = new System.Drawing.Point(18, 395);
+            this.cbxCategory_Purchase.Location = new System.Drawing.Point(15, 445);
             this.cbxCategory_Purchase.Name = "cbxCategory_Purchase";
             this.cbxCategory_Purchase.Size = new System.Drawing.Size(184, 21);
             this.cbxCategory_Purchase.TabIndex = 11;
@@ -1354,7 +1377,7 @@
             this.cat3.Location = new System.Drawing.Point(4, 22);
             this.cat3.Margin = new System.Windows.Forms.Padding(2);
             this.cat3.Name = "cat3";
-            this.cat3.Size = new System.Drawing.Size(273, 572);
+            this.cat3.Size = new System.Drawing.Size(855, 540);
             this.cat3.TabIndex = 2;
             this.cat3.Text = "cat3";
             // 
@@ -1484,7 +1507,7 @@
             this.cat2.Margin = new System.Windows.Forms.Padding(2);
             this.cat2.Name = "cat2";
             this.cat2.Padding = new System.Windows.Forms.Padding(2);
-            this.cat2.Size = new System.Drawing.Size(273, 572);
+            this.cat2.Size = new System.Drawing.Size(855, 540);
             this.cat2.TabIndex = 1;
             this.cat2.Text = "cat2";
             // 
@@ -1618,7 +1641,7 @@
             this.btnShoeOrder.ForeColor = System.Drawing.Color.Black;
             this.btnShoeOrder.Image = global::ISTN3AS.Properties.Resources.order;
             this.btnShoeOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShoeOrder.Location = new System.Drawing.Point(0, 554);
+            this.btnShoeOrder.Location = new System.Drawing.Point(12, 466);
             this.btnShoeOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnShoeOrder.Name = "btnShoeOrder";
             this.btnShoeOrder.Size = new System.Drawing.Size(186, 58);
@@ -1639,13 +1662,14 @@
             this.btnShoePurchase.ForeColor = System.Drawing.Color.Black;
             this.btnShoePurchase.Image = global::ISTN3AS.Properties.Resources.basket__1_;
             this.btnShoePurchase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShoePurchase.Location = new System.Drawing.Point(366, 556);
+            this.btnShoePurchase.Location = new System.Drawing.Point(371, 470);
             this.btnShoePurchase.Margin = new System.Windows.Forms.Padding(2);
             this.btnShoePurchase.Name = "btnShoePurchase";
             this.btnShoePurchase.Size = new System.Drawing.Size(192, 54);
             this.btnShoePurchase.TabIndex = 6;
             this.btnShoePurchase.Text = "Add To Cart";
             this.btnShoePurchase.UseVisualStyleBackColor = false;
+            this.btnShoePurchase.Click += new System.EventHandler(this.btnShoePurchase_Click);
             // 
             // cat1
             // 
@@ -1656,7 +1680,7 @@
             this.cat1.Margin = new System.Windows.Forms.Padding(2);
             this.cat1.Name = "cat1";
             this.cat1.Padding = new System.Windows.Forms.Padding(2);
-            this.cat1.Size = new System.Drawing.Size(273, 572);
+            this.cat1.Size = new System.Drawing.Size(855, 540);
             this.cat1.TabIndex = 0;
             this.cat1.Text = "cat1";
             // 
@@ -1794,11 +1818,12 @@
             this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(281, 598);
+            this.tabcontrol1.Size = new System.Drawing.Size(863, 566);
             this.tabcontrol1.TabIndex = 5;
             // 
             // accCreate
             // 
+            this.accCreate.AutoScroll = true;
             this.accCreate.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accCreate.Controls.Add(this.groupBox13);
             this.accCreate.Controls.Add(this.groupBox12);
@@ -1806,19 +1831,20 @@
             this.accCreate.Location = new System.Drawing.Point(4, 22);
             this.accCreate.Margin = new System.Windows.Forms.Padding(2);
             this.accCreate.Name = "accCreate";
-            this.accCreate.Size = new System.Drawing.Size(273, 572);
+            this.accCreate.Size = new System.Drawing.Size(855, 540);
             this.accCreate.TabIndex = 7;
             this.accCreate.Text = "AccCreate";
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.staffTblDataGridView);
             this.groupBox13.Controls.Add(this.groupBox3);
             this.groupBox13.Controls.Add(this.label7);
             this.groupBox13.Location = new System.Drawing.Point(476, 6);
             this.groupBox13.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox13.Size = new System.Drawing.Size(334, 476);
+            this.groupBox13.Size = new System.Drawing.Size(353, 573);
             this.groupBox13.TabIndex = 1;
             this.groupBox13.TabStop = false;
             // 
@@ -1827,7 +1853,7 @@
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox3.Location = new System.Drawing.Point(4, 67);
+            this.groupBox3.Location = new System.Drawing.Point(0, 75);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -1857,7 +1883,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 23);
+            this.label7.Location = new System.Drawing.Point(40, 24);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(271, 36);
@@ -1879,22 +1905,6 @@
             this.groupBox12.TabIndex = 0;
             this.groupBox12.TabStop = false;
             // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.White;
-            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
-            this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button20.Location = new System.Drawing.Point(4, 418);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(141, 46);
-            this.button20.TabIndex = 17;
-            this.button20.Text = "Clear";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
             // label56
             // 
             this.label56.BackColor = System.Drawing.Color.White;
@@ -1906,22 +1916,6 @@
             this.label56.TabIndex = 16;
             this.label56.Text = "Account Creation";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.White;
-            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Image = global::ISTN3AS.Properties.Resources.process;
-            this.button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button21.Location = new System.Drawing.Point(320, 418);
-            this.button21.Margin = new System.Windows.Forms.Padding(2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(141, 46);
-            this.button21.TabIndex = 18;
-            this.button21.Text = "Process";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // panel25
             // 
@@ -1940,7 +1934,7 @@
             this.panel25.Location = new System.Drawing.Point(4, 75);
             this.panel25.Margin = new System.Windows.Forms.Padding(2);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(457, 262);
+            this.panel25.Size = new System.Drawing.Size(457, 246);
             this.panel25.TabIndex = 15;
             // 
             // tbxCell_AccCreation
@@ -2041,7 +2035,7 @@
             this.orders.Location = new System.Drawing.Point(4, 22);
             this.orders.Margin = new System.Windows.Forms.Padding(2);
             this.orders.Name = "orders";
-            this.orders.Size = new System.Drawing.Size(273, 572);
+            this.orders.Size = new System.Drawing.Size(855, 540);
             this.orders.TabIndex = 8;
             this.orders.Text = "orders";
             // 
@@ -2167,7 +2161,7 @@
             this.returnItem.Location = new System.Drawing.Point(4, 22);
             this.returnItem.Margin = new System.Windows.Forms.Padding(2);
             this.returnItem.Name = "returnItem";
-            this.returnItem.Size = new System.Drawing.Size(273, 572);
+            this.returnItem.Size = new System.Drawing.Size(855, 540);
             this.returnItem.TabIndex = 9;
             this.returnItem.Text = "return";
             // 
@@ -2379,7 +2373,6 @@
             this.comboBox5.Size = new System.Drawing.Size(156, 27);
             this.comboBox5.Sorted = true;
             this.comboBox5.TabIndex = 3;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // label45
             // 
@@ -2444,19 +2437,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(273, 572);
+            this.tabPage1.Size = new System.Drawing.Size(855, 540);
             this.tabPage1.TabIndex = 10;
             this.tabPage1.Text = "tabPage1";
-            // 
-            // richItemsPurchased
-            // 
-            this.richItemsPurchased.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.richItemsPurchased.Location = new System.Drawing.Point(4, 58);
-            this.richItemsPurchased.Margin = new System.Windows.Forms.Padding(2);
-            this.richItemsPurchased.Name = "richItemsPurchased";
-            this.richItemsPurchased.Size = new System.Drawing.Size(310, 375);
-            this.richItemsPurchased.TabIndex = 19;
-            this.richItemsPurchased.Text = "Item Type                         Item Name                          Item Cost";
             // 
             // pnlCompany
             // 
@@ -2629,7 +2612,6 @@
             this.pictureBox10.Size = new System.Drawing.Size(35, 34);
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // btnReturns
             // 
@@ -2814,7 +2796,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1369, 56);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnCat5
             // 
@@ -2923,17 +2904,37 @@
             // 
             this.gbItemsScroll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbItemsScroll.Controls.Add(this.lblTotal);
+            this.gbItemsScroll.Controls.Add(this.lsvProductCart_Control);
             this.gbItemsScroll.Controls.Add(this.button2);
             this.gbItemsScroll.Controls.Add(this.button5);
-            this.gbItemsScroll.Controls.Add(this.richItemsPurchased);
             this.gbItemsScroll.Controls.Add(this.panel3);
-            this.gbItemsScroll.Location = new System.Drawing.Point(1088, 141);
+            this.gbItemsScroll.Location = new System.Drawing.Point(1060, 141);
             this.gbItemsScroll.Margin = new System.Windows.Forms.Padding(2);
             this.gbItemsScroll.Name = "gbItemsScroll";
             this.gbItemsScroll.Padding = new System.Windows.Forms.Padding(2);
-            this.gbItemsScroll.Size = new System.Drawing.Size(318, 616);
+            this.gbItemsScroll.Size = new System.Drawing.Size(339, 533);
             this.gbItemsScroll.TabIndex = 20;
             this.gbItemsScroll.TabStop = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(6, 444);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(70, 24);
+            this.lblTotal.TabIndex = 24;
+            this.lblTotal.Text = "label32";
+            // 
+            // lsvProductCart_Control
+            // 
+            this.lsvProductCart_Control.HideSelection = false;
+            this.lsvProductCart_Control.Location = new System.Drawing.Point(6, 55);
+            this.lsvProductCart_Control.Name = "lsvProductCart_Control";
+            this.lsvProductCart_Control.Size = new System.Drawing.Size(328, 382);
+            this.lsvProductCart_Control.TabIndex = 23;
+            this.lsvProductCart_Control.UseCompatibleStateImageBehavior = false;
             // 
             // button2
             // 
@@ -2944,13 +2945,14 @@
             this.button2.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button2.Image = global::ISTN3AS.Properties.Resources.quit;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(4, 520);
+            this.button2.Location = new System.Drawing.Point(4, 475);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 41);
             this.button2.TabIndex = 21;
             this.button2.Text = "Delete Item";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -2960,7 +2962,7 @@
             this.button5.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button5.Image = global::ISTN3AS.Properties.Resources.process;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(164, 520);
+            this.button5.Location = new System.Drawing.Point(181, 475);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 41);
@@ -2975,10 +2977,10 @@
             this.panel3.Controls.Add(this.btnSearch2);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(6, 6);
+            this.panel3.Location = new System.Drawing.Point(6, 17);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(308, 33);
+            this.panel3.Size = new System.Drawing.Size(328, 33);
             this.panel3.TabIndex = 20;
             // 
             // btnSearch2
@@ -2988,7 +2990,7 @@
             this.btnSearch2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSearch2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch2.Location = new System.Drawing.Point(267, 2);
+            this.btnSearch2.Location = new System.Drawing.Point(291, 3);
             this.btnSearch2.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch2.Name = "btnSearch2";
             this.btnSearch2.Size = new System.Drawing.Size(33, 25);
@@ -3007,11 +3009,11 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(101, 2);
+            this.textBox2.Location = new System.Drawing.Point(100, 2);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 26);
+            this.textBox2.Size = new System.Drawing.Size(179, 26);
             this.textBox2.TabIndex = 11;
             // 
             // grpBoxDBgrid
@@ -3024,7 +3026,7 @@
             this.grpBoxDBgrid.Margin = new System.Windows.Forms.Padding(2);
             this.grpBoxDBgrid.Name = "grpBoxDBgrid";
             this.grpBoxDBgrid.Padding = new System.Windows.Forms.Padding(2);
-            this.grpBoxDBgrid.Size = new System.Drawing.Size(567, 616);
+            this.grpBoxDBgrid.Size = new System.Drawing.Size(567, 533);
             this.grpBoxDBgrid.TabIndex = 22;
             this.grpBoxDBgrid.TabStop = false;
             // 
@@ -3039,9 +3041,9 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.categoryFIlterDataGridView.DataSource = this.categoryFIlterBS;
-            this.categoryFIlterDataGridView.Location = new System.Drawing.Point(40, 11);
+            this.categoryFIlterDataGridView.Location = new System.Drawing.Point(12, 16);
             this.categoryFIlterDataGridView.Name = "categoryFIlterDataGridView";
-            this.categoryFIlterDataGridView.Size = new System.Drawing.Size(518, 442);
+            this.categoryFIlterDataGridView.Size = new System.Drawing.Size(545, 442);
             this.categoryFIlterDataGridView.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
@@ -3112,6 +3114,107 @@
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.UpdateOrder = ISTN3AS.ProductFilterDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // staffTblBindingSource
+            // 
+            this.staffTblBindingSource.DataMember = "StaffTbl";
+            this.staffTblBindingSource.DataSource = this.group6DataSet;
+            // 
+            // tableAdapterManager3
+            // 
+            this.tableAdapterManager3.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager3.StaffTblTableAdapter = this.staffTblTableAdapter;
+            this.tableAdapterManager3.UpdateOrder = ISTN3AS.group6DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.White;
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
+            this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button20.Location = new System.Drawing.Point(4, 418);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(141, 46);
+            this.button20.TabIndex = 17;
+            this.button20.Text = "Clear";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.White;
+            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button21.Image = global::ISTN3AS.Properties.Resources.process;
+            this.button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button21.Location = new System.Drawing.Point(320, 418);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(141, 46);
+            this.button21.TabIndex = 18;
+            this.button21.Text = "Process";
+            this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // staffTblTableAdapter
+            // 
+            this.staffTblTableAdapter.ClearBeforeFill = true;
+            // 
+            // staffTblDataGridView
+            // 
+            this.staffTblDataGridView.AutoGenerateColumns = false;
+            this.staffTblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.staffTblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.staffTblDataGridView.DataSource = this.staffTblBindingSource;
+            this.staffTblDataGridView.Location = new System.Drawing.Point(9, 286);
+            this.staffTblDataGridView.Name = "staffTblDataGridView";
+            this.staffTblDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.staffTblDataGridView.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "StaffID";
+            this.dataGridViewTextBoxColumn9.HeaderText = "StaffID";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn10.HeaderText = "FullName";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Status";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
             // salesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3162,6 +3265,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
             this.cat4.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Quantity_Control)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.group6DataSet)).EndInit();
             this.cat3.ResumeLayout(false);
@@ -3200,12 +3304,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.gbItemsScroll.ResumeLayout(false);
+            this.gbItemsScroll.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.grpBoxDBgrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryFIlterBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffTblDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3327,8 +3434,6 @@
         public System.Windows.Forms.Button btnShoePurchase;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.RadioButton radioButton7;
@@ -3340,7 +3445,6 @@
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.RichTextBox richItemsPurchased;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSearch2;
         private System.Windows.Forms.Label label5;
@@ -3385,7 +3489,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox grpBoxDBgrid;
         private group6DataSet group6DataSet;
-        private group6DataSetTableAdapters.ProductTblTableAdapter productTblTableAdapter;
         private group6DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodNameDataGridViewTextBoxColumn1;
@@ -3453,5 +3556,20 @@
         private ProductFilterDSTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxCategory_Purchase;
+        private System.Windows.Forms.NumericUpDown Quantity_Control;
+        private System.Windows.Forms.ListView lsvProductCart_Control;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.BindingSource staffTblBindingSource;
+        private group6DataSetTableAdapters.TableAdapterManager tableAdapterManager3;
+        private System.Windows.Forms.DataGridView staffTblDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button21;
+        private group6DataSetTableAdapters.StaffTblTableAdapter staffTblTableAdapter;
     }
 }
