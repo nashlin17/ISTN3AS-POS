@@ -56,8 +56,8 @@ namespace ISTN3AS
            
 
     
-            formInstance.btnMenuOrder.Enabled = false;
-            formInstance.btnShoeOrder.Enabled = false;
+            //formInstance.btnMenuOrder.Enabled = false;
+            //formInstance.btnShoeOrder.Enabled = false;
        
         }
 
@@ -72,8 +72,8 @@ namespace ISTN3AS
      
    
           
-            formInstance.btnMenuOrder.Enabled = true;
-            formInstance.btnShoeOrder.Enabled = true;
+            //formInstance.btnMenuOrder.Enabled = true;
+            //formInstance.btnShoeOrder.Enabled = true;
             
         }
 

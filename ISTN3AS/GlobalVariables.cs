@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
@@ -19,6 +20,23 @@ namespace ISTN3AS
         public static int MemberID;
         public static int StaffID;
         public static double AccDiscount = 0.05;
+
+        //Customer Details
+        public static string customerName_Order;
+        public static string customerCellNo_Order;
+
+        public static void Clear()
+        {
+            cartTotal = 0;
+            productCart_ProductID.Clear();
+            productCart_Quantity.Clear();
+            productCart_UnitPrice.Clear();
+            TransactionType = "";
+            MemberID = new int();
+            //StaffID = new int();
+            customerCellNo_Order = "";
+            customerName_Order = "";
+        }
 
     }
 }

@@ -126,8 +126,31 @@ namespace ISTN3AS
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form payment = new payment(this);
-            payment.ShowDialog();
+            if (GlobalVariables.TransactionType.Equals("Store"))
+            {
+                Form payment = new payment(this);
+                payment.ShowDialog();
+            }
+            else
+            {
+                //Add to Phone Order Table.
+                phoneOrderTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()),GlobalVariables.customerName_Order,GlobalVariables.customerCellNo_Order,GlobalVariables.StaffID, null);
+
+                int maxID = int.Parse(phoneOrderTableAdapter.getMaxID().ToString());
+                //MessageBox.Show(maxID.ToString()) ;
+                for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
+                {
+                    phoneOrderLineTblTableAdapter.Insert(maxID, int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), Decimal.Parse(GlobalVariables.productCart_UnitPrice.ElementAt(i).ToString()), GlobalVariables.productCart_Quantity.ElementAt(i));
+                }
+
+                this.phoneOrderLineTblTableAdapter.Fill(this.productDS.PhoneOrderLineTbl);
+                this.phoneOrderTableAdapter.Fill(this.productDS.PhoneOrder);
+
+                tabcontrol1.SelectedTab = orders;
+                tabcontrol1.Size = new Size(1280, 566);
+            }
+
+
 
         }
 
@@ -142,10 +165,10 @@ namespace ISTN3AS
 
         private void rgbOrdCust_Click(object sender, EventArgs e)
         {
-            if (rgbOrdCust.Checked == true)
-            {
-                //rgbOrdMem.Checked = false;
-            }
+            //if (rgbOrdCust.Checked == true)
+            //{
+            //    //rgbOrdMem.Checked = false;
+            //}
         }
 
         private void rgbStCust_CheckedChanged(object sender, EventArgs e)
@@ -159,27 +182,28 @@ namespace ISTN3AS
 
         private void rgbStMem_CheckedChanged(object sender, EventArgs e)
         {
-            if (rgbStMem.Checked == true)
+            if (chbxIsMemeber_Purchase.Checked)
             {
                 lblStMem.Enabled = true;
                 tbxStMem.Enabled = true;
             }
+            else { tbxStMem.Enabled = false; }
         }
 
         private void rgbOrdCust_CheckedChanged(object sender, EventArgs e)
         {
-            if (rgbOrdCust.Checked == true)
-            {
-               // lblOrdMem.Enabled = false;
-               // tbxOrdMem.Enabled = false;
+            //if (rgbOrdCust.Checked == true)
+            //{
+            //   // lblOrdMem.Enabled = false;
+            //   // tbxOrdMem.Enabled = false;
 
-                lblOrdCell.Enabled = true;
-                lblOrdName.Enabled = true;
-                lblOrdNo.Enabled = true;
-                tbxOrdName.Enabled = true;
-                tbxOrdCell.Enabled = true;
-                tbxOrdNo.Enabled = true;
-            }
+            //    lblOrdCell.Enabled = true;
+            //    lblOrdName.Enabled = true;
+            //    lblOrdNo.Enabled = true;
+            //    tbxOrdName.Enabled = true;
+            //    tbxOrdCell.Enabled = true;
+            //    tbxOrdNo.Enabled = true;
+            //}
         }
 
         private void rgbOrdMem_CheckedChanged(object sender, EventArgs e)
@@ -200,7 +224,15 @@ namespace ISTN3AS
 
         private void btnMenuPurchase_Click(object sender, EventArgs e)
         {
-            GlobalVariables.TransactionType = "Store";
+            if (chbxStoreOrder_Purchase.Checked)
+            {
+                GlobalVariables.TransactionType = "Store";
+            }
+            else { GlobalVariables.TransactionType = "Phone"; }
+            GlobalVariables.customerName_Order = tbxCustomerOrdName_BeginPurchase.Text;
+            GlobalVariables.customerCellNo_Order = tbxCustomerOrdCell_BeginPurchase.Text;
+
+            
             sc.Purchase(this);
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat4;
@@ -218,17 +250,17 @@ namespace ISTN3AS
 
         private void btnMenuOrder_Click(object sender, EventArgs e)
         {
-            GlobalVariables.TransactionType = "Order";
-            sc.Order(this);
-            sc.Showbuttons(this);
-            //tabcontrol1.SelectedTab = cat1;
-            tabcontrol1.Size = new Size(307, 640);
-            btnCashOut.Enabled = false;
-            btnItems.Enabled = true;
         }
 
         private void salesControl_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'productDS.PhoneOrderLineTbl' table. You can move, or remove it, as needed.
+            
+
+            chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
+            pnlContactDetails_Purchase.Enabled = false;
+
+
             //MessageBox.Show(GlobalVariables.StaffID.ToString());
             // TODO: This line of code loads data into the 'group6DataSet.MemberTbl' table. You can move, or remove it, as needed.
             this.memberTblTableAdapter.Fill(this.group6DataSet.MemberTbl);
@@ -390,27 +422,50 @@ namespace ISTN3AS
         //double cartTotal = 0;
         private void btnShoePurchase_Click(object sender, EventArgs e)
         {
-            try
+            if (GlobalVariables.TransactionType.Equals("Store"))
             {
-                this.selectProductIDTableAdapter.selectID(this.productDS.selectProductID, categoryFIlterDataGridView.CurrentRow.Cells[3].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[4].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString());
+                try
+                {
+                    this.selectProductIDTableAdapter.selectID(this.productDS.selectProductID, categoryFIlterDataGridView.CurrentRow.Cells[3].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[4].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString());
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+                this.getProductDiscountTableAdapter.getDiscount(this.productDS.getProductDiscount, int.Parse(lblProductID_Purchase.Text));
+                //int.Parse(lblProductID_Purchase.Text)
+                double tprice = (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text));
+
+                GlobalVariables.productCart_ProductID.Add(lblProductID_Purchase.Text);
+                GlobalVariables.productCart_UnitPrice.Add(tprice);
+                GlobalVariables.productCart_Quantity.Add(int.Parse(Quantity_Control.Value.ToString()));
+
+                lsvProductCart_Control.Items.Add(new ListViewItem(new[] { categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString(), Quantity_Control.Value.ToString(), (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text)).ToString() }));
+                GlobalVariables.cartTotal += tprice;
+                lblTotal.Text = "Total : " + GlobalVariables.cartTotal.ToString();
             }
-            catch (System.Exception ex)
+            else
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                try
+                {
+                    this.selectProductIDTableAdapter.selectID(this.productDS.selectProductID, categoryFIlterDataGridView.CurrentRow.Cells[3].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[4].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString());
+                }
+                catch (System.Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                }
+                this.getProductDiscountTableAdapter.getDiscount(this.productDS.getProductDiscount, int.Parse(lblProductID_Purchase.Text));
+                //int.Parse(lblProductID_Purchase.Text)
+                double tprice = (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text));
+
+                GlobalVariables.productCart_ProductID.Add(lblProductID_Purchase.Text);
+                GlobalVariables.productCart_UnitPrice.Add(tprice);
+                GlobalVariables.productCart_Quantity.Add(int.Parse(Quantity_Control.Value.ToString()));
+
+                lsvProductCart_Control.Items.Add(new ListViewItem(new[] { categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString(), Quantity_Control.Value.ToString(), (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text)).ToString() }));
+                GlobalVariables.cartTotal += tprice;
+                lblTotal.Text = "Total : " + GlobalVariables.cartTotal.ToString();
             }
-            this.getProductDiscountTableAdapter.getDiscount(this.productDS.getProductDiscount, int.Parse(lblProductID_Purchase.Text));
-            //int.Parse(lblProductID_Purchase.Text)
-            double tprice = (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text));
-            
-            GlobalVariables.productCart_ProductID.Add(lblProductID_Purchase.Text);
-            GlobalVariables.productCart_UnitPrice.Add(tprice);
-            GlobalVariables.productCart_Quantity.Add(int.Parse(Quantity_Control.Value.ToString()));
-
-            lsvProductCart_Control.Items.Add(new ListViewItem(new[] { categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString(), Quantity_Control.Value.ToString(), (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text)).ToString()}));
-            GlobalVariables.cartTotal += tprice;
-            lblTotal.Text = "Total : " + GlobalVariables.cartTotal.ToString(); ;
-
-           // MessageBox.Show(GlobalVariables.productCart.Count().ToString());
 
         }
 
@@ -432,6 +487,33 @@ namespace ISTN3AS
             }
             
             //MessageBox.Show(GlobalVariables.productCart.Count().ToString());
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chbxPhoneOrder_Purchase.Checked)
+            {
+                chbxStoreOrder_Purchase.CheckState = CheckState.Unchecked;
+                pnlContactDetails_Purchase.Enabled = true;
+            }
+            else { 
+                pnlContactDetails_Purchase.Enabled = false;
+                chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
+            }
+        }
+
+        private void chbxStoreOrder_Purchase_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxStoreOrder_Purchase.Checked)
+            {
+                chbxPhoneOrder_Purchase.CheckState = CheckState.Unchecked;
+            }
+            else { chbxPhoneOrder_Purchase.CheckState = CheckState.Checked; }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
