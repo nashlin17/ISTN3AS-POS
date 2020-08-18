@@ -32,6 +32,8 @@ namespace ISTN3AS
                this.getLoginDetailsTableAdapter.CheckLoginDetails(this.getLoginDS.GetLoginDetails, tbxUsername_Login.Text, tbxPassword_Login.Text);
                 if(getLoginDS.GetLoginDetails.Rows[0][0].ToString().ToUpper() == tbxUsername_Login.Text.ToUpper() && getLoginDS.GetLoginDetails.Rows[0][1].ToString() == tbxPassword_Login.Text)
                 {
+                    
+                    GlobalVariables.StaffID = int.Parse(getLoginDS.GetLoginDetails.Rows[0][2].ToString());
                     salesControl sc = new salesControl();
                     this.Hide();
                     sc.ShowDialog();
@@ -47,6 +49,12 @@ namespace ISTN3AS
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+            //getLoginDetailsTableAdapter.CheckLoginDetails(this.getLoginDS.GetLoginDetails, "Netflix", "Chill");
+            //this.getLoginDetailsTableAdapter.CheckLoginDetails(this.getLoginDS.GetLoginDetails, "Netflix", "Chill");
         }
     }
 }

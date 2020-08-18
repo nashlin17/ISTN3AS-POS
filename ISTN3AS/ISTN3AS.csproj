@@ -54,6 +54,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="group6DataSet.cs">
       <DependentUpon>group6DataSet.xsd</DependentUpon>
     </Compile>

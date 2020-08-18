@@ -1,4 +1,5 @@
-﻿using Microsoft.SqlServer.Server;
+﻿using ISTN3AS.ProductDSTableAdapters;
+using Microsoft.SqlServer.Server;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace ISTN3AS
         private void btnItems_Click(object sender, EventArgs e)
         {
             sc.Showbuttons(this);
-            tabcontrol1.SelectedTab = cat1;
+            //tabcontrol1.SelectedTab = cat1;
             tabcontrol1.Size = new Size(307, 640);
         }
 
@@ -132,28 +133,28 @@ namespace ISTN3AS
 
         private void rgbOrdMem_Click(object sender, EventArgs e)
         {
-            if (rgbOrdMem.Checked == true)
-            {
+            //if (rgbOrdMem.Checked == true)
+            //{
 
-                rgbOrdCust.Checked = false;
-            }
+            //    rgbOrdCust.Checked = false;
+            //}
         }
 
         private void rgbOrdCust_Click(object sender, EventArgs e)
         {
             if (rgbOrdCust.Checked == true)
             {
-                rgbOrdMem.Checked = false;
+                //rgbOrdMem.Checked = false;
             }
         }
 
         private void rgbStCust_CheckedChanged(object sender, EventArgs e)
         {
-            if (rgbStCust.Checked == true)
-            {
-                lblStMem.Enabled = false;
-                tbxStMem.Enabled = false;
-            }
+            //if (rgbStCust.Checked == true)
+            //{
+            //    lblStMem.Enabled = false;
+            //    tbxStMem.Enabled = false;
+            //}
         }
 
         private void rgbStMem_CheckedChanged(object sender, EventArgs e)
@@ -169,8 +170,8 @@ namespace ISTN3AS
         {
             if (rgbOrdCust.Checked == true)
             {
-                lblOrdMem.Enabled = false;
-                tbxOrdMem.Enabled = false;
+               // lblOrdMem.Enabled = false;
+               // tbxOrdMem.Enabled = false;
 
                 lblOrdCell.Enabled = true;
                 lblOrdName.Enabled = true;
@@ -183,23 +184,23 @@ namespace ISTN3AS
 
         private void rgbOrdMem_CheckedChanged(object sender, EventArgs e)
         {
-            if (rgbOrdMem.Checked == true)
-            {
-                lblOrdMem.Enabled = true;
-                tbxOrdMem.Enabled = true;
+            //if (rgbOrdMem.Checked == true)
+            //{
+            //   // lblOrdMem.Enabled = true;
+            //    //tbxOrdMem.Enabled = true;
 
-                lblOrdCell.Enabled = false;
-                lblOrdName.Enabled = false;
-                lblOrdNo.Enabled = false;
-                tbxOrdName.Enabled = false;
-                tbxOrdCell.Enabled = false;
-                tbxOrdNo.Enabled = false;
-            }
+            //    lblOrdCell.Enabled = false;
+            //    lblOrdName.Enabled = false;
+            //    lblOrdNo.Enabled = false;
+            //    tbxOrdName.Enabled = false;
+            //    tbxOrdCell.Enabled = false;
+            //    tbxOrdNo.Enabled = false;
+            //}
         }
 
         private void btnMenuPurchase_Click(object sender, EventArgs e)
         {
-            
+            GlobalVariables.TransactionType = "Store";
             sc.Purchase(this);
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat4;
@@ -217,9 +218,10 @@ namespace ISTN3AS
 
         private void btnMenuOrder_Click(object sender, EventArgs e)
         {
+            GlobalVariables.TransactionType = "Order";
             sc.Order(this);
             sc.Showbuttons(this);
-            tabcontrol1.SelectedTab = cat1;
+            //tabcontrol1.SelectedTab = cat1;
             tabcontrol1.Size = new Size(307, 640);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
@@ -227,12 +229,14 @@ namespace ISTN3AS
 
         private void salesControl_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'productFilterDS.CategoryTbl' table. You can move, or remove it, as needed.
+            //MessageBox.Show(GlobalVariables.StaffID.ToString());
+            // TODO: This line of code loads data into the 'group6DataSet.MemberTbl' table. You can move, or remove it, as needed.
+            this.memberTblTableAdapter.Fill(this.group6DataSet.MemberTbl);
             this.categoryTblTableAdapter.populateCategory(this.productFilterDS.CategoryTbl);
-            this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
-            // TODO: This line of code loads data into the 'group6DataSet.ColourTbl' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'group6DataSet.ProductTbl' table. You can move, or remove it, as needed.
-            //this.productTblTableAdapter.Fill(this.group6DataSet.ProductTbl);
+
+            tbxAccountNo_AccCreation.ReadOnly = true;
+            //lblProductID_Purchase.Visible = false;
+
             Quantity_Control.Value = 1;
             lblTotal.Text = "Total : ";
 
@@ -261,10 +265,11 @@ namespace ISTN3AS
         {
             if (tbxCell_AccCreation.TextLength == 10 & (tbxEmail_AccCreation.Text.Contains("@")))
             {
-                
-                staffTblTableAdapter.Insert(tbxName_AccCreation.Text, tbxSurname_AccCreation.Text, tbxCell_AccCreation.Text, tbxAddress_AccCreation.Text, tbxEmail_AccCreation.Text);
-                this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
-                MessageBox.Show("Account Created");
+               string AccNumber = tbxID_AccCreation.Text.Substring(0, 6) + tbxName_AccCreation.Text.ElementAt(0) + tbxSurname_AccCreation.Text.ElementAt(0) + memberTblTableAdapter.maxID();
+                tbxAccountNo_AccCreation.Text = AccNumber;
+               memberTblTableAdapter.Insert(tbxName_AccCreation.Text, tbxSurname_AccCreation.Text, tbxCell_AccCreation.Text, tbxAddress_AccCreation.Text, tbxEmail_AccCreation.Text, tbxID_AccCreation.Text,AccNumber);
+               this.memberTblTableAdapter.Fill(this.group6DataSet.MemberTbl);
+                MessageBox.Show(AccNumber);
             }
             else { MessageBox.Show("Please Re-Enter PhoneNumber or Email"); }
             
@@ -381,22 +386,52 @@ namespace ISTN3AS
 
         }
 
-        double cartTotal = 0;
+        List<String> Cart = new List<string>();
+        //double cartTotal = 0;
         private void btnShoePurchase_Click(object sender, EventArgs e)
         {
-            lsvProductCart_Control.Items.Add(new ListViewItem(new[] { categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString(), Quantity_Control.Value.ToString(), (Quantity_Control.Value * Decimal.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString())).ToString() }));
-            cartTotal += Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString());
-            lblTotal.Text = "Total : " + cartTotal.ToString(); ;
+            try
+            {
+                this.selectProductIDTableAdapter.selectID(this.productDS.selectProductID, categoryFIlterDataGridView.CurrentRow.Cells[3].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[4].Value.ToString(), categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            this.getProductDiscountTableAdapter.getDiscount(this.productDS.getProductDiscount, int.Parse(lblProductID_Purchase.Text));
+            //int.Parse(lblProductID_Purchase.Text)
+            double tprice = (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text));
+            
+            GlobalVariables.productCart_ProductID.Add(lblProductID_Purchase.Text);
+            GlobalVariables.productCart_UnitPrice.Add(tprice);
+            GlobalVariables.productCart_Quantity.Add(int.Parse(Quantity_Control.Value.ToString()));
+
+            lsvProductCart_Control.Items.Add(new ListViewItem(new[] { categoryFIlterDataGridView.CurrentRow.Cells[0].Value.ToString(), Quantity_Control.Value.ToString(), (Double.Parse(Quantity_Control.Value.ToString()) * Double.Parse(categoryFIlterDataGridView.CurrentRow.Cells[1].Value.ToString()) - Double.Parse(lblProductDiscount.Text)).ToString()}));
+            GlobalVariables.cartTotal += tprice;
+            lblTotal.Text = "Total : " + GlobalVariables.cartTotal.ToString(); ;
+
+           // MessageBox.Show(GlobalVariables.productCart.Count().ToString());
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem eachItem in lsvProductCart_Control.SelectedItems)
             {
-                cartTotal -= Double.Parse(lsvProductCart_Control.SelectedItems[0].SubItems[2].Text);
-                lblTotal.Text = "Total : " + cartTotal.ToString();
+                GlobalVariables.cartTotal -= Double.Parse(lsvProductCart_Control.SelectedItems[0].SubItems[2].Text);
+                lblTotal.Text = "Total : " + GlobalVariables.cartTotal.ToString();
                 lsvProductCart_Control.Items.Remove(eachItem);
             }
+            try
+            {
+                GlobalVariables.productCart_ProductID.RemoveAt(lsvProductCart_Control.FocusedItem.Index);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Please Select a Product to Remove");
+            }
+            
+            //MessageBox.Show(GlobalVariables.productCart.Count().ToString());
         }
     }
 }
