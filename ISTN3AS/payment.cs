@@ -48,23 +48,42 @@ namespace ISTN3AS
         {
             if (GlobalVariables.TransactionType.Equals("Store"))
             {
-                orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, null);
-                int maxOrderID = int.Parse(orderTblTableAdapter.getMaxID().ToString());
-                for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
+                if (GlobalVariables.isMemeber)
                 {
-                    orderLineTblTableAdapter.Insert(maxOrderID, int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), Decimal.Parse(GlobalVariables.productCart_UnitPrice.ElementAt(i).ToString()), GlobalVariables.productCart_Quantity.ElementAt(i));
-                    int productQuantity = int.Parse(updateProduantity1.getQuanity(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i))).ToString());
-                    updateProduantity1.updateProductQuantity(productQuantity - GlobalVariables.productCart_Quantity.ElementAt(i), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)));
+                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, GlobalVariables.MemberID);
+
+                }
+                else
+                {
+                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, null);
                 }
             }
             else
             {
+                if (GlobalVariables.isMemeber)
+                {
+                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), "Phone", GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, GlobalVariables.MemberID);
+                }
+                else
+                {
+                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), "Phone", GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, null);
+                }
 
+            }
+            int maxOrderID = int.Parse(orderTblTableAdapter.getMaxID().ToString());
+            MessageBox.Show(maxOrderID.ToString());
+            for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
+            {
+                orderLineTblTableAdapter.Insert(maxOrderID, int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), Decimal.Parse(GlobalVariables.productCart_UnitPrice.ElementAt(i).ToString()), GlobalVariables.productCart_Quantity.ElementAt(i));
+                //int productQuantity = int.Parse(updateProduantity1.getQuanity(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i))).ToString());
+                //updateProduantity1.updateProductQuantity(productQuantity - GlobalVariables.productCart_Quantity.ElementAt(i), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)));
             }
 
 
+            this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
+            this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             //Non Member
-            
+
 
             //sc.btnCashOut.Enabled = true;
             //sc.btnItems.Enabled = false;
@@ -85,7 +104,7 @@ namespace ISTN3AS
 
         private void payment_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(GlobalVariables.TransactionType);
+            MessageBox.Show(GlobalVariables.productCart_ProductID.Count.ToString());
             this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             //Initialize Payment Details(Total, Discount and Sub-Total)

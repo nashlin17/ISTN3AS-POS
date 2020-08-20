@@ -16,14 +16,16 @@ namespace ISTN3AS
         public static List<int> productCart_Quantity = new List<int>();
         public static List<double> productCart_UnitPrice = new List<double>();
 
+
         public static string TransactionType;
         public static int MemberID;
         public static int StaffID;
-        public static double AccDiscount = 0.05;
+        public static double AccDiscount = 0;
 
         //Customer Details
         public static string customerName_Order;
         public static string customerCellNo_Order;
+        public static bool isMemeber = false;
 
         public static void Clear()
         {
@@ -32,10 +34,11 @@ namespace ISTN3AS
             productCart_Quantity.Clear();
             productCart_UnitPrice.Clear();
             TransactionType = "";
-            MemberID = new int();
+            MemberID = -1;
             //StaffID = new int();
             customerCellNo_Order = "";
             customerName_Order = "";
+            isMemeber = false;
         }
 
     }

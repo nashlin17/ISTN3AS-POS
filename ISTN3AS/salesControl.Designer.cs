@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.memberAcc = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel19 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -78,8 +69,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnMenuPurchase = new System.Windows.Forms.Button();
             this.pnlMember_Purchase = new System.Windows.Forms.Panel();
+            this.chbxIsMemeber_Purchase = new System.Windows.Forms.CheckBox();
             this.tbxStMem = new System.Windows.Forms.TextBox();
-            this.chbxIsMemeber_Purchase = new System.Windows.Forms.RadioButton();
             this.lblStMem = new System.Windows.Forms.Label();
             this.brandTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productFilterDS = new ISTN3AS.ProductFilterDS();
@@ -137,12 +128,12 @@
             this.label55 = new System.Windows.Forms.Label();
             this.orders = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.phoneOrderLineTblDataGridView = new System.Windows.Forms.DataGridView();
+            this.getPhoneOrderProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneOrderLineTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getPhoneOrderProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.phoneOrderDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -179,6 +170,7 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
+            this.phoneOrderLineTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCompany = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -225,7 +217,6 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryFIlterBS = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.insert1 = new ISTN3AS.group6DataSetTableAdapters.Insert();
             this.categoryFIlterTA = new ISTN3AS.ProductDSTableAdapters.CategoryFIlterTableAdapter();
             this.tableAdapterManager2 = new ISTN3AS.ProductDSTableAdapters.TableAdapterManager();
             this.brandTblTableAdapter1 = new ISTN3AS.ProductFilterDSTableAdapters.BrandTblTableAdapter();
@@ -243,10 +234,14 @@
             this.lblProductID_Purchase = new System.Windows.Forms.Label();
             this.phoneOrderTableAdapter = new ISTN3AS.ProductDSTableAdapters.PhoneOrderTableAdapter();
             this.phoneOrderLineTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.PhoneOrderLineTblTableAdapter();
+            this.queries1 = new ISTN3AS.group6DataSetTableAdapters.Queries();
+            this.getPhoneOrderProductsTableAdapter = new ISTN3AS.ProductDSTableAdapters.getPhoneOrderProductsTableAdapter();
+            this.getPhoneOrderProductsToolStrip = new System.Windows.Forms.ToolStrip();
+            this.iDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.iDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.getPhoneOrderProductsToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.updateProduantity1 = new ISTN3AS.ProductDSTableAdapters.updateProduantity();
             this.memberAcc.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel18.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -277,8 +272,8 @@
             this.panel25.SuspendLayout();
             this.orders.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getPhoneOrderProductsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getPhoneOrderProductsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderBindingSource)).BeginInit();
             this.panel16.SuspendLayout();
@@ -286,6 +281,7 @@
             this.groupBox11.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.grpboxReturn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblBindingSource)).BeginInit();
             this.pnlCompany.SuspendLayout();
             this.pnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxusr)).BeginInit();
@@ -305,126 +301,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getProductDiscountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectProductIDBindingSource)).BeginInit();
+            this.getPhoneOrderProductsToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // memberAcc
             // 
             this.memberAcc.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.memberAcc.Controls.Add(this.groupBox5);
             this.memberAcc.Controls.Add(this.groupBox2);
             this.memberAcc.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memberAcc.Location = new System.Drawing.Point(4, 22);
             this.memberAcc.Margin = new System.Windows.Forms.Padding(2);
             this.memberAcc.Name = "memberAcc";
-            this.memberAcc.Size = new System.Drawing.Size(760, 540);
+            this.memberAcc.Size = new System.Drawing.Size(851, 540);
             this.memberAcc.TabIndex = 6;
             this.memberAcc.Text = "memberAcc";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.button6);
-            this.groupBox5.Controls.Add(this.button7);
-            this.groupBox5.Controls.Add(this.panel14);
-            this.groupBox5.Controls.Add(this.panel18);
-            this.groupBox5.Location = new System.Drawing.Point(495, 14);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(303, 474);
-            this.groupBox5.TabIndex = 3;
-            this.groupBox5.TabStop = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = global::ISTN3AS.Properties.Resources.process;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(161, 410);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 46);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Payment";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 410);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 46);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Cancel";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.label20);
-            this.panel14.Controls.Add(this.label23);
-            this.panel14.Location = new System.Drawing.Point(4, 68);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(299, 69);
-            this.panel14.TabIndex = 5;
-            // 
-            // label20
-            // 
-            this.label20.Location = new System.Drawing.Point(14, 30);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 28);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "R500";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.Location = new System.Drawing.Point(8, 2);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(105, 28);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Monthly Limit";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.White;
-            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel18.Controls.Add(this.label29);
-            this.panel18.Controls.Add(this.label30);
-            this.panel18.Location = new System.Drawing.Point(4, 15);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(299, 49);
-            this.panel18.TabIndex = 0;
-            // 
-            // label29
-            // 
-            this.label29.Location = new System.Drawing.Point(182, 12);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(82, 28);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "300";
-            // 
-            // label30
-            // 
-            this.label30.Location = new System.Drawing.Point(14, 12);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(169, 28);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Outstanding Amount : R";
             // 
             // groupBox2
             // 
@@ -783,7 +673,7 @@
             this.purchase.Location = new System.Drawing.Point(4, 22);
             this.purchase.Margin = new System.Windows.Forms.Padding(2);
             this.purchase.Name = "purchase";
-            this.purchase.Size = new System.Drawing.Size(760, 540);
+            this.purchase.Size = new System.Drawing.Size(851, 540);
             this.purchase.TabIndex = 5;
             this.purchase.Text = "purchase";
             // 
@@ -925,14 +815,25 @@
             // pnlMember_Purchase
             // 
             this.pnlMember_Purchase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMember_Purchase.Controls.Add(this.tbxStMem);
             this.pnlMember_Purchase.Controls.Add(this.chbxIsMemeber_Purchase);
+            this.pnlMember_Purchase.Controls.Add(this.tbxStMem);
             this.pnlMember_Purchase.Controls.Add(this.lblStMem);
             this.pnlMember_Purchase.Location = new System.Drawing.Point(63, 146);
             this.pnlMember_Purchase.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMember_Purchase.Name = "pnlMember_Purchase";
             this.pnlMember_Purchase.Size = new System.Drawing.Size(355, 107);
             this.pnlMember_Purchase.TabIndex = 7;
+            // 
+            // chbxIsMemeber_Purchase
+            // 
+            this.chbxIsMemeber_Purchase.AutoSize = true;
+            this.chbxIsMemeber_Purchase.Location = new System.Drawing.Point(17, 23);
+            this.chbxIsMemeber_Purchase.Name = "chbxIsMemeber_Purchase";
+            this.chbxIsMemeber_Purchase.Size = new System.Drawing.Size(87, 23);
+            this.chbxIsMemeber_Purchase.TabIndex = 2;
+            this.chbxIsMemeber_Purchase.Text = "Member";
+            this.chbxIsMemeber_Purchase.UseVisualStyleBackColor = true;
+            this.chbxIsMemeber_Purchase.CheckedChanged += new System.EventHandler(this.chbxMember_BeginOrder_CheckedChanged);
             // 
             // tbxStMem
             // 
@@ -941,19 +842,6 @@
             this.tbxStMem.Name = "tbxStMem";
             this.tbxStMem.Size = new System.Drawing.Size(250, 29);
             this.tbxStMem.TabIndex = 1;
-            // 
-            // chbxIsMemeber_Purchase
-            // 
-            this.chbxIsMemeber_Purchase.BackColor = System.Drawing.Color.White;
-            this.chbxIsMemeber_Purchase.Location = new System.Drawing.Point(-1, 8);
-            this.chbxIsMemeber_Purchase.Margin = new System.Windows.Forms.Padding(2);
-            this.chbxIsMemeber_Purchase.Name = "chbxIsMemeber_Purchase";
-            this.chbxIsMemeber_Purchase.Size = new System.Drawing.Size(352, 50);
-            this.chbxIsMemeber_Purchase.TabIndex = 8;
-            this.chbxIsMemeber_Purchase.TabStop = true;
-            this.chbxIsMemeber_Purchase.Text = "Member";
-            this.chbxIsMemeber_Purchase.UseVisualStyleBackColor = false;
-            this.chbxIsMemeber_Purchase.CheckedChanged += new System.EventHandler(this.rgbStMem_CheckedChanged);
             // 
             // lblStMem
             // 
@@ -999,7 +887,7 @@
             this.cat4.Location = new System.Drawing.Point(4, 22);
             this.cat4.Margin = new System.Windows.Forms.Padding(2);
             this.cat4.Name = "cat4";
-            this.cat4.Size = new System.Drawing.Size(760, 540);
+            this.cat4.Size = new System.Drawing.Size(851, 540);
             this.cat4.TabIndex = 3;
             this.cat4.Text = "cat4";
             // 
@@ -1173,7 +1061,7 @@
             this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(740, 566);
+            this.tabcontrol1.Size = new System.Drawing.Size(859, 566);
             this.tabcontrol1.TabIndex = 5;
             // 
             // accCreate
@@ -1186,7 +1074,7 @@
             this.accCreate.Location = new System.Drawing.Point(4, 22);
             this.accCreate.Margin = new System.Windows.Forms.Padding(2);
             this.accCreate.Name = "accCreate";
-            this.accCreate.Size = new System.Drawing.Size(760, 540);
+            this.accCreate.Size = new System.Drawing.Size(851, 540);
             this.accCreate.TabIndex = 7;
             this.accCreate.Text = "AccCreate";
             // 
@@ -1509,19 +1397,20 @@
             // 
             // orders
             // 
+            this.orders.AutoScroll = true;
             this.orders.BackColor = System.Drawing.Color.WhiteSmoke;
             this.orders.Controls.Add(this.groupBox6);
             this.orders.Font = new System.Drawing.Font("Gadugi", 12F);
             this.orders.Location = new System.Drawing.Point(4, 22);
             this.orders.Margin = new System.Windows.Forms.Padding(2);
             this.orders.Name = "orders";
-            this.orders.Size = new System.Drawing.Size(732, 540);
+            this.orders.Size = new System.Drawing.Size(851, 540);
             this.orders.TabIndex = 8;
             this.orders.Text = "orders";
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.phoneOrderLineTblDataGridView);
+            this.groupBox6.Controls.Add(this.getPhoneOrderProductsDataGridView);
             this.groupBox6.Controls.Add(this.phoneOrderDataGridView);
             this.groupBox6.Controls.Add(this.panel16);
             this.groupBox6.Controls.Add(this.button14);
@@ -1531,24 +1420,24 @@
             this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox6.Size = new System.Drawing.Size(756, 530);
+            this.groupBox6.Size = new System.Drawing.Size(675, 504);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             // 
-            // phoneOrderLineTblDataGridView
+            // getPhoneOrderProductsDataGridView
             // 
-            this.phoneOrderLineTblDataGridView.AutoGenerateColumns = false;
-            this.phoneOrderLineTblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.phoneOrderLineTblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.getPhoneOrderProductsDataGridView.AutoGenerateColumns = false;
+            this.getPhoneOrderProductsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.getPhoneOrderProductsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn23,
             this.dataGridViewTextBoxColumn24,
             this.dataGridViewTextBoxColumn25,
             this.dataGridViewTextBoxColumn26});
-            this.phoneOrderLineTblDataGridView.DataSource = this.phoneOrderLineTblBindingSource;
-            this.phoneOrderLineTblDataGridView.Location = new System.Drawing.Point(218, 285);
-            this.phoneOrderLineTblDataGridView.Name = "phoneOrderLineTblDataGridView";
-            this.phoneOrderLineTblDataGridView.Size = new System.Drawing.Size(453, 220);
-            this.phoneOrderLineTblDataGridView.TabIndex = 13;
+            this.getPhoneOrderProductsDataGridView.DataSource = this.getPhoneOrderProductsBindingSource;
+            this.getPhoneOrderProductsDataGridView.Location = new System.Drawing.Point(216, 267);
+            this.getPhoneOrderProductsDataGridView.Name = "getPhoneOrderProductsDataGridView";
+            this.getPhoneOrderProductsDataGridView.Size = new System.Drawing.Size(440, 220);
+            this.getPhoneOrderProductsDataGridView.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn23
             // 
@@ -1574,10 +1463,10 @@
             this.dataGridViewTextBoxColumn26.HeaderText = "Quantity";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             // 
-            // phoneOrderLineTblBindingSource
+            // getPhoneOrderProductsBindingSource
             // 
-            this.phoneOrderLineTblBindingSource.DataMember = "PhoneOrderLineTbl";
-            this.phoneOrderLineTblBindingSource.DataSource = this.productDS;
+            this.getPhoneOrderProductsBindingSource.DataMember = "getPhoneOrderProducts";
+            this.getPhoneOrderProductsBindingSource.DataSource = this.productDS;
             // 
             // phoneOrderDataGridView
             // 
@@ -1593,8 +1482,9 @@
             this.phoneOrderDataGridView.DataSource = this.phoneOrderBindingSource;
             this.phoneOrderDataGridView.Location = new System.Drawing.Point(12, 93);
             this.phoneOrderDataGridView.Name = "phoneOrderDataGridView";
-            this.phoneOrderDataGridView.Size = new System.Drawing.Size(659, 160);
+            this.phoneOrderDataGridView.Size = new System.Drawing.Size(643, 160);
             this.phoneOrderDataGridView.TabIndex = 13;
+            this.phoneOrderDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.phoneOrderDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -1644,10 +1534,10 @@
             this.panel16.Controls.Add(this.button12);
             this.panel16.Controls.Add(this.label27);
             this.panel16.Controls.Add(this.textBox7);
-            this.panel16.Location = new System.Drawing.Point(5, 53);
+            this.panel16.Location = new System.Drawing.Point(12, 52);
             this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(362, 32);
+            this.panel16.Size = new System.Drawing.Size(523, 32);
             this.panel16.TabIndex = 13;
             // 
             // button12
@@ -1657,7 +1547,7 @@
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(316, 2);
+            this.button12.Location = new System.Drawing.Point(486, 2);
             this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(33, 25);
@@ -1667,20 +1557,20 @@
             // label27
             // 
             this.label27.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(2, 4);
+            this.label27.Location = new System.Drawing.Point(2, 1);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(121, 26);
+            this.label27.Size = new System.Drawing.Size(187, 26);
             this.label27.TabIndex = 8;
-            this.label27.Text = "Search Order No: ";
+            this.label27.Text = "Search Customer Details:";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(128, 3);
+            this.textBox7.Location = new System.Drawing.Point(193, 2);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 26);
+            this.textBox7.Size = new System.Drawing.Size(288, 26);
             this.textBox7.TabIndex = 11;
             // 
             // button14
@@ -1715,17 +1605,18 @@
             this.button13.TabIndex = 10;
             this.button13.Text = "Delete Order";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Gadugi", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(129, 11);
+            this.label6.Location = new System.Drawing.Point(249, 9);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(161, 23);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Order Table";
+            this.label6.Text = "Phone Orders";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // returnItem
@@ -1737,7 +1628,7 @@
             this.returnItem.Location = new System.Drawing.Point(4, 22);
             this.returnItem.Margin = new System.Windows.Forms.Padding(2);
             this.returnItem.Name = "returnItem";
-            this.returnItem.Size = new System.Drawing.Size(760, 540);
+            this.returnItem.Size = new System.Drawing.Size(851, 540);
             this.returnItem.TabIndex = 9;
             this.returnItem.Text = "return";
             // 
@@ -2006,6 +1897,11 @@
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(0, 19);
             this.label41.TabIndex = 0;
+            // 
+            // phoneOrderLineTblBindingSource
+            // 
+            this.phoneOrderLineTblBindingSource.DataMember = "PhoneOrderLineTbl";
+            this.phoneOrderLineTblBindingSource.DataSource = this.productDS;
             // 
             // pnlCompany
             // 
@@ -2294,7 +2190,7 @@
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(244, 58);
             this.btnAdd2.TabIndex = 5;
-            this.btnAdd2.Text = "Order/Collect";
+            this.btnAdd2.Text = "Phone Orders";
             this.btnAdd2.UseVisualStyleBackColor = true;
             this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
             // 
@@ -2655,6 +2551,7 @@
             // 
             this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager2.Connection = null;
+            this.tableAdapterManager2.getPhoneOrderProductsTableAdapter = null;
             this.tableAdapterManager2.OrderLineTblTableAdapter = null;
             this.tableAdapterManager2.OrderTblTableAdapter = null;
             this.tableAdapterManager2.PhoneOrderLineTblTableAdapter = null;
@@ -2741,12 +2638,49 @@
             // 
             this.phoneOrderLineTblTableAdapter.ClearBeforeFill = true;
             // 
+            // getPhoneOrderProductsTableAdapter
+            // 
+            this.getPhoneOrderProductsTableAdapter.ClearBeforeFill = true;
+            // 
+            // getPhoneOrderProductsToolStrip
+            // 
+            this.getPhoneOrderProductsToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iDToolStripLabel,
+            this.iDToolStripTextBox,
+            this.getPhoneOrderProductsToolStripButton});
+            this.getPhoneOrderProductsToolStrip.Location = new System.Drawing.Point(244, 0);
+            this.getPhoneOrderProductsToolStrip.Name = "getPhoneOrderProductsToolStrip";
+            this.getPhoneOrderProductsToolStrip.Size = new System.Drawing.Size(1468, 25);
+            this.getPhoneOrderProductsToolStrip.TabIndex = 29;
+            this.getPhoneOrderProductsToolStrip.Text = "getPhoneOrderProductsToolStrip";
+            // 
+            // iDToolStripLabel
+            // 
+            this.iDToolStripLabel.Name = "iDToolStripLabel";
+            this.iDToolStripLabel.Size = new System.Drawing.Size(21, 22);
+            this.iDToolStripLabel.Text = "ID:";
+            // 
+            // iDToolStripTextBox
+            // 
+            this.iDToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.iDToolStripTextBox.Name = "iDToolStripTextBox";
+            this.iDToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // getPhoneOrderProductsToolStripButton
+            // 
+            this.getPhoneOrderProductsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.getPhoneOrderProductsToolStripButton.Name = "getPhoneOrderProductsToolStripButton";
+            this.getPhoneOrderProductsToolStripButton.Size = new System.Drawing.Size(139, 22);
+            this.getPhoneOrderProductsToolStripButton.Text = "getPhoneOrderProducts";
+            this.getPhoneOrderProductsToolStripButton.Click += new System.EventHandler(this.getPhoneOrderProductsToolStripButton_Click);
+            // 
             // salesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1712, 770);
+            this.Controls.Add(this.getPhoneOrderProductsToolStrip);
             this.Controls.Add(this.lblProductID_Purchase);
             this.Controls.Add(this.lblProductDiscount);
             this.Controls.Add(this.pnlCompany);
@@ -2762,9 +2696,6 @@
             this.Text = "salesControl";
             this.Load += new System.EventHandler(this.salesControl_Load);
             this.memberAcc.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
@@ -2801,8 +2732,8 @@
             this.panel25.PerformLayout();
             this.orders.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getPhoneOrderProductsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getPhoneOrderProductsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderBindingSource)).EndInit();
             this.panel16.ResumeLayout(false);
@@ -2813,6 +2744,7 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.grpboxReturn.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblBindingSource)).EndInit();
             this.pnlCompany.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxusr)).EndInit();
@@ -2834,7 +2766,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getProductDiscountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectProductIDBindingSource)).EndInit();
+            this.getPhoneOrderProductsToolStrip.ResumeLayout(false);
+            this.getPhoneOrderProductsToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2881,15 +2816,6 @@
         public System.Windows.Forms.Label label18;
         public System.Windows.Forms.Label label17;
         public System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox tbxCustAccPass;
@@ -2980,7 +2906,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colourDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private group6DataSetTableAdapters.Insert insert1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -3051,7 +2976,6 @@
         private System.Windows.Forms.TextBox tbxCustomerOrdName_BeginPurchase;
         private System.Windows.Forms.Label lblOrdCell;
         private System.Windows.Forms.Label lblOrdName;
-        private System.Windows.Forms.RadioButton chbxIsMemeber_Purchase;
         private System.Windows.Forms.BindingSource phoneOrderBindingSource;
         private ProductDSTableAdapters.PhoneOrderTableAdapter phoneOrderTableAdapter;
         private System.Windows.Forms.DataGridView phoneOrderDataGridView;
@@ -3063,10 +2987,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.BindingSource phoneOrderLineTblBindingSource;
         private ProductDSTableAdapters.PhoneOrderLineTblTableAdapter phoneOrderLineTblTableAdapter;
-        private System.Windows.Forms.DataGridView phoneOrderLineTblDataGridView;
+        private System.Windows.Forms.CheckBox chbxIsMemeber_Purchase;
+        private group6DataSetTableAdapters.Queries queries1;
+        private System.Windows.Forms.BindingSource getPhoneOrderProductsBindingSource;
+        private ProductDSTableAdapters.getPhoneOrderProductsTableAdapter getPhoneOrderProductsTableAdapter;
+        private System.Windows.Forms.ToolStrip getPhoneOrderProductsToolStrip;
+        private System.Windows.Forms.ToolStripLabel iDToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox iDToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton getPhoneOrderProductsToolStripButton;
+        private System.Windows.Forms.DataGridView getPhoneOrderProductsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private ProductDSTableAdapters.updateProduantity updateProduantity1;
     }
 }

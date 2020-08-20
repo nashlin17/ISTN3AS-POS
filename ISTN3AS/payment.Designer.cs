@@ -127,6 +127,20 @@
             this.orderLineTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderLineTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderLineTblTableAdapter();
             this.updateProduantity1 = new ISTN3AS.ProductDSTableAdapters.updateProduantity();
+            this.orderLineTblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.orderLineTblDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderTblDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCompany.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpItemPayment.SuspendLayout();
@@ -161,6 +175,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTblDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCompany
@@ -176,7 +193,7 @@
             this.pnlCompany.Location = new System.Drawing.Point(0, 0);
             this.pnlCompany.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(899, 62);
+            this.pnlCompany.Size = new System.Drawing.Size(919, 62);
             this.pnlCompany.TabIndex = 4;
             // 
             // btnExit
@@ -203,7 +220,7 @@
             this.lblCompany.Location = new System.Drawing.Point(0, 0);
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(897, 56);
+            this.lblCompany.Size = new System.Drawing.Size(917, 56);
             this.lblCompany.TabIndex = 0;
             this.lblCompany.Text = "TOTOAL SPORTS";
             this.lblCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1235,8 +1252,11 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.getPhoneOrderProductsTableAdapter = null;
             this.tableAdapterManager.OrderLineTblTableAdapter = null;
             this.tableAdapterManager.OrderTblTableAdapter = this.orderTblTableAdapter;
+            this.tableAdapterManager.PhoneOrderLineTblTableAdapter = null;
+            this.tableAdapterManager.PhoneOrderTableAdapter = null;
             this.tableAdapterManager.ProductTblTableAdapter = null;
             this.tableAdapterManager.selectProductIDTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ISTN3AS.ProductDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -1250,12 +1270,119 @@
             // 
             this.orderLineTblTableAdapter.ClearBeforeFill = true;
             // 
+            // orderLineTblBindingSource1
+            // 
+            this.orderLineTblBindingSource1.DataMember = "OrderLineTbl";
+            this.orderLineTblBindingSource1.DataSource = this.productDS;
+            // 
+            // orderLineTblDataGridView
+            // 
+            this.orderLineTblDataGridView.AutoGenerateColumns = false;
+            this.orderLineTblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderLineTblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.orderLineTblDataGridView.DataSource = this.orderLineTblBindingSource1;
+            this.orderLineTblDataGridView.Location = new System.Drawing.Point(532, 81);
+            this.orderLineTblDataGridView.Name = "orderLineTblDataGridView";
+            this.orderLineTblDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.orderLineTblDataGridView.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "OrderNum";
+            this.dataGridViewTextBoxColumn1.HeaderText = "OrderNum";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProdID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ProdID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "UnitPrice";
+            this.dataGridViewTextBoxColumn3.HeaderText = "UnitPrice";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // orderTblDataGridView
+            // 
+            this.orderTblDataGridView.AutoGenerateColumns = false;
+            this.orderTblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderTblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            this.orderTblDataGridView.DataSource = this.orderTblBindingSource;
+            this.orderTblDataGridView.Location = new System.Drawing.Point(532, 307);
+            this.orderTblDataGridView.Name = "orderTblDataGridView";
+            this.orderTblDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.orderTblDataGridView.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "OrderNum";
+            this.dataGridViewTextBoxColumn5.HeaderText = "OrderNum";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "OrderTotal";
+            this.dataGridViewTextBoxColumn6.HeaderText = "OrderTotal";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "OrderType";
+            this.dataGridViewTextBoxColumn7.HeaderText = "OrderType";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn8.HeaderText = "FullName";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "CellNum";
+            this.dataGridViewTextBoxColumn9.HeaderText = "CellNum";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "StaffID";
+            this.dataGridViewTextBoxColumn10.HeaderText = "StaffID";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "MemID";
+            this.dataGridViewTextBoxColumn11.HeaderText = "MemID";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
             // payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(899, 683);
+            this.ClientSize = new System.Drawing.Size(919, 683);
+            this.Controls.Add(this.orderTblDataGridView);
+            this.Controls.Add(this.orderLineTblDataGridView);
             this.Controls.Add(this.pnlCompany);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1303,6 +1430,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTblDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1408,5 +1538,19 @@
         private System.Windows.Forms.BindingSource orderLineTblBindingSource;
         private ProductDSTableAdapters.OrderLineTblTableAdapter orderLineTblTableAdapter;
         private ProductDSTableAdapters.updateProduantity updateProduantity1;
+        private System.Windows.Forms.BindingSource orderLineTblBindingSource1;
+        private System.Windows.Forms.DataGridView orderLineTblDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridView orderTblDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }

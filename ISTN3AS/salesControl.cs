@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace ISTN3AS
 {
@@ -80,7 +81,13 @@ namespace ISTN3AS
         private void btnAdd2_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
+
+            this.phoneOrderLineTblTableAdapter.Fill(this.productDS.PhoneOrderLineTbl);
+            this.phoneOrderTableAdapter.Fill(this.productDS.PhoneOrder);
+
             tabcontrol1.SelectedTab = orders;
+            //tabcontrol1.Size = new Size(1280, 566);
+
             tabcontrol1.Size = new Size(1382, 734);
 
         }
@@ -148,6 +155,8 @@ namespace ISTN3AS
 
                 tabcontrol1.SelectedTab = orders;
                 tabcontrol1.Size = new Size(1280, 566);
+
+                GlobalVariables.Clear();
             }
 
 
@@ -180,15 +189,6 @@ namespace ISTN3AS
             //}
         }
 
-        private void rgbStMem_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbxIsMemeber_Purchase.Checked)
-            {
-                lblStMem.Enabled = true;
-                tbxStMem.Enabled = true;
-            }
-            else { tbxStMem.Enabled = false; }
-        }
 
         private void rgbOrdCust_CheckedChanged(object sender, EventArgs e)
         {
@@ -232,6 +232,13 @@ namespace ISTN3AS
             GlobalVariables.customerName_Order = tbxCustomerOrdName_BeginPurchase.Text;
             GlobalVariables.customerCellNo_Order = tbxCustomerOrdCell_BeginPurchase.Text;
 
+            //MessageBox.Show();
+            if (chbxIsMemeber_Purchase.Checked && bool.Parse(queries1.CheckAccNum(tbxStMem.Text).ToString()))
+            {
+                GlobalVariables.isMemeber = true;
+                GlobalVariables.AccDiscount = 0.05;
+            }
+
             
             sc.Purchase(this);
             sc.Showbuttons(this);
@@ -255,8 +262,8 @@ namespace ISTN3AS
         private void salesControl_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'productDS.PhoneOrderLineTbl' table. You can move, or remove it, as needed.
-            
 
+            tbxStMem.Enabled = false;
             chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
             pnlContactDetails_Purchase.Enabled = false;
 
@@ -295,6 +302,7 @@ namespace ISTN3AS
 
         private void button21_Click(object sender, EventArgs e)
         {
+            //Acc Number  = BirthDay + FirstLetter ofName + FirstLetter of Surname + MemberID
             if (tbxCell_AccCreation.TextLength == 10 & (tbxEmail_AccCreation.Text.Contains("@")))
             {
                string AccNumber = tbxID_AccCreation.Text.Substring(0, 6) + tbxName_AccCreation.Text.ElementAt(0) + tbxSurname_AccCreation.Text.ElementAt(0) + memberTblTableAdapter.maxID();
@@ -513,7 +521,66 @@ namespace ISTN3AS
 
         private void button14_Click(object sender, EventArgs e)
         {
+            GlobalVariables.cartTotal = Double.Parse(phoneOrderDataGridView.CurrentRow.Cells[1].Value.ToString());
+            GlobalVariables.customerName_Order = phoneOrderDataGridView.CurrentRow.Cells[2].Value.ToString();
+            GlobalVariables.customerCellNo_Order = phoneOrderDataGridView.CurrentRow.Cells[3].Value.ToString();
+            GlobalVariables.StaffID = int.Parse(phoneOrderDataGridView.CurrentRow.Cells[4].Value.ToString());
+            if (GlobalVariables.isMemeber)
+            {
+                GlobalVariables.MemberID = int.Parse(phoneOrderDataGridView.CurrentRow.Cells[5].Value.ToString());
+            }
+            //MessageBox.Show(GlobalVariables.productCart_ProductID.Count.ToString());
+            for (int i = 0; i < getPhoneOrderProductsDataGridView.Rows.Count - 1; i++)
+            {
+                //MessageBox.Show(i.ToString());
+                GlobalVariables.productCart_ProductID.Add(getPhoneOrderProductsDataGridView.Rows[i].Cells[1].Value.ToString());
+                GlobalVariables.productCart_UnitPrice.Add(Double.Parse(getPhoneOrderProductsDataGridView.Rows[i].Cells[2].Value.ToString()));
+                GlobalVariables.productCart_Quantity.Add(int.Parse(getPhoneOrderProductsDataGridView.Rows[i].Cells[3].Value.ToString()));
+            }
+           // MessageBox.Show(GlobalVariables.productCart_ProductID.Count.ToString());
+            Form payment = new payment(this);
+            payment.ShowDialog();
 
+            updateProduantity1.DeletePhoneOrder(int.Parse(phoneOrderDataGridView.CurrentRow.Cells[0].Value.ToString()));
+            updateProduantity1.deletePhoneOrderLine(int.Parse(phoneOrderDataGridView.CurrentRow.Cells[0].Value.ToString()));
+        }
+
+        private void chbxMember_BeginOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxIsMemeber_Purchase.Checked)
+            {
+                lblStMem.Enabled = true;
+                tbxStMem.Enabled = true;
+            }
+            else { tbxStMem.Enabled = false; }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            updateProduantity1.DeletePhoneOrder(int.Parse(phoneOrderDataGridView.CurrentRow.Cells[0].Value.ToString()));
+            updateProduantity1.deletePhoneOrderLine(int.Parse(phoneOrderDataGridView.CurrentRow.Cells[0].Value.ToString()));
+            
+            this.phoneOrderTableAdapter.Fill(this.productDS.PhoneOrder);
+            this.phoneOrderLineTblTableAdapter.Fill(this.productDS.PhoneOrderLineTbl);
+
+        }
+
+        private void getPhoneOrderProductsToolStripButton_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void phoneOrderDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                this.getPhoneOrderProductsTableAdapter.getPhoneOrderProducts(this.productDS.getPhoneOrderProducts, int.Parse(phoneOrderDataGridView.CurrentRow.Cells[0].Value.ToString()));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
