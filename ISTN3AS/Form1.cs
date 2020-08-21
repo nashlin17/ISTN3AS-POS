@@ -30,5 +30,13 @@ namespace ISTN3AS
         {
            this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            managerScreen mngSc = new managerScreen();
+            this.Hide();
+            mngSc.ShowDialog();
+            this.Dispose();
+        }
     }
 }
