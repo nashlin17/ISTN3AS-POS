@@ -104,6 +104,17 @@ namespace ISTN3AS
 
         private void payment_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'productDS.ReturnTbl' table. You can move, or remove it, as needed.
+            this.returnTblTableAdapter.Fill(this.productDS.ReturnTbl);
+            // TODO: This line of code loads data into the 'productDS.ReturnProductTbl' table. You can move, or remove it, as needed.
+            this.returnProductTblTableAdapter.Fill(this.productDS.ReturnProductTbl);
+            // TODO: This line of code loads data into the 'productDS.ReturnTbl' table. You can move, or remove it, as needed.
+            if (GlobalVariables.TransactionType.Equals("Return"))
+            {
+                tabControl1.SelectedTab = tpReturn;
+            }
+
+            
             MessageBox.Show(GlobalVariables.productCart_ProductID.Count.ToString());
             this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
@@ -129,6 +140,27 @@ namespace ISTN3AS
             }
             catch (Exception ex) { }         
 
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProcess_Return_Click(object sender, EventArgs e)
+        {
+            returnTblTableAdapter.Insert(tbxReason_Return.Text, tbxCellNo_Return.Text);
+
+            int maxID = int.Parse(returnTblTableAdapter.getMaxID().ToString());
+            for(int i = 0; i < GlobalVariables.productCart_ProductID.Count - 1; i++)
+            {
+                returnProductTblTableAdapter.Insert(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), maxID, dtpReturnDate_Returns.Value, GlobalVariables.Return_OrderNum.ElementAt(i));
+            }
         }
     }
 }

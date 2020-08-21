@@ -94,6 +94,7 @@ namespace ISTN3AS
 
         private void btnReturns_Click(object sender, EventArgs e)
         {
+            GlobalVariables.Clear();
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = returnItem;
             tabcontrol1.Size = new Size(1382, 734);
@@ -261,6 +262,12 @@ namespace ISTN3AS
 
         private void salesControl_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'productDS.OrderLineTbl' table. You can move, or remove it, as needed.
+            this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
+            // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
+            this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
+            // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
+            this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             // TODO: This line of code loads data into the 'productDS.PhoneOrderLineTbl' table. You can move, or remove it, as needed.
 
             tbxStMem.Enabled = false;
@@ -288,6 +295,15 @@ namespace ISTN3AS
             lsvProductCart_Control.Columns[1].TextAlign = HorizontalAlignment.Center;
             lsvProductCart_Control.Columns.Add("Total");
             lsvProductCart_Control.Columns[2].TextAlign = HorizontalAlignment.Center;
+
+            lsvReturnItems_Returns.View = View.Details;
+
+            lsvReturnItems_Returns.Columns.Add("Player Name");
+            lsvReturnItems_Returns.Columns[0].Width = 203;
+            lsvReturnItems_Returns.Columns.Add("Qty");
+            lsvReturnItems_Returns.Columns[1].TextAlign = HorizontalAlignment.Center;
+            lsvReturnItems_Returns.Columns.Add("Total");
+            lsvReturnItems_Returns.Columns[2].TextAlign = HorizontalAlignment.Center;
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -581,6 +597,65 @@ namespace ISTN3AS
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            orderTblTableAdapter.FilterByOrderNum(productDS.OrderTbl, int.Parse(tbxOrderNum_Returns.Text));
+            
+        }
+
+        private void orderTblDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            try
+            {
+                this.orderLineTblTableAdapter.FillBy(this.productDS.OrderLineTbl, int.Parse(orderTblDataGridView.CurrentRow.Cells[0].Value.ToString()));
+
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            //GlobalVariables.Return_OrderNum = int.Parse(orderTblDataGridView.CurrentRow.Cells[0].ToString());
+            GlobalVariables.Return_OrderNum.Add(int.Parse(orderTblDataGridView.CurrentRow.Cells[0].Value.ToString()));
+
+            //MessageBox.Show(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
+
+            string name = productTblTableAdapter1.GetProdName(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString()));
+            lsvReturnItems_Returns.Items.Add(new ListViewItem(new[] { name, orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString(), orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString() }));
+
+            GlobalVariables.productCart_ProductID.Add(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
+            GlobalVariables.productCart_Quantity.Add(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString()));
+            GlobalVariables.productCart_UnitPrice.Add(Double.Parse(orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString()));
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            GlobalVariables.TransactionType = "Return";
+            
+            //GlobalVariables.productCart_ProductID
+
+
+
+
+
+            Form payment = new payment(this);
+            payment.ShowDialog();
+        }
+
+        private void orderLineTblDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //string name = productTblTableAdapter1.GetProdName(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString()));
+            //lsvReturnItems_Returns.Items.Add(new ListViewItem(new[] { name, orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString(), orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString() }));
+
+            //GlobalVariables.productCart_ProductID.Add(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
+            //GlobalVariables.productCart_Quantity.Add(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString()));
+            //GlobalVariables.productCart_UnitPrice.Add(Double.Parse(orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString()));
         }
     }
 }

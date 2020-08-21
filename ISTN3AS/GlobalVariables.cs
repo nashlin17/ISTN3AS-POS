@@ -16,7 +16,6 @@ namespace ISTN3AS
         public static List<int> productCart_Quantity = new List<int>();
         public static List<double> productCart_UnitPrice = new List<double>();
 
-
         public static string TransactionType;
         public static int MemberID;
         public static int StaffID;
@@ -27,6 +26,8 @@ namespace ISTN3AS
         public static string customerCellNo_Order;
         public static bool isMemeber = false;
 
+        //Returns
+        public static List<int> Return_OrderNum = new List<int>();
         public static void Clear()
         {
             cartTotal = 0;

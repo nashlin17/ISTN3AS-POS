@@ -71,18 +71,17 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tpReturn = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dtpReturnDate_Returns = new System.Windows.Forms.DateTimePicker();
+            this.tbxReason_Return = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbxCellNo_Return = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnProcess_Return = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -120,27 +119,20 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.returnTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productDS = new ISTN3AS.ProductDS();
+            this.returnProductTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orderLineTblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.orderTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderTblTableAdapter();
             this.tableAdapterManager = new ISTN3AS.ProductDSTableAdapters.TableAdapterManager();
             this.orderLineTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderLineTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderLineTblTableAdapter();
             this.updateProduantity1 = new ISTN3AS.ProductDSTableAdapters.updateProduantity();
-            this.orderLineTblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.orderLineTblDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderTblDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.returnProductTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.ReturnProductTblTableAdapter();
+            this.updateProduantity2 = new ISTN3AS.ProductDSTableAdapters.updateProduantity();
+            this.returnTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.ReturnTblTableAdapter();
+            this.returnProductTblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCompany.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpItemPayment.SuspendLayout();
@@ -157,8 +149,8 @@
             this.panel10.SuspendLayout();
             this.panel13.SuspendLayout();
             this.tpReturn.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel24.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.panel14.SuspendLayout();
             this.tpOrder.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -172,12 +164,13 @@
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.returnTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderTblDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCompany
@@ -193,7 +186,7 @@
             this.pnlCompany.Location = new System.Drawing.Point(0, 0);
             this.pnlCompany.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(919, 62);
+            this.pnlCompany.Size = new System.Drawing.Size(574, 58);
             this.pnlCompany.TabIndex = 4;
             // 
             // btnExit
@@ -202,7 +195,7 @@
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Font = new System.Drawing.Font("Castellar", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Snow;
-            this.btnExit.Location = new System.Drawing.Point(454, 20);
+            this.btnExit.Location = new System.Drawing.Point(478, 10);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(44, 38);
@@ -220,7 +213,7 @@
             this.lblCompany.Location = new System.Drawing.Point(0, 0);
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(917, 56);
+            this.lblCompany.Size = new System.Drawing.Size(572, 56);
             this.lblCompany.TabIndex = 0;
             this.lblCompany.Text = "TOTOAL SPORTS";
             this.lblCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -673,6 +666,7 @@
             // tpReturn
             // 
             this.tpReturn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpReturn.Controls.Add(this.panel24);
             this.tpReturn.Controls.Add(this.groupBox2);
             this.tpReturn.Location = new System.Drawing.Point(4, 22);
             this.tpReturn.Margin = new System.Windows.Forms.Padding(2);
@@ -681,50 +675,38 @@
             this.tpReturn.TabIndex = 2;
             this.tpReturn.Text = "return";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Controls.Add(this.panel24);
-            this.groupBox2.Controls.Add(this.label48);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.panel14);
-            this.groupBox2.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(68, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(392, 497);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel24.Controls.Add(this.textBox2);
+            this.panel24.Controls.Add(this.dtpReturnDate_Returns);
+            this.panel24.Controls.Add(this.tbxReason_Return);
             this.panel24.Controls.Add(this.label4);
-            this.panel24.Controls.Add(this.textBox11);
-            this.panel24.Controls.Add(this.textBox10);
-            this.panel24.Controls.Add(this.textBox9);
+            this.panel24.Controls.Add(this.tbxCellNo_Return);
             this.panel24.Controls.Add(this.label47);
             this.panel24.Controls.Add(this.label49);
             this.panel24.Controls.Add(this.label50);
-            this.panel24.Location = new System.Drawing.Point(0, 83);
+            this.panel24.Location = new System.Drawing.Point(57, 89);
             this.panel24.Margin = new System.Windows.Forms.Padding(2);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(393, 264);
+            this.panel24.Size = new System.Drawing.Size(404, 264);
             this.panel24.TabIndex = 15;
             // 
-            // textBox2
+            // dtpReturnDate_Returns
             // 
-            this.textBox2.Location = new System.Drawing.Point(86, 156);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(257, 93);
-            this.textBox2.TabIndex = 18;
+            this.dtpReturnDate_Returns.Location = new System.Drawing.Point(86, 119);
+            this.dtpReturnDate_Returns.Name = "dtpReturnDate_Returns";
+            this.dtpReturnDate_Returns.Size = new System.Drawing.Size(258, 20);
+            this.dtpReturnDate_Returns.TabIndex = 19;
+            // 
+            // tbxReason_Return
+            // 
+            this.tbxReason_Return.Location = new System.Drawing.Point(86, 156);
+            this.tbxReason_Return.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxReason_Return.Multiline = true;
+            this.tbxReason_Return.Name = "tbxReason_Return";
+            this.tbxReason_Return.Size = new System.Drawing.Size(257, 93);
+            this.tbxReason_Return.TabIndex = 18;
             // 
             // label4
             // 
@@ -736,44 +718,28 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Reasons : ";
             // 
-            // textBox11
+            // tbxCellNo_Return
             // 
-            this.textBox11.Location = new System.Drawing.Point(86, 106);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(257, 29);
-            this.textBox11.TabIndex = 16;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(86, 58);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(257, 29);
-            this.textBox10.TabIndex = 15;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(86, 10);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(258, 29);
-            this.textBox9.TabIndex = 14;
+            this.tbxCellNo_Return.Location = new System.Drawing.Point(86, 45);
+            this.tbxCellNo_Return.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxCellNo_Return.Name = "tbxCellNo_Return";
+            this.tbxCellNo_Return.Size = new System.Drawing.Size(257, 20);
+            this.tbxCellNo_Return.TabIndex = 15;
             // 
             // label47
             // 
             this.label47.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(15, 19);
+            this.label47.Location = new System.Drawing.Point(15, 9);
             this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(131, 19);
+            this.label47.Size = new System.Drawing.Size(67, 19);
             this.label47.TabIndex = 13;
             this.label47.Text = "Name : ";
             // 
             // label49
             // 
             this.label49.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(15, 115);
+            this.label49.Location = new System.Drawing.Point(14, 80);
             this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(131, 19);
@@ -783,12 +749,29 @@
             // label50
             // 
             this.label50.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(15, 67);
+            this.label50.Location = new System.Drawing.Point(14, 44);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(131, 19);
             this.label50.TabIndex = 1;
             this.label50.Text = "Cell No: ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.Controls.Add(this.label48);
+            this.groupBox2.Controls.Add(this.btnProcess_Return);
+            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.panel14);
+            this.groupBox2.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.groupBox2.Location = new System.Drawing.Point(37, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(442, 497);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label48
             // 
@@ -802,20 +785,21 @@
             this.label48.Text = "Customer Details";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button7
+            // btnProcess_Return
             // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::ISTN3AS.Properties.Resources.process;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(220, 436);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(134, 46);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Process";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnProcess_Return.BackColor = System.Drawing.Color.White;
+            this.btnProcess_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnProcess_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcess_Return.Image = global::ISTN3AS.Properties.Resources.process;
+            this.btnProcess_Return.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProcess_Return.Location = new System.Drawing.Point(212, 436);
+            this.btnProcess_Return.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProcess_Return.Name = "btnProcess_Return";
+            this.btnProcess_Return.Size = new System.Drawing.Size(134, 46);
+            this.btnProcess_Return.TabIndex = 8;
+            this.btnProcess_Return.Text = "Process";
+            this.btnProcess_Return.UseVisualStyleBackColor = false;
+            this.btnProcess_Return.Click += new System.EventHandler(this.btnProcess_Return_Click);
             // 
             // button8
             // 
@@ -838,15 +822,16 @@
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.label13);
             this.panel14.Controls.Add(this.label19);
-            this.panel14.Location = new System.Drawing.Point(0, 352);
+            this.panel14.Location = new System.Drawing.Point(20, 355);
             this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(393, 45);
+            this.panel14.Size = new System.Drawing.Size(404, 45);
             this.panel14.TabIndex = 3;
+            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(68, 12);
+            this.label13.Location = new System.Drawing.Point(84, 12);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(82, 28);
@@ -1235,15 +1220,30 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "Disocunt: R";
             // 
+            // returnTblBindingSource
+            // 
+            this.returnTblBindingSource.DataMember = "ReturnTbl";
+            this.returnTblBindingSource.DataSource = this.productDS;
+            // 
             // productDS
             // 
             this.productDS.DataSetName = "ProductDS";
             this.productDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // returnProductTblBindingSource
+            // 
+            this.returnProductTblBindingSource.DataSource = this.productDS;
+            this.returnProductTblBindingSource.Position = 0;
+            // 
             // orderTblBindingSource
             // 
             this.orderTblBindingSource.DataMember = "OrderTbl";
             this.orderTblBindingSource.DataSource = this.productDS;
+            // 
+            // orderLineTblBindingSource1
+            // 
+            this.orderLineTblBindingSource1.DataMember = "OrderLineTbl";
+            this.orderLineTblBindingSource1.DataSource = this.productDS;
             // 
             // orderTblTableAdapter
             // 
@@ -1258,6 +1258,8 @@
             this.tableAdapterManager.PhoneOrderLineTblTableAdapter = null;
             this.tableAdapterManager.PhoneOrderTableAdapter = null;
             this.tableAdapterManager.ProductTblTableAdapter = null;
+            this.tableAdapterManager.ReturnProductTblTableAdapter = null;
+            this.tableAdapterManager.ReturnTblTableAdapter = null;
             this.tableAdapterManager.selectProductIDTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ISTN3AS.ProductDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -1270,119 +1272,25 @@
             // 
             this.orderLineTblTableAdapter.ClearBeforeFill = true;
             // 
-            // orderLineTblBindingSource1
+            // returnProductTblTableAdapter
             // 
-            this.orderLineTblBindingSource1.DataMember = "OrderLineTbl";
-            this.orderLineTblBindingSource1.DataSource = this.productDS;
+            this.returnProductTblTableAdapter.ClearBeforeFill = true;
             // 
-            // orderLineTblDataGridView
+            // returnTblTableAdapter
             // 
-            this.orderLineTblDataGridView.AutoGenerateColumns = false;
-            this.orderLineTblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderLineTblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.orderLineTblDataGridView.DataSource = this.orderLineTblBindingSource1;
-            this.orderLineTblDataGridView.Location = new System.Drawing.Point(532, 81);
-            this.orderLineTblDataGridView.Name = "orderLineTblDataGridView";
-            this.orderLineTblDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.orderLineTblDataGridView.TabIndex = 6;
+            this.returnTblTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // returnProductTblBindingSource1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "OrderNum";
-            this.dataGridViewTextBoxColumn1.HeaderText = "OrderNum";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProdID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ProdID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "UnitPrice";
-            this.dataGridViewTextBoxColumn3.HeaderText = "UnitPrice";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // orderTblDataGridView
-            // 
-            this.orderTblDataGridView.AutoGenerateColumns = false;
-            this.orderTblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderTblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
-            this.orderTblDataGridView.DataSource = this.orderTblBindingSource;
-            this.orderTblDataGridView.Location = new System.Drawing.Point(532, 307);
-            this.orderTblDataGridView.Name = "orderTblDataGridView";
-            this.orderTblDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.orderTblDataGridView.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "OrderNum";
-            this.dataGridViewTextBoxColumn5.HeaderText = "OrderNum";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "OrderTotal";
-            this.dataGridViewTextBoxColumn6.HeaderText = "OrderTotal";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "OrderType";
-            this.dataGridViewTextBoxColumn7.HeaderText = "OrderType";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "FullName";
-            this.dataGridViewTextBoxColumn8.HeaderText = "FullName";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "CellNum";
-            this.dataGridViewTextBoxColumn9.HeaderText = "CellNum";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "StaffID";
-            this.dataGridViewTextBoxColumn10.HeaderText = "StaffID";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "MemID";
-            this.dataGridViewTextBoxColumn11.HeaderText = "MemID";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.returnProductTblBindingSource1.DataMember = "ReturnProductTbl";
+            this.returnProductTblBindingSource1.DataSource = this.productDS;
             // 
             // payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(919, 683);
-            this.Controls.Add(this.orderTblDataGridView);
-            this.Controls.Add(this.orderLineTblDataGridView);
+            this.ClientSize = new System.Drawing.Size(574, 683);
             this.Controls.Add(this.pnlCompany);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1409,9 +1317,9 @@
             this.panel10.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.tpReturn.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.tpOrder.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1427,12 +1335,13 @@
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.returnTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderTblDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1482,18 +1391,16 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TabPage tpReturn;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnProcess_Return;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxReason_Return;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbxCellNo_Return;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
@@ -1539,18 +1446,12 @@
         private ProductDSTableAdapters.OrderLineTblTableAdapter orderLineTblTableAdapter;
         private ProductDSTableAdapters.updateProduantity updateProduantity1;
         private System.Windows.Forms.BindingSource orderLineTblBindingSource1;
-        private System.Windows.Forms.DataGridView orderLineTblDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridView orderTblDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.BindingSource returnProductTblBindingSource;
+        private ProductDSTableAdapters.ReturnProductTblTableAdapter returnProductTblTableAdapter;
+        private System.Windows.Forms.DateTimePicker dtpReturnDate_Returns;
+        private ProductDSTableAdapters.updateProduantity updateProduantity2;
+        private System.Windows.Forms.BindingSource returnTblBindingSource;
+        private ProductDSTableAdapters.ReturnTblTableAdapter returnTblTableAdapter;
+        private System.Windows.Forms.BindingSource returnProductTblBindingSource1;
     }
 }
