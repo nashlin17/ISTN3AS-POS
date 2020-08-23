@@ -67,9 +67,9 @@ namespace ISTN3AS
         private SortedDictionary<string, int> sizes = new SortedDictionary<string, int>();
         private void managerScreen_Load(object sender, EventArgs e)
         {
+    
 
-           
- 
+
             initTables();
 
 
@@ -207,6 +207,11 @@ namespace ISTN3AS
             this.productTblTableAdapter.Fill(this.productDS.ProductTbl);
             // TODO: This line of code loads data into the 'supplierDS.SupplierTbl' table. You can move, or remove it, as needed.
             this.supplierTblTableAdapter.Fill(this.supplierDS.SupplierTbl);
+            // TODO: This line of code loads data into the 'supplierDS.SupplierProductLine' table. You can move, or remove it, as needed.
+            this.supplierProductLineTableAdapter.Fill(this.supplierDS.SupplierProductLine);
+            // TODO: This line of code loads data into the 'supplierDS.SupplierOrderTbl' table. You can move, or remove it, as needed.
+            this.supplierOrderTblTableAdapter.Fill(this.supplierDS.SupplierOrderTbl);
+
         }
 
         private void initCbx()
@@ -332,5 +337,70 @@ namespace ISTN3AS
         {
             tabControl1.SelectedTab = tpOrder;
         }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+
+
+            supplierOrderTblTableAdapter.InsertOrderInView(decimal.Parse(tbxTotal.Text), "Undelivered", dt.ToString(), null, int.Parse(tbxSuppID.Text));
+            initTables();
+            int SuppOrderID = int.Parse(suppOrderGrid.Rows[suppOrderGrid.Rows.Count - 2].Cells[0].Value.ToString());
+            supplierProductLineTableAdapter.InsertProductOrder(int.Parse(tbxProdID.Text), SuppOrderID, decimal.Parse(tbxTotal.Text), int.Parse(tbxProdQuantity.Text));
+
+            initTables();
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            DateTime dt2 = DateTime.Now;
+            Boolean bflag = false;
+            int prodID, quantity, originalQT;
+            originalQT = 0;
+            quantity = 0;
+            prodID = 0;
+
+
+
+            supplierProductLineTableAdapter.FillBy(supplierDS.SupplierProductLine, int.Parse(suppOrderGrid.CurrentRow.Cells[0].Value.ToString()));
+
+            foreach (DataGridViewRow row in fillbyGrid.Rows)
+            {
+                prodID = int.Parse(row.Cells[0].Value.ToString());
+
+                quantity = int.Parse(row.Cells[3].Value.ToString());
+
+                foreach (DataGridViewRow row2 in productTblDataGridView.Rows)
+                {
+                    int compareID = int.Parse(row2.Cells[0].Value.ToString());
+
+                    if (prodID == compareID)
+                    {
+                        originalQT = int.Parse(row2.Cells[3].Value.ToString());
+                        bflag = true;
+                        break;
+                    }
+
+                }
+                if (bflag)
+                {
+                    break;
+                }
+
+            }
+            quantity = quantity + originalQT;
+            MessageBox.Show(quantity + "quantity");
+            MessageBox.Show(prodID + "quantity");
+            productTblTableAdapter.UpdateNewStock(quantity,prodID);
+
+            MessageBox.Show("Update Complete");
+            supplierOrderTblTableAdapter.UpdateDelieveryStatus("Delivered", dt2.ToString(), int.Parse(suppOrderGrid.CurrentRow.Cells[0].Value.ToString()));
+            initTables();
+       
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+        }  
     }
 }
