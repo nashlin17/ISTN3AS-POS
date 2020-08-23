@@ -20,7 +20,7 @@ namespace ISTN3AS
         private void btnExit2Home_Click(object sender, EventArgs e)
         {
             mainMenu mm = new mainMenu();
-            mm.ShowDialog();
+            mm.Show();
             this.Close();
 
         }

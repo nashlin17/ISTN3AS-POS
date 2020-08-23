@@ -16,7 +16,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace ISTN3AS
 {
-    public partial class salesControl : Form
+    public partial  class salesControl : Form
     {
         cls_itemComp sc = new cls_itemComp();
         private bool filterOn = false;
@@ -48,7 +48,7 @@ namespace ISTN3AS
             sc.Hidebuttons(this);
             //tabcontrol1.SelectedTab = purchase;
 
-
+            
         }
 
         private void btnCat1_Click(object sender, EventArgs e)
@@ -134,10 +134,12 @@ namespace ISTN3AS
 
         private void button5_Click(object sender, EventArgs e)
         {
+          
             if (GlobalVariables.TransactionType.Equals("Store"))
             {
                 Form payment = new payment(this);
                 payment.ShowDialog();
+               
             }
             else
             {

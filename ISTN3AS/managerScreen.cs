@@ -67,6 +67,9 @@ namespace ISTN3AS
         private SortedDictionary<string, int> sizes = new SortedDictionary<string, int>();
         private void managerScreen_Load(object sender, EventArgs e)
         {
+
+           
+ 
             initTables();
 
 
@@ -202,6 +205,8 @@ namespace ISTN3AS
             this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
             // TODO: This line of code loads data into the 'productDS.ProductTbl' table. You can move, or remove it, as needed.
             this.productTblTableAdapter.Fill(this.productDS.ProductTbl);
+            // TODO: This line of code loads data into the 'supplierDS.SupplierTbl' table. You can move, or remove it, as needed.
+            this.supplierTblTableAdapter.Fill(this.supplierDS.SupplierTbl);
         }
 
         private void initCbx()
@@ -286,6 +291,46 @@ namespace ISTN3AS
             {
                 chbxUpdateProduct_Management.CheckState = CheckState.Unchecked;
             }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if(tbxSuppName.Text=="" || tbxSuppNo.Text==""  || tbxSuppMail.Text == "" ||tbxSuppAddress.Text == "")
+            {
+                MessageBox.Show("Details Incomplete ");
+            }
+            else
+            {
+               
+                supplierTblTableAdapter.InsertSupplier(tbxSuppName.Text, tbxSuppNo.Text, tbxSuppMail.Text, tbxSuppAddress.Text, "Active");
+                initTables();
+            }
+            
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if(cbxSupplierStatus.Text!="" && int.Parse(supplierGrid.CurrentRow.Cells[0].Value.ToString()) > 0)
+            {
+                int id = int.Parse(supplierGrid.CurrentRow.Cells[0].Value.ToString());
+                supplierTblTableAdapter.UpdateAvailability(cbxSupplierStatus.Text, id);
+                initTables();
+            }
+            else
+            {
+                MessageBox.Show("Select a Supplier And Status ");
+            }
+            
+        }
+
+        private void btnSupp_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tpSupp;
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tpOrder;
         }
     }
 }

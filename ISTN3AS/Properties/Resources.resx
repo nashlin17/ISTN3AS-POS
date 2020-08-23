@@ -151,26 +151,20 @@
   <data name="sports-pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\sports-pack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\user (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\bank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="baseballcapsprod-18-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\baseballcapsprod-18-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mainScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\mainScreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shirts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\shirts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="signIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\signIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="supermarket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\supermarket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cash-on-delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\cash-on-delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="password (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\password (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +196,8 @@
   <data name="polo-shirt (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\polo-shirt (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\user (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="baseballcapsprod-18-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\baseballcapsprod-18-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\quit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,6 +220,9 @@
   <data name="trash (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\trash (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="9B8k_U-c_400x400" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9B8k_U-c_400x400.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pass2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\pass2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,8 +238,8 @@
   <data name="shirt3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\shirt3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="files-and-folders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\files-and-folders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sports-and-competition" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\sports-and-competition.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,11 +247,17 @@
   <data name="passwordID" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\passwordID.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="frmexit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\frmexit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sneaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\sneaker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="process" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\process.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cash-on-delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\cash-on-delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="passs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\passs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,13 +271,13 @@
   <data name="price" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\price.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frmexit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\frmexit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shirts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\shirts.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="files-and-folders" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\files-and-folders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9B8k_U-c_400x400" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9B8k_U-c_400x400.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="store-_0003s_0001_Total-Sports-ho9ver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\store-_0003s_0001_Total-Sports-ho9ver.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

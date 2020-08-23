@@ -79,12 +79,17 @@ namespace ISTN3AS
                 //updateProduantity1.updateProductQuantity(productQuantity - GlobalVariables.productCart_Quantity.ElementAt(i), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)));
             }
 
-
+           
             this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             //Non Member
-
-
+           
+            sc.tabcontrol1.SelectedIndex = 1;
+            printForm pf = new printForm();
+           
+            pf.Show();
+            this.Dispose();
+            // this.Close();
             //sc.btnCashOut.Enabled = true;
             //sc.btnItems.Enabled = false;
             //sc.btnMenuOrder.Enabled = true;

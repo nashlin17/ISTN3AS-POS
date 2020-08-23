@@ -82,6 +82,12 @@
     <Compile Include="payment.Designer.cs">
       <DependentUpon>payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="printForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printForm.Designer.cs">
+      <DependentUpon>printForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,6 +112,11 @@
     <Compile Include="salesControl.Designer.cs">
       <DependentUpon>salesControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="supplierDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supplierDS.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="payment.resx">
       <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printForm.resx">
+      <DependentUpon>printForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -176,6 +190,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="supplierDS.xsc">
+      <DependentUpon>supplierDS.xsd</DependentUpon>
+    </None>
+    <None Include="supplierDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>supplierDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="supplierDS.xss">
+      <DependentUpon>supplierDS.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -350,6 +375,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\9B8k_U-c_400x400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store-_0003s_0001_Total-Sports-ho9ver.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

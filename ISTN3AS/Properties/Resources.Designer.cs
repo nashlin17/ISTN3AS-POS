@@ -493,6 +493,16 @@ namespace ISTN3AS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap store__0003s_0001_Total_Sports_ho9ver {
+            get {
+                object obj = ResourceManager.GetObject("store-_0003s_0001_Total-Sports-ho9ver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap supermarket {
             get {
                 object obj = ResourceManager.GetObject("supermarket", resourceCulture);
