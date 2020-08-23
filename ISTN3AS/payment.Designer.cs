@@ -76,8 +76,6 @@
             this.tbxReason_Return = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxCellNo_Return = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -133,6 +131,7 @@
             this.updateProduantity2 = new ISTN3AS.ProductDSTableAdapters.updateProduantity();
             this.returnTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.ReturnTblTableAdapter();
             this.returnProductTblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlCompany.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpItemPayment.SuspendLayout();
@@ -186,7 +185,7 @@
             this.pnlCompany.Location = new System.Drawing.Point(0, 0);
             this.pnlCompany.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(574, 58);
+            this.pnlCompany.Size = new System.Drawing.Size(531, 58);
             this.pnlCompany.TabIndex = 4;
             // 
             // btnExit
@@ -213,7 +212,7 @@
             this.lblCompany.Location = new System.Drawing.Point(0, 0);
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(572, 56);
+            this.lblCompany.Size = new System.Drawing.Size(529, 56);
             this.lblCompany.TabIndex = 0;
             this.lblCompany.Text = "TOTOAL SPORTS";
             this.lblCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -683,25 +682,24 @@
             this.panel24.Controls.Add(this.tbxReason_Return);
             this.panel24.Controls.Add(this.label4);
             this.panel24.Controls.Add(this.tbxCellNo_Return);
-            this.panel24.Controls.Add(this.label47);
-            this.panel24.Controls.Add(this.label49);
             this.panel24.Controls.Add(this.label50);
+            this.panel24.Controls.Add(this.label8);
             this.panel24.Location = new System.Drawing.Point(57, 89);
             this.panel24.Margin = new System.Windows.Forms.Padding(2);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(404, 264);
+            this.panel24.Size = new System.Drawing.Size(404, 168);
             this.panel24.TabIndex = 15;
             // 
             // dtpReturnDate_Returns
             // 
-            this.dtpReturnDate_Returns.Location = new System.Drawing.Point(86, 119);
+            this.dtpReturnDate_Returns.Location = new System.Drawing.Point(107, 35);
             this.dtpReturnDate_Returns.Name = "dtpReturnDate_Returns";
-            this.dtpReturnDate_Returns.Size = new System.Drawing.Size(258, 20);
+            this.dtpReturnDate_Returns.Size = new System.Drawing.Size(257, 20);
             this.dtpReturnDate_Returns.TabIndex = 19;
             // 
             // tbxReason_Return
             // 
-            this.tbxReason_Return.Location = new System.Drawing.Point(86, 156);
+            this.tbxReason_Return.Location = new System.Drawing.Point(107, 60);
             this.tbxReason_Return.Margin = new System.Windows.Forms.Padding(2);
             this.tbxReason_Return.Multiline = true;
             this.tbxReason_Return.Name = "tbxReason_Return";
@@ -711,48 +709,28 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 165);
+            this.label4.Location = new System.Drawing.Point(25, 59);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 19);
+            this.label4.Size = new System.Drawing.Size(78, 19);
             this.label4.TabIndex = 17;
             this.label4.Text = "Reasons : ";
             // 
             // tbxCellNo_Return
             // 
-            this.tbxCellNo_Return.Location = new System.Drawing.Point(86, 45);
+            this.tbxCellNo_Return.Location = new System.Drawing.Point(107, 10);
             this.tbxCellNo_Return.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCellNo_Return.Name = "tbxCellNo_Return";
             this.tbxCellNo_Return.Size = new System.Drawing.Size(257, 20);
             this.tbxCellNo_Return.TabIndex = 15;
             // 
-            // label47
-            // 
-            this.label47.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(15, 9);
-            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(67, 19);
-            this.label47.TabIndex = 13;
-            this.label47.Text = "Name : ";
-            // 
-            // label49
-            // 
-            this.label49.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(14, 80);
-            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(131, 19);
-            this.label49.TabIndex = 2;
-            this.label49.Text = "Address : ";
-            // 
             // label50
             // 
             this.label50.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(14, 44);
+            this.label50.Location = new System.Drawing.Point(25, 9);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(131, 19);
+            this.label50.Size = new System.Drawing.Size(131, 21);
             this.label50.TabIndex = 1;
             this.label50.Text = "Cell No: ";
             // 
@@ -792,7 +770,7 @@
             this.btnProcess_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcess_Return.Image = global::ISTN3AS.Properties.Resources.process;
             this.btnProcess_Return.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcess_Return.Location = new System.Drawing.Point(212, 436);
+            this.btnProcess_Return.Location = new System.Drawing.Point(251, 436);
             this.btnProcess_Return.Margin = new System.Windows.Forms.Padding(2);
             this.btnProcess_Return.Name = "btnProcess_Return";
             this.btnProcess_Return.Size = new System.Drawing.Size(134, 46);
@@ -808,7 +786,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(46, 436);
+            this.button8.Location = new System.Drawing.Point(77, 436);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(134, 46);
@@ -822,7 +800,7 @@
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.label13);
             this.panel14.Controls.Add(this.label19);
-            this.panel14.Location = new System.Drawing.Point(20, 355);
+            this.panel14.Location = new System.Drawing.Point(20, 259);
             this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(404, 45);
@@ -1285,12 +1263,22 @@
             this.returnProductTblBindingSource1.DataMember = "ReturnProductTbl";
             this.returnProductTblBindingSource1.DataSource = this.productDS;
             // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 32);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 19);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Date:";
+            // 
             // payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(574, 683);
+            this.ClientSize = new System.Drawing.Size(531, 683);
             this.Controls.Add(this.pnlCompany);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1401,8 +1389,6 @@
         private System.Windows.Forms.TextBox tbxReason_Return;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxCellNo_Return;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.TabPage tpOrder;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -1453,5 +1439,6 @@
         private System.Windows.Forms.BindingSource returnTblBindingSource;
         private ProductDSTableAdapters.ReturnTblTableAdapter returnTblTableAdapter;
         private System.Windows.Forms.BindingSource returnProductTblBindingSource1;
+        private System.Windows.Forms.Label label8;
     }
 }

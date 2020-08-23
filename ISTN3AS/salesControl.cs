@@ -88,7 +88,7 @@ namespace ISTN3AS
             tabcontrol1.SelectedTab = orders;
             //tabcontrol1.Size = new Size(1280, 566);
 
-            tabcontrol1.Size = new Size(1382, 734);
+            tabcontrol1.Size = new Size(1242, 559);
 
         }
 
@@ -97,7 +97,7 @@ namespace ISTN3AS
             GlobalVariables.Clear();
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = returnItem;
-            tabcontrol1.Size = new Size(1382, 734);
+            tabcontrol1.Size = new Size(1242, 559);
 
         }
 
@@ -105,7 +105,7 @@ namespace ISTN3AS
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = accCreate;
-            tabcontrol1.Size = new Size(1382, 734);
+            tabcontrol1.Size = new Size(1242, 559);
 
         }
 
@@ -227,6 +227,7 @@ namespace ISTN3AS
 
         private void btnMenuPurchase_Click(object sender, EventArgs e)
         {
+            GlobalVariables.Clear();
             if (chbxStoreOrder_Purchase.Checked)
             {
                 GlobalVariables.TransactionType = "Store";
@@ -247,7 +248,7 @@ namespace ISTN3AS
             sc.Showbuttons(this);
             tabcontrol1.SelectedTab = cat4;
             this.categoryFIlterTA.AllProducts(this.productDS.CategoryFIlter);
-            tabcontrol1.Size = new Size(242, 640);
+            tabcontrol1.Size = new Size(230, 559);
             btnCashOut.Enabled = false;
             btnItems.Enabled = true;
 
@@ -255,7 +256,7 @@ namespace ISTN3AS
             cbxCategory_Purchase.SelectedIndex = -1;
 
             filterCategory = true;
-
+            
         }
 
         private void btnMenuOrder_Click(object sender, EventArgs e)
@@ -264,6 +265,12 @@ namespace ISTN3AS
 
         private void salesControl_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'productFilterDS.Sizes' table. You can move, or remove it, as needed.
+            this.sizesTableAdapter.Fill(this.productFilterDS.Sizes);
+            // TODO: This line of code loads data into the 'productFilterDS.Colours' table. You can move, or remove it, as needed.
+            this.coloursTableAdapter.Fill(this.productFilterDS.Colours);
+            // TODO: This line of code loads data into the 'productFilterDS.Brands' table. You can move, or remove it, as needed.
+            this.brandsTableAdapter.Fill(this.productFilterDS.Brands);
             // TODO: This line of code loads data into the 'productDS.OrderLineTbl' table. You can move, or remove it, as needed.
             this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
             // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
@@ -271,10 +278,30 @@ namespace ISTN3AS
             // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             // TODO: This line of code loads data into the 'productDS.PhoneOrderLineTbl' table. You can move, or remove it, as needed.
+            
+
 
             tbxStMem.Enabled = false;
             chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
             pnlContactDetails_Purchase.Enabled = false;
+            //
+            //CBXAttributes
+            //
+            for (int i = 0; i < brandsDataGridView.Rows.Count - 1; i++)
+            {
+                cbxBrand_Accessories.Items.Add(brandsDataGridView.Rows[i].Cells[0].Value.ToString());
+            }
+            for (int i = 0; i < coloursDataGridView.Rows.Count - 1; i++)
+            {
+                cbxColour_Accessories.Items.Add(coloursDataGridView.Rows[i].Cells[1].Value.ToString());
+            }
+            for (int i = 0; i < sizesDataGridView.Rows.Count - 1; i++)
+            {
+                cbxSize_Accessories.Items.Add(sizesDataGridView.Rows[i].Cells[1].Value.ToString());
+            }
+
+
+
 
 
             //MessageBox.Show(GlobalVariables.StaffID.ToString());
@@ -437,11 +464,37 @@ namespace ISTN3AS
         {
             if (filterCategory)
             {
+                loadCBX();
+
                 categorySelceted(cbxCategory_Purchase.Text);
                 lblCategory.Text = cbxCategory_Purchase.Text;
             }
             
 
+        }
+
+        public void loadCBX()
+        {
+            brandTblTableAdapter1.populateBrand(productFilterDS.BrandTbl, cbxCategory_Purchase.Text);
+            colourTblTableAdapter1.populateColour(productFilterDS.ColourTbl, cbxCategory_Purchase.Text);
+            sizeTblTableAdapter1.populateSize(productFilterDS.SizeTbl, cbxCategory_Purchase.Text);
+
+            cbxBrand_Accessories.Items.Clear();
+            cbxColour_Accessories.Items.Clear();
+            cbxSize_Accessories.Items.Clear();
+
+            for (int i = 0; i < brandTblDataGridView.Rows.Count - 1; i++)
+            {
+                cbxBrand_Accessories.Items.Add(brandTblDataGridView.Rows[i].Cells[0].Value.ToString());
+            }
+            for (int i = 0; i < colourTblDataGridView.Rows.Count - 1; i++)
+            {
+                cbxColour_Accessories.Items.Add(colourTblDataGridView.Rows[i].Cells[0].Value.ToString());
+            }
+            for (int i = 0; i < sizeTblDataGridView.Rows.Count - 1; i++)
+            {
+                cbxSize_Accessories.Items.Add(sizeTblDataGridView.Rows[i].Cells[0].Value.ToString());
+            }
         }
 
         List<String> Cart = new List<string>();
@@ -505,6 +558,7 @@ namespace ISTN3AS
             }
             try
             {
+                MessageBox.Show(lsvProductCart_Control.FocusedItem.Index.ToString());
                 GlobalVariables.productCart_ProductID.RemoveAt(lsvProductCart_Control.FocusedItem.Index);
             }
             catch(Exception ex)
@@ -555,7 +609,8 @@ namespace ISTN3AS
                 GlobalVariables.productCart_UnitPrice.Add(Double.Parse(getPhoneOrderProductsDataGridView.Rows[i].Cells[2].Value.ToString()));
                 GlobalVariables.productCart_Quantity.Add(int.Parse(getPhoneOrderProductsDataGridView.Rows[i].Cells[3].Value.ToString()));
             }
-           // MessageBox.Show(GlobalVariables.productCart_ProductID.Count.ToString());
+            // MessageBox.Show(GlobalVariables.productCart_ProductID.Count.ToString());
+            GlobalVariables.TransactionType = "Phone";
             Form payment = new payment(this);
             payment.ShowDialog();
 
@@ -658,6 +713,16 @@ namespace ISTN3AS
             //GlobalVariables.productCart_ProductID.Add(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
             //GlobalVariables.productCart_Quantity.Add(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString()));
             //GlobalVariables.productCart_UnitPrice.Add(Double.Parse(orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString()));
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxAccountNo_AccCreation_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -109,14 +109,15 @@ namespace ISTN3AS
 
         private void payment_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'productDS.ReturnTbl' table. You can move, or remove it, as needed.
-            this.returnTblTableAdapter.Fill(this.productDS.ReturnTbl);
-            // TODO: This line of code loads data into the 'productDS.ReturnProductTbl' table. You can move, or remove it, as needed.
-            this.returnProductTblTableAdapter.Fill(this.productDS.ReturnProductTbl);
+            MessageBox.Show(GlobalVariables.TransactionType);
             // TODO: This line of code loads data into the 'productDS.ReturnTbl' table. You can move, or remove it, as needed.
             if (GlobalVariables.TransactionType.Equals("Return"))
             {
                 tabControl1.SelectedTab = tpReturn;
+                // TODO: This line of code loads data into the 'productDS.ReturnTbl' table. You can move, or remove it, as needed.
+                this.returnTblTableAdapter.Fill(this.productDS.ReturnTbl);
+                // TODO: This line of code loads data into the 'productDS.ReturnProductTbl' table. You can move, or remove it, as needed.
+                this.returnProductTblTableAdapter.Fill(this.productDS.ReturnProductTbl);
             }
 
             
@@ -159,13 +160,39 @@ namespace ISTN3AS
 
         private void btnProcess_Return_Click(object sender, EventArgs e)
         {
-            returnTblTableAdapter.Insert(tbxReason_Return.Text, tbxCellNo_Return.Text);
-
-            int maxID = int.Parse(returnTblTableAdapter.getMaxID().ToString());
-            for(int i = 0; i < GlobalVariables.productCart_ProductID.Count - 1; i++)
+            DialogResult confirm = MessageBox.Show("Are You Sure", "Confirm Return",MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
             {
-                returnProductTblTableAdapter.Insert(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), maxID, dtpReturnDate_Returns.Value, GlobalVariables.Return_OrderNum.ElementAt(i));
+                returnTblTableAdapter.Insert(tbxReason_Return.Text, tbxCellNo_Return.Text);
+
+                int maxID = int.Parse(returnTblTableAdapter.getMaxID().ToString());
+                for (int i = 0; i < GlobalVariables.Return_OrderNum.Count; i++)
+                {
+                    returnProductTblTableAdapter.Insert(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), maxID, dtpReturnDate_Returns.Value, GlobalVariables.Return_OrderNum.ElementAt(i));
+                }
+
+                for (int i = 0; i < GlobalVariables.Return_OrderNum.Count - 1; i++)
+                {
+                    if (bool.Parse(updateProduantity1.CheckOrderNumExists(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString())).ToString()))
+                    {
+                        updateProduantity1.DeleteOrderProduct(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString()), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i).ElementAt(i).ToString()));
+                    }
+                    else
+                    {
+                        updateProduantity1.DeleteOrder(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString()));
+                    }
+                }
             }
+            else
+            {
+                this.Close();
+            }
+
+        }
+
+        private void tpItemPayment_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
