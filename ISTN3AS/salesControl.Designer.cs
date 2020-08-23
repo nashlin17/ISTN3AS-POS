@@ -889,7 +889,7 @@
             this.cat4.Location = new System.Drawing.Point(4, 22);
             this.cat4.Margin = new System.Windows.Forms.Padding(2);
             this.cat4.Name = "cat4";
-            this.cat4.Size = new System.Drawing.Size(1203, 567);
+            this.cat4.Size = new System.Drawing.Size(829, 567);
             this.cat4.TabIndex = 3;
             this.cat4.Text = "cat4";
             // 
@@ -1063,7 +1063,7 @@
             this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1211, 593);
+            this.tabcontrol1.Size = new System.Drawing.Size(837, 593);
             this.tabcontrol1.TabIndex = 5;
             // 
             // accCreate
@@ -2550,7 +2550,10 @@
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.BrandsTableAdapter = null;
+            this.tableAdapterManager1.ColoursTableAdapter = null;
             this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.SizesTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = ISTN3AS.ProductFilterDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // tableAdapterManager3
