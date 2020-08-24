@@ -104,14 +104,38 @@ namespace ISTN3AS
 
         private void button8_Click(object sender, EventArgs e)
         {
-            staffTblTableAdapter.Insert(tbxFullName_Management.Text, tbxUsername_Management.Text, tbxPassword_Management.Text, tbxStatus_Management.Text, tbxEmail_Management.Text);
+            if (tbxFullName_Management.Text!="" && tbxUsername_Management.Text!="" && tbxPassword_Management.Text!="" && tbxStatus_Management.Text !="" && tbxEmail_Management.Text!="")
+            {
+                try
+                {
+                    staffTblTableAdapter.Insert(tbxFullName_Management.Text, tbxUsername_Management.Text, tbxPassword_Management.Text, tbxStatus_Management.Text, tbxEmail_Management.Text);
+                }
+                catch (Exception c)
+                {
+                    MessageBox.Show("Details Entered Incorrectly");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Details Incomplete");
+            }
+           
+            
         }
         int ProdID;
         private void btnInsertProduct_Managment_Click(object sender, EventArgs e)
         {
             if (chbxAddProduct_Management.Checked)
             {
-                productTblTableAdapter.Insert(tbxProductName_Management.Text, Decimal.Parse(mtbxCostPrice_Management.Text), int.Parse(nupQuantity_Management.Value.ToString()), Decimal.Parse(tbxDiscount_Mangement.Text), Decimal.Parse(mtbxSellingPrice_Management.Text), cbxReorder_Management.Text, brands[cbxBrandName_Management.Text], sizes[cbxSize_Management.Text], colours[cbxColour_Management.Text], cbxCategory_Management.Text, cbxGender_Management.Text);
+                try
+                {
+                    productTblTableAdapter.Insert(tbxProductName_Management.Text, Decimal.Parse(mtbxCostPrice_Management.Text), int.Parse(nupQuantity_Management.Value.ToString()), Decimal.Parse(tbxDiscount_Mangement.Text), Decimal.Parse(mtbxSellingPrice_Management.Text), cbxReorder_Management.Text, brands[cbxBrandName_Management.Text], sizes[cbxSize_Management.Text], colours[cbxColour_Management.Text], cbxCategory_Management.Text, cbxGender_Management.Text);
+                }
+                catch (Exception c)
+                {
+                    MessageBox.Show("Invalid Entries");
+                }
+                
             }
             else if (chbxUpdateProduct_Management.Checked)
             {
@@ -127,7 +151,15 @@ namespace ISTN3AS
                 productTblDataGridView.CurrentRow.Cells[3].Value = nupQuantity_Management.Value;
                 productTblDataGridView.CurrentRow.Cells[4].Value = tbxDiscount_Mangement.Text;
 
-                productTblTableAdapter.UpdateQuery(productTblDataGridView.CurrentRow.Cells[1].Value.ToString(), Decimal.Parse(productTblDataGridView.CurrentRow.Cells[2].Value.ToString()), int.Parse(productTblDataGridView.CurrentRow.Cells[3].Value.ToString()), Decimal.Parse(productTblDataGridView.CurrentRow.Cells[4].Value.ToString()), Decimal.Parse(productTblDataGridView.CurrentRow.Cells[5].Value.ToString()), productTblDataGridView.CurrentRow.Cells[6].Value.ToString(), int.Parse(productTblDataGridView.CurrentRow.Cells[7].Value.ToString()), int.Parse(productTblDataGridView.CurrentRow.Cells[8].Value.ToString()), int.Parse(productTblDataGridView.CurrentRow.Cells[9].Value.ToString()), productTblDataGridView.CurrentRow.Cells[10].Value.ToString(), productTblDataGridView.CurrentRow.Cells[11].Value.ToString(), ProdID);
+                try
+                {
+                    productTblTableAdapter.UpdateQuery(productTblDataGridView.CurrentRow.Cells[1].Value.ToString(), Decimal.Parse(productTblDataGridView.CurrentRow.Cells[2].Value.ToString()), int.Parse(productTblDataGridView.CurrentRow.Cells[3].Value.ToString()), Decimal.Parse(productTblDataGridView.CurrentRow.Cells[4].Value.ToString()), Decimal.Parse(productTblDataGridView.CurrentRow.Cells[5].Value.ToString()), productTblDataGridView.CurrentRow.Cells[6].Value.ToString(), int.Parse(productTblDataGridView.CurrentRow.Cells[7].Value.ToString()), int.Parse(productTblDataGridView.CurrentRow.Cells[8].Value.ToString()), int.Parse(productTblDataGridView.CurrentRow.Cells[9].Value.ToString()), productTblDataGridView.CurrentRow.Cells[10].Value.ToString(), productTblDataGridView.CurrentRow.Cells[11].Value.ToString(), ProdID);
+                }
+                catch(Exception c)
+                {
+                    MessageBox.Show("Invalid Entries");
+                }
+              
 
             }
             this.productTblTableAdapter.Fill(this.productDS.ProductTbl);
@@ -155,8 +187,8 @@ namespace ISTN3AS
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Email");
-            sendEmail("Hi", tbxContactEmail_Management.Text);
+          
+            sendEmail(richTextBox2.Text, tbxContactEmail_Management.Text);
         }
 
         List<string> recipients = new List<string>();
@@ -295,6 +327,18 @@ namespace ISTN3AS
             if (chbxAddProduct_Management.Checked)
             {
                 chbxUpdateProduct_Management.CheckState = CheckState.Unchecked;
+                tbxProductName_Management.Text="";
+               cbxCategory_Management.Text = "";
+               cbxBrandName_Management.SelectedIndex = -1;
+               cbxColour_Management.SelectedIndex = -1;
+               cbxSize_Management.SelectedIndex = -1;
+               cbxGender_Management.Text = "";
+               mtbxCostPrice_Management.Value = 0;
+                mtbxSellingPrice_Management.Value = 0 ;
+               cbxReorder_Management.Text = "";
+               nupQuantity_Management.Value = 0;
+               tbxDiscount_Mangement.Text = "";
+
             }
         }
 
@@ -360,42 +404,55 @@ namespace ISTN3AS
             quantity = 0;
             prodID = 0;
 
-
-
-            supplierProductLineTableAdapter.FillBy(supplierDS.SupplierProductLine, int.Parse(suppOrderGrid.CurrentRow.Cells[0].Value.ToString()));
-
-            foreach (DataGridViewRow row in fillbyGrid.Rows)
+            try
             {
-                prodID = int.Parse(row.Cells[0].Value.ToString());
-
-                quantity = int.Parse(row.Cells[3].Value.ToString());
-
-                foreach (DataGridViewRow row2 in productTblDataGridView.Rows)
+                if (suppOrderGrid.CurrentRow.Cells[2].Value.ToString() == "Undelivered")
                 {
-                    int compareID = int.Parse(row2.Cells[0].Value.ToString());
+                    supplierProductLineTableAdapter.FillBy(supplierDS.SupplierProductLine, int.Parse(suppOrderGrid.CurrentRow.Cells[0].Value.ToString()));
 
-                    if (prodID == compareID)
+                    foreach (DataGridViewRow row in fillbyGrid.Rows)
                     {
-                        originalQT = int.Parse(row2.Cells[3].Value.ToString());
-                        bflag = true;
-                        break;
+                        prodID = int.Parse(row.Cells[0].Value.ToString());
+
+                        quantity = int.Parse(row.Cells[3].Value.ToString());
+
+                        foreach (DataGridViewRow row2 in productTblDataGridView.Rows)
+                        {
+                            int compareID = int.Parse(row2.Cells[0].Value.ToString());
+
+                            if (prodID == compareID)
+                            {
+                                originalQT = int.Parse(row2.Cells[3].Value.ToString());
+                                bflag = true;
+                                break;
+                            }
+
+                        }
+                        if (bflag)
+                        {
+                            break;
+                        }
+
                     }
+                    quantity = quantity + originalQT;
+                    productTblTableAdapter.UpdateNewStock(quantity, prodID);
 
+                    MessageBox.Show("Update Complete");
+                    supplierOrderTblTableAdapter.UpdateDelieveryStatus("Delivered", dt2.ToString(), int.Parse(suppOrderGrid.CurrentRow.Cells[0].Value.ToString()));
+                    initTables();
                 }
-                if (bflag)
+                else
                 {
-                    break;
+                    MessageBox.Show("Products Already Delivered");
                 }
-
+                
             }
-            quantity = quantity + originalQT;
-            MessageBox.Show(quantity + "quantity");
-            MessageBox.Show(prodID + "quantity");
-            productTblTableAdapter.UpdateNewStock(quantity,prodID);
+            catch(Exception c)
+            {
+                MessageBox.Show("Update Not Successful");
+            }
 
-            MessageBox.Show("Update Complete");
-            supplierOrderTblTableAdapter.UpdateDelieveryStatus("Delivered", dt2.ToString(), int.Parse(suppOrderGrid.CurrentRow.Cells[0].Value.ToString()));
-            initTables();
+            
        
         }
 
