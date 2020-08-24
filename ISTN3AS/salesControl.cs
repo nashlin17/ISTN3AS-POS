@@ -90,7 +90,7 @@ namespace ISTN3AS
             tabcontrol1.SelectedTab = orders;
             //tabcontrol1.Size = new Size(1280, 566);
 
-            tabcontrol1.Size = new Size(1242, 559);
+            tabcontrol1.Size = new Size(1267, 582);
 
         }
 
@@ -99,7 +99,7 @@ namespace ISTN3AS
             GlobalVariables.Clear();
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = returnItem;
-            tabcontrol1.Size = new Size(1242, 559);
+            tabcontrol1.Size = new Size(1267, 582);
 
         }
 
@@ -107,7 +107,7 @@ namespace ISTN3AS
         {
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = accCreate;
-            tabcontrol1.Size = new Size(1242, 559);
+            tabcontrol1.Size = new Size(1267, 582);
 
         }
 
@@ -275,6 +275,7 @@ namespace ISTN3AS
                 sc.Showbuttons(this);
                 tabcontrol1.SelectedTab = cat4;
                 this.categoryFIlterTA.AllProducts(this.productDS.CategoryFIlter);
+                filterOn = true;
                 tabcontrol1.Size = new Size(230, 559);
                 btnCashOut.Enabled = false;
                 btnItems.Enabled = true;
@@ -303,9 +304,7 @@ namespace ISTN3AS
             // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             // TODO: This line of code loads data into the 'productDS.PhoneOrderLineTbl' table. You can move, or remove it, as needed.
-            
-
-
+     
             tbxStMem.Enabled = false;
             chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
             pnlContactDetails_Purchase.Enabled = false;
@@ -324,10 +323,6 @@ namespace ISTN3AS
             {
                 cbxSize_Accessories.Items.Add(sizesDataGridView.Rows[i].Cells[1].Value.ToString());
             }
-
-
-
-
 
             //MessageBox.Show(GlobalVariables.StaffID.ToString());
             // TODO: This line of code loads data into the 'group6DataSet.MemberTbl' table. You can move, or remove it, as needed.
@@ -489,10 +484,17 @@ namespace ISTN3AS
         {
             if (filterCategory)
             {
-                loadCBX();
+                if (cbxCategory_Purchase.SelectedIndex == -1)
+                {
+                    this.categoryFIlterTA.AllProducts(this.productDS.CategoryFIlter);
+                }
+                else
+                {
+                    loadCBX();
+                    categorySelceted(cbxCategory_Purchase.Text);
+                    lblCategory.Text = cbxCategory_Purchase.Text;
+                }
 
-                categorySelceted(cbxCategory_Purchase.Text);
-                lblCategory.Text = cbxCategory_Purchase.Text;
             }
             
 
@@ -508,6 +510,8 @@ namespace ISTN3AS
             cbxColour_Accessories.Items.Clear();
             cbxSize_Accessories.Items.Clear();
 
+            
+
             for (int i = 0; i < brandTblDataGridView.Rows.Count - 1; i++)
             {
                 cbxBrand_Accessories.Items.Add(brandTblDataGridView.Rows[i].Cells[0].Value.ToString());
@@ -520,6 +524,9 @@ namespace ISTN3AS
             {
                 cbxSize_Accessories.Items.Add(sizeTblDataGridView.Rows[i].Cells[0].Value.ToString());
             }
+            cbxBrand_Accessories.Items.Add("           ");
+            cbxColour_Accessories.Items.Add("          ");
+            cbxSize_Accessories.Items.Add("            ");
         }
 
         List<String> Cart = new List<string>();
@@ -750,5 +757,24 @@ namespace ISTN3AS
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cbxSize_Accessories.SelectedIndex = -1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cbxBrand_Accessories.SelectedIndex = -1;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            cbxColour_Accessories.SelectedIndex = -1;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            cbxCategory_Purchase.SelectedIndex = -1;
+        }
     }
 }
