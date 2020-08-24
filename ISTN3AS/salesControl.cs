@@ -41,6 +41,8 @@ namespace ISTN3AS
             sc.Showbuttons(this);
             //tabcontrol1.SelectedTab = cat1;
             tabcontrol1.Size = new Size(307, 640);
+            grpBoxDBgrid.Size = new Size(692, 533);
+            gbItemsScroll.Size = new Size(321, 533);
         }
 
         private void btnCashOut_Click(object sender, EventArgs e)
@@ -227,36 +229,59 @@ namespace ISTN3AS
 
         private void btnMenuPurchase_Click(object sender, EventArgs e)
         {
+            bool checkError = true;
             GlobalVariables.Clear();
             if (chbxStoreOrder_Purchase.Checked)
             {
                 GlobalVariables.TransactionType = "Store";
             }
-            else { GlobalVariables.TransactionType = "Phone"; }
-            GlobalVariables.customerName_Order = tbxCustomerOrdName_BeginPurchase.Text;
-            GlobalVariables.customerCellNo_Order = tbxCustomerOrdCell_BeginPurchase.Text;
+            else { 
+                GlobalVariables.TransactionType = "Phone";
+                if (!tbxCustomerOrdName_BeginPurchase.Text.Equals("") && !tbxCustomerOrdCell_BeginPurchase.Text.Equals(""))
+                {
+                    GlobalVariables.customerName_Order = tbxCustomerOrdName_BeginPurchase.Text;
+                    GlobalVariables.customerCellNo_Order = tbxCustomerOrdCell_BeginPurchase.Text;
+                }
+                else { 
+                    MessageBox.Show("Please Enter Contact Details");
+                    checkError = false;
+                }
+            }
+            
 
+            getAccountIDTableAdapter.Fill(group6DataSet.getAccountID,tbxStMem.Text);
             //MessageBox.Show();
             if (chbxIsMemeber_Purchase.Checked && bool.Parse(queries1.CheckAccNum(tbxStMem.Text).ToString()))
             {
-                GlobalVariables.isMemeber = true;
-                GlobalVariables.AccDiscount = 0.05;
+                try
+                {
+                    if (getAccountIDDataGridView.Rows.Count > 0)
+                    {
+                        GlobalVariables.MemberID = int.Parse(getAccountIDDataGridView.Rows[0].Cells[0].Value.ToString());
+                        GlobalVariables.isMemeber = true;
+                        GlobalVariables.AccDiscount = 0.05;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Please Enter a Valid Account Number");
+                }
+                
             }
+            MessageBox.Show(GlobalVariables.MemberID.ToString());
+            if (checkError)
+            {
+                sc.Purchase(this);
+                sc.Showbuttons(this);
+                tabcontrol1.SelectedTab = cat4;
+                this.categoryFIlterTA.AllProducts(this.productDS.CategoryFIlter);
+                tabcontrol1.Size = new Size(230, 559);
+                btnCashOut.Enabled = false;
+                btnItems.Enabled = true;
 
-            
-            sc.Purchase(this);
-            sc.Showbuttons(this);
-            tabcontrol1.SelectedTab = cat4;
-            this.categoryFIlterTA.AllProducts(this.productDS.CategoryFIlter);
-            tabcontrol1.Size = new Size(230, 559);
-            btnCashOut.Enabled = false;
-            btnItems.Enabled = true;
-
-
-            cbxCategory_Purchase.SelectedIndex = -1;
-
-            filterCategory = true;
-            
+                cbxCategory_Purchase.SelectedIndex = -1;
+                filterCategory = true;
+            }
         }
 
         private void btnMenuOrder_Click(object sender, EventArgs e)
@@ -724,5 +749,6 @@ namespace ISTN3AS
         {
 
         }
+
     }
 }

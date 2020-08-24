@@ -71,9 +71,9 @@ namespace ISTN3AS
 
 
             initTables();
-
-
-            for(int i = 0; i < brandsDataGridView.Rows.Count - 1; i++)
+            productTblDataGridView.ReadOnly = true;
+            
+            for (int i = 0; i < brandsDataGridView.Rows.Count - 1; i++)
             {
                 //MessageBox.Show(brandsDataGridView.Rows[i].Cells[0].Value.ToString() + " " + brandsDataGridView.Rows[i].Cells[1].Value);
                 brands.Add(brandsDataGridView.Rows[i].Cells[0].Value.ToString(), int.Parse(brandsDataGridView.Rows[i].Cells[1].Value.ToString())) ;
@@ -91,8 +91,9 @@ namespace ISTN3AS
 
             //Init ComboBoxes
             initCbx();
-
-
+            
+            chbxAddProduct_Management.CheckState = CheckState.Checked;
+            chbxAddAccount_Management.CheckState = CheckState.Checked;
 
             lsvRecipients.View = View.Details;
 
@@ -104,24 +105,49 @@ namespace ISTN3AS
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (tbxFullName_Management.Text!="" && tbxUsername_Management.Text!="" && tbxPassword_Management.Text!="" && tbxStatus_Management.Text !="" && tbxEmail_Management.Text!="")
+            if (chbxAddAccount_Management.Checked)
             {
-                try
+                DialogResult res = MessageBox.Show("Are You Sure", "Create Staff Account", MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
                 {
-                    staffTblTableAdapter.Insert(tbxFullName_Management.Text, tbxUsername_Management.Text, tbxPassword_Management.Text, tbxStatus_Management.Text, tbxEmail_Management.Text);
-                }
-                catch (Exception c)
-                {
-                    MessageBox.Show("Details Entered Incorrectly");
+                    try
+                    {
+                        staffTblTableAdapter.Insert(tbxFullName_Management.Text, tbxUsername_Management.Text, tbxPassword_Management.Text, tbxStatus_Management.Text, tbxEmail_Management.Text);
+                        this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
+                        MessageBox.Show("Staff Account Created");
+                        resetStaffTBX();
+                    }
+                    catch (Exception c)
+                    {
+                        MessageBox.Show("Details Incomplete");
+                    }
+
                 }
             }
-            else
+            else if (chbxUpdateAccount_Management.Checked)
             {
-                MessageBox.Show("Details Incomplete");
+                DialogResult res = MessageBox.Show("Are You Sure", "Add Staff Account", MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
+                {
+                    staffTblTableAdapter.updateStaffAccount(tbxFullName_Management.Text,tbxUsername_Management.Text,tbxPassword_Management.Text,tbxStatus_Management.Text,tbxEmail_Management.Text,int.Parse(staffTblDataGridView.CurrentRow.Cells[0].Value.ToString()));
+                    this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
+                    MessageBox.Show("Staff Account Updated");
+                    resetStaffTBX();
+                }
             }
-           
             
         }
+
+        public void resetStaffTBX()
+        {
+            tbxFullName_Management.Text = "";
+            tbxUsername_Management.Text = "";
+            tbxPassword_Management.Text = "";
+            tbxEmail_Management.Text = "";
+            tbxStatus_Management.Text = "";
+        }
+
+
         int ProdID;
         private void btnInsertProduct_Managment_Click(object sender, EventArgs e)
         {
@@ -188,11 +214,11 @@ namespace ISTN3AS
         private void button7_Click(object sender, EventArgs e)
         {
           
-            sendEmail(richTextBox2.Text, tbxContactEmail_Management.Text);
+            sendEmail(richTextBox2.Text);
         }
 
         List<string> recipients = new List<string>();
-        private void sendEmail(string htmlString, string toEmail)
+        private void sendEmail(string htmlString)
         {
             try
             {
@@ -270,6 +296,7 @@ namespace ISTN3AS
             {
                 cbxCategory_Management.Items.Add(categoryTblDataGridView.Rows[i].Cells[0].Value);
             }
+
         }
 
 
@@ -458,6 +485,110 @@ namespace ISTN3AS
 
         private void button12_Click(object sender, EventArgs e)
         {
-        }  
+        }
+
+        private void tbxProductName_Management_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+            productTblBindingSource.MoveFirst();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            productTblBindingSource.MovePrevious();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            productTblBindingSource.MoveNext();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            productTblBindingSource.MoveLast();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            DialogResult res =  MessageBox.Show("Are You Sure", "Delete Product", MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                productTblTableAdapter.DeleteProduct(int.Parse(productTblDataGridView.CurrentRow.Cells[0].Value.ToString()));
+                this.productTblTableAdapter.Fill(this.productDS.ProductTbl);
+                MessageBox.Show("Product Deleted");
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            staffTblBindingSource.MoveFirst();
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            staffTblBindingSource.MovePrevious();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            staffTblBindingSource.MoveNext();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            staffTblBindingSource.MoveLast();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            
+            DialogResult res = MessageBox.Show("Are You Sure", "Delete Staff Account", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                staffTblTableAdapter.DeleteStaffMember(int.Parse(staffTblDataGridView.CurrentRow.Cells[0].Value.ToString()));
+                this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
+                MessageBox.Show("Staff Account Removed");
+            }
+        }
+
+        private void tpStaff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chbxAddAccount_Management_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxAddAccount_Management.Checked)
+            {
+                chbxUpdateAccount_Management.CheckState = CheckState.Unchecked;
+            }
+            resetStaffTBX();
+        }
+
+        private void chbxUpdateAccount_Management_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxUpdateAccount_Management.Checked)
+            {
+                chbxAddAccount_Management.CheckState = CheckState.Unchecked;
+            }
+            resetStaffTBX();
+        }
+
+        private void staffTblDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (chbxUpdateAccount_Management.Checked)
+            {
+                tbxFullName_Management.Text = staffTblDataGridView.CurrentRow.Cells[1].Value.ToString();
+                tbxUsername_Management.Text = staffTblDataGridView.CurrentRow.Cells[2].Value.ToString();
+                tbxPassword_Management.Text = staffTblDataGridView.CurrentRow.Cells[3].Value.ToString();
+                tbxEmail_Management.Text = staffTblDataGridView.CurrentRow.Cells[5].Value.ToString();
+                tbxStatus_Management.Text = staffTblDataGridView.CurrentRow.Cells[4].Value.ToString();
+            }
+            
+        }
     }
 }
