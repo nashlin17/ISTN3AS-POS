@@ -30,7 +30,7 @@ namespace ISTN3AS
             sc.Intialise(this);
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = purchase;
-            tabcontrol1.Size = new Size(1382, 734);
+            tabcontrol1.Size = new Size(1285, 582);
             btnItems.Enabled = false;
 
 
@@ -76,7 +76,7 @@ namespace ISTN3AS
         private void btnCustAcc_Click(object sender, EventArgs e)
         {
             sc.Hidebuttons(this);
-            tabcontrol1.SelectedTab = memberAcc;
+            //tabcontrol1.SelectedTab = memberAcc;
 
         }
 
@@ -136,7 +136,6 @@ namespace ISTN3AS
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
             if (GlobalVariables.TransactionType.Equals("Store"))
             {
                 Form payment = new payment(this);
@@ -146,7 +145,14 @@ namespace ISTN3AS
             else
             {
                 //Add to Phone Order Table.
-                phoneOrderTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()),GlobalVariables.customerName_Order,GlobalVariables.customerCellNo_Order,GlobalVariables.StaffID, null);
+                if (GlobalVariables.isMemeber)
+                {
+                    phoneOrderTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, GlobalVariables.MemberID);
+                }
+                else
+                {
+                    phoneOrderTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, null);
+                }
 
                 int maxID = int.Parse(phoneOrderTableAdapter.getMaxID().ToString());
                 //MessageBox.Show(maxID.ToString()) ;
@@ -291,19 +297,13 @@ namespace ISTN3AS
 
         private void salesControl_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'productFilterDS.Sizes' table. You can move, or remove it, as needed.
+            //Load All Tables
             this.sizesTableAdapter.Fill(this.productFilterDS.Sizes);
-            // TODO: This line of code loads data into the 'productFilterDS.Colours' table. You can move, or remove it, as needed.
             this.coloursTableAdapter.Fill(this.productFilterDS.Colours);
-            // TODO: This line of code loads data into the 'productFilterDS.Brands' table. You can move, or remove it, as needed.
             this.brandsTableAdapter.Fill(this.productFilterDS.Brands);
-            // TODO: This line of code loads data into the 'productDS.OrderLineTbl' table. You can move, or remove it, as needed.
             this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
-            // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
-            // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
-            // TODO: This line of code loads data into the 'productDS.PhoneOrderLineTbl' table. You can move, or remove it, as needed.
      
             tbxStMem.Enabled = false;
             chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
@@ -335,7 +335,7 @@ namespace ISTN3AS
             Quantity_Control.Value = 1;
             lblTotal.Text = "Total : ";
 
-
+            //ListView Columns
             lsvProductCart_Control.View = View.Details;
 
             lsvProductCart_Control.Columns.Add("Player Name");
@@ -359,7 +359,7 @@ namespace ISTN3AS
         {
             tbxAddress_AccCreation.Clear();
             tbxCell_AccCreation.Clear();
-            tbxCustAccPass.Clear();
+            //tbxCustAccPass.Clear();
             tbxEmail_AccCreation.Clear();
             tbxName_AccCreation.Clear();
             tbxSurname_AccCreation.Clear();
@@ -368,15 +368,30 @@ namespace ISTN3AS
         private void button21_Click(object sender, EventArgs e)
         {
             //Acc Number  = BirthDay + FirstLetter ofName + FirstLetter of Surname + MemberID
-            if (tbxCell_AccCreation.TextLength == 10 & (tbxEmail_AccCreation.Text.Contains("@")))
+            if (checkAllFieldsFilled())
             {
-               string AccNumber = tbxID_AccCreation.Text.Substring(0, 6) + tbxName_AccCreation.Text.ElementAt(0) + tbxSurname_AccCreation.Text.ElementAt(0) + memberTblTableAdapter.maxID();
-                tbxAccountNo_AccCreation.Text = AccNumber;
-               memberTblTableAdapter.Insert(tbxName_AccCreation.Text, tbxSurname_AccCreation.Text, tbxCell_AccCreation.Text, tbxAddress_AccCreation.Text, tbxEmail_AccCreation.Text, tbxID_AccCreation.Text,AccNumber);
-               this.memberTblTableAdapter.Fill(this.group6DataSet.MemberTbl);
-                MessageBox.Show(AccNumber);
+                if (tbxCell_AccCreation.TextLength == 10 & (tbxEmail_AccCreation.Text.Contains("@")))
+                {
+                    string AccNumber = tbxID_AccCreation.Text.Substring(0, 6) + tbxName_AccCreation.Text.ElementAt(0) + tbxSurname_AccCreation.Text.ElementAt(0) + memberTblTableAdapter.maxID();
+                    tbxAccountNo_AccCreation.Text = AccNumber;
+                    memberTblTableAdapter.Insert(tbxName_AccCreation.Text, tbxSurname_AccCreation.Text, tbxCell_AccCreation.Text, tbxAddress_AccCreation.Text, tbxEmail_AccCreation.Text, tbxID_AccCreation.Text, AccNumber);
+                    this.memberTblTableAdapter.Fill(this.group6DataSet.MemberTbl);
+                    MessageBox.Show("Please Store this Number\n" + AccNumber, tbxName_AccCreation.Text + "'s Account Number");
+                    resetAccCreation();
+                }
+                else { MessageBox.Show("Please Re-Enter PhoneNumber or Email"); }
             }
-            else { MessageBox.Show("Please Re-Enter PhoneNumber or Email"); }
+            else { MessageBox.Show("Enter Values for All Fields"); }
+
+
+        }
+        private bool checkAllFieldsFilled()
+        {
+            if (tbxAddress_AccCreation.Text.Equals("") || tbxEmail_AccCreation.Equals("") || tbxName_AccCreation.Equals("") || tbxSurname_AccCreation.Equals("") || tbxID_AccCreation.Equals("") || tbxAddress_AccCreation.Equals(""))
+            {
+                return false;
+            }
+            else { return true; }
             
         }
 
@@ -717,10 +732,12 @@ namespace ISTN3AS
 
             string name = productTblTableAdapter1.GetProdName(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString()));
             lsvReturnItems_Returns.Items.Add(new ListViewItem(new[] { name, orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString(), orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString() }));
-
+            //MessageBox.Show(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
             GlobalVariables.productCart_ProductID.Add(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
             GlobalVariables.productCart_Quantity.Add(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString()));
             GlobalVariables.productCart_UnitPrice.Add(Double.Parse(orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString()));
+
+            GlobalVariables.cartTotal += Double.Parse(orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString());
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -728,13 +745,20 @@ namespace ISTN3AS
             GlobalVariables.TransactionType = "Return";
             
             //GlobalVariables.productCart_ProductID
+            if(lsvReturnItems_Returns.Items.Count > 0)
+            {
+                Form payment = new payment(this);
+                payment.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please Add Items the Items to be Returned");
+            }
 
 
 
 
-
-            Form payment = new payment(this);
-            payment.ShowDialog();
+            
         }
 
         private void orderLineTblDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -775,6 +799,34 @@ namespace ISTN3AS
         private void button7_Click(object sender, EventArgs e)
         {
             cbxCategory_Purchase.SelectedIndex = -1;
+        }
+
+        public void resetBeginPurchase()
+        {
+            tbxStMem.Enabled = false;
+            chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
+            pnlContactDetails_Purchase.Enabled = false;
+            chbxIsMemeber_Purchase.CheckState = CheckState.Unchecked;
+
+            tbxStMem.Clear();
+            tbxCustomerOrdCell_BeginPurchase.Clear();
+            tbxCustomerOrdName_BeginPurchase.Clear();
+        }
+
+        public void resetReturnOrder()
+        {
+
+        }
+
+        public void resetAccCreation()
+        {
+            tbxName_AccCreation.Clear();
+            tbxCell_AccCreation.Clear();
+            tbxAccountNo_AccCreation.Clear();
+            tbxEmail_AccCreation.Clear();
+            tbxID_AccCreation.Clear();
+            tbxSurname_AccCreation.Clear();
+            tbxAddress_AccCreation.Clear();
         }
     }
 }

@@ -46,59 +46,56 @@ namespace ISTN3AS
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (GlobalVariables.TransactionType.Equals("Store"))
+            if(Double.Parse(tbxAmtPaid_Payment.Text) >= Double.Parse(lblTotal_Payment.Text))
             {
-                if (GlobalVariables.isMemeber)
+                if (GlobalVariables.TransactionType.Equals("Store"))
                 {
-                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, GlobalVariables.MemberID);
+                    if (GlobalVariables.isMemeber)
+                    {
+                        orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, GlobalVariables.MemberID);
 
+                    }
+                    else
+                    {
+                        orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, null);
+                    }
                 }
                 else
                 {
-                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, null);
+                    if (GlobalVariables.isMemeber)
+                    {
+                        orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), "Phone", GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, GlobalVariables.MemberID);
+                    }
+                    else
+                    {
+                        orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), "Phone", GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, null);
+                    }
+
                 }
-            }
-            else
-            {
-                if (GlobalVariables.isMemeber)
+                int maxOrderID = int.Parse(orderTblTableAdapter.getMaxID().ToString());
+                MessageBox.Show(maxOrderID.ToString());
+                for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
                 {
-                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), "Phone", GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, GlobalVariables.MemberID);
-                }
-                else
-                {
-                    orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), "Phone", GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, null);
+                    orderLineTblTableAdapter.Insert(maxOrderID, int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), Decimal.Parse(GlobalVariables.productCart_UnitPrice.ElementAt(i).ToString()), GlobalVariables.productCart_Quantity.ElementAt(i));
+                    int productQuantity = int.Parse(updateProduantity1.getQuanity(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i))).ToString());
+                    updateProduantity1.updateProductQuantity(productQuantity - GlobalVariables.productCart_Quantity.ElementAt(i), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)));
                 }
 
-            }
-            int maxOrderID = int.Parse(orderTblTableAdapter.getMaxID().ToString());
-            MessageBox.Show(maxOrderID.ToString());
-            for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
-            {
-                orderLineTblTableAdapter.Insert(maxOrderID, int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), Decimal.Parse(GlobalVariables.productCart_UnitPrice.ElementAt(i).ToString()), GlobalVariables.productCart_Quantity.ElementAt(i));
-                //int productQuantity = int.Parse(updateProduantity1.getQuanity(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i))).ToString());
-                //updateProduantity1.updateProductQuantity(productQuantity - GlobalVariables.productCart_Quantity.ElementAt(i), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)));
-            }
 
-           
-            this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
-            this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
-            //Non Member
-           
-            sc.tabcontrol1.SelectedIndex = 1;
-            printForm pf = new printForm();
-           
-            pf.Show();
-            this.Dispose();
-            // this.Close();
-            //sc.btnCashOut.Enabled = true;
-            //sc.btnItems.Enabled = false;
-            //sc.btnMenuOrder.Enabled = true;
-            //sc.btnMenuPurchase.Enabled = true;
-            ////sc.tabcontrol1.SelectedIndex=4 ;
-            //sc.gbItemsScroll.SendToBack();
-            //sc.tabcontrol1.Width = 1382;
-            //sc.tabcontrol1.Height = 734;
-            ////this.Close();
+                this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
+                this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
+                //Non Member
+
+                sc.tabcontrol1.SelectedIndex = 1;
+                sc.tabcontrol1.Size = new Size(1267, 582);
+                sc.resetBeginPurchase();
+                printForm pf = new printForm();
+
+                pf.Show();
+                this.Dispose();
+            }
+            else { MessageBox.Show("Outstanding Amount" + (Double.Parse(lblTotal_Payment.Text) - Double.Parse(tbxAmtPaid_Payment.Text))); }
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -129,6 +126,8 @@ namespace ISTN3AS
             lblDiscount_Payment.Text = (GlobalVariables.cartTotal * GlobalVariables.AccDiscount).ToString();
             lblTotal_Payment.Text = (GlobalVariables.cartTotal - (GlobalVariables.cartTotal * GlobalVariables.AccDiscount)).ToString();
             GlobalVariables.cartTotal = Double.Parse(lblTotal_Payment.Text);
+
+            lblTotal_Return.Text = GlobalVariables.cartTotal.ToString();
         }
 
         private void tbxAmtPaid_Payment_TextChanged(object sender, EventArgs e)
@@ -160,39 +159,61 @@ namespace ISTN3AS
 
         private void btnProcess_Return_Click(object sender, EventArgs e)
         {
-            DialogResult confirm = MessageBox.Show("Are You Sure", "Confirm Return",MessageBoxButtons.YesNo);
-            if (confirm == DialogResult.Yes)
-            {
-                returnTblTableAdapter.Insert(tbxReason_Return.Text, tbxCellNo_Return.Text);
-
-                int maxID = int.Parse(returnTblTableAdapter.getMaxID().ToString());
-                for (int i = 0; i < GlobalVariables.Return_OrderNum.Count; i++)
+            if (!tbxReason_Return.Text.Equals("") && tbxCellNo_Return.Text.Length == 10 && !tbxCellNo_Return.Text.Equals("")) {
+                DialogResult confirm = MessageBox.Show("Are You Sure", "Confirm Return", MessageBoxButtons.YesNo);
+                if (confirm == DialogResult.Yes)
                 {
-                    returnProductTblTableAdapter.Insert(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), maxID, dtpReturnDate_Returns.Value, GlobalVariables.Return_OrderNum.ElementAt(i));
+                    returnTblTableAdapter.Insert(tbxReason_Return.Text, tbxCellNo_Return.Text);
+
+                    int maxID = int.Parse(returnTblTableAdapter.getMaxID().ToString());
+                    for (int i = 0; i < GlobalVariables.Return_OrderNum.Count; i++)
+                    {
+                        returnProductTblTableAdapter.Insert(int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), maxID, dtpReturnDate_Returns.Value, GlobalVariables.Return_OrderNum.ElementAt(i));
+                    }
+
+                    for (int i = 0; i < GlobalVariables.Return_OrderNum.Count; i++)
+                    {
+                        updateProduantity1.DeleteOrderProduct(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString()), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i).ToString()));
+                        this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
+
+                        if (!bool.Parse(updateProduantity1.CheckOrderNumExists(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString())).ToString()))
+                        {
+                            updateProduantity1.DeleteOrder(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString()));
+                            this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
+                        }
+                    }
+                    sc.tabcontrol1.SelectedIndex = 1;
+                    sc.tabcontrol1.Size = new Size(1267, 582);
+                    sc.resetBeginPurchase();
+                    printForm pf = new printForm();
+
+                    pf.Show();
+                    this.Dispose();
                 }
-
-                for (int i = 0; i < GlobalVariables.Return_OrderNum.Count - 1; i++)
+                else
                 {
-                    if (bool.Parse(updateProduantity1.CheckOrderNumExists(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString())).ToString()))
-                    {
-                        updateProduantity1.DeleteOrderProduct(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString()), int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i).ElementAt(i).ToString()));
-                    }
-                    else
-                    {
-                        updateProduantity1.DeleteOrder(int.Parse(GlobalVariables.Return_OrderNum.ElementAt(i).ToString()));
-                    }
                 }
             }
             else
             {
-                this.Close();
+                MessageBox.Show("Please Re-Enter Details for Return ");
             }
-
         }
 
         private void tpItemPayment_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            sc.tabcontrol1.SelectedIndex = 1;
+            sc.tabcontrol1.Size = new Size(1267, 582);
+            sc.resetBeginPurchase();
+            printForm pf = new printForm();
+
+            pf.Show();
+            this.Dispose();
         }
     }
 }

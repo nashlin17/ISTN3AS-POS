@@ -67,7 +67,11 @@ namespace ISTN3AS
         private SortedDictionary<string, int> sizes = new SortedDictionary<string, int>();
         private void managerScreen_Load(object sender, EventArgs e)
         {
-    
+            // TODO: This line of code loads data into the 'productDS.OrderLineTbl' table. You can move, or remove it, as needed.
+            this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
+            // TODO: This line of code loads data into the 'productDS.OrderTbl' table. You can move, or remove it, as needed.
+            this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
+
 
 
             initTables();
