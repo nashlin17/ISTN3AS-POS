@@ -19,14 +19,14 @@ namespace ISTN3AS
 
         private void btnExit2Home_Click(object sender, EventArgs e)
         {
-           
+            mainMenu mm = new mainMenu();
+            mm.Show();
             this.Close();
 
         }
 
         private void btnStaffSign_Click(object sender, EventArgs e)
         {
-            GlobalVariables.username = tbxUsername_Login.Text;
             try
             {
                this.getLoginDetailsTableAdapter.CheckLoginDetails(this.getLoginDS.GetLoginDetails, tbxUsername_Login.Text, tbxPassword_Login.Text);
@@ -34,7 +34,7 @@ namespace ISTN3AS
                 {
                     
                     GlobalVariables.StaffID = int.Parse(getLoginDS.GetLoginDetails.Rows[0][2].ToString());
-                    mainMenu sc = new mainMenu();
+                    salesControl sc = new salesControl();
                     this.Hide();
                     sc.ShowDialog();
                     this.Close();
