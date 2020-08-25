@@ -16,7 +16,7 @@ namespace ISTN3AS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginScreen());
+            Application.Run(new mainMenu());
         }
     }
 }

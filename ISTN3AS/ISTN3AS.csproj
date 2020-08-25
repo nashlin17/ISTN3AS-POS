@@ -47,10 +47,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,12 +63,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cardPay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="cardPay.Designer.cs">
-      <DependentUpon>cardPay.cs</DependentUpon>
-    </Compile>
     <Compile Include="cls_itemComp.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -142,9 +132,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>supplierDS.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="cardPay.resx">
-      <DependentUpon>cardPay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

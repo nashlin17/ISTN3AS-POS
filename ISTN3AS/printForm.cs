@@ -34,7 +34,7 @@ namespace ISTN3AS
             {
                 lsvReceipt.Items.Add(new ListViewItem(new[] { GlobalVariables.productCart_ProductID.ElementAt(i), GlobalVariables.productCart_Quantity.ElementAt(i).ToString(), GlobalVariables.productCart_UnitPrice.ElementAt(i).ToString() }));
             }
-            lblOrdNo.Text =lblOrdNo.Text+ GlobalVariables.orderNo.ToString();
+
             lblDate.Text = DateTime.Now.ToString();
             tbxReceipt.Text = GlobalVariables.cartTotal.ToString();
 
