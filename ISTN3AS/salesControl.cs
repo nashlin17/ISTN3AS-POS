@@ -821,6 +821,7 @@ namespace ISTN3AS
             tbxSurname_AccCreation.Clear();
             tbxAddress_AccCreation.Clear();
         }
+<<<<<<< HEAD
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -836,5 +837,7 @@ namespace ISTN3AS
         {
 
         }
+=======
+>>>>>>> parent of b99a555... nashlinChanges
     }
 }
