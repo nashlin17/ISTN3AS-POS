@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace ISTN3AS
 {
@@ -59,6 +60,7 @@ namespace ISTN3AS
                     {
                         orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), GlobalVariables.TransactionType, null, null, GlobalVariables.StaffID, null);
                     }
+                    GlobalVariables.orderNo= int.Parse(globalOrdeNoGrid.Rows[globalOrdeNoGrid.Rows.Count-2].Cells[0].Value.ToString());
                 }
                 else
                 {
@@ -70,7 +72,7 @@ namespace ISTN3AS
                     {
                         orderTblTableAdapter.Insert(Decimal.Parse(GlobalVariables.cartTotal.ToString()), "Phone", GlobalVariables.customerName_Order, GlobalVariables.customerCellNo_Order, GlobalVariables.StaffID, null);
                     }
-
+                  
                 }
                 int maxOrderID = int.Parse(orderTblTableAdapter.getMaxID().ToString());
                 MessageBox.Show(maxOrderID.ToString());
@@ -85,7 +87,7 @@ namespace ISTN3AS
                 this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
                 this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
                 //Non Member
-
+                GlobalVariables.orderNo = int.Parse(globalOrdeNoGrid.Rows[globalOrdeNoGrid.Rows.Count - 2].Cells[0].Value.ToString());
                 sc.tabcontrol1.SelectedIndex = 1;
                 sc.tabcontrol1.Size = new Size(1267, 582);
                 sc.resetBeginPurchase();
@@ -207,6 +209,19 @@ namespace ISTN3AS
 
         private void button8_Click(object sender, EventArgs e)
         {
+            sc.tabcontrol1.SelectedIndex = 1;
+            sc.tabcontrol1.Size = new Size(1267, 582);
+            sc.resetBeginPurchase();
+            printForm pf = new printForm();
+
+            pf.Show();
+            this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cardPay cp = new cardPay();
+            cp.ShowDialog();
             sc.tabcontrol1.SelectedIndex = 1;
             sc.tabcontrol1.Size = new Size(1267, 582);
             sc.resetBeginPurchase();

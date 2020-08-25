@@ -155,6 +155,7 @@ namespace ISTN3AS
                 }
 
                 int maxID = int.Parse(phoneOrderTableAdapter.getMaxID().ToString());
+
                 //MessageBox.Show(maxID.ToString()) ;
                 for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
                 {
@@ -640,6 +641,7 @@ namespace ISTN3AS
 
         private void button14_Click(object sender, EventArgs e)
         {
+            
             GlobalVariables.cartTotal = Double.Parse(phoneOrderDataGridView.CurrentRow.Cells[1].Value.ToString());
             GlobalVariables.customerName_Order = phoneOrderDataGridView.CurrentRow.Cells[2].Value.ToString();
             GlobalVariables.customerCellNo_Order = phoneOrderDataGridView.CurrentRow.Cells[3].Value.ToString();
@@ -807,7 +809,8 @@ namespace ISTN3AS
             chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
             pnlContactDetails_Purchase.Enabled = false;
             chbxIsMemeber_Purchase.CheckState = CheckState.Unchecked;
-
+            lsvProductCart_Control.Clear();
+            lblTotal.Text = "";
             tbxStMem.Clear();
             tbxCustomerOrdCell_BeginPurchase.Clear();
             tbxCustomerOrdName_BeginPurchase.Clear();
@@ -827,6 +830,14 @@ namespace ISTN3AS
             tbxID_AccCreation.Clear();
             tbxSurname_AccCreation.Clear();
             tbxAddress_AccCreation.Clear();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginScreen lg = new LoginScreen();
+            lg.ShowDialog();
+            this.Dispose();
         }
     }
 }
