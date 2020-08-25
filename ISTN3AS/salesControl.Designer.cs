@@ -232,6 +232,15 @@
             this.orderTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderTblTableAdapter();
             this.orderLineTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderLineTblTableAdapter();
             this.productTblTableAdapter1 = new ISTN3AS.ProductDSTableAdapters.ProductTblTableAdapter();
+            this.memberTblDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchase.SuspendLayout();
             this.pnlContactDetails_Purchase.SuspendLayout();
             this.pnlMember_Purchase.SuspendLayout();
@@ -295,6 +304,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.selectProductIDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getProductDiscountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberTblDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // purchase
@@ -667,19 +677,20 @@
             this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1175, 582);
+            this.tabcontrol1.Size = new System.Drawing.Size(1268, 582);
             this.tabcontrol1.TabIndex = 5;
             // 
             // accCreate
             // 
             this.accCreate.AutoScroll = true;
             this.accCreate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.accCreate.Controls.Add(this.memberTblDataGridView);
             this.accCreate.Controls.Add(this.groupBox12);
             this.accCreate.Font = new System.Drawing.Font("Gadugi", 12F);
             this.accCreate.Location = new System.Drawing.Point(4, 22);
             this.accCreate.Margin = new System.Windows.Forms.Padding(2);
             this.accCreate.Name = "accCreate";
-            this.accCreate.Size = new System.Drawing.Size(1167, 556);
+            this.accCreate.Size = new System.Drawing.Size(1260, 556);
             this.accCreate.TabIndex = 7;
             this.accCreate.Text = "AccCreate";
             // 
@@ -691,7 +702,7 @@
             this.groupBox12.Controls.Add(this.label56);
             this.groupBox12.Controls.Add(this.button21);
             this.groupBox12.Controls.Add(this.panel25);
-            this.groupBox12.Location = new System.Drawing.Point(391, 37);
+            this.groupBox12.Location = new System.Drawing.Point(24, 40);
             this.groupBox12.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Padding = new System.Windows.Forms.Padding(2);
@@ -2420,6 +2431,74 @@
             // 
             this.productTblTableAdapter1.ClearBeforeFill = true;
             // 
+            // memberTblDataGridView
+            // 
+            this.memberTblDataGridView.AutoGenerateColumns = false;
+            this.memberTblDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.memberTblDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn47});
+            this.memberTblDataGridView.DataSource = this.memberTblBindingSource1;
+            this.memberTblDataGridView.Location = new System.Drawing.Point(512, 48);
+            this.memberTblDataGridView.Name = "memberTblDataGridView";
+            this.memberTblDataGridView.Size = new System.Drawing.Size(725, 468);
+            this.memberTblDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "MemID";
+            this.dataGridViewTextBoxColumn10.HeaderText = "MemID";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Surname";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Surname";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "CellNum";
+            this.dataGridViewTextBoxColumn13.HeaderText = "CellNum";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Address";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn16.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "AccNumber";
+            this.dataGridViewTextBoxColumn47.HeaderText = "AccNumber";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            // 
             // salesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2511,6 +2590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.selectProductIDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getProductDiscountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderLineTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memberTblDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2734,5 +2814,14 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridView memberTblDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
     }
 }
