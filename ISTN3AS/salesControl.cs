@@ -155,6 +155,7 @@ namespace ISTN3AS
                 }
 
                 int maxID = int.Parse(phoneOrderTableAdapter.getMaxID().ToString());
+
                 //MessageBox.Show(maxID.ToString()) ;
                 for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
                 {
@@ -640,6 +641,7 @@ namespace ISTN3AS
 
         private void button14_Click(object sender, EventArgs e)
         {
+            
             GlobalVariables.cartTotal = Double.Parse(phoneOrderDataGridView.CurrentRow.Cells[1].Value.ToString());
             GlobalVariables.customerName_Order = phoneOrderDataGridView.CurrentRow.Cells[2].Value.ToString();
             GlobalVariables.customerCellNo_Order = phoneOrderDataGridView.CurrentRow.Cells[3].Value.ToString();
@@ -807,7 +809,8 @@ namespace ISTN3AS
             chbxStoreOrder_Purchase.CheckState = CheckState.Checked;
             pnlContactDetails_Purchase.Enabled = false;
             chbxIsMemeber_Purchase.CheckState = CheckState.Unchecked;
-
+            lsvProductCart_Control.Clear();
+            lblTotal.Text = "";
             tbxStMem.Clear();
             tbxCustomerOrdCell_BeginPurchase.Clear();
             tbxCustomerOrdName_BeginPurchase.Clear();
@@ -828,26 +831,13 @@ namespace ISTN3AS
             tbxSurname_AccCreation.Clear();
             tbxAddress_AccCreation.Clear();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tbxSearch_PhoneOrder_TextChanged(object sender, EventArgs e)
-        {
-            phoneOrderTableAdapter.SeachPhoneOrder(productDS.PhoneOrder, tbxSearch_PhoneOrder.Text);
-        }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            LoginScreen lg = new LoginScreen();
+            lg.ShowDialog();
+            this.Dispose();
         }
-=======
->>>>>>> parent of b99a555... nashlinChanges
-=======
->>>>>>> parent of 4e3f1c5... merger
     }
 }

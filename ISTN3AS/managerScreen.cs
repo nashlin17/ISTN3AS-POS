@@ -245,6 +245,9 @@ namespace ISTN3AS
                 smtp.Send(message);
 
                 MessageBox.Show("Email Sent");
+                richTextBox2.Clear();
+                lsvRecipients.Clear();
+                lsvRecipients.Columns.Add("Emails");
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
