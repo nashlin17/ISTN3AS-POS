@@ -42,6 +42,7 @@
             this.btnMngStaff = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpReport = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpItems = new System.Windows.Forms.TabPage();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -212,6 +213,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.btnSuppStatus = new System.Windows.Forms.Button();
             this.tpOrder = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.orderLineTblDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -243,12 +245,11 @@
             this.memberTblTableAdapter = new ISTN3AS.group6DataSetTableAdapters.MemberTblTableAdapter();
             this.orderTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderTblTableAdapter();
             this.orderLineTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderLineTblTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlCompany.SuspendLayout();
             this.pnlOptions.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpReport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpItems.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -293,7 +294,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCompany
@@ -439,7 +439,7 @@
             this.btnReturns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturns.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturns.ForeColor = System.Drawing.Color.Snow;
-            this.btnReturns.Location = new System.Drawing.Point(0, 594);
+            this.btnReturns.Location = new System.Drawing.Point(0, 601);
             this.btnReturns.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturns.Name = "btnReturns";
             this.btnReturns.Size = new System.Drawing.Size(325, 71);
@@ -515,6 +515,16 @@
             this.tpReport.TabIndex = 0;
             this.tpReport.Text = "Reports";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ISTN3AS.Properties.Resources.store__0003s_0001_Total_Sports_ho9ver;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(221, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1121, 590);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // tpItems
             // 
             this.tpItems.AutoScroll = true;
@@ -541,7 +551,7 @@
             // button16
             // 
             this.button16.Location = new System.Drawing.Point(1553, 128);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(45, 42);
             this.button16.TabIndex = 50;
@@ -552,7 +562,7 @@
             // button15
             // 
             this.button15.Location = new System.Drawing.Point(1553, 179);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Margin = new System.Windows.Forms.Padding(4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(45, 42);
             this.button15.TabIndex = 49;
@@ -563,7 +573,7 @@
             // button14
             // 
             this.button14.Location = new System.Drawing.Point(1553, 229);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.Margin = new System.Windows.Forms.Padding(4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(45, 42);
             this.button14.TabIndex = 48;
@@ -574,7 +584,7 @@
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(1553, 279);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.Margin = new System.Windows.Forms.Padding(4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(45, 42);
             this.button13.TabIndex = 47;
@@ -585,7 +595,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(1553, 78);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(45, 42);
             this.button6.TabIndex = 45;
@@ -598,7 +608,7 @@
             this.chbxUpdateProduct_Management.AutoSize = true;
             this.chbxUpdateProduct_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbxUpdateProduct_Management.Location = new System.Drawing.Point(613, 341);
-            this.chbxUpdateProduct_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbxUpdateProduct_Management.Margin = new System.Windows.Forms.Padding(4);
             this.chbxUpdateProduct_Management.Name = "chbxUpdateProduct_Management";
             this.chbxUpdateProduct_Management.Size = new System.Drawing.Size(233, 29);
             this.chbxUpdateProduct_Management.TabIndex = 28;
@@ -611,7 +621,7 @@
             this.chbxAddProduct_Management.AutoSize = true;
             this.chbxAddProduct_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbxAddProduct_Management.Location = new System.Drawing.Point(423, 341);
-            this.chbxAddProduct_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbxAddProduct_Management.Margin = new System.Windows.Forms.Padding(4);
             this.chbxAddProduct_Management.Name = "chbxAddProduct_Management";
             this.chbxAddProduct_Management.Size = new System.Drawing.Size(142, 29);
             this.chbxAddProduct_Management.TabIndex = 27;
@@ -627,9 +637,9 @@
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.tbxAttribute_Management);
             this.groupBox2.Location = new System.Drawing.Point(1084, 378);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(515, 305);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
@@ -653,7 +663,7 @@
             "Size",
             "Colour"});
             this.cbxAttribute_Management.Location = new System.Drawing.Point(243, 81);
-            this.cbxAttribute_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxAttribute_Management.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAttribute_Management.Name = "cbxAttribute_Management";
             this.cbxAttribute_Management.Size = new System.Drawing.Size(243, 33);
             this.cbxAttribute_Management.TabIndex = 40;
@@ -661,7 +671,7 @@
             // btnAddAttribute
             // 
             this.btnAddAttribute.Location = new System.Drawing.Point(387, 187);
-            this.btnAddAttribute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddAttribute.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAttribute.Name = "btnAddAttribute";
             this.btnAddAttribute.Size = new System.Drawing.Size(100, 76);
             this.btnAddAttribute.TabIndex = 43;
@@ -682,7 +692,7 @@
             // 
             this.tbxAttribute_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxAttribute_Management.Location = new System.Drawing.Point(243, 43);
-            this.tbxAttribute_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxAttribute_Management.Margin = new System.Windows.Forms.Padding(4);
             this.tbxAttribute_Management.Name = "tbxAttribute_Management";
             this.tbxAttribute_Management.Size = new System.Drawing.Size(243, 30);
             this.tbxAttribute_Management.TabIndex = 0;
@@ -713,9 +723,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Location = new System.Drawing.Point(9, 378);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1067, 302);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
@@ -725,7 +735,7 @@
             // 
             this.tbxDiscount_Mangement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxDiscount_Mangement.Location = new System.Drawing.Point(645, 162);
-            this.tbxDiscount_Mangement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxDiscount_Mangement.Margin = new System.Windows.Forms.Padding(4);
             this.tbxDiscount_Mangement.MaxLength = 3;
             this.tbxDiscount_Mangement.Name = "tbxDiscount_Mangement";
             this.tbxDiscount_Mangement.Size = new System.Drawing.Size(248, 30);
@@ -737,7 +747,7 @@
             this.mtbxSellingPrice_Management.DecimalPlaces = 2;
             this.mtbxSellingPrice_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbxSellingPrice_Management.Location = new System.Drawing.Point(645, 79);
-            this.mtbxSellingPrice_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbxSellingPrice_Management.Margin = new System.Windows.Forms.Padding(4);
             this.mtbxSellingPrice_Management.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -754,7 +764,7 @@
             this.mtbxCostPrice_Management.DecimalPlaces = 2;
             this.mtbxCostPrice_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbxCostPrice_Management.Location = new System.Drawing.Point(645, 37);
-            this.mtbxCostPrice_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbxCostPrice_Management.Margin = new System.Windows.Forms.Padding(4);
             this.mtbxCostPrice_Management.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -768,7 +778,7 @@
             // 
             this.nupQuantity_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nupQuantity_Management.Location = new System.Drawing.Point(645, 202);
-            this.nupQuantity_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nupQuantity_Management.Margin = new System.Windows.Forms.Padding(4);
             this.nupQuantity_Management.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -786,7 +796,7 @@
             "True",
             "False"});
             this.cbxReorder_Management.Location = new System.Drawing.Point(645, 119);
-            this.cbxReorder_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxReorder_Management.Margin = new System.Windows.Forms.Padding(4);
             this.cbxReorder_Management.Name = "cbxReorder_Management";
             this.cbxReorder_Management.Size = new System.Drawing.Size(243, 33);
             this.cbxReorder_Management.TabIndex = 38;
@@ -844,7 +854,7 @@
             "Female",
             "Male"});
             this.cbxGender_Management.Location = new System.Drawing.Point(171, 246);
-            this.cbxGender_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxGender_Management.Margin = new System.Windows.Forms.Padding(4);
             this.cbxGender_Management.Name = "cbxGender_Management";
             this.cbxGender_Management.Size = new System.Drawing.Size(249, 33);
             this.cbxGender_Management.TabIndex = 31;
@@ -853,7 +863,7 @@
             // 
             this.tbxProductName_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxProductName_Management.Location = new System.Drawing.Point(173, 39);
-            this.tbxProductName_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxProductName_Management.Margin = new System.Windows.Forms.Padding(4);
             this.tbxProductName_Management.Name = "tbxProductName_Management";
             this.tbxProductName_Management.Size = new System.Drawing.Size(248, 30);
             this.tbxProductName_Management.TabIndex = 19;
@@ -865,7 +875,7 @@
             this.cbxCategory_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategory_Management.FormattingEnabled = true;
             this.cbxCategory_Management.Location = new System.Drawing.Point(173, 79);
-            this.cbxCategory_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCategory_Management.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCategory_Management.Name = "cbxCategory_Management";
             this.cbxCategory_Management.Size = new System.Drawing.Size(248, 33);
             this.cbxCategory_Management.TabIndex = 24;
@@ -886,7 +896,7 @@
             this.cbxBrandName_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBrandName_Management.FormattingEnabled = true;
             this.cbxBrandName_Management.Location = new System.Drawing.Point(173, 121);
-            this.cbxBrandName_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxBrandName_Management.Margin = new System.Windows.Forms.Padding(4);
             this.cbxBrandName_Management.Name = "cbxBrandName_Management";
             this.cbxBrandName_Management.Size = new System.Drawing.Size(247, 33);
             this.cbxBrandName_Management.TabIndex = 23;
@@ -902,7 +912,7 @@
             this.cbxColour_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxColour_Management.FormattingEnabled = true;
             this.cbxColour_Management.Location = new System.Drawing.Point(172, 162);
-            this.cbxColour_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxColour_Management.Margin = new System.Windows.Forms.Padding(4);
             this.cbxColour_Management.Name = "cbxColour_Management";
             this.cbxColour_Management.Size = new System.Drawing.Size(248, 33);
             this.cbxColour_Management.TabIndex = 22;
@@ -918,7 +928,7 @@
             this.cbxSize_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSize_Management.FormattingEnabled = true;
             this.cbxSize_Management.Location = new System.Drawing.Point(172, 204);
-            this.cbxSize_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxSize_Management.Margin = new System.Windows.Forms.Padding(4);
             this.cbxSize_Management.Name = "cbxSize_Management";
             this.cbxSize_Management.Size = new System.Drawing.Size(248, 33);
             this.cbxSize_Management.TabIndex = 21;
@@ -1013,7 +1023,7 @@
             this.dataGridViewTextBoxColumn12});
             this.productTblDataGridView.DataSource = this.productTblBindingSource;
             this.productTblDataGridView.Location = new System.Drawing.Point(9, 63);
-            this.productTblDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productTblDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.productTblDataGridView.Name = "productTblDataGridView";
             this.productTblDataGridView.RowHeadersWidth = 51;
             this.productTblDataGridView.Size = new System.Drawing.Size(1539, 271);
@@ -1173,9 +1183,9 @@
             this.groupBox7.Controls.Add(this.button8);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Location = new System.Drawing.Point(344, 420);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(881, 224);
             this.groupBox7.TabIndex = 58;
             this.groupBox7.TabStop = false;
@@ -1295,7 +1305,7 @@
             this.chbxUpdateAccount_Management.AutoSize = true;
             this.chbxUpdateAccount_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbxUpdateAccount_Management.Location = new System.Drawing.Point(870, 383);
-            this.chbxUpdateAccount_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbxUpdateAccount_Management.Margin = new System.Windows.Forms.Padding(4);
             this.chbxUpdateAccount_Management.Name = "chbxUpdateAccount_Management";
             this.chbxUpdateAccount_Management.Size = new System.Drawing.Size(238, 29);
             this.chbxUpdateAccount_Management.TabIndex = 57;
@@ -1308,7 +1318,7 @@
             this.chbxAddAccount_Management.AutoSize = true;
             this.chbxAddAccount_Management.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbxAddAccount_Management.Location = new System.Drawing.Point(565, 383);
-            this.chbxAddAccount_Management.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbxAddAccount_Management.Margin = new System.Windows.Forms.Padding(4);
             this.chbxAddAccount_Management.Name = "chbxAddAccount_Management";
             this.chbxAddAccount_Management.Size = new System.Drawing.Size(147, 29);
             this.chbxAddAccount_Management.TabIndex = 56;
@@ -1319,7 +1329,7 @@
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(1324, 146);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(45, 42);
             this.button12.TabIndex = 55;
@@ -1330,7 +1340,7 @@
             // button17
             // 
             this.button17.Location = new System.Drawing.Point(1324, 208);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(45, 42);
             this.button17.TabIndex = 54;
@@ -1341,7 +1351,7 @@
             // button18
             // 
             this.button18.Location = new System.Drawing.Point(1324, 258);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button18.Margin = new System.Windows.Forms.Padding(4);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(45, 42);
             this.button18.TabIndex = 53;
@@ -1352,7 +1362,7 @@
             // button19
             // 
             this.button19.Location = new System.Drawing.Point(1324, 309);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(45, 42);
             this.button19.TabIndex = 52;
@@ -1363,7 +1373,7 @@
             // button20
             // 
             this.button20.Location = new System.Drawing.Point(1324, 96);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(45, 42);
             this.button20.TabIndex = 51;
@@ -1384,7 +1394,7 @@
             this.dataGridViewTextBoxColumn18});
             this.staffTblDataGridView.DataSource = this.staffTblBindingSource;
             this.staffTblDataGridView.Location = new System.Drawing.Point(244, 92);
-            this.staffTblDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.staffTblDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.staffTblDataGridView.Name = "staffTblDataGridView";
             this.staffTblDataGridView.RowHeadersWidth = 30;
             this.staffTblDataGridView.Size = new System.Drawing.Size(1044, 271);
@@ -1480,7 +1490,7 @@
             // 
             this.lsvRecipients.HideSelection = false;
             this.lsvRecipients.Location = new System.Drawing.Point(277, 376);
-            this.lsvRecipients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvRecipients.Margin = new System.Windows.Forms.Padding(4);
             this.lsvRecipients.Name = "lsvRecipients";
             this.lsvRecipients.Size = new System.Drawing.Size(379, 170);
             this.lsvRecipients.TabIndex = 16;
@@ -1489,7 +1499,7 @@
             // richTextBox2
             // 
             this.richTextBox2.Location = new System.Drawing.Point(664, 376);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(667, 171);
             this.richTextBox2.TabIndex = 15;
@@ -1522,7 +1532,7 @@
             this.dataGridViewTextBoxColumn32});
             this.memberTblDataGridView.DataSource = this.memberTblBindingSource;
             this.memberTblDataGridView.Location = new System.Drawing.Point(275, 97);
-            this.memberTblDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memberTblDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.memberTblDataGridView.Name = "memberTblDataGridView";
             this.memberTblDataGridView.RowHeadersWidth = 51;
             this.memberTblDataGridView.Size = new System.Drawing.Size(1056, 271);
@@ -1629,9 +1639,9 @@
             this.tabPage1.Controls.Add(this.coloursDataGridView);
             this.tabPage1.Controls.Add(this.brandsDataGridView);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1671, 692);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "tabPage1";
@@ -1705,7 +1715,7 @@
             this.dataGridViewTextBoxColumn33});
             this.categoryTblDataGridView.DataSource = this.categoryTblBindingSource;
             this.categoryTblDataGridView.Location = new System.Drawing.Point(1065, 7);
-            this.categoryTblDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.categoryTblDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.categoryTblDataGridView.Name = "categoryTblDataGridView";
             this.categoryTblDataGridView.RowHeadersWidth = 51;
             this.categoryTblDataGridView.Size = new System.Drawing.Size(193, 187);
@@ -1728,7 +1738,7 @@
             this.dataGridViewTextBoxColumn24});
             this.sizesDataGridView.DataSource = this.sizesBindingSource;
             this.sizesDataGridView.Location = new System.Drawing.Point(703, 7);
-            this.sizesDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sizesDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.sizesDataGridView.Name = "sizesDataGridView";
             this.sizesDataGridView.RowHeadersWidth = 51;
             this.sizesDataGridView.Size = new System.Drawing.Size(324, 203);
@@ -1760,7 +1770,7 @@
             this.dataGridViewTextBoxColumn22});
             this.coloursDataGridView.DataSource = this.coloursBindingSource;
             this.coloursDataGridView.Location = new System.Drawing.Point(357, 7);
-            this.coloursDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coloursDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.coloursDataGridView.Name = "coloursDataGridView";
             this.coloursDataGridView.RowHeadersWidth = 51;
             this.coloursDataGridView.Size = new System.Drawing.Size(324, 203);
@@ -1792,7 +1802,7 @@
             this.dataGridViewTextBoxColumn20});
             this.brandsDataGridView.DataSource = this.brandsBindingSource;
             this.brandsDataGridView.Location = new System.Drawing.Point(8, 7);
-            this.brandsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.brandsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.brandsDataGridView.Name = "brandsDataGridView";
             this.brandsDataGridView.RowHeadersWidth = 51;
             this.brandsDataGridView.Size = new System.Drawing.Size(327, 203);
@@ -2293,6 +2303,16 @@
             this.tpOrder.Text = "tpOrder";
             this.tpOrder.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(711, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 49);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "View Orders";
+            // 
             // orderLineTblDataGridView
             // 
             this.orderLineTblDataGridView.AutoGenerateColumns = false;
@@ -2304,7 +2324,7 @@
             this.dataGridViewTextBoxColumn44});
             this.orderLineTblDataGridView.DataSource = this.orderLineTblBindingSource;
             this.orderLineTblDataGridView.Location = new System.Drawing.Point(500, 412);
-            this.orderLineTblDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderLineTblDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.orderLineTblDataGridView.Name = "orderLineTblDataGridView";
             this.orderLineTblDataGridView.RowHeadersWidth = 51;
             this.orderLineTblDataGridView.Size = new System.Drawing.Size(592, 271);
@@ -2361,7 +2381,7 @@
             this.dataGridViewTextBoxColumn40});
             this.orderTblDataGridView.DataSource = this.orderTblBindingSource;
             this.orderTblDataGridView.Location = new System.Drawing.Point(314, 119);
-            this.orderTblDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderTblDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.orderTblDataGridView.Name = "orderTblDataGridView";
             this.orderTblDataGridView.RowHeadersWidth = 51;
             this.orderTblDataGridView.Size = new System.Drawing.Size(991, 271);
@@ -2511,26 +2531,6 @@
             // 
             this.orderLineTblTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ISTN3AS.Properties.Resources.store__0003s_0001_Total_Sports_ho9ver;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(221, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1121, 590);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(711, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 49);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "View Orders";
-            // 
             // managerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2549,6 +2549,7 @@
             this.pnlOptions.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tpReport.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpItems.ResumeLayout(false);
             this.tpItems.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -2601,7 +2602,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
