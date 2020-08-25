@@ -10,6 +10,8 @@ namespace ISTN3AS
 {
     public static class GlobalVariables
     {
+        public static string username;
+        public static int orderNo;
         public static double cartTotal;
         //Added to Order and OrderLine Tables
         public static List<string> productCart_ProductID = new List<string>();

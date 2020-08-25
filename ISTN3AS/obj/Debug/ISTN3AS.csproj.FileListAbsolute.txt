@@ -55,3 +55,5 @@ C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\IS
 C:\Users\Ashli\Desktop\ISTN Project\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.managerScreen.resources
 C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.printForm.resources
 C:\Users\Ashli\Desktop\ISTN Project\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.printForm.resources
+C:\Users\Nashlin Moodly\Desktop\Submission ISTN\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.cardPay.resources
+C:\Users\Ashli\Desktop\ISTN Project\ISTN3AS-POS\ISTN3AS\obj\Debug\ISTN3AS.cardPay.resources

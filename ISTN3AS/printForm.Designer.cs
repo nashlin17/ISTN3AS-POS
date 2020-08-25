@@ -36,6 +36,7 @@
             this.lsvReceipt = new System.Windows.Forms.ListView();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.lblOrdNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,12 +100,22 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // lblOrdNo
+            // 
+            this.lblOrdNo.AutoSize = true;
+            this.lblOrdNo.Location = new System.Drawing.Point(88, 9);
+            this.lblOrdNo.Name = "lblOrdNo";
+            this.lblOrdNo.Size = new System.Drawing.Size(75, 17);
+            this.lblOrdNo.TabIndex = 14;
+            this.lblOrdNo.Text = "Order No. ";
+            // 
             // printForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(724, 879);
+            this.Controls.Add(this.lblOrdNo);
             this.Controls.Add(this.lsvReceipt);
             this.Controls.Add(this.tbxReceipt);
             this.Controls.Add(this.label2);
@@ -132,5 +143,6 @@
         public System.Windows.Forms.ListView lsvReceipt;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        public System.Windows.Forms.Label lblOrdNo;
     }
 }
