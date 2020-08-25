@@ -14,7 +14,6 @@ namespace ISTN3AS
             formInstance.btnLogOut.BackColor = System.Drawing.Color.Transparent;
             formInstance.lblCompany.BackColor = System.Drawing.Color.Transparent;
             formInstance.lblUsrname.BackColor = System.Drawing.Color.Transparent;
-            formInstance.btnItems.BackColor = System.Drawing.Color.Transparent;
             formInstance.btnCashOut.BackColor = System.Drawing.Color.Transparent;
             formInstance.btnAddUser.BackColor = System.Drawing.Color.Transparent;
             formInstance.btnAdd2.BackColor = System.Drawing.Color.Transparent;
