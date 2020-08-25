@@ -103,6 +103,7 @@ namespace ISTN3AS
         private void button9_Click(object sender, EventArgs e)
         {
             sc.btnCashOut.Enabled = true;
+            sc.btnItems.Enabled = false;
         }
 
         private void payment_Load(object sender, EventArgs e)
