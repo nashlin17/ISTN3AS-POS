@@ -68,10 +68,19 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.lblTotal_Return = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.returnTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productDS = new ISTN3AS.ProductDS();
-            this.returnProductTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.globalOrdeNoGrid = new System.Windows.Forms.DataGridView();
+            this.orderNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productDS = new ISTN3AS.ProductDS();
+            this.returnTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.returnProductTblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderLineTblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.orderTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.OrderTblTableAdapter();
             this.tableAdapterManager = new ISTN3AS.ProductDSTableAdapters.TableAdapterManager();
@@ -82,15 +91,6 @@
             this.updateProduantity2 = new ISTN3AS.ProductDSTableAdapters.updateProduantity();
             this.returnTblTableAdapter = new ISTN3AS.ProductDSTableAdapters.ReturnTblTableAdapter();
             this.returnProductTblBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.globalOrdeNoGrid = new System.Windows.Forms.DataGridView();
-            this.orderNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderTotalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCompany.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpItemPayment.SuspendLayout();
@@ -104,15 +104,15 @@
             this.panel24.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.returnTblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.globalOrdeNoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnTblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource1)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.globalOrdeNoGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCompany
@@ -122,13 +122,13 @@
             this.pnlCompany.BackgroundImage = global::ISTN3AS.Properties.Resources.Frost;
             this.pnlCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCompany.Controls.Add(this.btnExit);
             this.pnlCompany.Controls.Add(this.lblCompany);
+            this.pnlCompany.Controls.Add(this.btnExit);
             this.pnlCompany.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCompany.Location = new System.Drawing.Point(0, 0);
-            this.pnlCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlCompany.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(708, 71);
+            this.pnlCompany.Size = new System.Drawing.Size(531, 80);
             this.pnlCompany.TabIndex = 4;
             // 
             // btnExit
@@ -137,10 +137,10 @@
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Font = new System.Drawing.Font("Castellar", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Snow;
-            this.btnExit.Location = new System.Drawing.Point(637, 12);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(478, 10);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(59, 47);
+            this.btnExit.Size = new System.Drawing.Size(44, 38);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "x";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -153,8 +153,9 @@
             this.lblCompany.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCompany.Image = global::ISTN3AS.Properties.Resources.Frost;
             this.lblCompany.Location = new System.Drawing.Point(0, 0);
+            this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(706, 69);
+            this.lblCompany.Size = new System.Drawing.Size(529, 78);
             this.lblCompany.TabIndex = 0;
             this.lblCompany.Text = "TOTOAL SPORTS";
             this.lblCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,22 +165,22 @@
             this.tabControl1.Controls.Add(this.tpItemPayment);
             this.tabControl1.Controls.Add(this.tpReturn);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-7, 73);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(-5, 59);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(709, 695);
+            this.tabControl1.Size = new System.Drawing.Size(532, 565);
             this.tabControl1.TabIndex = 6;
             // 
             // tpItemPayment
             // 
             this.tpItemPayment.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpItemPayment.Controls.Add(this.groupBox4);
-            this.tpItemPayment.Location = new System.Drawing.Point(4, 25);
-            this.tpItemPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpItemPayment.Location = new System.Drawing.Point(4, 22);
+            this.tpItemPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tpItemPayment.Name = "tpItemPayment";
-            this.tpItemPayment.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpItemPayment.Size = new System.Drawing.Size(701, 666);
+            this.tpItemPayment.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpItemPayment.Size = new System.Drawing.Size(524, 539);
             this.tpItemPayment.TabIndex = 0;
             this.tpItemPayment.Text = "mainPay";
             // 
@@ -195,11 +196,11 @@
             this.groupBox4.Controls.Add(this.panel5);
             this.groupBox4.Controls.Add(this.panel4);
             this.groupBox4.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.groupBox4.Location = new System.Drawing.Point(91, 6);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(68, 5);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(523, 612);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(392, 497);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             // 
@@ -210,10 +211,10 @@
             this.btnProcessPayment_Payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcessPayment_Payment.Image = global::ISTN3AS.Properties.Resources.process;
             this.btnProcessPayment_Payment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcessPayment_Payment.Location = new System.Drawing.Point(293, 537);
-            this.btnProcessPayment_Payment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProcessPayment_Payment.Location = new System.Drawing.Point(220, 436);
+            this.btnProcessPayment_Payment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProcessPayment_Payment.Name = "btnProcessPayment_Payment";
-            this.btnProcessPayment_Payment.Size = new System.Drawing.Size(179, 57);
+            this.btnProcessPayment_Payment.Size = new System.Drawing.Size(134, 46);
             this.btnProcessPayment_Payment.TabIndex = 8;
             this.btnProcessPayment_Payment.Text = "Process";
             this.btnProcessPayment_Payment.UseVisualStyleBackColor = false;
@@ -226,10 +227,10 @@
             this.btnCancel_Payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel_Payment.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
             this.btnCancel_Payment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel_Payment.Location = new System.Drawing.Point(61, 537);
-            this.btnCancel_Payment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel_Payment.Location = new System.Drawing.Point(46, 436);
+            this.btnCancel_Payment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel_Payment.Name = "btnCancel_Payment";
-            this.btnCancel_Payment.Size = new System.Drawing.Size(179, 57);
+            this.btnCancel_Payment.Size = new System.Drawing.Size(134, 46);
             this.btnCancel_Payment.TabIndex = 7;
             this.btnCancel_Payment.Text = "Cancel";
             this.btnCancel_Payment.UseVisualStyleBackColor = false;
@@ -241,10 +242,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::ISTN3AS.Properties.Resources.bank;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(5, 300);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(4, 244);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(509, 64);
+            this.button3.Size = new System.Drawing.Size(382, 52);
             this.button3.TabIndex = 6;
             this.button3.Text = "Pay With Card";
             this.button3.UseVisualStyleBackColor = false;
@@ -256,26 +257,28 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.lblCustomerChange_Payment);
             this.panel8.Controls.Add(this.label16);
-            this.panel8.Location = new System.Drawing.Point(264, 210);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Location = new System.Drawing.Point(198, 171);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(253, 84);
+            this.panel8.Size = new System.Drawing.Size(190, 69);
             this.panel8.TabIndex = 5;
             // 
             // lblCustomerChange_Payment
             // 
             this.lblCustomerChange_Payment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCustomerChange_Payment.Location = new System.Drawing.Point(72, 36);
+            this.lblCustomerChange_Payment.Location = new System.Drawing.Point(54, 29);
+            this.lblCustomerChange_Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCustomerChange_Payment.Name = "lblCustomerChange_Payment";
-            this.lblCustomerChange_Payment.Size = new System.Drawing.Size(109, 34);
+            this.lblCustomerChange_Payment.Size = new System.Drawing.Size(82, 28);
             this.lblCustomerChange_Payment.TabIndex = 1;
             this.lblCustomerChange_Payment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(59, 0);
+            this.label16.Location = new System.Drawing.Point(44, 0);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(140, 34);
+            this.label16.Size = new System.Drawing.Size(105, 28);
             this.label16.TabIndex = 0;
             this.label16.Text = "Change";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,27 +289,28 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.tbxAmtPaid_Payment);
             this.panel7.Controls.Add(this.label14);
-            this.panel7.Location = new System.Drawing.Point(5, 210);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel7.Location = new System.Drawing.Point(4, 171);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(253, 84);
+            this.panel7.Size = new System.Drawing.Size(190, 69);
             this.panel7.TabIndex = 4;
             // 
             // tbxAmtPaid_Payment
             // 
             this.tbxAmtPaid_Payment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxAmtPaid_Payment.Location = new System.Drawing.Point(35, 37);
-            this.tbxAmtPaid_Payment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxAmtPaid_Payment.Location = new System.Drawing.Point(26, 30);
+            this.tbxAmtPaid_Payment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxAmtPaid_Payment.Name = "tbxAmtPaid_Payment";
-            this.tbxAmtPaid_Payment.Size = new System.Drawing.Size(199, 34);
+            this.tbxAmtPaid_Payment.Size = new System.Drawing.Size(150, 29);
             this.tbxAmtPaid_Payment.TabIndex = 1;
             this.tbxAmtPaid_Payment.TextChanged += new System.EventHandler(this.tbxAmtPaid_Payment_TextChanged);
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(57, 1);
+            this.label14.Location = new System.Drawing.Point(43, 1);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(157, 34);
+            this.label14.Size = new System.Drawing.Size(118, 28);
             this.label14.TabIndex = 0;
             this.label14.Text = "Amount Paid";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -317,25 +321,27 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.lblTotal_Payment);
             this.panel6.Controls.Add(this.label12);
-            this.panel6.Location = new System.Drawing.Point(7, 146);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(5, 119);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(510, 55);
+            this.panel6.Size = new System.Drawing.Size(383, 45);
             this.panel6.TabIndex = 3;
             // 
             // lblTotal_Payment
             // 
-            this.lblTotal_Payment.Location = new System.Drawing.Point(91, 15);
+            this.lblTotal_Payment.Location = new System.Drawing.Point(68, 12);
+            this.lblTotal_Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal_Payment.Name = "lblTotal_Payment";
-            this.lblTotal_Payment.Size = new System.Drawing.Size(109, 34);
+            this.lblTotal_Payment.Size = new System.Drawing.Size(82, 28);
             this.lblTotal_Payment.TabIndex = 1;
             this.lblTotal_Payment.Text = "350";
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(19, 15);
+            this.label12.Location = new System.Drawing.Point(14, 12);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 34);
+            this.label12.Size = new System.Drawing.Size(57, 28);
             this.label12.TabIndex = 0;
             this.label12.Text = "Total: R";
             // 
@@ -345,25 +351,27 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblDiscount_Payment);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Location = new System.Drawing.Point(7, 84);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(5, 68);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(510, 57);
+            this.panel5.Size = new System.Drawing.Size(383, 47);
             this.panel5.TabIndex = 2;
             // 
             // lblDiscount_Payment
             // 
-            this.lblDiscount_Payment.Location = new System.Drawing.Point(123, 15);
+            this.lblDiscount_Payment.Location = new System.Drawing.Point(92, 12);
+            this.lblDiscount_Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiscount_Payment.Name = "lblDiscount_Payment";
-            this.lblDiscount_Payment.Size = new System.Drawing.Size(109, 34);
+            this.lblDiscount_Payment.Size = new System.Drawing.Size(82, 28);
             this.lblDiscount_Payment.TabIndex = 1;
             this.lblDiscount_Payment.Text = "50";
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(19, 15);
+            this.label10.Location = new System.Drawing.Point(14, 12);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 34);
+            this.label10.Size = new System.Drawing.Size(82, 28);
             this.label10.TabIndex = 0;
             this.label10.Text = "Disocunt: R";
             // 
@@ -373,25 +381,27 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.lblSubTotal_Payment);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Location = new System.Drawing.Point(5, 18);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(4, 15);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(511, 60);
+            this.panel4.Size = new System.Drawing.Size(384, 49);
             this.panel4.TabIndex = 0;
             // 
             // lblSubTotal_Payment
             // 
-            this.lblSubTotal_Payment.Location = new System.Drawing.Point(123, 15);
+            this.lblSubTotal_Payment.Location = new System.Drawing.Point(92, 12);
+            this.lblSubTotal_Payment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSubTotal_Payment.Name = "lblSubTotal_Payment";
-            this.lblSubTotal_Payment.Size = new System.Drawing.Size(109, 34);
+            this.lblSubTotal_Payment.Size = new System.Drawing.Size(82, 28);
             this.lblSubTotal_Payment.TabIndex = 1;
             this.lblSubTotal_Payment.Text = "300";
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(19, 15);
+            this.label7.Location = new System.Drawing.Point(14, 12);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 34);
+            this.label7.Size = new System.Drawing.Size(82, 28);
             this.label7.TabIndex = 0;
             this.label7.Text = "Subtotal: R";
             // 
@@ -400,10 +410,10 @@
             this.tpReturn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpReturn.Controls.Add(this.panel24);
             this.tpReturn.Controls.Add(this.groupBox2);
-            this.tpReturn.Location = new System.Drawing.Point(4, 25);
-            this.tpReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpReturn.Location = new System.Drawing.Point(4, 22);
+            this.tpReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tpReturn.Name = "tpReturn";
-            this.tpReturn.Size = new System.Drawing.Size(701, 666);
+            this.tpReturn.Size = new System.Drawing.Size(524, 539);
             this.tpReturn.TabIndex = 2;
             this.tpReturn.Text = "return";
             // 
@@ -417,63 +427,65 @@
             this.panel24.Controls.Add(this.tbxCellNo_Return);
             this.panel24.Controls.Add(this.label50);
             this.panel24.Controls.Add(this.label8);
-            this.panel24.Location = new System.Drawing.Point(76, 110);
-            this.panel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel24.Location = new System.Drawing.Point(57, 89);
+            this.panel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(538, 206);
+            this.panel24.Size = new System.Drawing.Size(404, 168);
             this.panel24.TabIndex = 15;
             // 
             // dtpReturnDate_Returns
             // 
             this.dtpReturnDate_Returns.Enabled = false;
-            this.dtpReturnDate_Returns.Location = new System.Drawing.Point(143, 43);
-            this.dtpReturnDate_Returns.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpReturnDate_Returns.Location = new System.Drawing.Point(107, 35);
             this.dtpReturnDate_Returns.Name = "dtpReturnDate_Returns";
-            this.dtpReturnDate_Returns.Size = new System.Drawing.Size(341, 22);
+            this.dtpReturnDate_Returns.Size = new System.Drawing.Size(257, 20);
             this.dtpReturnDate_Returns.TabIndex = 19;
             // 
             // tbxReason_Return
             // 
-            this.tbxReason_Return.Location = new System.Drawing.Point(143, 74);
-            this.tbxReason_Return.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxReason_Return.Location = new System.Drawing.Point(107, 60);
+            this.tbxReason_Return.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxReason_Return.Multiline = true;
             this.tbxReason_Return.Name = "tbxReason_Return";
-            this.tbxReason_Return.Size = new System.Drawing.Size(341, 114);
+            this.tbxReason_Return.Size = new System.Drawing.Size(257, 93);
             this.tbxReason_Return.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 73);
+            this.label4.Location = new System.Drawing.Point(25, 59);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 23);
+            this.label4.Size = new System.Drawing.Size(78, 19);
             this.label4.TabIndex = 17;
             this.label4.Text = "Reasons : ";
             // 
             // tbxCellNo_Return
             // 
-            this.tbxCellNo_Return.Location = new System.Drawing.Point(143, 12);
-            this.tbxCellNo_Return.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxCellNo_Return.Location = new System.Drawing.Point(107, 10);
+            this.tbxCellNo_Return.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxCellNo_Return.MaxLength = 10;
             this.tbxCellNo_Return.Name = "tbxCellNo_Return";
-            this.tbxCellNo_Return.Size = new System.Drawing.Size(341, 22);
+            this.tbxCellNo_Return.Size = new System.Drawing.Size(257, 20);
             this.tbxCellNo_Return.TabIndex = 15;
             // 
             // label50
             // 
             this.label50.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(33, 11);
+            this.label50.Location = new System.Drawing.Point(25, 9);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(175, 26);
+            this.label50.Size = new System.Drawing.Size(131, 21);
             this.label50.TabIndex = 1;
             this.label50.Text = "Cell No: ";
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(33, 39);
+            this.label8.Location = new System.Drawing.Point(25, 32);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(175, 23);
+            this.label8.Size = new System.Drawing.Size(131, 19);
             this.label8.TabIndex = 20;
             this.label8.Text = "Date:";
             // 
@@ -485,11 +497,11 @@
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.panel14);
             this.groupBox2.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(49, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(37, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(589, 612);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(442, 497);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -498,9 +510,10 @@
             // 
             this.label48.BackColor = System.Drawing.Color.White;
             this.label48.Font = new System.Drawing.Font("Gadugi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(96, 30);
+            this.label48.Location = new System.Drawing.Point(72, 24);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(320, 44);
+            this.label48.Size = new System.Drawing.Size(240, 36);
             this.label48.TabIndex = 9;
             this.label48.Text = "Customer Details";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -512,10 +525,10 @@
             this.btnProcess_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcess_Return.Image = global::ISTN3AS.Properties.Resources.process;
             this.btnProcess_Return.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcess_Return.Location = new System.Drawing.Point(335, 537);
-            this.btnProcess_Return.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProcess_Return.Location = new System.Drawing.Point(251, 436);
+            this.btnProcess_Return.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProcess_Return.Name = "btnProcess_Return";
-            this.btnProcess_Return.Size = new System.Drawing.Size(179, 57);
+            this.btnProcess_Return.Size = new System.Drawing.Size(134, 46);
             this.btnProcess_Return.TabIndex = 8;
             this.btnProcess_Return.Text = "Process";
             this.btnProcess_Return.UseVisualStyleBackColor = false;
@@ -528,10 +541,10 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = global::ISTN3AS.Properties.Resources.cancel__1_;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(103, 537);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Location = new System.Drawing.Point(77, 436);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(179, 57);
+            this.button8.Size = new System.Drawing.Size(134, 46);
             this.button8.TabIndex = 7;
             this.button8.Text = "Cancel";
             this.button8.UseVisualStyleBackColor = false;
@@ -543,100 +556,38 @@
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.lblTotal_Return);
             this.panel14.Controls.Add(this.label19);
-            this.panel14.Location = new System.Drawing.Point(27, 319);
-            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel14.Location = new System.Drawing.Point(20, 259);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(538, 55);
+            this.panel14.Size = new System.Drawing.Size(404, 45);
             this.panel14.TabIndex = 3;
             this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // lblTotal_Return
             // 
-            this.lblTotal_Return.Location = new System.Drawing.Point(112, 15);
+            this.lblTotal_Return.Location = new System.Drawing.Point(84, 12);
+            this.lblTotal_Return.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal_Return.Name = "lblTotal_Return";
-            this.lblTotal_Return.Size = new System.Drawing.Size(109, 34);
+            this.lblTotal_Return.Size = new System.Drawing.Size(82, 28);
             this.lblTotal_Return.TabIndex = 1;
             this.lblTotal_Return.Text = "350";
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(19, 15);
+            this.label19.Location = new System.Drawing.Point(14, 12);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 34);
+            this.label19.Size = new System.Drawing.Size(57, 28);
             this.label19.TabIndex = 0;
             this.label19.Text = "Total: R";
-            // 
-            // returnTblBindingSource
-            // 
-            this.returnTblBindingSource.DataMember = "ReturnTbl";
-            this.returnTblBindingSource.DataSource = this.productDS;
-            // 
-            // productDS
-            // 
-            this.productDS.DataSetName = "ProductDS";
-            this.productDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // returnProductTblBindingSource
-            // 
-            this.returnProductTblBindingSource.DataSource = this.productDS;
-            this.returnProductTblBindingSource.Position = 0;
-            // 
-            // orderTblBindingSource
-            // 
-            this.orderTblBindingSource.DataMember = "OrderTbl";
-            this.orderTblBindingSource.DataSource = this.productDS;
-            // 
-            // orderLineTblBindingSource1
-            // 
-            this.orderLineTblBindingSource1.DataMember = "OrderLineTbl";
-            this.orderLineTblBindingSource1.DataSource = this.productDS;
-            // 
-            // orderTblTableAdapter
-            // 
-            this.orderTblTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.getPhoneOrderProductsTableAdapter = null;
-            this.tableAdapterManager.OrderLineTblTableAdapter = null;
-            this.tableAdapterManager.OrderTblTableAdapter = this.orderTblTableAdapter;
-            this.tableAdapterManager.PhoneOrderLineTblTableAdapter = null;
-            this.tableAdapterManager.PhoneOrderTableAdapter = null;
-            this.tableAdapterManager.ProductTblTableAdapter = null;
-            this.tableAdapterManager.ReturnProductTblTableAdapter = null;
-            this.tableAdapterManager.ReturnTblTableAdapter = null;
-            this.tableAdapterManager.selectProductIDTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ISTN3AS.ProductDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // orderLineTblBindingSource
-            // 
-            this.orderLineTblBindingSource.DataSource = this.productDS;
-            this.orderLineTblBindingSource.Position = 0;
-            // 
-            // orderLineTblTableAdapter
-            // 
-            this.orderLineTblTableAdapter.ClearBeforeFill = true;
-            // 
-            // returnProductTblTableAdapter
-            // 
-            this.returnProductTblTableAdapter.ClearBeforeFill = true;
-            // 
-            // returnTblTableAdapter
-            // 
-            this.returnTblTableAdapter.ClearBeforeFill = true;
-            // 
-            // returnProductTblBindingSource1
-            // 
-            this.returnProductTblBindingSource1.DataMember = "ReturnProductTbl";
-            this.returnProductTblBindingSource1.DataSource = this.productDS;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.globalOrdeNoGrid);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(701, 666);
+            this.tabPage1.Size = new System.Drawing.Size(524, 539);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -654,11 +605,12 @@
             this.staffIDDataGridViewTextBoxColumn,
             this.memIDDataGridViewTextBoxColumn});
             this.globalOrdeNoGrid.DataSource = this.orderTblBindingSource;
-            this.globalOrdeNoGrid.Location = new System.Drawing.Point(47, 163);
+            this.globalOrdeNoGrid.Location = new System.Drawing.Point(35, 132);
+            this.globalOrdeNoGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.globalOrdeNoGrid.Name = "globalOrdeNoGrid";
             this.globalOrdeNoGrid.RowHeadersWidth = 51;
             this.globalOrdeNoGrid.RowTemplate.Height = 24;
-            this.globalOrdeNoGrid.Size = new System.Drawing.Size(523, 150);
+            this.globalOrdeNoGrid.Size = new System.Drawing.Size(392, 122);
             this.globalOrdeNoGrid.TabIndex = 0;
             // 
             // orderNumDataGridViewTextBoxColumn
@@ -718,16 +670,81 @@
             this.memIDDataGridViewTextBoxColumn.Name = "memIDDataGridViewTextBoxColumn";
             this.memIDDataGridViewTextBoxColumn.Width = 125;
             // 
+            // orderTblBindingSource
+            // 
+            this.orderTblBindingSource.DataMember = "OrderTbl";
+            this.orderTblBindingSource.DataSource = this.productDS;
+            // 
+            // productDS
+            // 
+            this.productDS.DataSetName = "ProductDS";
+            this.productDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // returnTblBindingSource
+            // 
+            this.returnTblBindingSource.DataMember = "ReturnTbl";
+            this.returnTblBindingSource.DataSource = this.productDS;
+            // 
+            // returnProductTblBindingSource
+            // 
+            this.returnProductTblBindingSource.DataSource = this.productDS;
+            this.returnProductTblBindingSource.Position = 0;
+            // 
+            // orderLineTblBindingSource1
+            // 
+            this.orderLineTblBindingSource1.DataMember = "OrderLineTbl";
+            this.orderLineTblBindingSource1.DataSource = this.productDS;
+            // 
+            // orderTblTableAdapter
+            // 
+            this.orderTblTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.getPhoneOrderProductsTableAdapter = null;
+            this.tableAdapterManager.OrderLineTblTableAdapter = null;
+            this.tableAdapterManager.OrderTblTableAdapter = this.orderTblTableAdapter;
+            this.tableAdapterManager.PhoneOrderLineTblTableAdapter = null;
+            this.tableAdapterManager.PhoneOrderTableAdapter = null;
+            this.tableAdapterManager.ProductTblTableAdapter = null;
+            this.tableAdapterManager.ReturnProductTblTableAdapter = null;
+            this.tableAdapterManager.ReturnTblTableAdapter = null;
+            this.tableAdapterManager.selectProductIDTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ISTN3AS.ProductDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // orderLineTblBindingSource
+            // 
+            this.orderLineTblBindingSource.DataSource = this.productDS;
+            this.orderLineTblBindingSource.Position = 0;
+            // 
+            // orderLineTblTableAdapter
+            // 
+            this.orderLineTblTableAdapter.ClearBeforeFill = true;
+            // 
+            // returnProductTblTableAdapter
+            // 
+            this.returnProductTblTableAdapter.ClearBeforeFill = true;
+            // 
+            // returnTblTableAdapter
+            // 
+            this.returnTblTableAdapter.ClearBeforeFill = true;
+            // 
+            // returnProductTblBindingSource1
+            // 
+            this.returnProductTblBindingSource1.DataMember = "ReturnProductTbl";
+            this.returnProductTblBindingSource1.DataSource = this.productDS;
+            // 
             // payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(708, 841);
+            this.ClientSize = new System.Drawing.Size(531, 683);
             this.Controls.Add(this.pnlCompany);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "payment";
@@ -747,15 +764,15 @@
             this.panel24.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.returnTblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.globalOrdeNoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnTblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderLineTblBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.returnProductTblBindingSource1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.globalOrdeNoGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

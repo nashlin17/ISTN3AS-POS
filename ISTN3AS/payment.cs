@@ -75,7 +75,7 @@ namespace ISTN3AS
                   
                 }
                 int maxOrderID = int.Parse(orderTblTableAdapter.getMaxID().ToString());
-                MessageBox.Show(maxOrderID.ToString());
+
                 for (int i = 0; i < GlobalVariables.productCart_ProductID.Count(); i++)
                 {
                     orderLineTblTableAdapter.Insert(maxOrderID, int.Parse(GlobalVariables.productCart_ProductID.ElementAt(i)), Decimal.Parse(GlobalVariables.productCart_UnitPrice.ElementAt(i).ToString()), GlobalVariables.productCart_Quantity.ElementAt(i));
@@ -96,19 +96,17 @@ namespace ISTN3AS
                 pf.Show();
                 this.Dispose();
             }
-            else { MessageBox.Show("Outstanding Amount" + (Double.Parse(lblTotal_Payment.Text) - Double.Parse(tbxAmtPaid_Payment.Text))); }
+            else { MessageBox.Show("Outstanding Amount R" + (Double.Parse(lblTotal_Payment.Text) - Double.Parse(tbxAmtPaid_Payment.Text))); }
             
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             sc.btnCashOut.Enabled = true;
-            sc.btnItems.Enabled = false;
         }
 
         private void payment_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(GlobalVariables.TransactionType);
             // TODO: This line of code loads data into the 'productDS.ReturnTbl' table. You can move, or remove it, as needed.
             if (GlobalVariables.TransactionType.Equals("Return"))
             {
@@ -120,7 +118,6 @@ namespace ISTN3AS
             }
 
             
-            MessageBox.Show(GlobalVariables.productCart_ProductID.Count.ToString());
             this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
             this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             //Initialize Payment Details(Total, Discount and Sub-Total)
@@ -161,7 +158,8 @@ namespace ISTN3AS
 
         private void btnProcess_Return_Click(object sender, EventArgs e)
         {
-            if (!tbxReason_Return.Text.Equals("") && tbxCellNo_Return.Text.Length == 10 && !tbxCellNo_Return.Text.Equals("")) {
+            if (!tbxReason_Return.Text.Equals("") && tbxCellNo_Return.Text.Length == 10 && !tbxCellNo_Return.Text.Equals(""))
+            {
                 DialogResult confirm = MessageBox.Show("Are You Sure", "Confirm Return", MessageBoxButtons.YesNo);
                 if (confirm == DialogResult.Yes)
                 {
@@ -194,6 +192,13 @@ namespace ISTN3AS
                 }
                 else
                 {
+                    sc.tabcontrol1.SelectedIndex = 1;
+                    sc.tabcontrol1.Size = new Size(1267, 582);
+                    sc.resetBeginPurchase();
+                    printForm pf = new printForm();
+
+                    pf.Show();
+                    this.Dispose();
                 }
             }
             else

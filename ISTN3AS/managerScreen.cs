@@ -254,27 +254,16 @@ namespace ISTN3AS
 
         public void initTables()
         {
-            // TODO: This line of code loads data into the 'group6DataSet.MemberTbl' table. You can move, or remove it, as needed.
             this.memberTblTableAdapter.Fill(this.group6DataSet.MemberTbl);
-            // TODO: This line of code loads data into the 'productFilterDS.CategoryTbl' table. You can move, or remove it, as needed.
             this.categoryTblTableAdapter.populateCategory(this.productFilterDS.CategoryTbl);
-            // TODO: This line of code loads data into the 'productFilterDS.Brands' table. You can move, or remove it, as needed.
             this.brandsTableAdapter.Fill(this.productFilterDS.Brands);
-            // TODO: This line of code loads data into the 'productFilterDS.Colours' table. You can move, or remove it, as needed.
             this.coloursTableAdapter.Fill(this.productFilterDS.Colours);
-            // TODO: This line of code loads data into the 'productFilterDS.Sizes' table. You can move, or remove it, as needed.
             this.sizesTableAdapter.Fill(this.productFilterDS.Sizes);
-            // TODO: This line of code loads data into the 'productFilterDS.CategoryTbl' table. You can move, or remove it, as needed.
             this.categoryTblTableAdapter.populateCategory(this.productFilterDS.CategoryTbl);
-            // TODO: This line of code loads data into the 'group6DataSet.StaffTbl' table. You can move, or remove it, as needed.
             this.staffTblTableAdapter.Fill(this.group6DataSet.StaffTbl);
-            // TODO: This line of code loads data into the 'productDS.ProductTbl' table. You can move, or remove it, as needed.
             this.productTblTableAdapter.Fill(this.productDS.ProductTbl);
-            // TODO: This line of code loads data into the 'supplierDS.SupplierTbl' table. You can move, or remove it, as needed.
             this.supplierTblTableAdapter.Fill(this.supplierDS.SupplierTbl);
-            // TODO: This line of code loads data into the 'supplierDS.SupplierProductLine' table. You can move, or remove it, as needed.
             this.supplierProductLineTableAdapter.Fill(this.supplierDS.SupplierProductLine);
-            // TODO: This line of code loads data into the 'supplierDS.SupplierOrderTbl' table. You can move, or remove it, as needed.
             this.supplierOrderTblTableAdapter.Fill(this.supplierDS.SupplierOrderTbl);
 
         }
