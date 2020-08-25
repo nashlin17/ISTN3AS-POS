@@ -31,6 +31,7 @@ namespace ISTN3AS
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = purchase;
             tabcontrol1.Size = new Size(1285, 582);
+            btnItems.Enabled = false;
 
 
         }
@@ -46,9 +47,10 @@ namespace ISTN3AS
 
         private void btnCashOut_Click(object sender, EventArgs e)
         {
-            GlobalVariables.Clear();
             sc.Hidebuttons(this);
-            tabcontrol1.SelectedTab = purchase;  
+            //tabcontrol1.SelectedTab = purchase;
+
+            
         }
 
         private void btnCat1_Click(object sender, EventArgs e)
@@ -94,10 +96,7 @@ namespace ISTN3AS
 
         private void btnReturns_Click(object sender, EventArgs e)
         {
-            lsvReturnItems_Returns.Items.Clear();
             GlobalVariables.Clear();
-            this.orderLineTblTableAdapter.Fill(this.productDS.OrderLineTbl);
-            this.orderTblTableAdapter.Fill(this.productDS.OrderTbl);
             sc.Hidebuttons(this);
             tabcontrol1.SelectedTab = returnItem;
             tabcontrol1.Size = new Size(1267, 582);
@@ -257,6 +256,7 @@ namespace ISTN3AS
             
 
             getAccountIDTableAdapter.Fill(group6DataSet.getAccountID,tbxStMem.Text);
+            //MessageBox.Show();
             if (chbxIsMemeber_Purchase.Checked && bool.Parse(queries1.CheckAccNum(tbxStMem.Text).ToString()))
             {
                 try
@@ -274,6 +274,7 @@ namespace ISTN3AS
                 }
                 
             }
+            MessageBox.Show(GlobalVariables.MemberID.ToString());
             if (checkError)
             {
                 sc.Purchase(this);
@@ -283,6 +284,7 @@ namespace ISTN3AS
                 filterOn = true;
                 tabcontrol1.Size = new Size(230, 559);
                 btnCashOut.Enabled = false;
+                btnItems.Enabled = true;
 
                 cbxCategory_Purchase.SelectedIndex = -1;
                 filterCategory = true;
@@ -723,10 +725,14 @@ namespace ISTN3AS
 
         private void button18_Click(object sender, EventArgs e)
         {
+            //GlobalVariables.Return_OrderNum = int.Parse(orderTblDataGridView.CurrentRow.Cells[0].ToString());
             GlobalVariables.Return_OrderNum.Add(int.Parse(orderTblDataGridView.CurrentRow.Cells[0].Value.ToString()));
+
+            //MessageBox.Show(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
 
             string name = productTblTableAdapter1.GetProdName(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString()));
             lsvReturnItems_Returns.Items.Add(new ListViewItem(new[] { name, orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString(), orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString() }));
+            //MessageBox.Show(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
             GlobalVariables.productCart_ProductID.Add(orderLineTblDataGridView.CurrentRow.Cells[1].Value.ToString());
             GlobalVariables.productCart_Quantity.Add(int.Parse(orderLineTblDataGridView.CurrentRow.Cells[3].Value.ToString()));
             GlobalVariables.productCart_UnitPrice.Add(Double.Parse(orderLineTblDataGridView.CurrentRow.Cells[2].Value.ToString()));
@@ -738,6 +744,7 @@ namespace ISTN3AS
         {
             GlobalVariables.TransactionType = "Return";
             
+            //GlobalVariables.productCart_ProductID
             if(lsvReturnItems_Returns.Items.Count > 0)
             {
                 Form payment = new payment(this);
@@ -822,6 +829,7 @@ namespace ISTN3AS
             tbxAddress_AccCreation.Clear();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -839,5 +847,7 @@ namespace ISTN3AS
         }
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
     }
 }

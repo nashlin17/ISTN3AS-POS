@@ -87,8 +87,9 @@
             this.getPhoneOrderProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.phoneOrderDataGridView = new System.Windows.Forms.DataGridView();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.tbxSearch_PhoneOrder = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -137,6 +138,8 @@
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.lblUsrname = new System.Windows.Forms.Label();
             this.pbxusr = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnItems = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnReturns = new System.Windows.Forms.Button();
@@ -184,6 +187,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.memberTblDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -195,6 +199,8 @@
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -291,6 +297,7 @@
             this.pnlCompany.SuspendLayout();
             this.pnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxusr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -304,9 +311,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.memberTblBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getLoginDetailsBindingSource)).BeginInit();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.memberTblDataGridView)).BeginInit();
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             ((System.ComponentModel.ISupportInitialize)(this.getPhoneOrderProductsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderBindingSource)).BeginInit();
@@ -333,10 +343,14 @@
             this.purchase.Margin = new System.Windows.Forms.Padding(2);
             this.purchase.Name = "purchase";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.purchase.Size = new System.Drawing.Size(1260, 556);
 =======
             this.purchase.Size = new System.Drawing.Size(1167, 556);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.purchase.Size = new System.Drawing.Size(1167, 556);
+>>>>>>> parent of 4e3f1c5... merger
             this.purchase.TabIndex = 5;
             this.purchase.Text = "purchase";
             // 
@@ -523,10 +537,14 @@
             this.cat4.Margin = new System.Windows.Forms.Padding(2);
             this.cat4.Name = "cat4";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.cat4.Size = new System.Drawing.Size(1260, 556);
 =======
             this.cat4.Size = new System.Drawing.Size(1167, 556);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.cat4.Size = new System.Drawing.Size(1167, 556);
+>>>>>>> parent of 4e3f1c5... merger
             this.cat4.TabIndex = 3;
             this.cat4.Text = "cat4";
             // 
@@ -935,10 +953,14 @@
             this.orders.Margin = new System.Windows.Forms.Padding(2);
             this.orders.Name = "orders";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.orders.Size = new System.Drawing.Size(1260, 556);
 =======
             this.orders.Size = new System.Drawing.Size(1167, 556);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.orders.Size = new System.Drawing.Size(1167, 556);
+>>>>>>> parent of 4e3f1c5... merger
             this.orders.TabIndex = 8;
             this.orders.Text = "orders";
             // 
@@ -970,7 +992,6 @@
             this.getPhoneOrderProductsDataGridView.DataSource = this.getPhoneOrderProductsBindingSource;
             this.getPhoneOrderProductsDataGridView.Location = new System.Drawing.Point(261, 269);
             this.getPhoneOrderProductsDataGridView.Name = "getPhoneOrderProductsDataGridView";
-            this.getPhoneOrderProductsDataGridView.ReadOnly = true;
             this.getPhoneOrderProductsDataGridView.RowHeadersWidth = 51;
             this.getPhoneOrderProductsDataGridView.Size = new System.Drawing.Size(554, 220);
             this.getPhoneOrderProductsDataGridView.TabIndex = 13;
@@ -989,7 +1010,6 @@
             this.phoneOrderDataGridView.DataSource = this.phoneOrderBindingSource;
             this.phoneOrderDataGridView.Location = new System.Drawing.Point(12, 93);
             this.phoneOrderDataGridView.Name = "phoneOrderDataGridView";
-            this.phoneOrderDataGridView.ReadOnly = true;
             this.phoneOrderDataGridView.RowHeadersWidth = 51;
             this.phoneOrderDataGridView.Size = new System.Drawing.Size(803, 160);
             this.phoneOrderDataGridView.TabIndex = 13;
@@ -998,12 +1018,17 @@
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel16.Controls.Add(this.button12);
             this.panel16.Controls.Add(this.label27);
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.panel16.Controls.Add(this.tbxSearch_PhoneOrder);
 =======
             this.panel16.Controls.Add(this.textBox7);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.panel16.Controls.Add(this.textBox7);
+>>>>>>> parent of 4e3f1c5... merger
             this.panel16.Location = new System.Drawing.Point(169, 56);
             this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
@@ -1011,7 +1036,10 @@
             this.panel16.TabIndex = 13;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 4e3f1c5... merger
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.White;
@@ -1026,7 +1054,10 @@
             this.button12.TabIndex = 10;
             this.button12.UseVisualStyleBackColor = false;
             // 
+<<<<<<< HEAD
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             // label27
             // 
             this.label27.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1037,8 +1068,9 @@
             this.label27.TabIndex = 8;
             this.label27.Text = "Search Customer Details:";
             // 
-            // tbxSearch_PhoneOrder
+            // textBox7
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.tbxSearch_PhoneOrder.Location = new System.Drawing.Point(193, 2);
             this.tbxSearch_PhoneOrder.Margin = new System.Windows.Forms.Padding(2);
@@ -1048,13 +1080,18 @@
             this.tbxSearch_PhoneOrder.TabIndex = 11;
             this.tbxSearch_PhoneOrder.TextChanged += new System.EventHandler(this.tbxSearch_PhoneOrder_TextChanged);
 =======
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.textBox7.Location = new System.Drawing.Point(193, 2);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(288, 26);
             this.textBox7.TabIndex = 11;
+<<<<<<< HEAD
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             // 
             // button14
             // 
@@ -1113,10 +1150,14 @@
             this.returnItem.Margin = new System.Windows.Forms.Padding(2);
             this.returnItem.Name = "returnItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.returnItem.Size = new System.Drawing.Size(1260, 556);
 =======
             this.returnItem.Size = new System.Drawing.Size(1167, 556);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.returnItem.Size = new System.Drawing.Size(1167, 556);
+>>>>>>> parent of 4e3f1c5... merger
             this.returnItem.TabIndex = 9;
             this.returnItem.Text = "return";
             // 
@@ -1213,7 +1254,6 @@
             this.orderLineTblDataGridView.DataSource = this.orderLineTblBindingSource;
             this.orderLineTblDataGridView.Location = new System.Drawing.Point(5, 250);
             this.orderLineTblDataGridView.Name = "orderLineTblDataGridView";
-            this.orderLineTblDataGridView.ReadOnly = true;
             this.orderLineTblDataGridView.RowHeadersWidth = 51;
             this.orderLineTblDataGridView.Size = new System.Drawing.Size(554, 220);
             this.orderLineTblDataGridView.TabIndex = 14;
@@ -1251,7 +1291,6 @@
             this.orderTblDataGridView.DataSource = this.orderTblBindingSource;
             this.orderTblDataGridView.Location = new System.Drawing.Point(5, 102);
             this.orderTblDataGridView.Name = "orderTblDataGridView";
-            this.orderTblDataGridView.ReadOnly = true;
             this.orderTblDataGridView.RowHeadersWidth = 51;
             this.orderTblDataGridView.Size = new System.Drawing.Size(847, 142);
             this.orderTblDataGridView.TabIndex = 5;
@@ -1348,10 +1387,14 @@
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage1.Size = new System.Drawing.Size(1260, 556);
 =======
             this.tabPage1.Size = new System.Drawing.Size(1167, 556);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.tabPage1.Size = new System.Drawing.Size(1167, 556);
+>>>>>>> parent of 4e3f1c5... merger
             this.tabPage1.TabIndex = 10;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1634,6 +1677,8 @@
             this.pnlOptions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlOptions.Controls.Add(this.lblUsrname);
             this.pnlOptions.Controls.Add(this.pbxusr);
+            this.pnlOptions.Controls.Add(this.pictureBox1);
+            this.pnlOptions.Controls.Add(this.btnItems);
             this.pnlOptions.Controls.Add(this.button30);
             this.pnlOptions.Controls.Add(this.pictureBox10);
             this.pnlOptions.Controls.Add(this.btnReturns);
@@ -1678,7 +1723,10 @@
             this.pbxusr.TabStop = false;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 4e3f1c5... merger
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -1709,7 +1757,10 @@
             this.btnItems.UseVisualStyleBackColor = true;
             this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
             // 
+<<<<<<< HEAD
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             // button30
             // 
             this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(59)))), ((int)(((byte)(149)))));
@@ -1730,10 +1781,14 @@
             this.pictureBox10.BackgroundImage = global::ISTN3AS.Properties.Resources.bag;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.pictureBox10.Location = new System.Drawing.Point(22, 323);
 =======
             this.pictureBox10.Location = new System.Drawing.Point(22, 396);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.pictureBox10.Location = new System.Drawing.Point(22, 396);
+>>>>>>> parent of 4e3f1c5... merger
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(35, 34);
@@ -1750,10 +1805,14 @@
             this.btnReturns.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturns.ForeColor = System.Drawing.Color.Snow;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnReturns.Location = new System.Drawing.Point(0, 311);
 =======
             this.btnReturns.Location = new System.Drawing.Point(0, 384);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.btnReturns.Location = new System.Drawing.Point(0, 384);
+>>>>>>> parent of 4e3f1c5... merger
             this.btnReturns.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturns.Name = "btnReturns";
             this.btnReturns.Size = new System.Drawing.Size(244, 58);
@@ -1768,10 +1827,14 @@
             this.pictureBox8.BackgroundImage = global::ISTN3AS.Properties.Resources.frmexit;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.pictureBox8.Location = new System.Drawing.Point(22, 409);
 =======
             this.pictureBox8.Location = new System.Drawing.Point(22, 482);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.pictureBox8.Location = new System.Drawing.Point(22, 482);
+>>>>>>> parent of 4e3f1c5... merger
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(35, 34);
@@ -1788,10 +1851,14 @@
             this.btnLogOut.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Snow;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnLogOut.Location = new System.Drawing.Point(-2, 403);
 =======
             this.btnLogOut.Location = new System.Drawing.Point(-2, 476);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.btnLogOut.Location = new System.Drawing.Point(-2, 476);
+>>>>>>> parent of 4e3f1c5... merger
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(244, 58);
@@ -1799,9 +1866,12 @@
             this.btnLogOut.Text = "Log-Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             // 
             // pictureBox7
             // 
@@ -1809,10 +1879,14 @@
             this.pictureBox7.BackgroundImage = global::ISTN3AS.Properties.Resources.cash_on_delivery;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.pictureBox7.Location = new System.Drawing.Point(22, 250);
 =======
             this.pictureBox7.Location = new System.Drawing.Point(22, 323);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.pictureBox7.Location = new System.Drawing.Point(22, 323);
+>>>>>>> parent of 4e3f1c5... merger
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 34);
@@ -1825,10 +1899,14 @@
             this.pictureBox6.BackgroundImage = global::ISTN3AS.Properties.Resources.user__5_;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.pictureBox6.Location = new System.Drawing.Point(22, 180);
 =======
             this.pictureBox6.Location = new System.Drawing.Point(22, 253);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.pictureBox6.Location = new System.Drawing.Point(22, 253);
+>>>>>>> parent of 4e3f1c5... merger
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(35, 34);
@@ -1845,10 +1923,14 @@
             this.btnAdd2.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd2.ForeColor = System.Drawing.Color.Snow;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnAdd2.Location = new System.Drawing.Point(0, 240);
 =======
             this.btnAdd2.Location = new System.Drawing.Point(0, 313);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.btnAdd2.Location = new System.Drawing.Point(0, 313);
+>>>>>>> parent of 4e3f1c5... merger
             this.btnAdd2.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(244, 58);
@@ -1867,10 +1949,14 @@
             this.btnAddUser.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.Color.Snow;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnAddUser.Location = new System.Drawing.Point(0, 167);
 =======
             this.btnAddUser.Location = new System.Drawing.Point(0, 240);
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.btnAddUser.Location = new System.Drawing.Point(0, 240);
+>>>>>>> parent of 4e3f1c5... merger
             this.btnAddUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(244, 58);
@@ -1906,10 +1992,14 @@
             this.btnCashOut.Size = new System.Drawing.Size(244, 58);
             this.btnCashOut.TabIndex = 2;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnCashOut.Text = "Begin Purchase";
 =======
             this.btnCashOut.Text = "Main Menu";
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+            this.btnCashOut.Text = "Main Menu";
+>>>>>>> parent of 4e3f1c5... merger
             this.btnCashOut.UseVisualStyleBackColor = true;
             this.btnCashOut.Click += new System.EventHandler(this.btnCashOut_Click);
             // 
@@ -2254,6 +2344,7 @@
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // memberTblDataGridView
             // 
             this.memberTblDataGridView.AutoGenerateColumns = false;
@@ -2332,6 +2423,8 @@
             // 
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "PhoneOrderNum";
@@ -2339,9 +2432,12 @@
             this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn23.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn23.Width = 125;
             // 
             // dataGridViewTextBoxColumn24
@@ -2351,9 +2447,12 @@
             this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn24.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn24.Width = 125;
             // 
             // dataGridViewTextBoxColumn25
@@ -2363,9 +2462,12 @@
             this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn25.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn25.Width = 125;
             // 
             // dataGridViewTextBoxColumn26
@@ -2375,9 +2477,12 @@
             this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn26.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn26.Width = 125;
             // 
             // getPhoneOrderProductsBindingSource
@@ -2406,9 +2511,12 @@
             this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn18.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn18.Width = 125;
             // 
             // dataGridViewTextBoxColumn19
@@ -2418,9 +2526,12 @@
             this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn19.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn19.Width = 125;
             // 
             // dataGridViewTextBoxColumn20
@@ -2430,9 +2541,12 @@
             this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn20.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn20.Width = 125;
             // 
             // dataGridViewTextBoxColumn21
@@ -2442,9 +2556,12 @@
             this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn21.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn21.Width = 125;
             // 
             // dataGridViewTextBoxColumn22
@@ -2454,9 +2571,12 @@
             this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn22.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn22.Width = 125;
             // 
             // phoneOrderBindingSource
@@ -2471,9 +2591,12 @@
             this.dataGridViewTextBoxColumn34.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn34.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn34.Width = 125;
             // 
             // dataGridViewTextBoxColumn35
@@ -2483,9 +2606,12 @@
             this.dataGridViewTextBoxColumn35.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn35.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn35.Width = 125;
             // 
             // dataGridViewTextBoxColumn36
@@ -2495,9 +2621,12 @@
             this.dataGridViewTextBoxColumn36.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn36.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn36.Width = 125;
             // 
             // dataGridViewTextBoxColumn37
@@ -2507,9 +2636,12 @@
             this.dataGridViewTextBoxColumn37.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn37.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn37.Width = 125;
             // 
             // orderLineTblBindingSource
@@ -2533,9 +2665,12 @@
             this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn28.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn28.Width = 125;
             // 
             // dataGridViewTextBoxColumn29
@@ -2545,9 +2680,12 @@
             this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn29.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn29.Width = 125;
             // 
             // dataGridViewTextBoxColumn30
@@ -2557,9 +2695,12 @@
             this.dataGridViewTextBoxColumn30.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn30.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn30.Width = 125;
             // 
             // dataGridViewTextBoxColumn31
@@ -2569,9 +2710,12 @@
             this.dataGridViewTextBoxColumn31.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn31.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn31.Width = 125;
             // 
             // dataGridViewTextBoxColumn32
@@ -2581,9 +2725,12 @@
             this.dataGridViewTextBoxColumn32.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn32.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn32.Width = 125;
             // 
             // dataGridViewTextBoxColumn33
@@ -2593,9 +2740,12 @@
             this.dataGridViewTextBoxColumn33.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn33.ReadOnly = true;
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             this.dataGridViewTextBoxColumn33.Width = 125;
             // 
             // orderTblBindingSource
@@ -2851,6 +3001,7 @@
             this.pnlCompany.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxusr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -2865,9 +3016,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.memberTblBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getLoginDetailsBindingSource)).EndInit();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.memberTblDataGridView)).EndInit();
 =======
 >>>>>>> parent of b99a555... nashlinChanges
+=======
+>>>>>>> parent of 4e3f1c5... merger
             ((System.ComponentModel.ISupportInitialize)(this.getPhoneOrderProductsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneOrderBindingSource)).EndInit();
@@ -2888,6 +3042,7 @@
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnCat1;
@@ -2896,6 +3051,7 @@
         public System.Windows.Forms.Button btnCat5;
         public System.Windows.Forms.Button btnCat4;
         public System.Windows.Forms.Label lblCompany;
+        public System.Windows.Forms.Button btnItems;
         public System.Windows.Forms.Button btnCashOut;
         public System.Windows.Forms.Button btnAdd2;
         public System.Windows.Forms.Button btnAddUser;
@@ -2910,8 +3066,9 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox tbxSearch_PhoneOrder;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox9;
         public System.Windows.Forms.Button button18;
